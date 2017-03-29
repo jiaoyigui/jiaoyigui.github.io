@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Zero">
+
+
+
+<meta name="description" content="收集Android相关的对话框Dialog组件库, 包含：各种Dialog、PopupWindow、Toast、Snackbar notification ………">
+<meta property="og:type" content="article">
+<meta property="og:title" content="弹窗 Dialog - Android开源组件">
+<meta property="og:url" content="http://www.jiaoyigui.cn/android-librarys/Dialog/index.html">
+<meta property="og:site_name" content="夜的灯">
+<meta property="og:description" content="收集Android相关的对话框Dialog组件库, 包含：各种Dialog、PopupWindow、Toast、Snackbar notification ………">
+<meta property="og:image" content="https://raw.githubusercontent.com/ahmadnajar10/fancyDialog/master/device-2017-03-08-171007.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/maiconhellmann/heins-input-dialogs/master/docs/img/main_activity.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/maiconhellmann/heins-input-dialogs/master/docs/img/calculator_input_dialog.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/maiconhellmann/heins-input-dialogs/master/docs/img/heins_date_picker_dialog.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/2f9c06e137b7d2b1b0a4d9763cf9cff70c1710f4/687474703a2f2f692e696d6775722e636f6d2f456d7067504d422e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/da188e3e26dbaa067d13a230f2ab8cb2669164f9/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313937363134372d366563356233306239666435393032332e6769663f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970">
+<meta property="og:image" content="https://raw.githubusercontent.com/t-kurimura/flickabledialog/master/sample_throw.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/t-kurimura/flickabledialog/master/sample_back.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/shaohui10086/BottomDialog/master/preview/bottom_dialog_share.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/shaohui10086/BottomDialog/master/preview/bottom_dialog_edit.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/codemybrainsout/PlaceSearchDialog/master/preview/preview.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jeasonwong/FlipShare/master/screenshots/flipshare.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Brudigem/DropDownWarning/master/gif/bounce.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/andyxialm/ColorDialog/master/art/Screenshot_type_success.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/andyxialm/ColorDialog/master/art/Screenshot_type_info.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/andyxialm/ColorDialog/master/art/Screenshot_type_help.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PierfrancescoSoffritti/SlidingDrawer/master/pics/SlidingView.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/rubensousa/BottomSheetExample/master/screens/screen-view.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/andremion/Floating-Navigation-View/master/art/sample.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/yipianfengye/android-adDialog/master/images/ezgif.com-video-to-gif1.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/pengjianbo/FloatViewFinal/master/images/screenshot0.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/liuguangqiang/CookieBar/master/arts/default.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/liuguangqiang/CookieBar/master/arts/custom.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Muddz/StyleableToast/master/showcase.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/scr1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/scr2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/mkodekar/AchievementToast/master/achievementtoastlibrary/blobs/AchievementToast.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/yadav-rahul/TastyToast/lib/static/success.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/yadav-rahul/TastyToast/lib/static/default.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/yadav-rahul/TastyToast/lib/static/warning.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/kakajika/RelativePopupWindow/master/art/art1.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Carbs0126/Screenshot/master/md_dialog_setview.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Carbs0126/Screenshot/master/md_dialog_setmessages.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/SwiftyWang/ToastBar/master/sample/2016_11_25_10_11_11_10_37_12.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/vatsaldesai92/MyDynamicToastLibrary/master/app/src/main/assets/images/mydynamictoast1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/vatsaldesai92/MyDynamicToastLibrary/master/app/src/main/assets/images/mydynamictoast2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/vatsaldesai92/MyDynamicToastLibrary/master/app/src/main/assets/images/mydynamictoast3.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/droidbyme/ToastLibrary/master/screenshots/screen1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/droidbyme/ToastLibrary/master/screenshots/screen2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/CROSP/pretty-toast/master/screen-animation.gif">
+<meta property="og:image" content="https://cloud.githubusercontent.com/assets/16832215/16327497/20a467be-3a02-11e6-892d-0870a95c4246.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/ligi/SnackEngage/master/doc/screenshots/rate_small.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/ligi/SnackEngage/master/doc/screenshots/betatest_small.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HuanHaiLiuXin/SnackbarUtils/master/%E5%BD%95%E5%B1%8F/%E6%89%80%E6%9C%89%E5%8A%9F%E8%83%BD%E5%BD%95%E5%B1%8F.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/AntonyGolovin/FluentSnackbar/master/art/screenshot.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/96592555c77792a317564369f8ff53bafcba2a13/687474703a2f2f692e696d6775722e636f6d2f57776f784c4d752e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/marcoscgdev/EasyLicensesDialog/master/sample/device-2016-06-21-005826.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/d8108413298d70047f52cff9ac05603a5fd51988/687474703a2f2f332e62702e626c6f6773706f742e636f6d2f2d6c3155765657694d5341672f564c61355a6657346444492f41414141414141414e54632f7273576f755f71623042632f733332302f593648615453772e676966">
+<meta property="og:image" content="https://github.com/NeoLSN/DialogAlchemy/blob/master/arts/device_portrait.png">
+<meta property="og:image" content="https://github.com/NeoLSN/DialogAlchemy/blob/master/arts/rotate.png">
+<meta property="og:image" content="https://github.com/NeoLSN/DialogAlchemy/blob/master/arts/device_landscape.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/javiersantos/BottomDialogs/master/Screenshots/gif-1.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/javiersantos/BottomDialogs/master/Screenshots/gif-2.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Mahfa/AndroidColorPop/master/androidcolorpop.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/coreORB/SelectionDialogs/master/screens/Screenshot_Fragment.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/coreORB/SelectionDialogs/master/screens/Screenshot_ColorSelectionDialog.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/coreORB/SelectionDialogs/master/screens/Screenshot_IconSelectionDialog.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/ViHtarb/Tooltip/master/art/demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/jayrambhia/Tooltip/master/art/demo1.gif">
+<meta property="og:image" content="https://cloud.githubusercontent.com/assets/19874536/16546659/485f29ba-415a-11e6-898d-c880e4b643b6.gif">
+<meta property="og:image" content="https://cloud.githubusercontent.com/assets/19874536/16546707/9b891816-415b-11e6-9be6-735a5649f1d7.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/douglasjunior/android-simple-tooltip/master/screenshots/demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/wiki/kakajika/SwipeAwayDialog/images/octocats.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/wiki/kakajika/SwipeAwayDialog/images/dialogs.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/yarolegovich/lovelydialog/master/art/lovelydialogs_framed.png">
+<meta property="og:image" content="https://github.com/fengdai/AlertDialogPro/raw/master/image/holo_light_dialog_only.png">
+<meta property="og:image" content="https://github.com/fengdai/AlertDialogPro/raw/master/image/material_light_dialog_only.png">
+<meta property="og:image" content="https://github.com/fengdai/AlertDialogPro/raw/master/image/flavored_material_light.png">
+<meta property="og:image" content="https://github.com/fengdai/AlertDialogPro/raw/master/image/material_dark_dialog_only.png">
+<meta property="og:image" content="https://github.com/drakeet/MaterialDialog/blob/master/screenshots/s1.png">
+<meta property="og:image" content="https://github.com/drakeet/MaterialDialog/blob/master/screenshots/s4.png">
+<meta property="og:image" content="https://github.com/drakeet/MaterialDialog/blob/master/screenshots/s5.png">
+<meta property="og:image" content="https://github.com/nr4bt/dialogplus/blob/master/art/dialogplus.gif">
+<meta property="og:image" content="https://github.com/nr4bt/dialogplus/blob/master/art/dialogplusanim.gif">
+<meta property="og:image" content="https://github.com/pedant/sweet-alert-dialog/raw/master/change_type.gif">
+<meta property="og:image" content="https://github.com/H07000223/FlycoDialog_Master/blob/master/gif/preview_1.gif">
+<meta property="og:image" content="https://github.com/H07000223/FlycoDialog_Master/blob/master/gif/preview_2.gif">
+<meta property="og:image" content="https://github.com/H07000223/FlycoDialog_Master/blob/master/gif/preview_3.gif">
+<meta property="og:image" content="https://github.com/H07000223/FlycoDialog_Master/blob/master/gif/preview_4.gif">
+<meta property="og:image" content="https://github.com/H07000223/FlycoDialog_Master/blob/master/gif/preview_14.gif">
+<meta property="og:image" content="https://github.com/H07000223/FlycoDialog_Master/blob/master/gif/preview_17.gif">
+<meta property="og:image" content="https://github.com/tvbarthel/BlurDialogFragment/blob/master/static/action_bar_blur.png">
+<meta property="og:image" content="https://github.com/tvbarthel/BlurDialogFragment/blob/master/static/full_screen_blur.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/halysongoncalves/pugnotification/master/art/screenshot.png">
+<meta property="og:updated_time" content="2017-03-29T09:47:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="弹窗 Dialog - Android开源组件">
+<meta name="twitter:description" content="收集Android相关的对话框Dialog组件库, 包含：各种Dialog、PopupWindow、Toast、Snackbar notification ………">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/ahmadnajar10/fancyDialog/master/device-2017-03-08-171007.png">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="夜的灯" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>弹窗 Dialog - Android开源组件 | 夜的灯</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8349881c9f92999de4652aac9681a840";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Zero</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">探索新知识，突破自身技术壁垒</p>
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:jyg0124@126.com" title="Email"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Animation/">Animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cocos2d-x/">Cocos2d-x</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Custom/">Custom</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DEBUG调试/">DEBUG调试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dialog/">Dialog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Homebrew/">Homebrew</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Image/">Image</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ-IDEA/">IntelliJ IDEA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Layout/">Layout</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/List/">List</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Menu/">Menu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shadowsocks/">Shadowsocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Unity/">Unity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Utils/">Utils</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VPS/">VPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vultr/">Vultr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinkphp5/">thinkphp5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/列表/">列表</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动画/">动画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反编译/">反编译</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图片组件/">图片组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具类/">工具类</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/布局/">布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发工具/">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发框架/">开发框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源组件/">开源组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源项目/">开源项目</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/弹窗/">弹窗</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/快捷键/">快捷键</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游戏/">游戏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/破解/">破解</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/终端/">终端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络请求/">网络请求</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/自定义控件/">自定义控件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/菜单/">菜单</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">关于我</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Zero</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Zero</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">探索新知识，突破自身技术壁垒</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:jyg0124@126.com" title="Email"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-android-librarys/Dialog" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/android-librarys/Dialog/" class="article-date">
+      <time datetime="2017-03-24T08:14:12.000Z" itemprop="datePublished">2017-03-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        <h1 class="article-title" itemprop="name">
+      弹窗 Dialog - Android开源组件
+    </h1>
+      </header>
+      
+      <div class="article-info article-info-post">
+        <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/开源组件/">开源组件</a>
+    </div>
+        <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Dialog/">Dialog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开源组件/">开源组件</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/弹窗/">弹窗</a></li></ul>
+    </div>
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="弹框-Dialog"><a href="#弹框-Dialog" class="headerlink" title="弹框 Dialog"></a>弹框 Dialog</h2><p>包含：各种Dialog、PopupWindow、Toast、Snackbar notification ……</p>
+<p><a href="/android-librarys/Index/">&lt;==返回总纲==</a></p>
+<hr>
+<p><strong>fancyDialog</strong>: <a href="https://github.com/geniusforapp/fancyDialog" target="_blank" rel="external">https://github.com/geniusforapp/fancyDialog</a></p>
+<p>一个好看的 Dialog</p>
+<p><img src="https://raw.githubusercontent.com/ahmadnajar10/fancyDialog/master/device-2017-03-08-171007.png" width="320"></p>
+<hr>
+<p><strong>heins-input-dialogs</strong>: <a href="https://github.com/maiconhellmann/heins-input-dialogs" target="_blank" rel="external">https://github.com/maiconhellmann/heins-input-dialogs</a></p>
+<p>It is a library with several commonly used Input Dialogs implementations</p>
+<p><img src="https://raw.githubusercontent.com/maiconhellmann/heins-input-dialogs/master/docs/img/main_activity.png" width="270"> <img src="https://raw.githubusercontent.com/maiconhellmann/heins-input-dialogs/master/docs/img/calculator_input_dialog.png" width="270"> <img src="https://raw.githubusercontent.com/maiconhellmann/heins-input-dialogs/master/docs/img/heins_date_picker_dialog.png" width="270"></p>
+<hr>
+<p><strong>panter-dialog</strong>: <a href="https://github.com/kngfrhzs/panter-dialog" target="_blank" rel="external">https://github.com/kngfrhzs/panter-dialog</a></p>
+<p>Panter Dialog is an stylish android library that helps users add cool features like adding header and header logos</p>
+<p><img src="https://camo.githubusercontent.com/2f9c06e137b7d2b1b0a4d9763cf9cff70c1710f4/687474703a2f2f692e696d6775722e636f6d2f456d7067504d422e706e67" width="800"></p>
+<hr>
+<p><strong>LoadingDialog</strong>: <a href="https://github.com/ForgetAll/LoadingDialog" target="_blank" rel="external">https://github.com/ForgetAll/LoadingDialog</a></p>
+<p>一个简单好用的LoadingDialog</p>
+<p><img src="https://camo.githubusercontent.com/da188e3e26dbaa067d13a230f2ab8cb2669164f9/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313937363134372d366563356233306239666435393032332e6769663f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970" width="320"></p>
+<hr>
+<p><strong>flickabledialog</strong>: <a href="https://github.com/t-kurimura/flickabledialog" target="_blank" rel="external">https://github.com/t-kurimura/flickabledialog</a></p>
+<p>This dialog can flick and make it easy to dismiss sensuously</p>
+<p><img src="https://raw.githubusercontent.com/t-kurimura/flickabledialog/master/sample_throw.gif" width="320"> <img src="https://raw.githubusercontent.com/t-kurimura/flickabledialog/master/sample_back.gif" width="320"></p>
+<hr>
+<p><strong>BottomDialog</strong>: <a href="https://github.com/shaohui10086/BottomDialog" target="_blank" rel="external">https://github.com/shaohui10086/BottomDialog</a></p>
+<p>BottomDialog 是一个通过 DialogFragment 实现的底部弹窗布局，并且支持弹出动画，支持任意布局 <a href="http://shaohui.me" target="_blank" rel="external">http://shaohui.me</a></p>
+<p><img src="https://raw.githubusercontent.com/shaohui10086/BottomDialog/master/preview/bottom_dialog_share.gif" width="320"> <img src="https://raw.githubusercontent.com/shaohui10086/BottomDialog/master/preview/bottom_dialog_edit.gif" width="320"></p>
+<hr>
+<p><strong>PlaceSearchDialog</strong>: <a href="https://github.com/codemybrainsout/PlaceSearchDialog" target="_blank" rel="external">https://github.com/codemybrainsout/PlaceSearchDialog</a></p>
+<p>位置搜索智能提示框</p>
+<p><img src="https://raw.githubusercontent.com/codemybrainsout/PlaceSearchDialog/master/preview/preview.png" width="640"></p>
+<hr>
+<p><strong>FlipShare</strong>: <a href="https://github.com/JeasonWong/FlipShare" target="_blank" rel="external">https://github.com/JeasonWong/FlipShare</a></p>
+<p>炫酷分享组件</p>
+<p><img src="https://raw.githubusercontent.com/jeasonwong/FlipShare/master/screenshots/flipshare.gif" width="280"></p>
+<hr>
+<p><strong>DropDownWarning</strong>: <a href="https://github.com/Brudigem/DropDownWarning" target="_blank" rel="external">https://github.com/Brudigem/DropDownWarning</a></p>
+<p>掉落通知效果</p>
+<p><img src="https://raw.githubusercontent.com/Brudigem/DropDownWarning/master/gif/bounce.gif" width="320"></p>
+<hr>
+<p><strong>ColorDialog</strong>: <a href="https://github.com/andyxialm/ColorDialog" target="_blank" rel="external">https://github.com/andyxialm/ColorDialog</a></p>
+<p>ColorDialog &amp; PromptDialog</p>
+<p><img src="https://raw.githubusercontent.com/andyxialm/ColorDialog/master/art/Screenshot_type_success.png" width="270"> <img src="https://raw.githubusercontent.com/andyxialm/ColorDialog/master/art/Screenshot_type_info.png" width="270"> <img src="https://raw.githubusercontent.com/andyxialm/ColorDialog/master/art/Screenshot_type_help.png" width="270"></p>
+<hr>
+<p><strong>SlidingDrawer</strong>: <a href="https://github.com/PierfrancescoSoffritti/SlidingDrawer" target="_blank" rel="external">https://github.com/PierfrancescoSoffritti/SlidingDrawer</a></p>
+<p>Android custom View implementing the bottom sheet pattern</p>
+<p><img src="https://raw.githubusercontent.com/PierfrancescoSoffritti/SlidingDrawer/master/pics/SlidingView.gif" width="320"></p>
+<hr>
+<p><strong>BottomSheetExample</strong>: <a href="https://github.com/rubensousa/BottomSheetExample" target="_blank" rel="external">https://github.com/rubensousa/BottomSheetExample</a></p>
+<p>A sample project with the new BottomSheet classes from the android support library</p>
+<p><img src="https://raw.githubusercontent.com/rubensousa/BottomSheetExample/master/screens/screen-view.png" width="320"></p>
+<hr>
+<p><strong>Floating-Navigation-View</strong>: <a href="https://github.com/andremion/Floating-Navigation-View" target="_blank" rel="external">https://github.com/andremion/Floating-Navigation-View</a></p>
+<p>A simple Floating Action Button that shows an anchored Navigation View</p>
+<p><img src="https://raw.githubusercontent.com/andremion/Floating-Navigation-View/master/art/sample.gif" width="270"></p>
+<hr>
+<p><strong>android-adDialog</strong>: <a href="https://github.com/yipianfengye/android-adDialog" target="_blank" rel="external">https://github.com/yipianfengye/android-adDialog</a></p>
+<p>一个简单，强大的广告活动弹窗控件</p>
+<p><img src="https://raw.githubusercontent.com/yipianfengye/android-adDialog/master/images/ezgif.com-video-to-gif1.gif" width="320"></p>
+<hr>
+<p><strong>FloatViewFinal</strong>: <a href="https://github.com/pengjianbo/FloatViewFinal" target="_blank" rel="external">https://github.com/pengjianbo/FloatViewFinal</a></p>
+<p>泡椒网游戏 SDK Float View(悬浮窗)</p>
+<p><img src="https://raw.githubusercontent.com/pengjianbo/FloatViewFinal/master/images/screenshot0.png" width="320"></p>
+<hr>
+<p><strong>CookieBar</strong>: <a href="https://github.com/liuguangqiang/CookieBar" target="_blank" rel="external">https://github.com/liuguangqiang/CookieBar</a></p>
+<p>轻量级的消息提示库，请脑补SnackBar和Toast，但自定义更方便</p>
+<p><img src="https://raw.githubusercontent.com/liuguangqiang/CookieBar/master/arts/default.gif" width="320"> <img src="https://raw.githubusercontent.com/liuguangqiang/CookieBar/master/arts/custom.gif" width="320"></p>
+<hr>
+<p><strong>StyleableToast</strong>: <a href="https://github.com/Muddz/StyleableToast" target="_blank" rel="external">https://github.com/Muddz/StyleableToast</a></p>
+<p>StyleableToast</p>
+<p><img src="https://raw.githubusercontent.com/Muddz/StyleableToast/master/showcase.png" width="600"></p>
+<hr>
+<p><strong>Toasty</strong>: <a href="https://github.com/GrenderG/Toasty" target="_blank" rel="external">https://github.com/GrenderG/Toasty</a></p>
+<p>美化原生 Toast</p>
+<p><img src="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/scr1.png" width="320"> <img src="https://raw.githubusercontent.com/GrenderG/Toasty/master/art/scr2.png" width="320"></p>
+<hr>
+<p><strong>AchievementToast</strong>: <a href="https://github.com/mkodekar/AchievementToast" target="_blank" rel="external">https://github.com/mkodekar/AchievementToast</a></p>
+<p>Alternative to show Toast or an alert message just inside your activity</p>
+<p><img src="https://raw.githubusercontent.com/mkodekar/AchievementToast/master/achievementtoastlibrary/blobs/AchievementToast.gif" width="320"></p>
+<hr>
+<p><strong>TastyToast</strong>: <a href="https://github.com/yadav-rahul/TastyToast" target="_blank" rel="external">https://github.com/yadav-rahul/TastyToast</a></p>
+<p>Make your native android Toasts Tasty</p>
+<p><img src="https://raw.githubusercontent.com/yadav-rahul/TastyToast/lib/static/success.gif" width="270"> <img src="https://raw.githubusercontent.com/yadav-rahul/TastyToast/lib/static/default.gif" width="270"> <img src="https://raw.githubusercontent.com/yadav-rahul/TastyToast/lib/static/warning.gif" width="270"></p>
+<hr>
+<p><strong>RelativePopupWindow</strong>: <a href="https://github.com/kakajika/RelativePopupWindow" target="_blank" rel="external">https://github.com/kakajika/RelativePopupWindow</a></p>
+<p>Android PopupWindow that can be easily located relative to anchor View</p>
+<p><img src="https://raw.githubusercontent.com/kakajika/RelativePopupWindow/master/art/art1.gif" width="320"></p>
+<hr>
+<p><strong>MDDialog</strong>: <a href="https://github.com/Carbs0126/MDDialog" target="_blank" rel="external">https://github.com/Carbs0126/MDDialog</a></p>
+<p>MDDialog</p>
+<p><img src="https://raw.githubusercontent.com/Carbs0126/Screenshot/master/md_dialog_setview.png" width="300"> <img src="https://raw.githubusercontent.com/Carbs0126/Screenshot/master/md_dialog_setmessages.png" width="300"></p>
+<hr>
+<p><strong>ToastBar</strong>: <a href="https://github.com/SwiftyWang/ToastBar" target="_blank" rel="external">https://github.com/SwiftyWang/ToastBar</a></p>
+<p>一个ToastBar, 可以像Snackbar一样attach到viewgroup里面或者像Toast一样的overlay，支持Top/Bottom两种模式</p>
+<p><img src="https://raw.githubusercontent.com/SwiftyWang/ToastBar/master/sample/2016_11_25_10_11_11_10_37_12.gif" width="320"></p>
+<hr>
+<p><strong>MyDynamicToastLibrary</strong>: <a href="https://github.com/vatsaldesai92/MyDynamicToastLibrary" target="_blank" rel="external">https://github.com/vatsaldesai92/MyDynamicToastLibrary</a></p>
+<p>MyDynamicToastLibrary</p>
+<p><img src="https://raw.githubusercontent.com/vatsaldesai92/MyDynamicToastLibrary/master/app/src/main/assets/images/mydynamictoast1.png" width="320"> <img src="https://raw.githubusercontent.com/vatsaldesai92/MyDynamicToastLibrary/master/app/src/main/assets/images/mydynamictoast2.png" width="320"> <img src="https://raw.githubusercontent.com/vatsaldesai92/MyDynamicToastLibrary/master/app/src/main/assets/images/mydynamictoast3.png" width="320"></p>
+<hr>
+<p><strong>ToastLibrary</strong>: <a href="https://github.com/droidbyme/ToastLibrary" target="_blank" rel="external">https://github.com/droidbyme/ToastLibrary</a></p>
+<p>Library for custom toast</p>
+<p><img src="https://raw.githubusercontent.com/droidbyme/ToastLibrary/master/screenshots/screen1.png" width="320"> <img src="https://raw.githubusercontent.com/droidbyme/ToastLibrary/master/screenshots/screen2.png" width="320"></p>
+<hr>
+<p><strong>pretty-toast</strong>: <a href="https://github.com/CROSP/pretty-toast" target="_blank" rel="external">https://github.com/CROSP/pretty-toast</a></p>
+<p>This is quite simple toast library, that make it easier to show and create custom toast</p>
+<p><img src="https://raw.githubusercontent.com/CROSP/pretty-toast/master/screen-animation.gif" width="320"></p>
+<hr>
+<p><strong>magic-toast</strong>: <a href="https://github.com/ekimual/magic-toast" target="_blank" rel="external">https://github.com/ekimual/magic-toast</a></p>
+<p>Magic Toast</p>
+<p><img src="https://cloud.githubusercontent.com/assets/16832215/16327497/20a467be-3a02-11e6-892d-0870a95c4246.jpg" width="320"></p>
+<hr>
+<p><strong>SnackEngage</strong>: <a href="https://github.com/ligi/SnackEngage" target="_blank" rel="external">https://github.com/ligi/SnackEngage</a></p>
+<p>Engage Users with a Snackbar to e.g. rate or translate the app</p>
+<p><img src="https://raw.githubusercontent.com/ligi/SnackEngage/master/doc/screenshots/rate_small.png" width="320"> <img src="https://raw.githubusercontent.com/ligi/SnackEngage/master/doc/screenshots/betatest_small.png" width="320"></p>
+<hr>
+<p><strong>SnackbarUtils</strong>: <a href="https://github.com/HuanHaiLiuXin/SnackbarUtils" target="_blank" rel="external">https://github.com/HuanHaiLiuXin/SnackbarUtils</a></p>
+<p>Snackbar工具类,方法丰富,支持链式调用,可以满足Snackbar绝大部分的使用场景</p>
+<p><img src="https://raw.githubusercontent.com/HuanHaiLiuXin/SnackbarUtils/master/%E5%BD%95%E5%B1%8F/%E6%89%80%E6%9C%89%E5%8A%9F%E8%83%BD%E5%BD%95%E5%B1%8F.gif" width="320"></p>
+<hr>
+<p><strong>FluentSnackbar</strong>: <a href="https://github.com/AntonyGolovin/FluentSnackbar" target="_blank" rel="external">https://github.com/AntonyGolovin/FluentSnackbar</a></p>
+<p>Snackbar 封装库</p>
+<p><img src="https://raw.githubusercontent.com/AntonyGolovin/FluentSnackbar/master/art/screenshot.png" width="320"></p>
+<hr>
+<p><strong>SnackbarBuilder</strong>: <a href="https://github.com/andrewlord1990/SnackbarBuilder" target="_blank" rel="external">https://github.com/andrewlord1990/SnackbarBuilder</a></p>
+<p>Snackbar 的简单使用库</p>
+<hr>
+<p><strong>loadtoast</strong>: <a href="https://github.com/code-mc/loadtoast" target="_blank" rel="external">https://github.com/code-mc/loadtoast</a></p>
+<p>带动画反馈的 MD 风格 Toast</p>
+<p><img src="https://camo.githubusercontent.com/96592555c77792a317564369f8ff53bafcba2a13/687474703a2f2f692e696d6775722e636f6d2f57776f784c4d752e676966" width="320"></p>
+<hr>
+<p><strong>EasyLicensesDialog</strong>: <a href="https://github.com/marcoscgdev/EasyLicensesDialog" target="_blank" rel="external">https://github.com/marcoscgdev/EasyLicensesDialog</a></p>
+<p>EasyLicensesDialog</p>
+<p><img src="https://raw.githubusercontent.com/marcoscgdev/EasyLicensesDialog/master/sample/device-2016-06-21-005826.gif" width="320"></p>
+<hr>
+<p><strong>spots-dialog</strong>: <a href="https://github.com/d-max/spots-dialog" target="_blank" rel="external">https://github.com/d-max/spots-dialog</a></p>
+<p>Android AlertDialog with mowing dots progress indicator</p>
+<p><img src="https://camo.githubusercontent.com/d8108413298d70047f52cff9ac05603a5fd51988/687474703a2f2f332e62702e626c6f6773706f742e636f6d2f2d6c3155765657694d5341672f564c61355a6657346444492f41414141414141414e54632f7273576f755f71623042632f733332302f593648615453772e676966" width="320"></p>
+<hr>
+<p><strong>DialogAlchemy</strong>: <a href="https://github.com/NeoLSN/DialogAlchemy" target="_blank" rel="external">https://github.com/NeoLSN/DialogAlchemy</a></p>
+<p>简单的处理对话框旋转</p>
+<p><img src="https://github.com/NeoLSN/DialogAlchemy/blob/master/arts/device_portrait.png" height="300" alt="Portrait image"><br><img src="https://github.com/NeoLSN/DialogAlchemy/blob/master/arts/rotate.png" width="50" alt="Rotate screen"><br><img src="https://github.com/NeoLSN/DialogAlchemy/blob/master/arts/device_landscape.png" width="300" alt="Landscape image"></p>
+<hr>
+<p><strong>BottomDialogs</strong>: <a href="https://github.com/javiersantos/BottomDialogs" target="_blank" rel="external">https://github.com/javiersantos/BottomDialogs</a></p>
+<p>底部弹窗</p>
+<p><img src="https://raw.githubusercontent.com/javiersantos/BottomDialogs/master/Screenshots/gif-1.gif" width="260"> <img src="https://raw.githubusercontent.com/javiersantos/BottomDialogs/master/Screenshots/gif-2.gif" width="540"></p>
+<hr>
+<p><strong>AndroidColorPop</strong>: <a href="https://github.com/Mahfa/AndroidColorPop" target="_blank" rel="external">https://github.com/Mahfa/AndroidColorPop</a></p>
+<p>绚丽的 PopupWindow</p>
+<p><img src="https://raw.githubusercontent.com/Mahfa/AndroidColorPop/master/androidcolorpop.gif" width="200"></p>
+<hr>
+<p><strong>SelectionDialogs</strong>: <a href="https://github.com/coreORB/SelectionDialogs" target="_blank" rel="external">https://github.com/coreORB/SelectionDialogs</a></p>
+<p>快速选择 图标和颜色 的 Dialog</p>
+<p><img src="https://raw.githubusercontent.com/coreORB/SelectionDialogs/master/screens/Screenshot_Fragment.png" width="270"> <img src="https://raw.githubusercontent.com/coreORB/SelectionDialogs/master/screens/Screenshot_ColorSelectionDialog.png" width="270"> <img src="https://raw.githubusercontent.com/coreORB/SelectionDialogs/master/screens/Screenshot_IconSelectionDialog.png" width="270"></p>
+<hr>
+<p><strong>Tooltip</strong>: <a href="https://github.com/ViHtarb/Tooltip" target="_blank" rel="external">https://github.com/ViHtarb/Tooltip</a></p>
+<p>Simple to use customizable Android Tooltips library based on PopupWindow</p>
+<p><img src="https://raw.githubusercontent.com/ViHtarb/Tooltip/master/art/demo.gif" width="320"></p>
+<hr>
+<p><strong>Tooltip</strong>: <a href="https://github.com/jayrambhia/Tooltip" target="_blank" rel="external">https://github.com/jayrambhia/Tooltip</a></p>
+<p>给 View 添加提示</p>
+<p><img src="https://raw.githubusercontent.com/jayrambhia/Tooltip/master/art/demo1.gif" width="480"></p>
+<hr>
+<p><strong>tooltips</strong>: <a href="https://github.com/tomergoldst/tooltips" target="_blank" rel="external">https://github.com/tomergoldst/tooltips</a></p>
+<p>给 View 添加提示</p>
+<p><img src="https://cloud.githubusercontent.com/assets/19874536/16546659/485f29ba-415a-11e6-898d-c880e4b643b6.gif" width="320"> <img src="https://cloud.githubusercontent.com/assets/19874536/16546707/9b891816-415b-11e6-9be6-735a5649f1d7.gif" width="320"></p>
+<hr>
+<p><strong>android-simple-tooltip</strong>: <a href="https://github.com/douglasjunior/android-simple-tooltip" target="_blank" rel="external">https://github.com/douglasjunior/android-simple-tooltip</a></p>
+<p> simple library based on PopupWindow to create Tooltips on Android</p>
+<p><img src="https://raw.githubusercontent.com/douglasjunior/android-simple-tooltip/master/screenshots/demo.gif" width="320"></p>
+<hr>
+<p><strong>SwipeAwayDialog</strong>: <a href="https://github.com/kakajika/SwipeAwayDialog" target="_blank" rel="external">https://github.com/kakajika/SwipeAwayDialog</a></p>
+<p>DialogFragment swipeable away like Tinder UI</p>
+<p><img src="https://raw.githubusercontent.com/wiki/kakajika/SwipeAwayDialog/images/octocats.gif" width="320"> <img src="https://raw.githubusercontent.com/wiki/kakajika/SwipeAwayDialog/images/dialogs.gif" width="320"></p>
+<hr>
+<p><strong>LovelyDialog</strong>: <a href="https://github.com/yarolegovich/LovelyDialog" target="_blank" rel="external">https://github.com/yarolegovich/LovelyDialog</a></p>
+<p>This library is a set of simple wrapper classes that are aimed to help you easily create fancy material dialogs</p>
+<p><img src="https://raw.githubusercontent.com/yarolegovich/lovelydialog/master/art/lovelydialogs_framed.png" width="640"></p>
+<hr>
+<p><strong>material-dialogs</strong>: <a href="https://github.com/afollestad/material-dialogs" target="_blank" rel="external">https://github.com/afollestad/material-dialogs</a></p>
+<p>多种应用在使用，A beautiful dialogs API, enabling you to use Material designed dialogs down to API 8.<a href="http://aidanfollestad.com" target="_blank" rel="external">http://aidanfollestad.com</a></p>
+<hr>
+<p><strong>AlertDialogPro</strong>: <a href="https://github.com/fengdai/AlertDialogPro" target="_blank" rel="external">https://github.com/fengdai/AlertDialogPro</a></p>
+<p>This project can make it easy to theme and custom Android’s dialog. Also contains Holo and Material themes for old devices.</p>
+<p><img src="https://github.com/fengdai/AlertDialogPro/raw/master/image/holo_light_dialog_only.png" width="320"><br><img src="https://github.com/fengdai/AlertDialogPro/raw/master/image/material_light_dialog_only.png" width="320"><br><img src="https://github.com/fengdai/AlertDialogPro/raw/master/image/flavored_material_light.png" width="320"><br><img src="https://github.com/fengdai/AlertDialogPro/raw/master/image/material_dark_dialog_only.png" width="320"></p>
+<hr>
+<p><strong>MaterialDialog</strong>: <a href="https://github.com/drakeet/MaterialDialog" target="_blank" rel="external">https://github.com/drakeet/MaterialDialog</a></p>
+<p>（Deprecated）An Android dialog library, has strong extensibility, customizability, and for conveniently building Material Design Dialog in Android version 2.2 ~ L.</p>
+<p><img src="https://github.com/drakeet/MaterialDialog/blob/master/screenshots/s1.png" width="270"><br><img src="https://github.com/drakeet/MaterialDialog/blob/master/screenshots/s4.png" width="270"><br><img src="https://github.com/drakeet/MaterialDialog/blob/master/screenshots/s5.png" width="270"></p>
+<hr>
+<p><strong>dialogplus</strong>: <a href="https://github.com/orhanobut/dialogplus" target="_blank" rel="external">https://github.com/orhanobut/dialogplus</a></p>
+<p>Advanced dialog solution for android</p>
+<p><img src="https://github.com/nr4bt/dialogplus/blob/master/art/dialogplus.gif" width="320"><br><img src="https://github.com/nr4bt/dialogplus/blob/master/art/dialogplusanim.gif" width="320"></p>
+<hr>
+<p><strong>sweet-alert-dialog</strong>: <a href="https://github.com/pedant/sweet-alert-dialog" target="_blank" rel="external">https://github.com/pedant/sweet-alert-dialog</a></p>
+<p>SweetAlert for Android, a beautiful and clever alert dialog.<a href="http://www.pedant.cn" target="_blank" rel="external">http://www.pedant.cn</a></p>
+<p><img src="https://github.com/pedant/sweet-alert-dialog/raw/master/change_type.gif" width="320"></p>
+<hr>
+<p><strong>FlycoDialog_Master</strong>: <a href="https://github.com/H07000223/FlycoDialog_Master" target="_blank" rel="external">https://github.com/H07000223/FlycoDialog_Master</a></p>
+<p>A powerful android dialog library with inner widgets and animations supports customization.Easy to use, easy to customise. Support for Android 2.2 and up.</p>
+<p><img src="https://github.com/H07000223/FlycoDialog_Master/blob/master/gif/preview_1.gif" width="270"><br><img src="https://github.com/H07000223/FlycoDialog_Master/blob/master/gif/preview_2.gif" width="270"><br><img src="https://github.com/H07000223/FlycoDialog_Master/blob/master/gif/preview_3.gif" width="270"><br><img src="https://github.com/H07000223/FlycoDialog_Master/blob/master/gif/preview_4.gif" width="270"><br><img src="https://github.com/H07000223/FlycoDialog_Master/blob/master/gif/preview_14.gif" width="270"><br><img src="https://github.com/H07000223/FlycoDialog_Master/blob/master/gif/preview_17.gif" width="270"></p>
+<hr>
+<p><strong>BlurDialogFragment</strong>: <a href="https://github.com/tvbarthel/BlurDialogFragment" target="_blank" rel="external">https://github.com/tvbarthel/BlurDialogFragment</a></p>
+<p>Library project to display DialogFragment with a blur effect.</p>
+<p><img src="https://github.com/tvbarthel/BlurDialogFragment/blob/master/static/action_bar_blur.png" width="320"><br><img src="https://github.com/tvbarthel/BlurDialogFragment/blob/master/static/full_screen_blur.png" width="320"></p>
+<hr>
+<p><strong>Pugnotification</strong>: <a href="https://github.com/halysongoncalves/Pugnotification" target="_blank" rel="external">https://github.com/halysongoncalves/Pugnotification</a></p>
+<p>A powerful library for creating notifications in android platform.</p>
+<p><img src="https://raw.githubusercontent.com/halysongoncalves/pugnotification/master/art/screenshot.png" width="320"></p>
+<hr>
+      
+    </div>
+    
+  </div>
+  
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/android-librarys/Dialog/">弹窗 Dialog - Android开源组件</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Zero</a></p>
+        <p><span>发布时间:</span>2017-03-24 16:14</p>
+        <!-- <p><span>最后更新:</span>2017-03-29, 17:47:42</p> -->
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/android-librarys/Dialog/" title="弹窗 Dialog - Android开源组件">http://www.jiaoyigui.cn//android-librarys/Dialog/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.jiaoyigui.cn//android-librarys/Dialog/　　作者: Zero" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <!-- <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p> -->
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/android-librarys/Custom/">
+                    自定义控件 Custom - Android开源组件
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/android-librarys/Framework/">
+                    开发框架Framework - Android开源组件
+                </a>
+            </div>
+        
+    </nav>
+  
+</article>
+<div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#弹框-Dialog"><span class="toc-number">1.</span> <span class="toc-text">弹框 Dialog</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+    <div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"弹窗 Dialog - Android开源组件　| 夜的灯　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+    
+
+
+<div class="scroll" id="post-nav-button">
+        
+            <a href="/android-librarys/Custom/" title="上一篇: 自定义控件 Custom - Android开源组件">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/android-librarys/Framework/" title="下一篇: 开发框架Framework - Android开源组件">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/opensource/Android/">Android开源项目</a></li><li class="post-list-item"><a class="post-list-link" href="/opensource/Index/">索引 - 开源项目</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Utils/">辅助工具类 Utils - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Menu/">菜单 Menu - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Custom/">自定义控件 Custom - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Dialog/">弹窗 Dialog - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Framework/">开发框架Framework - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Layout/">布局Layout - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Animation/">动画Animation - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/List/">列表 List - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Network/">网络请求 Network - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Image/">图片 Image - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/php/thinkphp5-install/">Thinkphp5快速入门</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Index/">总纲 - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android/Android-Decompile/">Android反编译</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-Java/">开发环境 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-iTerm2/">终端方案iTerm2 + Zsh - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-Homebrew/">包管理工具 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-keymap/">常用快捷键 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-settings/">系统使用 - Java程序员眼中的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/server/VPS/">VPS + Shadowsocks 可以是什么，做什么</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-Debug/">IntelliJ IDEA DEBUG调试</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-For-Mac-Keys/">IntelliJ IDEA For Mac 快捷键</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-Settings/">IntelliJ IDEA 主题、字体、编辑区主题、文件编码修改、乱码问题</a></li><li class="post-list-item"><a class="post-list-link" href="/hexo/Hexo-Install/">搭建 Hexo 博客--增强篇</a></li></ul>
+
+
+    <script>
+        
+    </script></div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i>
+                2017 Zero
+            </div>
+            <div class="footer-right">
+                <!-- <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i> -->
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide()" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+<script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>

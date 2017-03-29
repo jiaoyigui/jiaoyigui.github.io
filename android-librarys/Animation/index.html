@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Zero">
+
+
+
+<meta name="description" content="收集Android相关的动画Animation组件库, 包含：各种动画效果Animation、Animator……">
+<meta property="og:type" content="article">
+<meta property="og:title" content="动画Animation - Android开源组件">
+<meta property="og:url" content="http://www.jiaoyigui.cn/android-librarys/Animation/index.html">
+<meta property="og:site_name" content="夜的灯">
+<meta property="og:description" content="收集Android相关的动画Animation组件库, 包含：各种动画效果Animation、Animator……">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/Github/o_download.gif">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/Github/download.gif">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/Github/o_volume.gif">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/Github/volume.gif">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/Github/o_loading.gif">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/Github/loading.gif">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/Github/o_play.gif">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/Github/play.gif">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/Github/o_search.gif">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/Github/search.gif">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/Github/o_scroll.gif">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/Github/scroll.gif">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/Github/o_refresh.gif">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/Github/refresh.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/cipherthinkers/shapeflyer/master/screenshots/shapeflyer-chaos.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/cipherthinkers/shapeflyer/master/screenshots/shapeflyer-select.gif">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/308526-da9f44278bc972c1.gif?imageMogr2/auto-orient/strip">
+<meta property="og:image" content="https://github.com/HuanHaiLiuXin/ILayoutAnimationController/raw/master/Screenshots/ILayoutAnimationController%E5%BD%95%E5%B1%8F.gif">
+<meta property="og:image" content="https://github.com/WakeHao/TransitionExample/raw/master/gif/first.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/jrummyapps/AndroidAnimations/master/art/technique.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/aarsy/GoogleMapsAnimations/master/gifs/Sample1.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/aarsy/GoogleMapsAnimations/master/gifs/Sample3.gif">
+<meta property="og:image" content="https://github.com/HeZaiJin/AnimatedRecordingView/raw/master/screen_shot/animated_recording.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/JetradarMobile/DesertPlaceholder/master/art/desertplaceholder.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Ajian-studio/GABottleLoading/master/raw/totalAnimation.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Luolc/EmojiRain/master/ohters/dropping-demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/alxrm/youtube-play-icon/master/art/play.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/zhangyuChen1991/some_sources/master/ow_show_1.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/yuweiguocn/SquareLoading/master/art/square-loading-demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/UFreedom/FloatingView/master/images/demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/thunderrise/android-TNRAnimationHelper/master/images/rotation.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ImmortalZ/TransitionHelper/master/screenshots/image.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ImmortalZ/TransitionHelper/master/screenshots/button.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Cleveroad/BubbleAnimationLayout/master/images/demo_.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/nickbutcher/AnimatorDurationTile/master/screenshots/duration_scale_toggle_demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/xuyisheng/NaturalAnim/master/pic/7.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/xuyisheng/NaturalAnim/master/pic/5.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/ebf3dfcf38c0562fd19187eaa7d142460e0e41df/687474703a2f2f676875692e752e71696e6975646e2e636f6d2f676966332e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/b5973bb46cd2bc5d7d89133aa2878d6f49846c7c/687474703a2f2f676875692e752e71696e6975646e2e636f6d2f676966322e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/f1c501d454122b9e9238fa4f81b30dcb1610576a/687474703a2f2f676875692e752e71696e6975646e2e636f6d2f676966342e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/eb93e349cec4bd5c6ae118b041b19fc9b6156438/687474703a2f2f676875692e752e71696e6975646e2e636f6d2f67696666352e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/dda6ddeba8bc975510b6ef260d5abc1e257f74af/687474703a2f2f676875692e752e71696e6975646e2e636f6d2f676966372e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/andyb129/ClockScroller/master/screenshots/clock_scroller_anim.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Cleveroad/BubbleAnimationLayout/master/images/demo_.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Yellow5A5/ActSwitchAnimTool/master/image/demo_show1.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Yellow5A5/ActSwitchAnimTool/master/image/demo_show2.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/4xes/FlipAnimation/master/art/readme_demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/renaudcerrato/DoorSignView/master/assets/sample.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/LiveTyping/CannyViewAnimator/master/readme_extra/top_1.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/LiveTyping/CannyViewAnimator/master/readme_extra/top_2.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/LiveTyping/CannyViewAnimator/master/readme_extra/top_3.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/evelyne24/ClockDrawableAnimation/master/Screenshot.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jeasonwong/Particle/master/screenshots/particle.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/lgvalle/Material-Animations/master/screenshots/transition_explode.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/lgvalle/Material-Animations/master/screenshots/transition_slide.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/lgvalle/Material-Animations/master/screenshots/transition_fade.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Jaouan/Sending-Animation-Example/master/art/demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/jeasonwong/signuptransition/master/screenshots/scene.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/f8e66102a3782e6b1bd6116bc2fee0179c375a5e/687474703a2f2f69322e7069696d672e636f6d2f313037302f306133626265623762373363366638372e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/ybq/nougat-boot-animation/master/art/effect.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/hitherejoe/animate/master/images/object_animator.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/hitherejoe/animate/master/images/circular_reveal.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/hitherejoe/animate/master/images/explode_window_transition.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/cc7f7f9c3869e07623e789df154b10878e0506fa/68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d766965772669643d3042396244454e7949414254365230347a4e446c54656c633051324d">
+<meta property="og:image" content="https://camo.githubusercontent.com/752e0e35b15b6b684cee90b6bf4309f387caa36f/687474703a2f2f66726f6765726d63732e6769746875622e696f2f696d616765732f32322f627574746f6e5f616e696d2e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/48830e431dc90cd6e96da0cb07846ee80b08d3f9/687474703a2f2f696d6731312e686f7374696e67706963732e6e65742f706963732f383739353037616e696d61746564546f6f6c6261722e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/chenupt/BezierDemo/master/pic/bezier.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/hujiaweibujidao/wava/master/wava.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/MartinRGB/RapidInterpolator/master/example.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/hujiaweibujidao/yava/master/yava.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/tuenti/animated-circle-progress-view/master/media/sample.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/florent37/Depth/master/media/default.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/florent37/Depth/master/media/revert.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/wiki/kakajika/FragmentAnimations/images/cube.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/wiki/kakajika/FragmentAnimations/images/pushmove.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/v-b7/ExpandableSearchView/master/demo.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/82e22c4fd86e8de5bcd0ccf4bdcc9dc1a0b7119f/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f37656630316663616777316632677a797973796772673230616e303568337a622e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/c4208e7d4d68d8a7154f764ab1b431fcbd0df0ec/687474703a2f2f7777332e73696e61696d672e636e2f6d773639302f376566303166636167773166326b6678346e303662673230623530356c3074652e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/45884a4adb99009c95670e0dd12e40e40918c92d/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f37656630316663616777316632677a797a64703576673230616e303568676e672e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/75864e0321a12be349e07c65f86ca5fa5b46bbc7/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f376566303166636167773166326b67386f3268747a673230623530356c6a726a2e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/81813780/AVLoadingIndicatorView/master/screenshots/avi.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ybq/AndroidSpinKit/master/art/screen.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/smasoumi/FAB-Loading/master/images/marvel_loader.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/44affb72f0688c213500917009a1680b41492413/687474703a2f2f7777322e73696e61696d672e636e2f6d773639302f36313064633033346a7731656a356969686a746c35673230387a3066326e70642e676966">
+<meta property="og:image" content="https://github.com/gelitenight/WaveView/blob/master/screenshot.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/c41223966bdfed2260dbbabbcbae648e5db542c6/687474703a2f2f7777332e73696e61696d672e636e2f6d773639302f3631306463303334677731656a37356d69327737376732306333306a623471722e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/f64413139bbaa918131384d3597c33e39333aa7f/687474703a2f2f7777332e73696e61696d672e636e2f6d773639302f36313064633033346a773165677a6f7236366f6a64673230393530666b6e70652e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/e7ea7ca41a3a3e03616d0627413e57a0854e2eba/687474703a2f2f686162726173746f726167652e6f72672f67657470726f2f686162722f706f73745f696d616765732f6539332f3337632f3064612f65393333376330646163633335353532336164646466313534356235376535612e676966">
+<meta property="og:image" content="https://github.com/skyfishjy/android-ripple-background/blob/master/previews/rippleSimple.gif">
+<meta property="og:image" content="https://github.com/skyfishjy/android-ripple-background/blob/master/previews/rippleFoundDevice.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/d20ac6fb1cb14db4b69ab5e48ebd609aab1f6831/687474703a2f2f6f70656e61706869642e6769746875622e636f6d2f696d616765732f666c6970766965772d686f72697a6f6e74616c2d64656d6f2e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/c260bd35546a4fa2a7a556bec851294a26639345/687474703a2f2f6f70656e61706869642e6769746875622e636f6d2f696d616765732f666c6970766965772d64656d6f2e676966">
+<meta property="og:image" content="https://github.com/DesarrolloAntonio/FragmentTransactionExtended/blob/master/fragmentTransactionExample/cap1.gif">
+<meta property="og:image" content="https://github.com/DesarrolloAntonio/FragmentTransactionExtended/blob/master/fragmentTransactionExample/cap2.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/b22b160910884cdd5984b67864b5786e4d34a793/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36313064633033346a77316568757a6f756c346838673230623030676d6839732e676966">
+<meta property="og:image" content="https://github.com/wasabeef/awesome-android-ui/blob/master/art/EasyAndroidAnimations.gif">
+<meta property="og:image" content="https://github.com/geftimov/android-pathview/blob/master/art/settings.gif">
+<meta property="og:image" content="https://github.com/sephiroth74/ViewRevealAnimator/blob/master/output.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/942dff1cf0e36fca72e5a6f513b0853c61dca7a9/687474703a2f2f692e696d6775722e636f6d2f445369517862672e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/06e3d80b9d4377192f145758fb1046c366c1b3c8/687474703a2f2f692e696d6775722e636f6d2f614c634c72476b2e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/kongnanlive/SearchMenuAnim/master/search.gif">
+<meta property="og:image" content="https://github.com/cdflynn/crossview/blob/master/sample/images/cross_btn_2.gif?raw=true">
+<meta property="og:image" content="https://github.com/cdflynn/crossview/blob/master/sample/images/cross_btn.gif?raw=true">
+<meta property="og:image" content="https://raw.githubusercontent.com/Narfss/ParallaxEverywhere/master/parallax-everywhere-animation-optimize.gif">
+<meta property="og:image" content="http://www.23code.com/wp-content/uploads/2015/07/device-2015-07-24-143320.jpg">
+<meta property="og:image" content="https://github.com/MasayukiSuda/EasingInterpolator/blob/master/art/FPSAnimator1.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/575b98a56c5546043ec045d044429590e4a623fe/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f3136363836362d376434313538646532636534306139612e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/cc415e73399ab06a9212eb1ee65f197939213b7f/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f3136363836362d366534303132633139343961616137612e676966">
+<meta property="og:updated_time" content="2017-03-29T09:47:51.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="动画Animation - Android开源组件">
+<meta name="twitter:description" content="收集Android相关的动画Animation组件库, 包含：各种动画效果Animation、Animator……">
+<meta name="twitter:image" content="http://odck16ake.bkt.clouddn.com/Github/o_download.gif">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="夜的灯" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>动画Animation - Android开源组件 | 夜的灯</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8349881c9f92999de4652aac9681a840";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Zero</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">探索新知识，突破自身技术壁垒</p>
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:jyg0124@126.com" title="Email"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Animation/">Animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cocos2d-x/">Cocos2d-x</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Custom/">Custom</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DEBUG调试/">DEBUG调试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dialog/">Dialog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Homebrew/">Homebrew</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Image/">Image</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ-IDEA/">IntelliJ IDEA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Layout/">Layout</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/List/">List</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Menu/">Menu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shadowsocks/">Shadowsocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Unity/">Unity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Utils/">Utils</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VPS/">VPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vultr/">Vultr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinkphp5/">thinkphp5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/列表/">列表</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动画/">动画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反编译/">反编译</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图片组件/">图片组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具类/">工具类</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/布局/">布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发工具/">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发框架/">开发框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源组件/">开源组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源项目/">开源项目</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/弹窗/">弹窗</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/快捷键/">快捷键</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游戏/">游戏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/破解/">破解</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/终端/">终端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络请求/">网络请求</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/自定义控件/">自定义控件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/菜单/">菜单</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">关于我</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Zero</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Zero</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">探索新知识，突破自身技术壁垒</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:jyg0124@126.com" title="Email"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-android-librarys/Animation" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/android-librarys/Animation/" class="article-date">
+      <time datetime="2017-03-24T05:14:12.000Z" itemprop="datePublished">2017-03-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        <h1 class="article-title" itemprop="name">
+      动画Animation - Android开源组件
+    </h1>
+      </header>
+      
+      <div class="article-info article-info-post">
+        <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/开源组件/">开源组件</a>
+    </div>
+        <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Animation/">Animation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动画/">动画</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开源组件/">开源组件</a></li></ul>
+    </div>
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="动画-Animation"><a href="#动画-Animation" class="headerlink" title="动画 Animation"></a>动画 Animation</h2><p>包含：各种动画效果Animation、Animator……</p>
+<p><a href="/android-librarys/Index/">&lt;==返回总纲==</a></p>
+<hr>
+<p><strong>ENViews</strong>: <a href="https://github.com/codeestX/ENViews" target="_blank" rel="external">https://github.com/codeestX/ENViews</a></p>
+<p>ENViews, 一个华丽丽的动效控件库</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Original design</th>
+<th style="text-align:center">Android demo</th>
+<th style="text-align:center">Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="http://odck16ake.bkt.clouddn.com/Github/o_download.gif" alt=""></td>
+<td style="text-align:center"><img src="http://odck16ake.bkt.clouddn.com/Github/download.gif" alt=""></td>
+<td style="text-align:center">ENDownloadView</td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="http://odck16ake.bkt.clouddn.com/Github/o_volume.gif" alt=""></td>
+<td style="text-align:center"><img src="http://odck16ake.bkt.clouddn.com/Github/volume.gif" alt=""></td>
+<td style="text-align:center">ENVolumeView</td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="http://odck16ake.bkt.clouddn.com/Github/o_loading.gif" alt=""></td>
+<td style="text-align:center"><img src="http://odck16ake.bkt.clouddn.com/Github/loading.gif" alt=""></td>
+<td style="text-align:center">ENLoadingView</td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="http://odck16ake.bkt.clouddn.com/Github/o_play.gif" alt=""></td>
+<td style="text-align:center"><img src="http://odck16ake.bkt.clouddn.com/Github/play.gif" alt=""></td>
+<td style="text-align:center">ENPlayView</td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="http://odck16ake.bkt.clouddn.com/Github/o_search.gif" alt=""></td>
+<td style="text-align:center"><img src="http://odck16ake.bkt.clouddn.com/Github/search.gif" alt=""></td>
+<td style="text-align:center">ENSearchView</td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="http://odck16ake.bkt.clouddn.com/Github/o_scroll.gif" alt=""></td>
+<td style="text-align:center"><img src="http://odck16ake.bkt.clouddn.com/Github/scroll.gif" alt=""></td>
+<td style="text-align:center">ENScrollView</td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="http://odck16ake.bkt.clouddn.com/Github/o_refresh.gif" alt=""></td>
+<td style="text-align:center"><img src="http://odck16ake.bkt.clouddn.com/Github/refresh.gif" alt=""></td>
+<td style="text-align:center">ENRefreshView</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>shapeflyer</strong>: <a href="https://github.com/cipherthinkers/shapeflyer" target="_blank" rel="external">https://github.com/cipherthinkers/shapeflyer</a></p>
+<p>shapeflyer</p>
+<p><img src="https://raw.githubusercontent.com/cipherthinkers/shapeflyer/master/screenshots/shapeflyer-chaos.gif" width="320"> <img src="https://raw.githubusercontent.com/cipherthinkers/shapeflyer/master/screenshots/shapeflyer-select.gif" width="320"></p>
+<hr>
+<p><strong>SpringAnimation</strong>: <a href="https://github.com/brucevanfdm/SpringAnimation" target="_blank" rel="external">https://github.com/brucevanfdm/SpringAnimation</a></p>
+<p>SpringAnimation,安卓模拟弹簧动画</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/308526-da9f44278bc972c1.gif?imageMogr2/auto-orient/strip" width="320"></p>
+<hr>
+<p><strong>ILayoutAnimationController</strong>: <a href="https://github.com/HuanHaiLiuXin/ILayoutAnimationController" target="_blank" rel="external">https://github.com/HuanHaiLiuXin/ILayoutAnimationController</a></p>
+<p>自定义LayoutAnimationController，一行代码搞定布局动画</p>
+<p><img src="https://github.com/HuanHaiLiuXin/ILayoutAnimationController/raw/master/Screenshots/ILayoutAnimationController%E5%BD%95%E5%B1%8F.gif" width="320"></p>
+<hr>
+<p><strong>TransitionExample</strong>: <a href="https://github.com/WakeHao/TransitionExample" target="_blank" rel="external">https://github.com/WakeHao/TransitionExample</a></p>
+<p>Android Transition Framework详解—超炫的动画框架</p>
+<p><img src="https://github.com/WakeHao/TransitionExample/raw/master/gif/first.gif" width="320"></p>
+<hr>
+<p><strong>AndroidAnimations</strong>: <a href="https://github.com/jrummyapps/AndroidAnimations" target="_blank" rel="external">https://github.com/jrummyapps/AndroidAnimations</a></p>
+<p>A bunch of fun animations for Android</p>
+<p><img src="https://raw.githubusercontent.com/jrummyapps/AndroidAnimations/master/art/technique.gif" width="320"></p>
+<hr>
+<p><strong>GoogleMapsAnimations</strong>: <a href="https://github.com/aarsy/GoogleMapsAnimations" target="_blank" rel="external">https://github.com/aarsy/GoogleMapsAnimations</a></p>
+<p>显示雷达和谷歌地图上的圆形涟漪波纹效应</p>
+<p><img src="https://raw.githubusercontent.com/aarsy/GoogleMapsAnimations/master/gifs/Sample1.gif" width="320"> <img src="https://raw.githubusercontent.com/aarsy/GoogleMapsAnimations/master/gifs/Sample3.gif" width="320"></p>
+<hr>
+<p><strong>AnimatedRecordingView</strong>: <a href="https://github.com/HeZaiJin/AnimatedRecordingView" target="_blank" rel="external">https://github.com/HeZaiJin/AnimatedRecordingView</a></p>
+<p>一个有趣的Android录音动画</p>
+<p><img src="https://github.com/HeZaiJin/AnimatedRecordingView/raw/master/screen_shot/animated_recording.gif" width="320"></p>
+<hr>
+<p><strong>DesertPlaceholder</strong>: <a href="https://github.com/JetradarMobile/DesertPlaceholder" target="_blank" rel="external">https://github.com/JetradarMobile/DesertPlaceholder</a></p>
+<p>Animated placeholder in desert style</p>
+<p><img src="https://raw.githubusercontent.com/JetradarMobile/DesertPlaceholder/master/art/desertplaceholder.gif" width="270"></p>
+<hr>
+<p><strong>GABottleLoading</strong>: <a href="https://github.com/Ajian-studio/GABottleLoading" target="_blank" rel="external">https://github.com/Ajian-studio/GABottleLoading</a></p>
+<p>Bezier storm（贝塞尔风暴）</p>
+<p><img src="https://raw.githubusercontent.com/Ajian-studio/GABottleLoading/master/raw/totalAnimation.gif" width="300"></p>
+<hr>
+<p><strong>EmojiRain</strong>: <a href="https://github.com/Luolc/EmojiRain" target="_blank" rel="external">https://github.com/Luolc/EmojiRain</a></p>
+<p>仿微信掉落表情包效果</p>
+<p><img src="https://raw.githubusercontent.com/Luolc/EmojiRain/master/ohters/dropping-demo.gif" width="320"></p>
+<hr>
+<p><strong>youtube-play-icon</strong>: <a href="https://github.com/alxrm/youtube-play-icon" target="_blank" rel="external">https://github.com/alxrm/youtube-play-icon</a></p>
+<p>Material style morphing play-pause drawable for Android</p>
+<p><img src="https://raw.githubusercontent.com/alxrm/youtube-play-icon/master/art/play.gif" width="320"></p>
+<hr>
+<p><strong>OverWatchLoading</strong>: <a href="https://github.com/zhangyuChen1991/OverWatchLoading" target="_blank" rel="external">https://github.com/zhangyuChen1991/OverWatchLoading</a></p>
+<p>守望先锋的加载效果</p>
+<p><img src="https://raw.githubusercontent.com/zhangyuChen1991/some_sources/master/ow_show_1.gif" width="320"></p>
+<hr>
+<p><strong>SquareLoading</strong>: <a href="https://github.com/yuweiguocn/SquareLoading" target="_blank" rel="external">https://github.com/yuweiguocn/SquareLoading</a></p>
+<p>Android 方块加载器动画</p>
+<p><img src="https://raw.githubusercontent.com/yuweiguocn/SquareLoading/master/art/square-loading-demo.gif" width="260"></p>
+<hr>
+<p><strong>FloatingView</strong>: <a href="https://github.com/UFreedom/FloatingView" target="_blank" rel="external">https://github.com/UFreedom/FloatingView</a></p>
+<p>一个能够让 View 执行漂亮的漂浮动画的库</p>
+<p><img src="https://raw.githubusercontent.com/UFreedom/FloatingView/master/images/demo.gif" width="320"></p>
+<hr>
+<p><strong>android-TNRAnimationHelper</strong>: <a href="https://github.com/thunderrise/android-TNRAnimationHelper" target="_blank" rel="external">https://github.com/thunderrise/android-TNRAnimationHelper</a></p>
+<p>Android 创造更精致的动画效果库</p>
+<p><img src="https://raw.githubusercontent.com/thunderrise/android-TNRAnimationHelper/master/images/rotation.gif" width="640"></p>
+<hr>
+<p><strong>TransitionHelper</strong>: <a href="https://github.com/ImmortalZ/TransitionHelper" target="_blank" rel="external">https://github.com/ImmortalZ/TransitionHelper</a></p>
+<p>兼容5.0以下转场动画帮助类</p>
+<p><img src="https://raw.githubusercontent.com/ImmortalZ/TransitionHelper/master/screenshots/image.gif" width="320"> <img src="https://raw.githubusercontent.com/ImmortalZ/TransitionHelper/master/screenshots/button.gif" width="320"></p>
+<hr>
+<p><strong>BubbleAnimationLayout</strong>: <a href="https://github.com/Cleveroad/BubbleAnimationLayout" target="_blank" rel="external">https://github.com/Cleveroad/BubbleAnimationLayout</a></p>
+<p>让你的 App 不再那么无聊和单调，气泡风格的过渡动画效果</p>
+<p><img src="https://raw.githubusercontent.com/Cleveroad/BubbleAnimationLayout/master/images/demo_.gif" width="640"></p>
+<hr>
+<p><strong>AnimatorDurationTile</strong>: <a href="https://github.com/nickbutcher/AnimatorDurationTile" target="_blank" rel="external">https://github.com/nickbutcher/AnimatorDurationTile</a></p>
+<p>A quick settings tile to quickly set the animator duration scale</p>
+<p><img src="https://raw.githubusercontent.com/nickbutcher/AnimatorDurationTile/master/screenshots/duration_scale_toggle_demo.gif" width="280"></p>
+<hr>
+<p><strong>NaturalAnim</strong>: <a href="https://github.com/xuyisheng/NaturalAnim" target="_blank" rel="external">https://github.com/xuyisheng/NaturalAnim</a></p>
+<p>模拟自然动画的精髓——TimeInterpolator与TypeEvaluator</p>
+<p><img src="https://raw.githubusercontent.com/xuyisheng/NaturalAnim/master/pic/7.gif" width="320"> <img src="https://raw.githubusercontent.com/xuyisheng/NaturalAnim/master/pic/5.gif" width="320"></p>
+<hr>
+<p><strong>AnimateVectorDrawableDEMO</strong>: <a href="https://github.com/ghuiii/AnimateVectorDrawableDEMO" target="_blank" rel="external">https://github.com/ghuiii/AnimateVectorDrawableDEMO</a></p>
+<p>通过 AnimateVectoreDrawer 实现的一些动画效果</p>
+<p><img src="https://camo.githubusercontent.com/ebf3dfcf38c0562fd19187eaa7d142460e0e41df/687474703a2f2f676875692e752e71696e6975646e2e636f6d2f676966332e676966" width="160"> <img src="https://camo.githubusercontent.com/b5973bb46cd2bc5d7d89133aa2878d6f49846c7c/687474703a2f2f676875692e752e71696e6975646e2e636f6d2f676966322e676966" width="160"> <img src="https://camo.githubusercontent.com/f1c501d454122b9e9238fa4f81b30dcb1610576a/687474703a2f2f676875692e752e71696e6975646e2e636f6d2f676966342e676966" width="160"> <img src="https://camo.githubusercontent.com/eb93e349cec4bd5c6ae118b041b19fc9b6156438/687474703a2f2f676875692e752e71696e6975646e2e636f6d2f67696666352e676966" width="160"> <img src="https://camo.githubusercontent.com/dda6ddeba8bc975510b6ef260d5abc1e257f74af/687474703a2f2f676875692e752e71696e6975646e2e636f6d2f676966372e676966" width="160"></p>
+<hr>
+<p><strong>ClockScroller</strong>: <a href="https://github.com/andyb129/ClockScroller" target="_blank" rel="external">https://github.com/andyb129/ClockScroller</a></p>
+<p>A cool animated RecyclerView clock face scroller handle inspired by the following MaterialUp submission</p>
+<p><img src="https://raw.githubusercontent.com/andyb129/ClockScroller/master/screenshots/clock_scroller_anim.gif" width="320"></p>
+<hr>
+<p><strong>BubbleAnimationLayout</strong>: <a href="https://github.com/Cleveroad/BubbleAnimationLayout" target="_blank" rel="external">https://github.com/Cleveroad/BubbleAnimationLayout</a></p>
+<p>气泡动画</p>
+<p><img src="https://raw.githubusercontent.com/Cleveroad/BubbleAnimationLayout/master/images/demo_.gif" width="640"></p>
+<hr>
+<p><strong>ActSwitchAnimTool</strong>: <a href="https://github.com/Yellow5A5/ActSwitchAnimTool" target="_blank" rel="external">https://github.com/Yellow5A5/ActSwitchAnimTool</a></p>
+<p>兼容4.0以上版本的点击扩散动画库，几行代码实现Activity转场动画效果 及新增自定义界面转场动画</p>
+<p><img src="https://raw.githubusercontent.com/Yellow5A5/ActSwitchAnimTool/master/image/demo_show1.gif" width="320"> <img src="https://raw.githubusercontent.com/Yellow5A5/ActSwitchAnimTool/master/image/demo_show2.gif" width="320"></p>
+<hr>
+<p><strong>FlipAnimation</strong>: <a href="https://github.com/4xes/FlipAnimation" target="_blank" rel="external">https://github.com/4xes/FlipAnimation</a></p>
+<p>双面翻转 View 效果</p>
+<p><img src="https://raw.githubusercontent.com/4xes/FlipAnimation/master/art/readme_demo.gif" width="240"></p>
+<hr>
+<p><strong>DoorSignView</strong>: <a href="https://github.com/renaudcerrato/DoorSignView" target="_blank" rel="external">https://github.com/renaudcerrato/DoorSignView</a></p>
+<p>类似商店关门的动画</p>
+<p><img src="https://raw.githubusercontent.com/renaudcerrato/DoorSignView/master/assets/sample.gif" width="240"></p>
+<hr>
+<p><strong>CannyViewAnimator</strong>: <a href="https://github.com/LiveTyping/CannyViewAnimator" target="_blank" rel="external">https://github.com/LiveTyping/CannyViewAnimator</a></p>
+<p>好看的动画</p>
+<p><img src="https://raw.githubusercontent.com/LiveTyping/CannyViewAnimator/master/readme_extra/top_1.gif" width="240"> <img src="https://raw.githubusercontent.com/LiveTyping/CannyViewAnimator/master/readme_extra/top_2.gif" width="240"> <img src="https://raw.githubusercontent.com/LiveTyping/CannyViewAnimator/master/readme_extra/top_3.gif" width="240"></p>
+<hr>
+<p><strong>ClockDrawableAnimation</strong>: <a href="https://github.com/evelyne24/ClockDrawableAnimation" target="_blank" rel="external">https://github.com/evelyne24/ClockDrawableAnimation</a></p>
+<p>Android animated clock Drawable</p>
+<p><img src="https://raw.githubusercontent.com/evelyne24/ClockDrawableAnimation/master/Screenshot.png" width="320"></p>
+<hr>
+<p><strong>Particle</strong>: <a href="https://github.com/JeasonWong/Particle" target="_blank" rel="external">https://github.com/JeasonWong/Particle</a></p>
+<p>可用于splash的动画</p>
+<p><img src="https://raw.githubusercontent.com/jeasonwong/Particle/master/screenshots/particle.gif" width="320"></p>
+<hr>
+<p><strong>Material-Animations</strong>: <a href="https://github.com/lgvalle/Material-Animations" target="_blank" rel="external">https://github.com/lgvalle/Material-Animations</a></p>
+<p>Android Transition animations explanation with examples</p>
+<p><img src="https://raw.githubusercontent.com/lgvalle/Material-Animations/master/screenshots/transition_explode.gif" width="270"> <img src="https://raw.githubusercontent.com/lgvalle/Material-Animations/master/screenshots/transition_slide.gif" width="270"> <img src="https://raw.githubusercontent.com/lgvalle/Material-Animations/master/screenshots/transition_fade.gif" width="270"></p>
+<hr>
+<p><strong>Sending-Animation-Example</strong>: <a href="https://github.com/Jaouan/Sending-Animation-Example" target="_blank" rel="external">https://github.com/Jaouan/Sending-Animation-Example</a></p>
+<p>Android 炫酷发送效果 Demo</p>
+<p><img src="https://raw.githubusercontent.com/Jaouan/Sending-Animation-Example/master/art/demo.gif" width="320"></p>
+<hr>
+<p><strong>SignUpTransition</strong>: <a href="https://github.com/JeasonWong/SignUpTransition" target="_blank" rel="external">https://github.com/JeasonWong/SignUpTransition</a></p>
+<p>炫酷的注册登录动画</p>
+<p><img src="https://raw.githubusercontent.com/jeasonwong/signuptransition/master/screenshots/scene.gif" width="300"></p>
+<hr>
+<p><strong>SlackLoadingView</strong>: <a href="https://github.com/JeasonWong/SlackLoadingView" target="_blank" rel="external">https://github.com/JeasonWong/SlackLoadingView</a></p>
+<p>Slack的Loading动画</p>
+<p><img src="https://camo.githubusercontent.com/f8e66102a3782e6b1bd6116bc2fee0179c375a5e/687474703a2f2f69322e7069696d672e636f6d2f313037302f306133626265623762373363366638372e676966" width="320"></p>
+<hr>
+<p><strong>nougat-boot-animation</strong>: <a href="https://github.com/ybq/nougat-boot-animation" target="_blank" rel="external">https://github.com/ybq/nougat-boot-animation</a></p>
+<p>安卓7.0启动动画</p>
+<p><img src="https://raw.githubusercontent.com/ybq/nougat-boot-animation/master/art/effect.gif" width="320"></p>
+<hr>
+<p><strong>animate</strong>: <a href="https://github.com/hitherejoe/animate" target="_blank" rel="external">https://github.com/hitherejoe/animate</a></p>
+<p>多种动画效果</p>
+<p><img src="https://raw.githubusercontent.com/hitherejoe/animate/master/images/object_animator.gif" width="270"> <img src="https://raw.githubusercontent.com/hitherejoe/animate/master/images/circular_reveal.gif" width="270"> <img src="https://raw.githubusercontent.com/hitherejoe/animate/master/images/explode_window_transition.gif" width="270"></p>
+<hr>
+<p><strong>crystal-preloaders</strong>: <a href="https://github.com/syedowaisali/crystal-preloaders" target="_blank" rel="external">https://github.com/syedowaisali/crystal-preloaders</a></p>
+<p>多种加载动画效果</p>
+<p><img src="https://camo.githubusercontent.com/cc7f7f9c3869e07623e789df154b10878e0506fa/68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d766965772669643d3042396244454e7949414254365230347a4e446c54656c633051324d" width="180"></p>
+<hr>
+<p><strong>LikeAnimation</strong>: <a href="https://github.com/frogermcs/LikeAnimation" target="_blank" rel="external">https://github.com/frogermcs/LikeAnimation</a></p>
+<p>类 Twitter 点赞效果</p>
+<p><img src="https://camo.githubusercontent.com/752e0e35b15b6b684cee90b6bf4309f387caa36f/687474703a2f2f66726f6765726d63732e6769746875622e696f2f696d616765732f32322f627574746f6e5f616e696d2e676966" width="180"></p>
+<hr>
+<p><strong>Android-animated-toolbar</strong>: <a href="https://github.com/kassisdion/Android-animated-toolbar" target="_blank" rel="external">https://github.com/kassisdion/Android-animated-toolbar</a></p>
+<p>Library for toolbar animation</p>
+<p><img src="https://camo.githubusercontent.com/48830e431dc90cd6e96da0cb07846ee80b08d3f9/687474703a2f2f696d6731312e686f7374696e67706963732e6e65742f706963732f383739353037616e696d61746564546f6f6c6261722e676966" width="320"></p>
+<hr>
+<p><strong>BezierDemo</strong>:  <a href="https://github.com/chenupt/BezierDemo" target="_blank" rel="external">https://github.com/chenupt/BezierDemo</a></p>
+<p>A demo to show bezier.</p>
+<p><img src="https://raw.githubusercontent.com/chenupt/BezierDemo/master/pic/bezier.gif" width="320"></p>
+<hr>
+<p><strong>wava</strong>: <a href="https://github.com/hujiaweibujidao/wava" target="_blank" rel="external">https://github.com/hujiaweibujidao/wava</a></p>
+<p>安卓动画</p>
+<p><img src="https://raw.githubusercontent.com/hujiaweibujidao/wava/master/wava.gif" width="320"></p>
+<hr>
+<p><strong>RapidInterpolator</strong>: <a href="https://github.com/MartinRGB/RapidInterpolator" target="_blank" rel="external">https://github.com/MartinRGB/RapidInterpolator</a></p>
+<p>动画插值器的编辑器</p>
+<p><img src="https://raw.githubusercontent.com/MartinRGB/RapidInterpolator/master/example.gif" width="300"></p>
+<hr>
+<p><strong>yava</strong>: <a href="https://github.com/hujiaweibujidao/yava" target="_blank" rel="external">https://github.com/hujiaweibujidao/yava</a></p>
+<p>安卓动画插值器</p>
+<p><img src="https://raw.githubusercontent.com/hujiaweibujidao/yava/master/yava.gif" width="320"></p>
+<hr>
+<p><strong>animated-circle-progress-view</strong>: <a href="https://github.com/tuenti/animated-circle-progress-view" target="_blank" rel="external">https://github.com/tuenti/animated-circle-progress-view</a></p>
+<p>Progress view that animates its state changes</p>
+<p><img src="https://raw.githubusercontent.com/tuenti/animated-circle-progress-view/master/media/sample.gif" width="400"></p>
+<hr>
+<p><strong>Depth</strong>: <a href="https://github.com/florent37/Depth" target="_blank" rel="external">https://github.com/florent37/Depth</a></p>
+<p>Fragment 3D 动画</p>
+<p><img src="https://raw.githubusercontent.com/florent37/Depth/master/media/default.gif" width="320"> <img src="https://raw.githubusercontent.com/florent37/Depth/master/media/revert.gif" width="320"></p>
+<hr>
+<p><strong>FragmentAnimations</strong>: <a href="https://github.com/kakajika/FragmentAnimations" target="_blank" rel="external">https://github.com/kakajika/FragmentAnimations</a></p>
+<p>3D animations for support-v4 Fragment transition</p>
+<p><img src="https://raw.githubusercontent.com/wiki/kakajika/FragmentAnimations/images/cube.gif" width="320"> <img src="https://raw.githubusercontent.com/wiki/kakajika/FragmentAnimations/images/pushmove.gif" width="320"></p>
+<hr>
+<p><strong>ExpandableSearchView</strong>: <a href="https://github.com/v-b7/ExpandableSearchView" target="_blank" rel="external">https://github.com/v-b7/ExpandableSearchView</a></p>
+<p>伸缩动画 SearchView</p>
+<p><img src="https://raw.githubusercontent.com/v-b7/ExpandableSearchView/master/demo.gif" width="320"></p>
+<hr>
+<p><strong>JJSearchViewAnim</strong>: <a href="https://github.com/android-cjj/JJSearchViewAnim" target="_blank" rel="external">https://github.com/android-cjj/JJSearchViewAnim</a></p>
+<p>A cool search view animation library</p>
+<p><img src="https://camo.githubusercontent.com/82e22c4fd86e8de5bcd0ccf4bdcc9dc1a0b7119f/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f37656630316663616777316632677a797973796772673230616e303568337a622e676966" width="160"> <img src="https://camo.githubusercontent.com/c4208e7d4d68d8a7154f764ab1b431fcbd0df0ec/687474703a2f2f7777332e73696e61696d672e636e2f6d773639302f376566303166636167773166326b6678346e303662673230623530356c3074652e676966" width="160"><br><img src="https://camo.githubusercontent.com/45884a4adb99009c95670e0dd12e40e40918c92d/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f37656630316663616777316632677a797a64703576673230616e303568676e672e676966" width="160"> <img src="https://camo.githubusercontent.com/75864e0321a12be349e07c65f86ca5fa5b46bbc7/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f376566303166636167773166326b67386f3268747a673230623530356c6a726a2e676966" width="160"></p>
+<hr>
+<p><strong>AVLoadingIndicatorView</strong>: <a href="https://github.com/81813780/AVLoadingIndicatorView" target="_blank" rel="external">https://github.com/81813780/AVLoadingIndicatorView</a></p>
+<p>Nice loading animations for Android</p>
+<p><img src="https://raw.githubusercontent.com/81813780/AVLoadingIndicatorView/master/screenshots/avi.gif" width="320"></p>
+<hr>
+<p><strong>Android-SpinKit</strong>: <a href="https://github.com/ybq/Android-SpinKit" target="_blank" rel="external">https://github.com/ybq/Android-SpinKit</a></p>
+<p>Android loading animations</p>
+<p><img src="https://raw.githubusercontent.com/ybq/AndroidSpinKit/master/art/screen.gif" width="320"></p>
+<hr>
+<p><strong>FAB-Loading</strong>: <a href="https://github.com/smasoumi/FAB-Loading" target="_blank" rel="external">https://github.com/smasoumi/FAB-Loading</a></p>
+<p>A loading animation based on Floating Action Button.</p>
+<p><img src="https://raw.githubusercontent.com/smasoumi/FAB-Loading/master/images/marvel_loader.gif" width="320"></p>
+<hr>
+<p><strong>AndroidViewHover</strong>: <a href="https://github.com/daimajia/AndroidViewHover" target="_blank" rel="external">https://github.com/daimajia/AndroidViewHover</a></p>
+<p>An elegant way to show your menu or messages.</p>
+<p><img src="https://camo.githubusercontent.com/44affb72f0688c213500917009a1680b41492413/687474703a2f2f7777322e73696e61696d672e636e2f6d773639302f36313064633033346a7731656a356969686a746c35673230387a3066326e70642e676966" width="320"></p>
+<hr>
+<p><strong>WaveView</strong>: <a href="https://github.com/gelitenight/WaveView" target="_blank" rel="external">https://github.com/gelitenight/WaveView</a></p>
+<p>waveview for android</p>
+<p><img src="https://github.com/gelitenight/WaveView/blob/master/screenshot.gif" width="320"></p>
+<hr>
+<p><strong>AndroidViewAnimations</strong>: <a href="https://github.com/daimajia/AndroidViewAnimations" target="_blank" rel="external">https://github.com/daimajia/AndroidViewAnimations</a></p>
+<p>Cute view animation collection.</p>
+<p><img src="https://camo.githubusercontent.com/c41223966bdfed2260dbbabbcbae648e5db542c6/687474703a2f2f7777332e73696e61696d672e636e2f6d773639302f3631306463303334677731656a37356d69327737376732306333306a623471722e676966" width="320"></p>
+<hr>
+<p><strong>AndroidImageSlider</strong>: <a href="https://github.com/daimajia/AndroidImageSlider" target="_blank" rel="external">https://github.com/daimajia/AndroidImageSlider</a></p>
+<p>An amazing and convenient Android image slider.</p>
+<p><img src="https://camo.githubusercontent.com/f64413139bbaa918131384d3597c33e39333aa7f/687474703a2f2f7777332e73696e61696d672e636e2f6d773639302f36313064633033346a773165677a6f7236366f6a64673230393530666b6e70652e676966" width="320"></p>
+<hr>
+<p><strong>Transitions-Everywhere</strong>: <a href="https://github.com/andkulikov/transitions-everywhere" target="_blank" rel="external">https://github.com/andkulikov/transitions-everywhere</a></p>
+<p>Backport of Android Transitions API for animations. Animations backported to Android 4.0+. API compatible with Android 2.2+</p>
+<p><img src="https://camo.githubusercontent.com/e7ea7ca41a3a3e03616d0627413e57a0854e2eba/687474703a2f2f686162726173746f726167652e6f72672f67657470726f2f686162722f706f73745f696d616765732f6539332f3337632f3064612f65393333376330646163633335353532336164646466313534356235376535612e676966" width="320"></p>
+<hr>
+<p><strong>android-ripple-background</strong>: <a href="https://github.com/skyfishjy/android-ripple-background" target="_blank" rel="external">https://github.com/skyfishjy/android-ripple-background</a></p>
+<p>A beautiful ripple animation for your app</p>
+<p><img src="https://github.com/skyfishjy/android-ripple-background/blob/master/previews/rippleSimple.gif" width="320"><br><img src="https://github.com/skyfishjy/android-ripple-background/blob/master/previews/rippleFoundDevice.gif" width="320"></p>
+<hr>
+<p><strong>android-flip</strong>: <a href="https://github.com/openaphid/android-flip" target="_blank" rel="external">https://github.com/openaphid/android-flip</a></p>
+<p>A component for flip animation on Android, which is similar to the effect in Flipboard iPhone/Android.<a href="http://openaphid.github.com/" target="_blank" rel="external">http://openaphid.github.com/</a></p>
+<p><img src="https://camo.githubusercontent.com/d20ac6fb1cb14db4b69ab5e48ebd609aab1f6831/687474703a2f2f6f70656e61706869642e6769746875622e636f6d2f696d616765732f666c6970766965772d686f72697a6f6e74616c2d64656d6f2e676966" width="320"><br><img src="https://camo.githubusercontent.com/c260bd35546a4fa2a7a556bec851294a26639345/687474703a2f2f6f70656e61706869642e6769746875622e636f6d2f696d616765732f666c6970766965772d64656d6f2e676966" width="320"></p>
+<hr>
+<p><strong>FragmentTransactionExtended</strong>: <a href="https://github.com/DesarrolloAntonio/FragmentTransactionExtended" target="_blank" rel="external">https://github.com/DesarrolloAntonio/FragmentTransactionExtended</a></p>
+<p>FragmentTransactionExtended is a library which provide us a set of custom animations between fragments.</p>
+<p><img src="https://github.com/DesarrolloAntonio/FragmentTransactionExtended/blob/master/fragmentTransactionExample/cap1.gif" width="320"><br><img src="https://github.com/DesarrolloAntonio/FragmentTransactionExtended/blob/master/fragmentTransactionExample/cap2.gif" width="320"></p>
+<hr>
+<p><strong>KenBurnsView</strong>: <a href="https://github.com/flavioarfaria/KenBurnsView" target="_blank" rel="external">https://github.com/flavioarfaria/KenBurnsView</a></p>
+<p>Android ImageViews animated by Ken Burns Effect</p>
+<hr>
+<p><strong>AnimationEasingFunctions</strong>: <a href="https://github.com/daimajia/AnimationEasingFunctions" target="_blank" rel="external">https://github.com/daimajia/AnimationEasingFunctions</a></p>
+<p>Android Animation Easing Functions. Let’s make animation more real!</p>
+<p><img src="https://camo.githubusercontent.com/b22b160910884cdd5984b67864b5786e4d34a793/687474703a2f2f7777342e73696e61696d672e636e2f6d773639302f36313064633033346a77316568757a6f756c346838673230623030676d6839732e676966" width="320"></p>
+<hr>
+<p><strong>EasyAndroidAnimations</strong>: <a href="https://github.com/2359media/EasyAndroidAnimations" target="_blank" rel="external">https://github.com/2359media/EasyAndroidAnimations</a></p>
+<p>Easy Android Animations is an animation library that aims to make android animations easier, with 50+ builtin animations, it allows you to introduce many complex animation effects in your application with one or two lines of code.</p>
+<p><img src="https://github.com/wasabeef/awesome-android-ui/blob/master/art/EasyAndroidAnimations.gif" width="320"></p>
+<hr>
+<p><strong>android-pathview</strong>: <a href="https://github.com/geftimov/android-pathview" target="_blank" rel="external">https://github.com/geftimov/android-pathview</a></p>
+<p>Android view with both path from constructed path or from svg.</p>
+<p><img src="https://github.com/geftimov/android-pathview/blob/master/art/settings.gif" width="320"></p>
+<hr>
+<p><strong>ViewRevealAnimator</strong>: <a href="https://github.com/sephiroth74/ViewRevealAnimator" target="_blank" rel="external">https://github.com/sephiroth74/ViewRevealAnimator</a></p>
+<p>ViewAnimator view with a lollipop style reveal effect</p>
+<p><img src="https://github.com/sephiroth74/ViewRevealAnimator/blob/master/output.gif" width="320"></p>
+<hr>
+<p><strong>ArcAnimator</strong>: <a href="https://github.com/asyl/ArcAnimator" target="_blank" rel="external">https://github.com/asyl/ArcAnimator</a></p>
+<p>ArcAnimator helps to create arc transition animation: 2.3.+</p>
+<p><img src="https://camo.githubusercontent.com/942dff1cf0e36fca72e5a6f513b0853c61dca7a9/687474703a2f2f692e696d6775722e636f6d2f445369517862672e676966" width="320"><br><img src="https://camo.githubusercontent.com/06e3d80b9d4377192f145758fb1046c366c1b3c8/687474703a2f2f692e696d6775722e636f6d2f614c634c72476b2e676966" width="320"></p>
+<hr>
+<p><strong>SearchMenuAnim</strong>: <a href="https://github.com/kongnanlive/SearchMenuAnim" target="_blank" rel="external">https://github.com/kongnanlive/SearchMenuAnim</a></p>
+<p><img src="https://raw.githubusercontent.com/kongnanlive/SearchMenuAnim/master/search.gif" width="320"></p>
+<hr>
+<p><strong>crossview</strong>: <a href="https://github.com/cdflynn/crossview" target="_blank" rel="external">https://github.com/cdflynn/crossview</a></p>
+<p>A Toggling Add/Remove button</p>
+<p><img src="https://github.com/cdflynn/crossview/blob/master/sample/images/cross_btn_2.gif?raw=true" width="320"><br><img src="https://github.com/cdflynn/crossview/blob/master/sample/images/cross_btn.gif?raw=true" width="320"></p>
+<hr>
+<p><strong>ParallaxEverywhere</strong>: <a href="https://github.com/Narfss/ParallaxEverywhere" target="_blank" rel="external">https://github.com/Narfss/ParallaxEverywhere</a></p>
+<p>Parallax everywhere is a library with alternative android widgets with parallax effects.</p>
+<p><img src="https://raw.githubusercontent.com/Narfss/ParallaxEverywhere/master/parallax-everywhere-animation-optimize.gif" width="320"></p>
+<hr>
+<p><strong>EaseInterpolator</strong>: <a href="https://github.com/cimi-chen/EaseInterpolator" target="_blank" rel="external">https://github.com/cimi-chen/EaseInterpolator</a></p>
+<p>Thirty different easing animation interpolators for Android.</p>
+<p><img src="http://www.23code.com/wp-content/uploads/2015/07/device-2015-07-24-143320.jpg" width="320"></p>
+<hr>
+<p><strong>EaseInterpolator</strong>: <a href="https://github.com/MasayukiSuda/EasingInterpolator" target="_blank" rel="external">https://github.com/MasayukiSuda/EasingInterpolator</a></p>
+<p>Twenty-eight different easing animation interpolators for Android.</p>
+<p><img src="https://github.com/MasayukiSuda/EasingInterpolator/blob/master/art/FPSAnimator1.gif" width="320"></p>
+<hr>
+<p><strong>android-shapeLoadingView</strong>:  <a href="https://github.com/zzz40500/android-shapeLoadingView" target="_blank" rel="external">https://github.com/zzz40500/android-shapeLoadingView</a></p>
+<p> 高仿新版58 加载动画</p>
+<p><img src="https://camo.githubusercontent.com/575b98a56c5546043ec045d044429590e4a623fe/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f3136363836362d376434313538646532636534306139612e676966" width="320"><br><img src="https://camo.githubusercontent.com/cc415e73399ab06a9212eb1ee65f197939213b7f/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f3136363836362d366534303132633139343961616137612e676966" width="320"></p>
+<hr>
+      
+    </div>
+    
+  </div>
+  
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/android-librarys/Animation/">动画Animation - Android开源组件</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Zero</a></p>
+        <p><span>发布时间:</span>2017-03-24 13:14</p>
+        <!-- <p><span>最后更新:</span>2017-03-29, 17:47:51</p> -->
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/android-librarys/Animation/" title="动画Animation - Android开源组件">http://www.jiaoyigui.cn//android-librarys/Animation/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.jiaoyigui.cn//android-librarys/Animation/　　作者: Zero" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <!-- <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p> -->
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/android-librarys/Layout/">
+                    布局Layout - Android开源组件
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/android-librarys/List/">
+                    列表 List - Android开源组件
+                </a>
+            </div>
+        
+    </nav>
+  
+</article>
+<div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#动画-Animation"><span class="toc-number">1.</span> <span class="toc-text">动画 Animation</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+    <div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"动画Animation - Android开源组件　| 夜的灯　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+    
+
+
+<div class="scroll" id="post-nav-button">
+        
+            <a href="/android-librarys/Layout/" title="上一篇: 布局Layout - Android开源组件">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/android-librarys/List/" title="下一篇: 列表 List - Android开源组件">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/opensource/Android/">Android开源项目</a></li><li class="post-list-item"><a class="post-list-link" href="/opensource/Index/">索引 - 开源项目</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Utils/">辅助工具类 Utils - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Menu/">菜单 Menu - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Custom/">自定义控件 Custom - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Dialog/">弹窗 Dialog - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Framework/">开发框架Framework - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Layout/">布局Layout - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Animation/">动画Animation - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/List/">列表 List - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Network/">网络请求 Network - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Image/">图片 Image - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/php/thinkphp5-install/">Thinkphp5快速入门</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Index/">总纲 - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android/Android-Decompile/">Android反编译</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-Java/">开发环境 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-iTerm2/">终端方案iTerm2 + Zsh - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-Homebrew/">包管理工具 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-keymap/">常用快捷键 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-settings/">系统使用 - Java程序员眼中的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/server/VPS/">VPS + Shadowsocks 可以是什么，做什么</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-Debug/">IntelliJ IDEA DEBUG调试</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-For-Mac-Keys/">IntelliJ IDEA For Mac 快捷键</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-Settings/">IntelliJ IDEA 主题、字体、编辑区主题、文件编码修改、乱码问题</a></li><li class="post-list-item"><a class="post-list-link" href="/hexo/Hexo-Install/">搭建 Hexo 博客--增强篇</a></li></ul>
+
+
+    <script>
+        
+    </script></div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i>
+                2017 Zero
+            </div>
+            <div class="footer-right">
+                <!-- <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i> -->
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide()" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+<script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>

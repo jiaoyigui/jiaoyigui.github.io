@@ -4,6 +4,385 @@
 
     
   <url>
+    <loc>http://www.jiaoyigui.cn//opensource/Android/</loc>
+    <lastmod>2017-03-29T10:23:09.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android开源项目</title>
+        <pubTime>2017-03-29T01:14:12.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>开源项目</tag>
+         
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="开源项目" url="http://www.jiaoyigui.cn/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
+          
+             
+              <breadCrumb title="Java" url="http://www.jiaoyigui.cn/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/Java/"/>
+          
+             
+              <breadCrumb title="Android" url="http://www.jiaoyigui.cn/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/Java/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jiaoyigui.cn//opensource/Index/</loc>
+    <lastmod>2017-03-29T09:59:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>索引 - 开源项目</title>
+        <pubTime>2017-03-29T00:14:12.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>开源项目</tag>
+         
+        <tag>Java</tag>
+         
+        <tag>Cocos2d-x</tag>
+         
+        <tag>Unity</tag>
+         
+        <tag>游戏</tag>
+         
+        <tag>PHP</tag>
+         
+        <tag>Golang</tag>
+         
+         
+           
+             
+              <breadCrumb title="开源项目" url="http://www.jiaoyigui.cn/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jiaoyigui.cn//android-librarys/Index/</loc>
+    <lastmod>2017-03-29T09:54:38.000Z</lastmod>
+    <data>
+        <display>
+        <title>总纲 - Android开源组件</title>
+        <pubTime>2017-03-24T00:14:12.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>开源组件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.jiaoyigui.cn/categories/Android/"/>
+          
+             
+              <breadCrumb title="开源组件" url="http://www.jiaoyigui.cn/categories/Android/%E5%BC%80%E6%BA%90%E7%BB%84%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jiaoyigui.cn//android-librarys/Utils/</loc>
+    <lastmod>2017-03-29T09:49:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>辅助工具类 Utils - Android开源组件</title>
+        <pubTime>2017-03-24T11:14:12.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>工具类</tag>
+         
+        <tag>Utils</tag>
+         
+        <tag>开源组件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.jiaoyigui.cn/categories/Android/"/>
+          
+             
+              <breadCrumb title="开源组件" url="http://www.jiaoyigui.cn/categories/Android/%E5%BC%80%E6%BA%90%E7%BB%84%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jiaoyigui.cn//android-librarys/Network/</loc>
+    <lastmod>2017-03-29T09:48:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>网络请求 Network - Android开源组件</title>
+        <pubTime>2017-03-24T03:14:12.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>网络请求</tag>
+         
+        <tag>Network</tag>
+         
+        <tag>开源组件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.jiaoyigui.cn/categories/Android/"/>
+          
+             
+              <breadCrumb title="开源组件" url="http://www.jiaoyigui.cn/categories/Android/%E5%BC%80%E6%BA%90%E7%BB%84%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jiaoyigui.cn//android-librarys/Menu/</loc>
+    <lastmod>2017-03-29T09:48:45.000Z</lastmod>
+    <data>
+        <display>
+        <title>菜单 Menu - Android开源组件</title>
+        <pubTime>2017-03-24T10:14:12.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>菜单</tag>
+         
+        <tag>Menu</tag>
+         
+        <tag>开源组件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.jiaoyigui.cn/categories/Android/"/>
+          
+             
+              <breadCrumb title="开源组件" url="http://www.jiaoyigui.cn/categories/Android/%E5%BC%80%E6%BA%90%E7%BB%84%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jiaoyigui.cn//android-librarys/List/</loc>
+    <lastmod>2017-03-29T09:48:39.000Z</lastmod>
+    <data>
+        <display>
+        <title>列表 List - Android开源组件</title>
+        <pubTime>2017-03-24T04:14:12.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>列表</tag>
+         
+        <tag>List</tag>
+         
+        <tag>开源组件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.jiaoyigui.cn/categories/Android/"/>
+          
+             
+              <breadCrumb title="开源组件" url="http://www.jiaoyigui.cn/categories/Android/%E5%BC%80%E6%BA%90%E7%BB%84%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jiaoyigui.cn//android-librarys/Layout/</loc>
+    <lastmod>2017-03-29T09:48:27.000Z</lastmod>
+    <data>
+        <display>
+        <title>布局Layout - Android开源组件</title>
+        <pubTime>2017-03-24T06:14:12.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>布局</tag>
+         
+        <tag>Layout</tag>
+         
+        <tag>开源组件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.jiaoyigui.cn/categories/Android/"/>
+          
+             
+              <breadCrumb title="开源组件" url="http://www.jiaoyigui.cn/categories/Android/%E5%BC%80%E6%BA%90%E7%BB%84%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jiaoyigui.cn//android-librarys/Image/</loc>
+    <lastmod>2017-03-29T09:48:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>图片 Image - Android开源组件</title>
+        <pubTime>2017-03-24T03:14:12.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>图片组件</tag>
+         
+        <tag>Image</tag>
+         
+        <tag>开源组件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.jiaoyigui.cn/categories/Android/"/>
+          
+             
+              <breadCrumb title="开源组件" url="http://www.jiaoyigui.cn/categories/Android/%E5%BC%80%E6%BA%90%E7%BB%84%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jiaoyigui.cn//android-librarys/Framework/</loc>
+    <lastmod>2017-03-29T09:48:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>开发框架Framework - Android开源组件</title>
+        <pubTime>2017-03-24T07:14:12.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>开发框架</tag>
+         
+        <tag>Framework</tag>
+         
+        <tag>开源组件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.jiaoyigui.cn/categories/Android/"/>
+          
+             
+              <breadCrumb title="Android开源组件" url="http://www.jiaoyigui.cn/categories/Android/Android%E5%BC%80%E6%BA%90%E7%BB%84%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jiaoyigui.cn//android-librarys/Animation/</loc>
+    <lastmod>2017-03-29T09:47:51.000Z</lastmod>
+    <data>
+        <display>
+        <title>动画Animation - Android开源组件</title>
+        <pubTime>2017-03-24T05:14:12.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>动画</tag>
+         
+        <tag>Animation</tag>
+         
+        <tag>开源组件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.jiaoyigui.cn/categories/Android/"/>
+          
+             
+              <breadCrumb title="开源组件" url="http://www.jiaoyigui.cn/categories/Android/%E5%BC%80%E6%BA%90%E7%BB%84%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jiaoyigui.cn//android-librarys/Custom/</loc>
+    <lastmod>2017-03-29T09:47:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>自定义控件 Custom - Android开源组件</title>
+        <pubTime>2017-03-24T09:14:12.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>自定义控件</tag>
+         
+        <tag>Custom</tag>
+         
+        <tag>开源组件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.jiaoyigui.cn/categories/Android/"/>
+          
+             
+              <breadCrumb title="开源组件" url="http://www.jiaoyigui.cn/categories/Android/%E5%BC%80%E6%BA%90%E7%BB%84%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jiaoyigui.cn//android-librarys/Dialog/</loc>
+    <lastmod>2017-03-29T09:47:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>弹窗 Dialog - Android开源组件</title>
+        <pubTime>2017-03-24T08:14:12.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Dialog</tag>
+         
+        <tag>弹窗</tag>
+         
+        <tag>开源组件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.jiaoyigui.cn/categories/Android/"/>
+          
+             
+              <breadCrumb title="开源组件" url="http://www.jiaoyigui.cn/categories/Android/%E5%BC%80%E6%BA%90%E7%BB%84%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.jiaoyigui.cn//macos/Mac-iTerm2/</loc>
     <lastmod>2017-03-29T08:08:15.000Z</lastmod>
     <data>
@@ -277,30 +656,6 @@
         <tag>反编译</tag>
          
         <tag>破解</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://www.jiaoyigui.cn/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.jiaoyigui.cn//android/Android-OpenSource/</loc>
-    <lastmod>2017-03-24T03:26:04.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android相关开源项目收藏</title>
-        <pubTime>2017-03-24T03:14:12.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>github</tag>
-         
-        <tag>开源项目</tag>
          
          
            

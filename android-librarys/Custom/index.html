@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Zero">
+
+
+
+<meta name="description" content="收集Android相关的 自定义控件 Custom 组件库, 包含：各种自定义控件、Widget、Material Design……">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自定义控件 Custom - Android开源组件">
+<meta property="og:url" content="http://www.jiaoyigui.cn/android-librarys/Custom/index.html">
+<meta property="og:site_name" content="夜的灯">
+<meta property="og:description" content="收集Android相关的 自定义控件 Custom 组件库, 包含：各种自定义控件、Widget、Material Design……">
+<meta property="og:image" content="https://camo.githubusercontent.com/b55c8897390fa16e51750958d88cd0304d146a51/687474703a2f2f692e696d6775722e636f6d2f326436334e46532e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/899450b935187b66a26cbef93e31b73b39ab2131/687474703a2f2f692e696d6775722e636f6d2f316b3472634e372e706e67">
+<meta property="og:image" content="https://raw.githubusercontent.com/mikepenz/AboutLibraries/master/DEV/screenshots/screenshot1_small.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/mikepenz/AboutLibraries/master/DEV/screenshots/screenshot2_small.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/borjabravo10/FooterNavigationView/master/FooterNavigationView.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jineshfrancs/LazyLoadingViews/master/screens/loading.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/fashare2015/TimerView/master/screen-record/dtv_fire.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/fashare2015/TimerView/master/screen-record/mtv.gif">
+<meta property="og:image" content="https://github.com/architjn/SharePanel/raw/master/demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/qinci/EdgeTranslucent/master/image/image.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/flipkart-incubator/proteus/master/assets/example-full.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pkarira/Swipper/19ec63a1f3833d8d12b21941bdf8bcd7fe8b62c0/library/src/main/res/drawable/finalfinal2.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/pkarira/Swipper/19ec63a1f3833d8d12b21941bdf8bcd7fe8b62c0/library/src/main/res/drawable/finalfinal1.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/0dcaa4bf8273844bc99207a8b9f9c159b509a078/687474703a2f2f692e67697068792e636f6d2f32366759426b38705178756477775751772e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/shaileshmamgain5/Carousal-Notification/master/app/screenshots/carousal.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/shaileshmamgain5/Carousal-Notification/master/app/screenshots/carousal-notification.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/zhangke3016/ViewSpreadTranslationController/master/gif/screen1.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/zhangke3016/ViewSpreadTranslationController/master/gif/screen2.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/zagum/Android-SwitchIcon/master/art/sample.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/bassaer/ChatMessageView/master/screens.png">
+<meta property="og:image" content="https://github.com/Taishi-Y/InstagramLikeColorTransitionAndroid/raw/master/images/screenshot.gif?raw=true">
+<meta property="og:image" content="https://raw.githubusercontent.com/Cleveroad/PlayWidget/master/images/header.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/zagum/Android-ExpandIcon/master/art/expand_icon_demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/huage2580/ZuiMeiTAG/master/hello.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/yingLanNull/HideKeyboard/master/show/show.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/barryhappy/TContributionsView/master/images/overview.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/7d15198ddb087ae09141ea29becb661bfaa96d21/687474703a2f2f7777772e67756964696e67746563682e636f6d2f6173736574732f706f7374696d616765732f323031362f30312f626c6f636b2d6164732d6f6e2d656467652d62726f777365722e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/b8f50f4047b3c1aedd077aea3d1f23079c83adc5/687474703a2f2f61632d6d686b65306b75762e636c6f7564646e2e636f6d2f37666362353836353365333538623965633030332e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/jineshfrancs/CaptchaImageView/master/screens/captcha_screen.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/jineshfrancs/CaptchaImageView/master/screens/captcha_screen_2.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/yongjhih/mismeter/master/art/screenshot.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/kofigyan/Thermometer/master/screenshots/therm_anim.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/florent37/ArcLayout/master/media/video1.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/alxrm/Timecon/master/imgs/timecon.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Yellow5A5/ClearScreenHelper/master/image/demo_image1.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Yellow5A5/ClearScreenHelper/master/image/demo_image2.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/brianPlummer/TinyDancer/master/assets/tinydancer1.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/92bdc502c25ff25dca9596e0246d1afd994d2f84/687474703a2f2f692e696d6775722e636f6d2f59434f67487a722e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/AMQR/GestureLockMaster/master/ges.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/4ca257787bd8b888b0dc811f490adb30f3217b0a/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f5535425035676b397a516171732f67697068792e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/ad933014f6134c4b490fa2ca0836d3ad5e56885a/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f436e43764c68394e543648696f2f67697068792e676966">
+<meta property="og:image" content="https://github.com/OrangeGangsters/LolliPin/blob/master/app/src/main/res/raw/github_gif.gif">
+<meta property="og:image" content="https://github.com/OrangeGangsters/LolliPin/blob/master/app/src/main/res/raw/github_gif2.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/aritraroy/PinLockView/master/screens/promo.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/e8de865b924b69792eae1052537f94c47f59a3a2/68747470733a2f2f61726a756e2d736e612e6769746875622e696f2f7261772f70617373636f6465766965775f312e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/dongjunkun/CouponView/master/art/couponView.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/andyxialm/WavyLineView/master/art/wavyline.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Jaouan/CompoundLayout/master/art/demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Qiang3570/LiveLayout/master/sample.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/zuiwuyuan/WeChatPswKeyboard/master/imgs/img.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/fed08272fc8bd4aca27087b27722874d15c0a6d3/687474703a2f2f692e696d6775722e636f6d2f687078706472392e6a7067">
+<meta property="og:image" content="https://raw.githubusercontent.com/Jaouan/Article-Details-Transition-Example/master/art/popfromtop.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Jaouan/Article-Details-Transition-Example/master/art/popfromitem.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ldoublem/FlightSeat/master/screenshot/seat_gif.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ldoublem/FlightSeat/master/screenshot/seat_png.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/rm3l/maoni/master/doc/screenshots/raw/1_Maoni_main_activity.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/rm3l/maoni/master/doc/screenshots/raw/2_Maoni_main_activity_with_screenshot_thumbnail.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/rm3l/maoni/master/doc/screenshots/raw/3_Maoni_main_activity_with_screenshot_touch_to_preview.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hanbaokun/FloatingViewService/master/Screenshot_2016-07-14-14-30-59-237_com.miui.home.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/saschpe/android-versioninfo/master/doc/img/versioninfo-sample-dialog.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/saschpe/android-versioninfo/master/doc/img/versioninfo-sample-fragment.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/eb5076c5b0b759f5a9ee9288ab754e6e9c54fd27/687474703a2f2f69313036302e70686f746f6275636b65742e636f6d2f616c62756d732f743434342f626f737379616f3136382f323031352d30342d303325323032305f35315f35305f7a7073636475696d6274612e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/oubowu/MarqueeLayoutLibrary/master/pic/demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/sujithkanna/SmileyRating/master/app/src/main/assets/demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/DreaminginCodeZH/MaterialRatingBar/master/screenshot/sample_app.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/FlyingPumba/SimpleRatingBar/master/images/sample.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/3db8e39d6d0754b4a2561564a8620dff1bd7870e/68747470733a2f2f676f6f676c6564726976652e636f6d2f686f73742f3042777a315f62396d413758596243314551323878614856776347632f726174696e6776696577322e6a7067">
+<meta property="og:image" content="https://raw.githubusercontent.com/eugeneek/SmileBar/master/img/screenshot.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/smartbetter/AndroidGooView/master/website/static/screenshot.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/venshine/BezierMaker/master/screenshot/2.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/venshine/BezierMaker/master/screenshot/3.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/venshine/BezierMaker/master/screenshot/7.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Bilibili/MagicaSakura/master/screenshot/magicasakura.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/d7ec90078d65ad6728580b5752b63658e8b92dcd/687474703a2f2f692e696d6775722e636f6d2f3553716a62684c2e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/wooplr/Spotlight/master/art/intro.gif?token=AA5ZAHdvAspW6Zj8YyyKamkV7jWXFtMHks5XaQovwA%3D%3D">
+<meta property="og:image" content="https://raw.githubusercontent.com/MajeurAndroid/Android-Cling/master/web_art/device_example.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qstumn/RadarChart/master/demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/jiangzehui/polygonsview/master/png/p1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jiangzehui/polygonsview/master/png/p2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiaopansky/SpiderWebScoreView/master/docs/sample.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jiefly/AbilityChart/master/app/Screenshot_20160522-150549.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jiefly/AbilityChart/master/app/Screenshot_20160521-203747.png">
+<meta property="og:image" content="https://github.com/Nescafemix/hintcase/raw/master/assets/welcome_demo.gif">
+<meta property="og:image" content="https://github.com/Nescafemix/hintcase/raw/master/assets/bubble_demo.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/947f61681a1700e42fae62f45618d1a9c1adb6e3/68747470733a2f2f692e696d6775722e636f6d2f775759625238522e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/ee6124cc259de10d4a4f6bfbc06ff3c06728803b/687474703a2f2f692e67697068792e636f6d2f764831715378637742424f69512e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/qyxxjd/MultipleStatusView/master/screenshots/demo.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/dcac7c2c31993d2a7c38dbf4bed192579bc05978/687474703a2f2f646979636f64652e62302e7570616979756e2e636f6d2f70686f746f2f323031362f35356238306334633237306534316534323963343638393733663231356363372e676966">
+<meta property="og:image" content="http://i.giphy.com/3ornjQLD95Osp4qlm8.gif">
+<meta property="og:image" content="http://i.giphy.com/26FPDYox55jE0UBVu.gif">
+<meta property="og:image" content="http://i.giphy.com/3o8doUXxjOCwHw2GEo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/qiujuer/Genius-Android/master/caprice/release/pic_ui.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/7dd0f4e141fa57a7906ad608027dc1fe84db9c7c/68747470733a2f2f696d672e616c6963646e2e636f6d2f696d6765787472612f69342f3138313235373637312f544232537068436b585858585861755870585858585858585858585f21213138313235373637312e676966">
+<meta property="og:image" content="https://github.com/ganfra/MaterialSpinner/blob/master/screenshots/screenshot.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/hpdx/DanmukuLight/master/result_image.jpg">
+<meta property="og:image" content="http://www.23code.com/wp-content/uploads/2015/05/device-2015-05-08-105135.jpg">
+<meta property="og:image" content="http://www.23code.com/wp-content/uploads/2015/05/device-2015-05-14-115235.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/worker8/all_my_media_files/25b3208/device-2015-07-01-114155.gif">
+<meta property="og:image" content="http://www.23code.com/wp-content/uploads/2015/08/device-2015-08-14-153220.jpg">
+<meta property="og:image" content="https://github.com/pepoc/ImageProcessing/blob/master/demo.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/himanshu-soni/QuantityView/master/screenshots/device-2015-09-29-191352.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/himanshu-soni/QuantityView/master/screenshots/device-2015-10-09-175354.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/himanshu-soni/QuantityView/master/screenshots/device-2015-10-09-175420.png">
+<meta property="og:image" content="https://github.com/lguipeng/BubbleView/blob/master/screenshot/screenshot.png">
+<meta property="og:image" content="https://github.com/navasmdc/MaterialDesignLibrary/blob/master/images/logo.png">
+<meta property="og:image" content="https://github.com/navasmdc/MaterialDesignLibrary/blob/master/images/rectangle_button.png">
+<meta property="og:image" content="https://github.com/navasmdc/MaterialDesignLibrary/blob/master/images/float_button.png">
+<meta property="og:image" content="https://github.com/navasmdc/MaterialDesignLibrary/blob/master/images/switch.png">
+<meta property="og:image" content="https://github.com/navasmdc/MaterialDesignLibrary/blob/master/images/progress_bar_circular_indeterminate.png">
+<meta property="og:image" content="https://github.com/navasmdc/MaterialDesignLibrary/blob/master/images/slider_with_number_indicator.png">
+<meta property="og:image" content="https://github.com/sachin1092/Lollipop-AppCompat-Skeleton/blob/master/art/LollipopAppCompatWidgetSkeleton.gif">
+<meta property="og:image" content="https://github.com/rey5137/Material/raw/master/image/progress_circular_indeterminate.gif">
+<meta property="og:image" content="https://github.com/rey5137/Material/raw/master/image/progress_linear_indeterminate.gif">
+<meta property="og:image" content="https://github.com/rey5137/Material/raw/master/image/progress_linear_buffer.gif">
+<meta property="og:image" content="https://github.com/rey5137/Material/raw/master/image/button_raise_touch.gif">
+<meta property="og:image" content="https://github.com/rey5137/Material/raw/master/image/fab_line.gif">
+<meta property="og:image" content="https://github.com/rey5137/Material/raw/master/image/cb.gif">
+<meta property="og:image" content="https://github.com/rey5137/Material/raw/master/image/switch.gif">
+<meta property="og:image" content="https://github.com/rey5137/Material/raw/master/image/slider_discrete.gif">
+<meta property="og:image" content="https://github.com/rey5137/Material/raw/master/image/spn.gif">
+<meta property="og:image" content="https://github.com/rey5137/Material/raw/master/image/textfield.gif">
+<meta property="og:image" content="https://github.com/rey5137/Material/raw/master/image/tpi.gif">
+<meta property="og:image" content="https://github.com/rey5137/Material/raw/master/image/snackbar.png">
+<meta property="og:image" content="https://github.com/rey5137/Material/raw/master/image/dialog_3.png">
+<meta property="og:image" content="https://github.com/rey5137/Material/raw/master/image/dialog_4.png">
+<meta property="og:image" content="https://github.com/rey5137/Material/raw/master/image/theme.gif">
+<meta property="og:image" content="https://github.com/christophesmet/android_maskable_layout/blob/master/Screencast.gif">
+<meta property="og:image" content="https://github.com/txusballesteros/bubbles-for-android/blob/master/assets/bubbles_demo.gif">
+<meta property="og:image" content="https://github.com/recruit-lifestyle/FloatingView/blob/master/screenshot/animation.gif">
+<meta property="og:image" content="https://github.com/TakWolf/Android-Lock9View/blob/master/art/screenshot.png">
+<meta property="og:image" content="https://github.com/frakbot/CreditsRoll/blob/master/img/scroll.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/b1c5e00bc9164c24b995a95942dbb731edd8d39e/68747470733a2f2f6c68362e676f6f676c6575736572636f6e74656e742e636f6d2f2d4a6a7678564d436d3175672f56485550575642667062492f41414141414141414874512f5450746f4f6a4849354d412f773633392d683335362f7365656b626172322e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/e717e2597779d1ddc980ace6f3943f62483d8a8c/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f2d376e62565058785568596b2f56472d724f3634704d57492f414141414141414148734d2f614d52676c7432567a726b2f773633392d683438302f616e696d6174696f6e2e676966">
+<meta property="og:image" content="https://github.com/dlazaro66/WheelIndicatorView/blob/master/art/animated_wheelview.gif?raw=true">
+<meta property="og:image" content="https://camo.githubusercontent.com/51755d59ed6fd53158a0d84696e6d184c3a6f4d5/68747470733a2f2f7261772e6769746875622e636f6d2f426561726465642d48656e2f416e64726f69642d426f6f7473747261702f6d61737465722f696d616765732f626f6f7473747261705f627574746f6e2e706e67">
+<meta property="og:image" content="https://github.com/wasabeef/awesome-android-ui/blob/master/art/dspec.png">
+<meta property="og:image" content="https://github.com/h6ah4i/android-materialshadowninepatch/blob/master/pic/gb.png?raw=true">
+<meta property="og:image" content="https://github.com/h6ah4i/android-materialshadowninepatch/blob/master/pic/ics.png?raw=true">
+<meta property="og:image" content="https://github.com/h6ah4i/android-materialshadowninepatch/blob/master/pic/lollipop.png?raw=true">
+<meta property="og:image" content="https://github.com/championswimmer/SimpleFingerGestures_Android_Library/blob/master/screens/1.gif">
+<meta property="og:image" content="https://github.com/championswimmer/SimpleFingerGestures_Android_Library/blob/master/screens/2.gif">
+<meta property="og:image" content="https://github.com/championswimmer/SimpleFingerGestures_Android_Library/blob/master/screens/4.gif">
+<meta property="og:image" content="https://github.com/chemouna/Decor/blob/master/images/decor_sample.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/dec65b58525ce17eff5e0318d3c39ae33760284a/687474703a2f2f696d672e796f75747562652e636f6d2f76692f664a546c31626751336a342f302e6a7067">
+<meta property="og:image" content="https://camo.githubusercontent.com/eff4f945232a44be81cec8a136fa17c52a43aaca/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313531303132313332393235353232">
+<meta property="og:updated_time" content="2017-03-29T09:47:47.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="自定义控件 Custom - Android开源组件">
+<meta name="twitter:description" content="收集Android相关的 自定义控件 Custom 组件库, 包含：各种自定义控件、Widget、Material Design……">
+<meta name="twitter:image" content="https://camo.githubusercontent.com/b55c8897390fa16e51750958d88cd0304d146a51/687474703a2f2f692e696d6775722e636f6d2f326436334e46532e706e67">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="夜的灯" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>自定义控件 Custom - Android开源组件 | 夜的灯</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8349881c9f92999de4652aac9681a840";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Zero</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">探索新知识，突破自身技术壁垒</p>
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:jyg0124@126.com" title="Email"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Animation/">Animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cocos2d-x/">Cocos2d-x</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Custom/">Custom</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DEBUG调试/">DEBUG调试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dialog/">Dialog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Homebrew/">Homebrew</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Image/">Image</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ-IDEA/">IntelliJ IDEA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Layout/">Layout</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/List/">List</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Menu/">Menu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shadowsocks/">Shadowsocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Unity/">Unity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Utils/">Utils</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VPS/">VPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vultr/">Vultr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinkphp5/">thinkphp5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/列表/">列表</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动画/">动画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反编译/">反编译</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图片组件/">图片组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具类/">工具类</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/布局/">布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发工具/">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发框架/">开发框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源组件/">开源组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源项目/">开源项目</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/弹窗/">弹窗</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/快捷键/">快捷键</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游戏/">游戏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/破解/">破解</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/终端/">终端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络请求/">网络请求</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/自定义控件/">自定义控件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/菜单/">菜单</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">关于我</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Zero</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Zero</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">探索新知识，突破自身技术壁垒</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:jyg0124@126.com" title="Email"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-android-librarys/Custom" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/android-librarys/Custom/" class="article-date">
+      <time datetime="2017-03-24T09:14:12.000Z" itemprop="datePublished">2017-03-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        <h1 class="article-title" itemprop="name">
+      自定义控件 Custom - Android开源组件
+    </h1>
+      </header>
+      
+      <div class="article-info article-info-post">
+        <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/开源组件/">开源组件</a>
+    </div>
+        <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Custom/">Custom</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开源组件/">开源组件</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/自定义控件/">自定义控件</a></li></ul>
+    </div>
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="自定义控件-Custom"><a href="#自定义控件-Custom" class="headerlink" title="自定义控件 Custom"></a>自定义控件 Custom</h2><p>包含：各种自定义控件、Widget、Material Design……</p>
+<p><a href="/android-librarys/Index/">&lt;==返回总纲==</a></p>
+<hr>
+<p><strong>material-about-library</strong>: <a href="https://github.com/daniel-stoneuk/material-about-library" target="_blank" rel="external">https://github.com/daniel-stoneuk/material-about-library</a></p>
+<p>Material Design 风格的 About 页面设计</p>
+<p><img src="https://camo.githubusercontent.com/b55c8897390fa16e51750958d88cd0304d146a51/687474703a2f2f692e696d6775722e636f6d2f326436334e46532e706e67" width="320"> <img src="https://camo.githubusercontent.com/899450b935187b66a26cbef93e31b73b39ab2131/687474703a2f2f692e696d6775722e636f6d2f316b3472634e372e706e67" width="320"></p>
+<hr>
+<p><strong>AboutLibraries</strong>: <a href="https://github.com/mikepenz/AboutLibraries" target="_blank" rel="external">https://github.com/mikepenz/AboutLibraries</a></p>
+<p>AboutLibraries is a library to offer some information of libraries</p>
+<p><img src="https://raw.githubusercontent.com/mikepenz/AboutLibraries/master/DEV/screenshots/screenshot1_small.png" width="320"> <img src="https://raw.githubusercontent.com/mikepenz/AboutLibraries/master/DEV/screenshots/screenshot2_small.png" width="320"></p>
+<hr>
+<p><strong>FooterNavigationView</strong>: <a href="https://github.com/borjabravo10/FooterNavigationView" target="_blank" rel="external">https://github.com/borjabravo10/FooterNavigationView</a></p>
+<p>FooterNavigationView helps to show a footer inside the NavigationView</p>
+<p><img src="https://raw.githubusercontent.com/borjabravo10/FooterNavigationView/master/FooterNavigationView.png" width="320"></p>
+<hr>
+<p><strong>LazyLoadingViews</strong>: <a href="https://github.com/jineshfrancs/LazyLoadingViews" target="_blank" rel="external">https://github.com/jineshfrancs/LazyLoadingViews</a></p>
+<p>Loading effect for the child views in Adapter View before binding data from service</p>
+<p><img src="https://raw.githubusercontent.com/jineshfrancs/LazyLoadingViews/master/screens/loading.gif" width="270"></p>
+<hr>
+<p><strong>TimerView</strong>: <a href="https://github.com/fashare2015/TimerView" target="_blank" rel="external">https://github.com/fashare2015/TimerView</a></p>
+<p>一个解耦良好的计时控件，可自由扩展</p>
+<p><img src="https://raw.githubusercontent.com/fashare2015/TimerView/master/screen-record/dtv_fire.gif" width="240"> <img src="https://raw.githubusercontent.com/fashare2015/TimerView/master/screen-record/mtv.gif" width="240"></p>
+<hr>
+<p><strong>SharePanel</strong>: <a href="https://github.com/architjn/SharePanel" target="_blank" rel="external">https://github.com/architjn/SharePanel</a></p>
+<p>A small Behavior Example</p>
+<p><img src="https://github.com/architjn/SharePanel/raw/master/demo.gif" width="260"></p>
+<hr>
+<p><strong>EdgeTranslucent</strong>: <a href="https://github.com/qinci/EdgeTranslucent" target="_blank" rel="external">https://github.com/qinci/EdgeTranslucent</a></p>
+<p>Android 任意View边沿渐变透明</p>
+<p><img src="https://raw.githubusercontent.com/qinci/EdgeTranslucent/master/image/image.gif" width="260"></p>
+<hr>
+<p><strong>proteus</strong>: <a href="https://github.com/flipkart-incubator/proteus" target="_blank" rel="external">https://github.com/flipkart-incubator/proteus</a></p>
+<p>Android 通过 JSON 实现原生 UI 布局，太棒了这个</p>
+<p><img src="https://raw.githubusercontent.com/flipkart-incubator/proteus/master/assets/example-full.png" width="320"></p>
+<hr>
+<p><strong>Swipper</strong>: <a href="https://github.com/pkarira/Swipper" target="_blank" rel="external">https://github.com/pkarira/Swipper</a></p>
+<p>手势控制库</p>
+<p><img src="https://raw.githubusercontent.com/pkarira/Swipper/19ec63a1f3833d8d12b21941bdf8bcd7fe8b62c0/library/src/main/res/drawable/finalfinal2.gif" width="320"> <img src="https://raw.githubusercontent.com/pkarira/Swipper/19ec63a1f3833d8d12b21941bdf8bcd7fe8b62c0/library/src/main/res/drawable/finalfinal1.gif" width="320"></p>
+<hr>
+<p><strong>AndroidAppShortcuts</strong>: <a href="https://github.com/michelelacorte/AndroidAppShortcuts" target="_blank" rel="external">https://github.com/michelelacorte/AndroidAppShortcuts</a></p>
+<p>支持7.0的快捷方式</p>
+<p><img src="https://camo.githubusercontent.com/0dcaa4bf8273844bc99207a8b9f9c159b509a078/687474703a2f2f692e67697068792e636f6d2f32366759426b38705178756477775751772e676966" width="320"></p>
+<hr>
+<p><strong>Carousel-Notification</strong>: <a href="https://github.com/shaileshmamgain5/Carousel-Notification" target="_blank" rel="external">https://github.com/shaileshmamgain5/Carousel-Notification</a></p>
+<p>Carousel-Notification lets you make carousel type notification where user can navigate within the notification. Selected item can be obtained using a broadcast receiver</p>
+<p><img src="https://raw.githubusercontent.com/shaileshmamgain5/Carousal-Notification/master/app/screenshots/carousal.png" width="300"> <img src="https://raw.githubusercontent.com/shaileshmamgain5/Carousal-Notification/master/app/screenshots/carousal-notification.gif" width="300"></p>
+<hr>
+<p><strong>ViewSpreadTranslationController</strong>: <a href="https://github.com/zhangke3016/ViewSpreadTranslationController" target="_blank" rel="external">https://github.com/zhangke3016/ViewSpreadTranslationController</a></p>
+<p>两行代码搞定Android视图扩散切换效果</p>
+<p><img src="https://raw.githubusercontent.com/zhangke3016/ViewSpreadTranslationController/master/gif/screen1.gif" width="320"> <img src="https://raw.githubusercontent.com/zhangke3016/ViewSpreadTranslationController/master/gif/screen2.gif" width="320"></p>
+<hr>
+<p><strong>Android-SwitchIcon</strong>: <a href="https://github.com/zagum/Android-SwitchIcon" target="_blank" rel="external">https://github.com/zagum/Android-SwitchIcon</a></p>
+<p>Android 状态切换按钮效果</p>
+<p><img src="https://raw.githubusercontent.com/zagum/Android-SwitchIcon/master/art/sample.gif" width="300"></p>
+<hr>
+<p><strong>ChatMessageView</strong>: <a href="https://github.com/bassaer/ChatMessageView" target="_blank" rel="external">https://github.com/bassaer/ChatMessageView</a></p>
+<p>聊天布局</p>
+<p><img src="https://raw.githubusercontent.com/bassaer/ChatMessageView/master/screens.png" width="640"></p>
+<hr>
+<p><strong>InstagramLikeColorTransitionAndroid</strong>: <a href="https://github.com/Taishi-Y/InstagramLikeColorTransitionAndroid" target="_blank" rel="external">https://github.com/Taishi-Y/InstagramLikeColorTransitionAndroid</a></p>
+<p>Instagram风格颜色过渡</p>
+<p><img src="https://github.com/Taishi-Y/InstagramLikeColorTransitionAndroid/raw/master/images/screenshot.gif?raw=true" width="270"></p>
+<hr>
+<p><strong>PlayWidget</strong>: <a href="https://github.com/Cleveroad/PlayWidget" target="_blank" rel="external">https://github.com/Cleveroad/PlayWidget</a></p>
+<p>新颖独特的音乐播放布局</p>
+<p><img src="https://raw.githubusercontent.com/Cleveroad/PlayWidget/master/images/header.png" width="640"></p>
+<hr>
+<p><strong>Android-ExpandIcon</strong>: <a href="https://github.com/zagum/Android-ExpandIcon" target="_blank" rel="external">https://github.com/zagum/Android-ExpandIcon</a></p>
+<p>实现 Google 风格的上下箭头动态效果</p>
+<p><img src="https://raw.githubusercontent.com/zagum/Android-ExpandIcon/master/art/expand_icon_demo.gif" width="320"></p>
+<hr>
+<p><strong>ZuiMeiTAG</strong>: <a href="https://github.com/huage2580/ZuiMeiTAG" target="_blank" rel="external">https://github.com/huage2580/ZuiMeiTAG</a></p>
+<p>仿最美应用的底栏，使用recyclerView实现</p>
+<p><img src="https://raw.githubusercontent.com/huage2580/ZuiMeiTAG/master/hello.gif" width="290"></p>
+<hr>
+<p><strong>HideKeyboard</strong>: <a href="https://github.com/yingLanNull/HideKeyboard" target="_blank" rel="external">https://github.com/yingLanNull/HideKeyboard</a></p>
+<p>仿ios输入法点击输入框以外区域 自动隐藏软键盘轻量级库</p>
+<p><img src="https://raw.githubusercontent.com/yingLanNull/HideKeyboard/master/show/show.gif" width="290"></p>
+<hr>
+<p><strong>TContributionsView</strong>: <a href="https://github.com/barryhappy/TContributionsView" target="_blank" rel="external">https://github.com/barryhappy/TContributionsView</a></p>
+<p>Android：用以显示类似github贡献度的View，当然，也绝不仅限于此~</p>
+<p><img src="https://raw.githubusercontent.com/barryhappy/TContributionsView/master/images/overview.png" width="640"></p>
+<hr>
+<p><strong>AdBlockedWebView-Android</strong>: <a href="https://github.com/AmniX/AdBlockedWebView-Android" target="_blank" rel="external">https://github.com/AmniX/AdBlockedWebView-Android</a></p>
+<p>Adblock Webview，支持自动屏蔽广告</p>
+<p><img src="https://camo.githubusercontent.com/7d15198ddb087ae09141ea29becb661bfaa96d21/687474703a2f2f7777772e67756964696e67746563682e636f6d2f6173736574732f706f7374696d616765732f323031362f30312f626c6f636b2d6164732d6f6e2d656467652d62726f777365722e706e67" width="640"></p>
+<hr>
+<p><strong>SwipeCaptcha</strong>: <a href="https://github.com/mcxtzhang/SwipeCaptcha" target="_blank" rel="external">https://github.com/mcxtzhang/SwipeCaptcha</a></p>
+<p>仿斗鱼滑动验证码</p>
+<p><img src="https://camo.githubusercontent.com/b8f50f4047b3c1aedd077aea3d1f23079c83adc5/687474703a2f2f61632d6d686b65306b75762e636c6f7564646e2e636f6d2f37666362353836353365333538623965633030332e676966" width="320"></p>
+<hr>
+<p><strong>CaptchaImageView</strong>: <a href="https://github.com/jineshfrancs/CaptchaImageView" target="_blank" rel="external">https://github.com/jineshfrancs/CaptchaImageView</a></p>
+<p>验证码图片 ImageView，相当实用</p>
+<p><img src="https://raw.githubusercontent.com/jineshfrancs/CaptchaImageView/master/screens/captcha_screen.gif" width="270"> <img src="https://raw.githubusercontent.com/jineshfrancs/CaptchaImageView/master/screens/captcha_screen_2.gif" width="270"></p>
+<hr>
+<p><strong>Rx.Widgets</strong>: <a href="https://github.com/andrefio/Rx.Widgets" target="_blank" rel="external">https://github.com/andrefio/Rx.Widgets</a></p>
+<p>Materially inspired widgets and views that expose RxJava bindings</p>
+<hr>
+<p><strong>mismeter</strong>: <a href="https://github.com/yongjhih/mismeter" target="_blank" rel="external">https://github.com/yongjhih/mismeter</a></p>
+<p>简单的仪表盘</p>
+<p><img src="https://raw.githubusercontent.com/yongjhih/mismeter/master/art/screenshot.png" width="300"></p>
+<hr>
+<p><strong>Thermometer</strong>: <a href="https://github.com/kofigyan/Thermometer" target="_blank" rel="external">https://github.com/kofigyan/Thermometer</a></p>
+<p>android温度计</p>
+<p><img src="https://raw.githubusercontent.com/kofigyan/Thermometer/master/screenshots/therm_anim.gif" width="320"></p>
+<hr>
+<p><strong>ArcLayout</strong>: <a href="https://github.com/florent37/ArcLayout" target="_blank" rel="external">https://github.com/florent37/ArcLayout</a></p>
+<p>漂亮的弧形顶部布局效果</p>
+<p><img src="https://raw.githubusercontent.com/florent37/ArcLayout/master/media/video1.gif" width="320"></p>
+<hr>
+<p><strong>Timecon</strong>: <a href="https://github.com/alxrm/Timecon" target="_blank" rel="external">https://github.com/alxrm/Timecon</a></p>
+<p>Easy-to-use animated clock icon</p>
+<p><img src="https://raw.githubusercontent.com/alxrm/Timecon/master/imgs/timecon.gif" width="320"></p>
+<hr>
+<p><strong>ClearScreenHelper</strong>: <a href="https://github.com/Yellow5A5/ClearScreenHelper" target="_blank" rel="external">https://github.com/Yellow5A5/ClearScreenHelper</a></p>
+<p>几行代码快速实现滑动清屏效果！动态绑定清屏UI，参考自淘宝直播</p>
+<p><img src="https://raw.githubusercontent.com/Yellow5A5/ClearScreenHelper/master/image/demo_image1.gif" width="270"> <img src="https://raw.githubusercontent.com/Yellow5A5/ClearScreenHelper/master/image/demo_image2.gif" width="270"></p>
+<hr>
+<p><strong>TinyDancer</strong>: <a href="https://github.com/friendlyrobotnyc/TinyDancer" target="_blank" rel="external">https://github.com/friendlyrobotnyc/TinyDancer</a></p>
+<p>Android 上展示 FPS(每秒显示帧数) 的悬浮组件</p>
+<p><img src="https://raw.githubusercontent.com/brianPlummer/TinyDancer/master/assets/tinydancer1.gif" width="270"></p>
+<hr>
+<p><strong>SGiOSViews</strong>: <a href="https://github.com/Shubhank101/SGiOSViews" target="_blank" rel="external">https://github.com/Shubhank101/SGiOSViews</a></p>
+<p>IOS 风格选择控制</p>
+<p><img src="https://camo.githubusercontent.com/92bdc502c25ff25dca9596e0246d1afd994d2f84/687474703a2f2f692e696d6775722e636f6d2f59434f67487a722e676966" width="270"></p>
+<hr>
+<p><strong>GestureLockMaster</strong>: <a href="https://github.com/AMQR/GestureLockMaster" target="_blank" rel="external">https://github.com/AMQR/GestureLockMaster</a></p>
+<p>手势解锁通用库 android</p>
+<p><img src="https://raw.githubusercontent.com/AMQR/GestureLockMaster/master/ges.gif" width="320"></p>
+<hr>
+<p><strong>Pinview</strong>: <a href="https://github.com/GoodieBag/Pinview" target="_blank" rel="external">https://github.com/GoodieBag/Pinview</a></p>
+<p>Pin 码效果的 UI 裤子</p>
+<p><img src="https://camo.githubusercontent.com/4ca257787bd8b888b0dc811f490adb30f3217b0a/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f5535425035676b397a516171732f67697068792e676966" width="270"><br><img src="https://camo.githubusercontent.com/ad933014f6134c4b490fa2ca0836d3ad5e56885a/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f436e43764c68394e543648696f2f67697068792e676966" width="270"></p>
+<hr>
+<p><strong>LolliPin</strong>: <a href="https://github.com/OrangeGangsters/LolliPin" target="_blank" rel="external">https://github.com/OrangeGangsters/LolliPin</a></p>
+<p>A Material design Android pincode library. Supports Fingerprint</p>
+<p><img src="https://github.com/OrangeGangsters/LolliPin/blob/master/app/src/main/res/raw/github_gif.gif" width="320"><br><img src="https://github.com/OrangeGangsters/LolliPin/blob/master/app/src/main/res/raw/github_gif2.gif" width="320"></p>
+<hr>
+<p><strong>PinLockView</strong>: <a href="https://github.com/aritraroy/PinLockView" target="_blank" rel="external">https://github.com/aritraroy/PinLockView</a></p>
+<p>A clean, minimal, highly customizable pin lock view</p>
+<p><img src="https://raw.githubusercontent.com/aritraroy/PinLockView/master/screens/promo.png" width="640"></p>
+<hr>
+<p><strong>android-passcodeview</strong>: <a href="https://github.com/Arjun-sna/android-passcodeview" target="_blank" rel="external">https://github.com/Arjun-sna/android-passcodeview</a></p>
+<p>A custom view with keyboard and character display to be used for authentication</p>
+<p><img src="https://camo.githubusercontent.com/e8de865b924b69792eae1052537f94c47f59a3a2/68747470733a2f2f61726a756e2d736e612e6769746875622e696f2f7261772f70617373636f6465766965775f312e676966" width="320"></p>
+<hr>
+<p><strong>CouponView</strong>: <a href="https://github.com/dongjunkun/CouponView" target="_blank" rel="external">https://github.com/dongjunkun/CouponView</a></p>
+<p>锯齿边框，类似优惠劵效果的自定义 View</p>
+<p><img src="https://raw.githubusercontent.com/dongjunkun/CouponView/master/art/couponView.png" width="640"></p>
+<hr>
+<p><strong>SmartisanTime</strong>: <a href="https://github.com/SpiritMan/SmartisanTime" target="_blank" rel="external">https://github.com/SpiritMan/SmartisanTime</a></p>
+<p>仿锤子时间View</p>
+<p><a href="https://raw.githubusercontent.com/SpiritMan/SmartisanTime/master/images/smartisanTime.gif" target="_blank" rel="external">https://raw.githubusercontent.com/SpiritMan/SmartisanTime/master/images/smartisanTime.gif</a>“ width=”320” /&gt;</p>
+<hr>
+<p><strong>WavyLineView</strong>: <a href="https://github.com/andyxialm/WavyLineView" target="_blank" rel="external">https://github.com/andyxialm/WavyLineView</a></p>
+<p>A custom wavy line view for android</p>
+<p><img src="https://raw.githubusercontent.com/andyxialm/WavyLineView/master/art/wavyline.gif" width="320"></p>
+<hr>
+<p><strong>CompoundLayout</strong>: <a href="https://github.com/Jaouan/CompoundLayout" target="_blank" rel="external">https://github.com/Jaouan/CompoundLayout</a></p>
+<p>让任何布局支持选中状态，类似 Checkbox 的属性</p>
+<p><img src="https://raw.githubusercontent.com/Jaouan/CompoundLayout/master/art/demo.gif" width="320"></p>
+<hr>
+<p><strong>LiveLayout</strong>: <a href="https://github.com/Qiang3570/LiveLayout" target="_blank" rel="external">https://github.com/Qiang3570/LiveLayout</a></p>
+<p>类似于映客，快手，等直播APP布局，直播刷礼物特效，定时清除礼物，计时器，圆形头像，横行listview等</p>
+<p><img src="https://raw.githubusercontent.com/Qiang3570/LiveLayout/master/sample.gif" width="240"></p>
+<hr>
+<p><strong>WeChatPswKeyboard</strong>: <a href="https://github.com/zuiwuyuan/WeChatPswKeyboard" target="_blank" rel="external">https://github.com/zuiwuyuan/WeChatPswKeyboard</a></p>
+<p>高仿微信数字键盘、支付键盘（密码键盘）</p>
+<p><img src="https://raw.githubusercontent.com/zuiwuyuan/WeChatPswKeyboard/master/imgs/img.gif" width="320"></p>
+<hr>
+<p><strong>ActionCardView</strong>: <a href="https://github.com/AdamMc331/ActionCardView" target="_blank" rel="external">https://github.com/AdamMc331/ActionCardView</a></p>
+<p>Detailed CardView that displays an action title, description, and buttons to initiate that action</p>
+<p><img src="https://camo.githubusercontent.com/fed08272fc8bd4aca27087b27722874d15c0a6d3/687474703a2f2f692e696d6775722e636f6d2f687078706472392e6a7067" width="320"></p>
+<hr>
+<p><strong>Article-Details-Transition-Example</strong>: <a href="https://github.com/Jaouan/Article-Details-Transition-Example" target="_blank" rel="external">https://github.com/Jaouan/Article-Details-Transition-Example</a></p>
+<p>It’s just an example of material transition</p>
+<p><img src="https://raw.githubusercontent.com/Jaouan/Article-Details-Transition-Example/master/art/popfromtop.gif" width="320"> <img src="https://raw.githubusercontent.com/Jaouan/Article-Details-Transition-Example/master/art/popfromitem.gif" width="320"></p>
+<hr>
+<p><strong>FlightSeat</strong>: <a href="https://github.com/ldoublem/FlightSeat" target="_blank" rel="external">https://github.com/ldoublem/FlightSeat</a></p>
+<p>机票座位选择</p>
+<p><img src="https://raw.githubusercontent.com/ldoublem/FlightSeat/master/screenshot/seat_gif.gif" width="320"> <img src="https://raw.githubusercontent.com/ldoublem/FlightSeat/master/screenshot/seat_png.png" width="320"></p>
+<hr>
+<p><strong>maoni</strong>: <a href="https://github.com/rm3l/maoni" target="_blank" rel="external">https://github.com/rm3l/maoni</a></p>
+<p>轻量安卓反馈库</p>
+<p><img src="https://raw.githubusercontent.com/rm3l/maoni/master/doc/screenshots/raw/1_Maoni_main_activity.png" width="270"> <img src="https://raw.githubusercontent.com/rm3l/maoni/master/doc/screenshots/raw/2_Maoni_main_activity_with_screenshot_thumbnail.png" width="270"> <img src="https://raw.githubusercontent.com/rm3l/maoni/master/doc/screenshots/raw/3_Maoni_main_activity_with_screenshot_touch_to_preview.png" width="270"></p>
+<hr>
+<p><strong>FloatingViewService</strong>: <a href="https://github.com/hanbaokun/FloatingViewService" target="_blank" rel="external">https://github.com/hanbaokun/FloatingViewService</a></p>
+<p>MIUI8 悬浮球</p>
+<p><img src="https://raw.githubusercontent.com/hanbaokun/FloatingViewService/master/Screenshot_2016-07-14-14-30-59-237_com.miui.home.png" width="320"></p>
+<hr>
+<p><strong>android-versioninfo</strong>: <a href="https://github.com/saschpe/android-versioninfo" target="_blank" rel="external">https://github.com/saschpe/android-versioninfo</a></p>
+<p>方便的以 dialog 或 fragment 显示软件版本</p>
+<p><img src="https://raw.githubusercontent.com/saschpe/android-versioninfo/master/doc/img/versioninfo-sample-dialog.png" width="256"> <img src="https://raw.githubusercontent.com/saschpe/android-versioninfo/master/doc/img/versioninfo-sample-fragment.png" width="256"></p>
+<hr>
+<p><strong>StackOverView</strong>: <a href="https://github.com/Bossyao168/StackOverView" target="_blank" rel="external">https://github.com/Bossyao168/StackOverView</a></p>
+<p>类似 5.0 任务栏的自定义控件</p>
+<p><img src="https://camo.githubusercontent.com/eb5076c5b0b759f5a9ee9288ab754e6e9c54fd27/687474703a2f2f69313036302e70686f746f6275636b65742e636f6d2f616c62756d732f743434342f626f737379616f3136382f323031352d30342d303325323032305f35315f35305f7a7073636475696d6274612e676966" width="360"></p>
+<hr>
+<p><strong>MarqueeLayoutLibrary</strong>: <a href="https://github.com/oubowu/MarqueeLayoutLibrary" target="_blank" rel="external">https://github.com/oubowu/MarqueeLayoutLibrary</a></p>
+<p>一个支持四个方向循环滚动的自定义控件</p>
+<p><img src="https://raw.githubusercontent.com/oubowu/MarqueeLayoutLibrary/master/pic/demo.gif" width="360"></p>
+<hr>
+<p><strong>SmileyRating</strong>: <a href="https://github.com/sujithkanna/SmileyRating" target="_blank" rel="external">https://github.com/sujithkanna/SmileyRating</a></p>
+<p>卡通萌萌系 Rating 组件，快用这个让你的用户去商店给你的 App 评分吧</p>
+<p><img src="https://raw.githubusercontent.com/sujithkanna/SmileyRating/master/app/src/main/assets/demo.gif" width="400"></p>
+<hr>
+<p><strong>MaterialRatingBar</strong>: <a href="https://github.com/DreaminginCodeZH/MaterialRatingBar" target="_blank" rel="external">https://github.com/DreaminginCodeZH/MaterialRatingBar</a></p>
+<p>一款漂亮的打分效果</p>
+<p><img src="https://raw.githubusercontent.com/DreaminginCodeZH/MaterialRatingBar/master/screenshot/sample_app.jpg" width="320"></p>
+<hr>
+<p><strong>SimpleRatingBar</strong>: <a href="https://github.com/FlyingPumba/SimpleRatingBar" target="_blank" rel="external">https://github.com/FlyingPumba/SimpleRatingBar</a></p>
+<p>A simple RatingBar for Android</p>
+<p><img src="https://raw.githubusercontent.com/FlyingPumba/SimpleRatingBar/master/images/sample.gif" width="320"></p>
+<hr>
+<p><strong>RatingView</strong>: <a href="https://github.com/Ornolfr/RatingView" target="_blank" rel="external">https://github.com/Ornolfr/RatingView</a></p>
+<p>等级评分</p>
+<p><img src="https://camo.githubusercontent.com/3db8e39d6d0754b4a2561564a8620dff1bd7870e/68747470733a2f2f676f6f676c6564726976652e636f6d2f686f73742f3042777a315f62396d413758596243314551323878614856776347632f726174696e6776696577322e6a7067" width="320"></p>
+<hr>
+<p><strong>SmileBar</strong>: <a href="https://github.com/eugeneek/SmileBar" target="_blank" rel="external">https://github.com/eugeneek/SmileBar</a></p>
+<p>等级评分</p>
+<p><img src="https://raw.githubusercontent.com/eugeneek/SmileBar/master/img/screenshot.png" width="320"></p>
+<hr>
+<p><strong>AndroidGooView</strong>: <a href="https://github.com/smartbetter/AndroidGooView" target="_blank" rel="external">https://github.com/smartbetter/AndroidGooView</a></p>
+<p>一个自定义粘性控件，拖动GooView，在一定的范围内具有粘性效果，当超出范围时，GooView消失</p>
+<p><img src="https://raw.githubusercontent.com/smartbetter/AndroidGooView/master/website/static/screenshot.gif" width="150"></p>
+<hr>
+<p><strong>BezierMaker</strong>: <a href="https://github.com/venshine/BezierMaker" target="_blank" rel="external">https://github.com/venshine/BezierMaker</a></p>
+<p>通过de Casteljau算法绘制贝塞尔曲线，并计算它的切线，实现1-7阶贝塞尔曲线的形成动画</p>
+<p><img src="https://raw.githubusercontent.com/venshine/BezierMaker/master/screenshot/2.gif" width="270"> <img src="https://raw.githubusercontent.com/venshine/BezierMaker/master/screenshot/3.gif" width="270"> <img src="https://raw.githubusercontent.com/venshine/BezierMaker/master/screenshot/7.gif" width="270"></p>
+<hr>
+<p><strong>MagicaSakura</strong>: <a href="https://github.com/Bilibili/MagicaSakura" target="_blank" rel="external">https://github.com/Bilibili/MagicaSakura</a></p>
+<p>B 站出品的 Android 主题切换</p>
+<p><img src="https://raw.githubusercontent.com/Bilibili/MagicaSakura/master/screenshot/magicasakura.gif" width="320"></p>
+<hr>
+<p><strong>Scoops</strong>: <a href="https://github.com/52inc/Scoops" target="_blank" rel="external">https://github.com/52inc/Scoops</a></p>
+<p>主题管理切换</p>
+<p><img src="https://camo.githubusercontent.com/d7ec90078d65ad6728580b5752b63658e8b92dcd/687474703a2f2f692e696d6775722e636f6d2f3553716a62684c2e676966" width="320"></p>
+<hr>
+<p><strong>Spotlight</strong>: <a href="https://github.com/wooplr/Spotlight" target="_blank" rel="external">https://github.com/wooplr/Spotlight</a></p>
+<p>showcasing specific features in the app</p>
+<p><img src="https://raw.githubusercontent.com/wooplr/Spotlight/master/art/intro.gif?token=AA5ZAHdvAspW6Zj8YyyKamkV7jWXFtMHks5XaQovwA%3D%3D" width="320"></p>
+<hr>
+<p><strong>Android-Cling</strong>: <a href="https://github.com/MajeurAndroid/Android-Cling" target="_blank" rel="external">https://github.com/MajeurAndroid/Android-Cling</a></p>
+<p>首次使用软件时指导用户操作</p>
+<p><img src="https://raw.githubusercontent.com/MajeurAndroid/Android-Cling/master/web_art/device_example.png" width="320"></p>
+<hr>
+<p><strong>RadarChart</strong>: <a href="https://github.com/qstumn/RadarChart" target="_blank" rel="external">https://github.com/qstumn/RadarChart</a></p>
+<p>一个可以自由定制、旋转交互的Android雷达图Lib</p>
+<p><img src="https://raw.githubusercontent.com/qstumn/RadarChart/master/demo.gif" width="310"></p>
+<hr>
+<p><strong>polygonsview</strong>: <a href="https://github.com/jiangzehui/polygonsview" target="_blank" rel="external">https://github.com/jiangzehui/polygonsview</a></p>
+<p>模仿掌上英雄联盟能力分析效果</p>
+<p><img src="https://raw.githubusercontent.com/jiangzehui/polygonsview/master/png/p1.png" width="320"> <img src="https://raw.githubusercontent.com/jiangzehui/polygonsview/master/png/p2.png" width="320"></p>
+<hr>
+<p><strong>SpiderWebScoreView</strong>: <a href="https://github.com/xiaopansky/SpiderWebScoreView" target="_blank" rel="external">https://github.com/xiaopansky/SpiderWebScoreView</a></p>
+<p>Android上的一个蜘蛛网评分控件</p>
+<p><img src="https://raw.githubusercontent.com/xiaopansky/SpiderWebScoreView/master/docs/sample.png" width="320"></p>
+<hr>
+<p><strong>AbilityChart</strong>: <a href="https://github.com/jiefly/AbilityChart" target="_blank" rel="external">https://github.com/jiefly/AbilityChart</a></p>
+<p>一个能力值属性分布的控件</p>
+<p><img src="https://raw.githubusercontent.com/jiefly/AbilityChart/master/app/Screenshot_20160522-150549.png" width="320"> <img src="https://raw.githubusercontent.com/jiefly/AbilityChart/master/app/Screenshot_20160521-203747.png" width="320"></p>
+<hr>
+<p><strong>hintcase</strong>: <a href="https://github.com/Nescafemix/hintcase" target="_blank" rel="external">https://github.com/Nescafemix/hintcase</a></p>
+<p>HintCase is a library for Android that will help you create really awesome hints/tips for your apps</p>
+<p><img src="https://github.com/Nescafemix/hintcase/raw/master/assets/welcome_demo.gif" width="320"> <img src="https://github.com/Nescafemix/hintcase/raw/master/assets/bubble_demo.gif" width="320"></p>
+<hr>
+<p><strong>HorizontalWheelView</strong>: <a href="https://github.com/shchurov/HorizontalWheelView" target="_blank" rel="external">https://github.com/shchurov/HorizontalWheelView</a></p>
+<p>HorizontalWheelView</p>
+<p><img src="https://camo.githubusercontent.com/947f61681a1700e42fae62f45618d1a9c1adb6e3/68747470733a2f2f692e696d6775722e636f6d2f775759625238522e706e67" width="480"></p>
+<p><img src="https://camo.githubusercontent.com/ee6124cc259de10d4a4f6bfbc06ff3c06728803b/687474703a2f2f692e67697068792e636f6d2f764831715378637742424f69512e676966" width="270"></p>
+<hr>
+<p><strong>MultipleStatusView</strong>: <a href="https://github.com/qyxxjd/MultipleStatusView" target="_blank" rel="external">https://github.com/qyxxjd/MultipleStatusView</a></p>
+<p>一个支持多种状态的自定义View,可以方便的切换到：加载中视图、错误视图、空数据视图、网络异常视图、内容视图</p>
+<p><img src="https://raw.githubusercontent.com/qyxxjd/MultipleStatusView/master/screenshots/demo.gif" width="320"></p>
+<hr>
+<p><strong>QQBubbleView</strong>: <a href="https://github.com/Yasic/QQBubbleView" target="_blank" rel="external">https://github.com/Yasic/QQBubbleView</a></p>
+<p>利用三阶贝塞尔曲线模仿QQ空间直播页面右下角的礼物冒泡特效</p>
+<p><img src="https://camo.githubusercontent.com/dcac7c2c31993d2a7c38dbf4bed192579bc05978/687474703a2f2f646979636f64652e62302e7570616979756e2e636f6d2f70686f746f2f323031362f35356238306334633237306534316534323963343638393733663231356363372e676966" width="270"></p>
+<hr>
+<p><strong>SwipeableCard</strong>: <a href="https://github.com/michelelacorte/SwipeableCard" target="_blank" rel="external">https://github.com/michelelacorte/SwipeableCard</a></p>
+<p>A simple implementation of swipe card like StreetView!!</p>
+<p><img src="http://i.giphy.com/3ornjQLD95Osp4qlm8.gif" width="270"><br><img src="http://i.giphy.com/26FPDYox55jE0UBVu.gif" width="270"><br><img src="http://i.giphy.com/3o8doUXxjOCwHw2GEo.gif" width="270"></p>
+<hr>
+<p><strong>Genius-Android</strong>: <a href="https://github.com/qiujuer/Genius-Android" target="_blank" rel="external">https://github.com/qiujuer/Genius-Android</a></p>
+<p>Android Material Design Theme UI and Tool Library. <a href="http://genius.qiujuer.net" target="_blank" rel="external">http://genius.qiujuer.net</a></p>
+<p><img src="https://raw.githubusercontent.com/qiujuer/Genius-Android/master/caprice/release/pic_ui.png" width="480"></p>
+<hr>
+<p><strong>MemorySpinner</strong>: <a href="https://github.com/Jasonchenlijian/MemorySpinner" target="_blank" rel="external">https://github.com/Jasonchenlijian/MemorySpinner</a></p>
+<p>可以记住历史选项的spinner</p>
+<p><img src="https://camo.githubusercontent.com/7dd0f4e141fa57a7906ad608027dc1fe84db9c7c/68747470733a2f2f696d672e616c6963646e2e636f6d2f696d6765787472612f69342f3138313235373637312f544232537068436b585858585861755870585858585858585858585f21213138313235373637312e676966" width="320"></p>
+<hr>
+<p><strong>MaterialSpinner</strong>: <a href="https://github.com/ganfra/MaterialSpinner" target="_blank" rel="external">https://github.com/ganfra/MaterialSpinner</a></p>
+<p>Spinner with Material Design - Down to API 9</p>
+<p><img src="https://github.com/ganfra/MaterialSpinner/blob/master/screenshots/screenshot.gif" width="320"></p>
+<hr>
+<p><strong>DanmakuFlameMaster</strong>: <a href="https://github.com/Bilibili/DanmakuFlameMaster" target="_blank" rel="external">https://github.com/Bilibili/DanmakuFlameMaster</a></p>
+<p>B 站出品的 Android 开源弹幕引擎 —— 烈焰弹幕使</p>
+<hr>
+<p><strong>DanmukuLight</strong>: <a href="https://github.com/hpdx/DanmukuLight" target="_blank" rel="external">https://github.com/hpdx/DanmukuLight</a></p>
+<p>Android上专为视屏直播打造的轻量级弹幕库（100多kb）</p>
+<p><img src="https://raw.githubusercontent.com/hpdx/DanmukuLight/master/result_image.jpg" width="320"></p>
+<hr>
+<p><strong>DanmakuFlameMaster</strong>: <a href="https://github.com/Bilibili/DanmakuFlameMaster" target="_blank" rel="external">https://github.com/Bilibili/DanmakuFlameMaster</a></p>
+<p>大弹幕时代来临了,这里是Android上最好的开源弹幕引擎·烈焰弹幕使 ～ 被弹幕吞噬吧!</p>
+<p><img src="http://www.23code.com/wp-content/uploads/2015/05/device-2015-05-08-105135.jpg" width="320"></p>
+<hr>
+<p><strong>StickerView</strong>: <a href="https://github.com/sangmingming/StickerView" target="_blank" rel="external">https://github.com/sangmingming/StickerView</a></p>
+<p>a sticker view for android application</p>
+<p><img src="http://www.23code.com/wp-content/uploads/2015/05/device-2015-05-14-115235.jpg" width="320"></p>
+<hr>
+<p><strong>phrase</strong>: <a href="https://github.com/square/phrase" target="_blank" rel="external">https://github.com/square/phrase</a></p>
+<p>Phrase is an Android string resource templating library</p>
+<hr>
+<p><strong>TourGuide</strong>: <a href="https://github.com/worker8/TourGuide" target="_blank" rel="external">https://github.com/worker8/TourGuide</a></p>
+<p>TourGuide is an Android library that aims to provide an easy way to add pointers with animations over a desired Android View</p>
+<p><img src="https://raw.githubusercontent.com/worker8/all_my_media_files/25b3208/device-2015-07-01-114155.gif" width="320"></p>
+<hr>
+<p><strong>cheesesquare</strong>: <a href="https://github.com/chrisbanes/cheesesquare" target="_blank" rel="external">https://github.com/chrisbanes/cheesesquare</a></p>
+<p>Demos the new Android Design library.</p>
+<p><img src="http://www.23code.com/wp-content/uploads/2015/08/device-2015-08-14-153220.jpg" width="320"></p>
+<hr>
+<p><strong>ImageProcessing</strong>: <a href="https://github.com/pepoc/ImageProcessing" target="_blank" rel="external">https://github.com/pepoc/ImageProcessing</a></p>
+<p>这个贴纸Demo是基于 <a href="http://blog.isming.me/2015/05/10/sticker-view/" target="_blank" rel="external">http://blog.isming.me/2015/05/10/sticker-view/</a> 现有基础的优化。</p>
+<p><img src="https://github.com/pepoc/ImageProcessing/blob/master/demo.png" width="320"></p>
+<hr>
+<p><strong>QuantityView</strong>: <a href="https://github.com/himanshu-soni/QuantityView" target="_blank" rel="external">https://github.com/himanshu-soni/QuantityView</a></p>
+<p>Android quantity view with add and remove button.</p>
+<p><img src="https://raw.githubusercontent.com/himanshu-soni/QuantityView/master/screenshots/device-2015-09-29-191352.png" width="270"><br><img src="https://raw.githubusercontent.com/himanshu-soni/QuantityView/master/screenshots/device-2015-10-09-175354.png" width="270"><br><img src="https://raw.githubusercontent.com/himanshu-soni/QuantityView/master/screenshots/device-2015-10-09-175420.png" width="270"></p>
+<hr>
+<p><strong>BubbleView</strong>: <a href="https://github.com/lguipeng/BubbleView" target="_blank" rel="external">https://github.com/lguipeng/BubbleView</a></p>
+<p>Bubble View 聊天气泡</p>
+<p><img src="https://github.com/lguipeng/BubbleView/blob/master/screenshot/screenshot.png" width="320"></p>
+<hr>
+<p><strong>MaterialDesignLibrary</strong>: <a href="https://github.com/navasmdc/MaterialDesignLibrary" target="_blank" rel="external">https://github.com/navasmdc/MaterialDesignLibrary</a></p>
+<p>This is a library with components of Android L to you use in android 2.2</p>
+<p><img src="https://github.com/navasmdc/MaterialDesignLibrary/blob/master/images/logo.png" width="320"><br><img src="https://github.com/navasmdc/MaterialDesignLibrary/blob/master/images/rectangle_button.png" width="150"><br><img src="https://github.com/navasmdc/MaterialDesignLibrary/blob/master/images/float_button.png" width="150"><br><img src="https://github.com/navasmdc/MaterialDesignLibrary/blob/master/images/switch.png" width="150"><br><img src="https://github.com/navasmdc/MaterialDesignLibrary/blob/master/images/progress_bar_circular_indeterminate.png" width="150"><br><img src="https://github.com/navasmdc/MaterialDesignLibrary/blob/master/images/slider_with_number_indicator.png" width="150"></p>
+<hr>
+<p><strong>Lollipop-AppCompat-Widgets-Skeleton</strong>: <a href="https://github.com/sachin1092/Lollipop-AppCompat-Widgets-Skeleton" target="_blank" rel="external">https://github.com/sachin1092/Lollipop-AppCompat-Widgets-Skeleton</a></p>
+<p>A skeleton of google’s appcompat android navigation drawer with material design.</p>
+<p><img src="https://github.com/sachin1092/Lollipop-AppCompat-Skeleton/blob/master/art/LollipopAppCompatWidgetSkeleton.gif" width="320"></p>
+<hr>
+<p><strong>material</strong>: <a href="https://github.com/rey5137/material" target="_blank" rel="external">https://github.com/rey5137/material</a></p>
+<p>A library to bring fully animated Material Design components to pre-Lolipop Android.<a href="http://rey5137.com/material/" target="_blank" rel="external">http://rey5137.com/material/</a></p>
+<p><img src="https://github.com/rey5137/Material/raw/master/image/progress_circular_indeterminate.gif" width="160"><br><img src="https://github.com/rey5137/Material/raw/master/image/progress_linear_indeterminate.gif" width="160"><br><img src="https://github.com/rey5137/Material/raw/master/image/progress_linear_buffer.gif" width="160"><br><img src="https://github.com/rey5137/Material/raw/master/image/button_raise_touch.gif" width="160"><br><img src="https://github.com/rey5137/Material/raw/master/image/fab_line.gif" width="160"><br><img src="https://github.com/rey5137/Material/raw/master/image/cb.gif" width="160"><br><img src="https://github.com/rey5137/Material/raw/master/image/switch.gif" width="160"><br><img src="https://github.com/rey5137/Material/raw/master/image/slider_discrete.gif" width="160"><br><img src="https://github.com/rey5137/Material/raw/master/image/spn.gif" width="160"><br><img src="https://github.com/rey5137/Material/raw/master/image/textfield.gif" width="160"><br><img src="https://github.com/rey5137/Material/raw/master/image/tpi.gif" width="160"><br><img src="https://github.com/rey5137/Material/raw/master/image/snackbar.png" width="160"><br><img src="https://github.com/rey5137/Material/raw/master/image/dialog_3.png" width="160"><br><img src="https://github.com/rey5137/Material/raw/master/image/dialog_4.png" width="160"><br><img src="https://github.com/rey5137/Material/raw/master/image/theme.gif" width="160"></p>
+<hr>
+<p><strong>android_maskable_layout</strong>: <a href="https://github.com/christophesmet/android_maskable_layout" target="_blank" rel="external">https://github.com/christophesmet/android_maskable_layout</a></p>
+<p>A library that easily allows you to mask layouts/viewgroups.</p>
+<p><img src="https://github.com/christophesmet/android_maskable_layout/blob/master/Screencast.gif" width="320"></p>
+<hr>
+<p><strong>bubbles-for-android</strong>: <a href="https://github.com/txusballesteros/bubbles-for-android" target="_blank" rel="external">https://github.com/txusballesteros/bubbles-for-android</a></p>
+<p>Bubbles for Android is an Android library to provide chat heads capabilities on your apps. With a fast way to integrate with your development.</p>
+<p><img src="https://github.com/txusballesteros/bubbles-for-android/blob/master/assets/bubbles_demo.gif" width="320"></p>
+<hr>
+<p><strong>FloatingView</strong>: <a href="https://github.com/recruit-lifestyle/FloatingView" target="_blank" rel="external">https://github.com/recruit-lifestyle/FloatingView</a></p>
+<p><a href="http://engineer.recruit-lifestyle.co.jp/techblog/2015-07-29-floatingview/" target="_blank" rel="external">http://engineer.recruit-lifestyle.co.jp/techblog/2015-07-29-floatingview/</a></p>
+<p><img src="https://github.com/recruit-lifestyle/FloatingView/blob/master/screenshot/animation.gif" width="320"></p>
+<hr>
+<p><strong>Android-Lock9View</strong>:  <a href="https://github.com/TakWolf/Android-Lock9View" target="_blank" rel="external">https://github.com/TakWolf/Android-Lock9View</a></p>
+<p> An Android grid lock screen view with a callback interface.</p>
+<p><img src="https://github.com/TakWolf/Android-Lock9View/blob/master/art/screenshot.png" width="320"></p>
+<hr>
+<p><strong>CreditsRoll</strong>:  <a href="https://github.com/frakbot/CreditsRoll" target="_blank" rel="external">https://github.com/frakbot/CreditsRoll</a></p>
+<p>[insert Star Wars theme here]</p>
+<p><img src="https://github.com/frakbot/CreditsRoll/blob/master/img/scroll.gif" width="320"></p>
+<hr>
+<p><strong>discreteSeekBar</strong>: <a href="https://github.com/AnderWeb/discreteSeekBar" target="_blank" rel="external">https://github.com/AnderWeb/discreteSeekBar</a></p>
+<p><img src="https://camo.githubusercontent.com/b1c5e00bc9164c24b995a95942dbb731edd8d39e/68747470733a2f2f6c68362e676f6f676c6575736572636f6e74656e742e636f6d2f2d4a6a7678564d436d3175672f56485550575642667062492f41414141414141414874512f5450746f4f6a4849354d412f773633392d683335362f7365656b626172322e676966" width="320"><br><img src="https://camo.githubusercontent.com/e717e2597779d1ddc980ace6f3943f62483d8a8c/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f2d376e62565058785568596b2f56472d724f3634704d57492f414141414141414148734d2f614d52676c7432567a726b2f773633392d683438302f616e696d6174696f6e2e676966" width="320"></p>
+<hr>
+<p><strong>WheelIndicatorView</strong>: <a href="https://github.com/dlazaro66/WheelIndicatorView" target="_blank" rel="external">https://github.com/dlazaro66/WheelIndicatorView</a></p>
+<p>A ‘Google Fit’ like activity indicator for Android</p>
+<p><img src="https://github.com/dlazaro66/WheelIndicatorView/blob/master/art/animated_wheelview.gif?raw=true" width="320"></p>
+<hr>
+<p><strong>Android-Bootstrap</strong>: <a href="https://github.com/Bearded-Hen/Android-Bootstrap" target="_blank" rel="external">https://github.com/Bearded-Hen/Android-Bootstrap</a></p>
+<p>Bootstrap style widgets for Android, with Glyph Icons</p>
+<p><img src="https://camo.githubusercontent.com/51755d59ed6fd53158a0d84696e6d184c3a6f4d5/68747470733a2f2f7261772e6769746875622e636f6d2f426561726465642d48656e2f416e64726f69642d426f6f7473747261702f6d61737465722f696d616765732f626f6f7473747261705f627574746f6e2e706e67" width="320"></p>
+<hr>
+<p><strong>dspec</strong>: <a href="https://github.com/lucasr/dspec" target="_blank" rel="external">https://github.com/lucasr/dspec</a></p>
+<p>Define and render UI specs on top of your Android UI</p>
+<p><img src="https://github.com/wasabeef/awesome-android-ui/blob/master/art/dspec.png" width="320"></p>
+<hr>
+<p><strong>android-materialshadowninepatch</strong>: <a href="https://github.com/h6ah4i/android-materialshadowninepatch" target="_blank" rel="external">https://github.com/h6ah4i/android-materialshadowninepatch</a></p>
+<p>Provides 9-patch based drop shadow for view elements. Works on API level 9 or later.</p>
+<p><img src="https://github.com/h6ah4i/android-materialshadowninepatch/blob/master/pic/gb.png?raw=true" width="270"><br><img src="https://github.com/h6ah4i/android-materialshadowninepatch/blob/master/pic/ics.png?raw=true" width="270"><br><img src="https://github.com/h6ah4i/android-materialshadowninepatch/blob/master/pic/lollipop.png?raw=true" width="270"></p>
+<hr>
+<p><strong>SimpleFingerGestures_Android_Library</strong>: <a href="https://github.com/championswimmer/SimpleFingerGestures_Android_Library" target="_blank" rel="external">https://github.com/championswimmer/SimpleFingerGestures_Android_Library</a></p>
+<p>Android</p>
+<p><img src="https://github.com/championswimmer/SimpleFingerGestures_Android_Library/blob/master/screens/1.gif" width="270"><br><img src="https://github.com/championswimmer/SimpleFingerGestures_Android_Library/blob/master/screens/2.gif" width="270"><br><img src="https://github.com/championswimmer/SimpleFingerGestures_Android_Library/blob/master/screens/4.gif" width="270"></p>
+<hr>
+<p><strong>Decor</strong>: <a href="https://github.com/chemouna/decor" target="_blank" rel="external">https://github.com/chemouna/decor</a></p>
+<p>Android layout decorators : Injecting custom attributes in layout files, Using decorators to get rid of unnecessary class explosion with custom views</p>
+<p><img src="https://github.com/chemouna/Decor/blob/master/images/decor_sample.png" width="320"></p>
+<hr>
+<p><strong>voice-recording-visualizer</strong>: <a href="https://github.com/tyorikan/voice-recording-visualizer" target="_blank" rel="external">https://github.com/tyorikan/voice-recording-visualizer</a></p>
+<p>Simple Visualizer from mic input for Android.</p>
+<p><img src="https://camo.githubusercontent.com/dec65b58525ce17eff5e0318d3c39ae33760284a/687474703a2f2f696d672e796f75747562652e636f6d2f76692f664a546c31626751336a342f302e6a7067" width="320"></p>
+<hr>
+<p><strong>MoveMapLocation</strong>: <a href="https://github.com/scp504677840/MoveMapLocation" target="_blank" rel="external">https://github.com/scp504677840/MoveMapLocation</a></p>
+<p>移动地图选址</p>
+<p><img src="https://camo.githubusercontent.com/eff4f945232a44be81cec8a136fa17c52a43aaca/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313531303132313332393235353232" width="320"></p>
+<hr>
+      
+    </div>
+    
+  </div>
+  
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/android-librarys/Custom/">自定义控件 Custom - Android开源组件</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Zero</a></p>
+        <p><span>发布时间:</span>2017-03-24 17:14</p>
+        <!-- <p><span>最后更新:</span>2017-03-29, 17:47:47</p> -->
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/android-librarys/Custom/" title="自定义控件 Custom - Android开源组件">http://www.jiaoyigui.cn//android-librarys/Custom/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.jiaoyigui.cn//android-librarys/Custom/　　作者: Zero" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <!-- <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p> -->
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/android-librarys/Menu/">
+                    菜单 Menu - Android开源组件
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/android-librarys/Dialog/">
+                    弹窗 Dialog - Android开源组件
+                </a>
+            </div>
+        
+    </nav>
+  
+</article>
+<div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义控件-Custom"><span class="toc-number">1.</span> <span class="toc-text">自定义控件 Custom</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+    <div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"自定义控件 Custom - Android开源组件　| 夜的灯　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+    
+
+
+<div class="scroll" id="post-nav-button">
+        
+            <a href="/android-librarys/Menu/" title="上一篇: 菜单 Menu - Android开源组件">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/android-librarys/Dialog/" title="下一篇: 弹窗 Dialog - Android开源组件">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/opensource/Android/">Android开源项目</a></li><li class="post-list-item"><a class="post-list-link" href="/opensource/Index/">索引 - 开源项目</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Utils/">辅助工具类 Utils - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Menu/">菜单 Menu - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Custom/">自定义控件 Custom - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Dialog/">弹窗 Dialog - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Framework/">开发框架Framework - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Layout/">布局Layout - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Animation/">动画Animation - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/List/">列表 List - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Network/">网络请求 Network - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Image/">图片 Image - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/php/thinkphp5-install/">Thinkphp5快速入门</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Index/">总纲 - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android/Android-Decompile/">Android反编译</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-Java/">开发环境 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-iTerm2/">终端方案iTerm2 + Zsh - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-Homebrew/">包管理工具 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-keymap/">常用快捷键 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-settings/">系统使用 - Java程序员眼中的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/server/VPS/">VPS + Shadowsocks 可以是什么，做什么</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-Debug/">IntelliJ IDEA DEBUG调试</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-For-Mac-Keys/">IntelliJ IDEA For Mac 快捷键</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-Settings/">IntelliJ IDEA 主题、字体、编辑区主题、文件编码修改、乱码问题</a></li><li class="post-list-item"><a class="post-list-link" href="/hexo/Hexo-Install/">搭建 Hexo 博客--增强篇</a></li></ul>
+
+
+    <script>
+        
+    </script></div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i>
+                2017 Zero
+            </div>
+            <div class="footer-right">
+                <!-- <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i> -->
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide()" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+<script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>

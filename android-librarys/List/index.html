@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Zero">
+
+
+
+<meta name="description" content="收集Android相关的列表组件库, 包含：ListView、GridView、RecyclerView、Refresh、LoadMore……">
+<meta property="og:type" content="article">
+<meta property="og:title" content="列表 List - Android开源组件">
+<meta property="og:url" content="http://www.jiaoyigui.cn/android-librarys/List/index.html">
+<meta property="og:site_name" content="夜的灯">
+<meta property="og:description" content="收集Android相关的列表组件库, 包含：ListView、GridView、RecyclerView、Refresh、LoadMore……">
+<meta property="og:image" content="https://raw.githubusercontent.com/lurbas/ListItemView/master/readme/cover.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/vivchar/RendererRecyclerViewAdapter/master/example_new.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/yarolegovich/DiscreteScrollView/master/images/cards_shop.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/yarolegovich/DiscreteScrollView/master/images/cards_weather.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/2b947a15f5502af5a4639a5927d68052ccfb54a3/687474703a2f2f696d67332e746263646e2e636e2f4c312f3436312f312f31623962666234323030393034376637356365653038616537343135303564653263373461633061">
+<meta property="og:image" content="https://raw.githubusercontent.com/florent37/ExpectAnim/master/media/sample.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/florent37/ExpectAnim/master/media/scroll.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/sharish/ShimmerRecyclerView/master/screenshots/list_demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/sharish/ShimmerRecyclerView/master/screenshots/grid_demo.gif">
+<meta property="og:image" content="https://github.com/jaychang0917/SimpleRecyclerView/raw/master/art/basic_usage.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/TellH/RecyclerStickyHeaderView/master/raw/effect.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/gjiazhe/LayoutSwitch/master/screenshot/screenshot.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/zhouchaoyuan/excelPanel/master/app/src/main/assets/roomFormDemo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/sharish/ShimmerRecyclerView/master/screenshots/list_demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/sharish/ShimmerRecyclerView/master/screenshots/grid_demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/abacritt/sectionedmergeadapter/master/app/Screenshot_20160724-231927.png">
+<meta property="og:image" content="https://github.com/lcodecorex/TwinklingRefreshLayout/raw/master/art/gif_recyclerview.gif">
+<meta property="og:image" content="https://github.com/lcodecorex/TwinklingRefreshLayout/raw/master/art/gif_recyclerview2.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/MarkoMilos/Paginate/master/art/demo.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/7467ac57d7290756110b1949b71cdb455d517548/687474703a2f2f6f66316b74796b737a2e626b742e636c6f7564646e2e636f6d2f6572765f6d6174657269616c5f6865616465722e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/Kelin-Hong/ScrollablePanel/master/art/ScrollablePanelDemo.gif">
+<meta property="og:image" content="https://github.com/BelooS/ChipsLayoutManager/raw/master/images/demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/drstranges/DataBinding_For_RecyclerView/master/!_img/img1.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/baf0794018fbb0812ade7d741a94d34ac3500b94/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313631303133323032313335373530">
+<meta property="og:image" content="https://raw.githubusercontent.com/ysq1051838264/FriendGroupManage/master/1.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/rubengees/EasyHeaderFooterAdapter/master/art/sample.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/pchauhan/StickyViewPagerGridHeaders/master/Screenshots/ScreenOne.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pchauhan/StickyViewPagerGridHeaders/master/Screenshots/Screenhalfscroll.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pchauhan/StickyViewPagerGridHeaders/master/Screenshots/Screenfullscroll.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/f5d88bebd99eccc89168d93c8c7ba31583733729/68747470733a2f2f7777772e64726f70626f782e636f6d2f732f79753235353862626d7633747763352f746578745f64656d6f312e6769663f7261773d74727565">
+<meta property="og:image" content="https://camo.githubusercontent.com/2bb257d1e851edcbde37313420cb7de1fccbf7af/68747470733a2f2f7777772e64726f70626f782e636f6d2f732f74376d3779643876683677346a69622f696d6167655f64656d6f312e6769663f7261773d74727565">
+<meta property="og:image" content="https://raw.githubusercontent.com/beworker/pinned-section-listview/master/web/screen3.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Kenber/DoubleStickyHeadersList/master/samplePicture/sample.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/kHRYSTAL/CircleRecyclerView/master/screenshot/screenshot1.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/kHRYSTAL/CircleRecyclerView/master/screenshot/screenshot2.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/eschao/android-ElasticListView/master/images/elasticlistview_updating.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/eschao/android-ElasticListView/master/images/elasticlistview_loading.png">
+<meta property="og:image" content="https://github.com/iielse/RetailMeNotList/raw/master/previews/123456789.gif">
+<meta property="og:image" content="https://github.com/iielse/RetailMeNotList/raw/master/previews/987654321.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/HotBitmapGG/EasyRecycleAdapterHelper/master/art/01.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/HotBitmapGG/EasyRecycleAdapterHelper/master/art/02.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/hougr/SmartisanPull/master/screenshot/smartisan_pull_small.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/5e017416bb7ab1281ced4b4be75b50d1e7ff156f/68747470733a2f2f6c68362e676f6f676c6575736572636f6e74656e742e636f6d2f2d4f4d5674354f77327473452f56736276626d4a4f6f75492f4141414141414141434c732f61516f417a5835684759772f773338362d683535312d6e6f2f6166676c2e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/8703b683fe9df6fa645bb27c2037746571a03713/68747470733a2f2f6c68342e676f6f676c6575736572636f6e74656e742e636f6d2f2d64586f556e476a474c48452f56736276627465685633492f4141414141414141434c732f45715942364141356659492f773339362d683535322d6e6f2f6163676c2e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/loopeer/itemtouchhelper-extension/master/screenshot/itemtouch_spring.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/loopeer/itemtouchhelper-extension/master/screenshot/itemtouch_recycler_width.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/rubensousa/RecyclerViewSnap/master/screens/snap_googleplay.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/rubensousa/RecyclerViewSnap/master/screens/snap_final.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/abhijith0505/ListView-Snapshot-Demo/master/screenshot.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/bhargavms/SelectableListDecoration/master/assets/Selection_001.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/bhargavms/SelectableListDecoration/master/assets/Selection_002.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/dinuscxj/RecyclerRefreshLayout/master/Preview/RecyclerRefreshLayoutNormal.gif?width=300">
+<meta property="og:image" content="https://raw.githubusercontent.com/dinuscxj/RecyclerRefreshLayout/master/Preview/RecyclerRefreshLayoutNoData.gif?width=300">
+<meta property="og:image" content="https://raw.githubusercontent.com/dinuscxj/RecyclerRefreshLayout/master/Preview/RecyclerRefreshLayoutFailure.gif?width=300">
+<meta property="og:image" content="https://camo.githubusercontent.com/3f8912b907378a5227100a1c6d2868d641a826c6/687474703a2f2f7777772e77656269616e6b732e636f6d2f706f707570627562626c652f322e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/9374a2962d3bd61817569fc8483b651d2fbcd1b0/687474703a2f2f7777772e77656269616e6b732e636f6d2f706f707570627562626c652f332e706e67">
+<meta property="og:image" content="https://raw.githubusercontent.com/zaihuishou/ExpandableRecyclerview-Databinding/master/Screenshots.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/airbnb/epoxy/master/epoxy-sample/epoxy_sample_app.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/37f2d500453ef5c5441c7f68bc69ad1145460a9a/687474703a2f2f692e696d6775722e636f6d2f6566744f4530762e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/LuckyJayce/MultiTypeView/master/raw/1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/drakeet/MultiType/master/art/screenshot.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Hitomis/FunGameRefresh/master/preview/HitBlock.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Hitomis/FunGameRefresh/master/preview/BattleCity.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/f390437ba548be66a9e4c91389e5587000533c24/68747470733a2f2f7261772e6769746875622e636f6d2f6c7562656173742f50756c6c4c61756e6368526f636b65742f6d61737465722f73637265656e73686f74732f726f636b65742e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/3947994e16b8e19b744f254e69219c626527fe37/68747470733a2f2f7261772e6769746875622e636f6d2f6c7562656173742f50756c6c4c61756e6368526f636b65742f6d61737465722f73637265656e73686f74732f73756e72616973652e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/snipsnap/SlyceMessaging/master/sample-photos/example.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/snipsnap/SlyceMessaging/master/sample-photos/chat-with-image.png">
+<meta property="og:image" content="https://github.com/sfsheng0322/StickyHeaderListView/raw/master/screenshots/stickyheader.gif">
+<meta property="og:image" content="https://github.com/sfsheng0322/StickyHeaderListView/raw/master/screenshots/stickyheader2.gif">
+<meta property="og:image" content="https://github.com/liaoinstan/SpringView/blob/master/screenshot/1459212323072_s.gif">
+<meta property="og:image" content="https://github.com/liaoinstan/SpringView/blob/master/screenshot/1459212372609_s.gif">
+<meta property="og:image" content="https://github.com/liaoinstan/SpringView/blob/master/screenshot/1459212462800_s.gif">
+<meta property="og:image" content="https://github.com/liaoinstan/SpringView/blob/master/screenshot/1459212485237_s.gif">
+<meta property="og:image" content="https://github.com/bgogetap/StickyHeaders/raw/master/art/demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/sergiocasero/ExtendedRecyclerAdapter/master/art/ExtendedRecyclerView.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/37e1cf21eef72546c34f463eba54d40e6ea34740/687474703a2f2f692e696d6775722e636f6d2f4e503757626f712e706e67">
+<meta property="og:image" content="https://github.com/chthai64/overscroll-bouncy-android/raw/master/arts/OverscrollDemo.gif">
+<meta property="og:image" content="https://github.com/tuesda/CircleRefreshLayout/blob/master/gif/circlerefresh.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/nshmura/SnappySmoothScroller/master/assets/demo.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/7d442887b9fcf56f0244f698f63307fab73b453b/687474703a2f2f63646e2e73747265616d61626c652e636f6d2f696d6167652f686772692e6a7067">
+<meta property="og:image" content="https://raw.githubusercontent.com/zaihuishou/ExpandableRecyclerview/master/sample-screen.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/hongyangAndroid/baseAdapter/master/screenshot/single.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hongyangAndroid/baseAdapter/master/screenshot/rvadapter_01.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Eason90/GridBuilder/master/screenshots/GridBuilder_1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/venshine/WheelView/master/screenshot/screenshot.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/venshine/WheelView/master/screenshot/screenshot1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/borjabravo10/FocusResize/master/resources/focusResize.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/barryhappy/TEmptyView/master/etc/demo1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/barryhappy/TEmptyView/master/etc/demo2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/cundong/HeaderAndFooterRecyclerView/master/art/art1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/cundong/HeaderAndFooterRecyclerView/master/art/art3.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/cundong/HeaderAndFooterRecyclerView/master/art/art5.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Yalantis/Persei/master/Assets/animation.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/yqritc/RecyclerView-MultipleViewTypesAdapter/master/sample/sample.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/eneim/Toro/master/art/sample_2.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/eneim/Toro/master/art/sample_4.gif">
+<meta property="og:image" content="https://github.com/brucetoo/ListVideoPlay/raw/master/list_video_play.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/w1123440793/VideoListDemo/master/screenshots/vidiolist.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/3b85d647e98d540f0ea2be9850691771b430cf79/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f33333838303133382f5374616e646172644865616465722e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/cb545f8abe903267a9a31df07c126b6b7682dce9/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f33333838303133382f437573746f6d486561646572732e706e67">
+<meta property="og:image" content="https://raw.githubusercontent.com/L4Digital/FastScroll/master/fastscroll_example.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/turing-tech/MaterialScrollBar/master/sample.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/gjiazhe/WaveSideBar/master/screenshot/gif.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/gjiazhe/WaveSideBar/master/screenshot/position_left.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/saiwu-bigkoo/Android-QuickSideBar/master/preview/quicksidebardemo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/kongnanlive/SideBar/master/gif5.gif">
+<meta property="og:image" content="https://cloud.githubusercontent.com/assets/12408339/15278798/0df854a2-1b50-11e6-962e-15cb94ecc113.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/loopeer/SpringHeader/master/art/demo.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/d02997a8f88b797a1df02e768a822a2bf7e9daa5/68747470733a2f2f7261772e6769746875622e636f6d2f7764756c6c6165722f5377697065416374696f6e416461707465722f67682d70616765732f696d616765732f73776970655f322e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/7215066edafdb957f51fa7c30bd1e62f74a1210e/68747470733a2f2f7261772e6769746875622e636f6d2f7764756c6c6165722f5377697065416374696f6e416461707465722f67682d70616765732f696d616765732f73776970655f312e706e67">
+<meta property="og:image" content="https://raw.githubusercontent.com/mzelzoghbi/ParallaxRecyclerView/master/gif_1.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/mzelzoghbi/ParallaxRecyclerView/master/gif_2.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/dvdciri/MultiChoiceRecyclerView/master/example1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/dvdciri/MultiChoiceRecyclerView/master/example2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/dvdciri/MultiChoiceRecyclerView/master/example.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/nikhilpanju/RecyclerViewEnhanced/master/sample/src/common/images/Demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/loopeer/CardStackView/master/screenshot/screenshot1.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/loopeer/CardStackView/master/screenshot/screenshot3.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/633c9f0144b49b6a90edb18e44361f843010cd0f/687474703a2f2f696d6775722e636f6d2f523931554a716c2e676966">
+<meta property="og:image" content="https://cloud.githubusercontent.com/assets/15362031/15170689/fe3117d6-16fc-11e6-8ffc-3e90b9bf5430.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/qyxxjd/CommonAdapter/master/screenshots/main.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qyxxjd/CommonAdapter/master/screenshots/simple.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qyxxjd/CommonAdapter/master/screenshots/multiple.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/davideas/FlexibleAdapter/master/screenshots/drag_grid_overall.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/davideas/FlexibleAdapter/master/screenshots/undo_single_selection.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/davideas/FlexibleAdapter/master/screenshots/swipe-to-dismiss2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/CarlLee/SnappingSwipingRecyclerView/master/preview.gif">
+<meta property="og:image" content="https://d13yacurqjgara.cloudfront.net/users/226618/screenshots/2340386/shoping_list.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/riontech-xten/StaggeredTextGridView/master/Screenshot_2016-04-28-19-52-08.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/riontech-xten/StaggeredTextGridView/master/Screenshot_2016-05-23-14-54-26.png">
+<meta property="og:image" content="https://github.com/Jude95/EasyRecyclerView/blob/master/recycler3.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ugurcany/InfiniteListView/master/infinitelistview.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ShamylZakariya/StickyHeaders/master/readme-assets/video-addressbook.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ShamylZakariya/StickyHeaders/master/readme-assets/video-callbacks.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/traex/CalendarListview/master/demo.gif">
+<meta property="og:image" content="https://github.com/CymChad/BaseRecyclerViewAdapterHelper/blob/master/demo_res/demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/kibotu/RecyclerViewPresenter/master/screenshot.png">
+<meta property="og:image" content="https://github.com/wasabeef/recyclerview-animators/blob/master/art/demo.gif">
+<meta property="og:image" content="https://github.com/wasabeef/recyclerview-animators/blob/master/art/demo2.gif">
+<meta property="og:image" content="https://github.com/wasabeef/recyclerview-animators/blob/master/art/demo4.gif">
+<meta property="og:image" content="https://github.com/wasabeef/recyclerview-animators/blob/master/art/demo3.gif">
+<meta property="og:image" content="https://github.com/wasabeef/recyclerview-animators/blob/master/art/demo5.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/baoyongzhang/android-PullRefreshLayout/master/demo.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/588a2ef2cdcfb6c71e88437df486226dd15605b3/687474703a2f2f737261696e2d6769746875622e71696e6975646e2e636f6d2f756c7472612d7074722f73746f72652d686f7573652d737472696e672d61727261792e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/d3fbe757c87fddc94e998ebdd08ac55956aed1cf/687474703a2f2f737261696e2d6769746875622e71696e6975646e2e636f6d2f756c7472612d7074722f73746f72652d686f7573652d737472696e672e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/4dfccd5a50f7d59b512300fce341a1217950603a/687474703a2f2f737261696e2d6769746875622e71696e6975646e2e636f6d2f756c7472612d7074722f6d6174657269616c2d7374796c652e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/9033435ad82be43ccddc8203450f361ee270c724/687474703a2f2f737261696e2d6769746875622e71696e6975646e2e636f6d2f756c7472612d7074722f70756c6c2d746f2d726566726573682e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/88cdf877aa0a1fb19506ecf3404447eba59e68cc/687474703a2f2f737261696e2d6769746875622e71696e6975646e2e636f6d2f756c7472612d7074722f6175746f2d726566726573682e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/chrisbanes/Android-PullToRefresh/master/header_graphic.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/timusus/RecyclerView-FastScroll/master/screenshot.png">
+<meta property="og:image" content="https://github.com/vipulasri/Timeline-View/blob/master/Screenshot1.png">
+<meta property="og:image" content="https://github.com/Kennyc1012/MultiStateView/blob/master/art/content.png">
+<meta property="og:image" content="https://github.com/Kennyc1012/MultiStateView/blob/master/art/loading.png">
+<meta property="og:image" content="https://github.com/Kennyc1012/MultiStateView/raw/master/art/empty.png">
+<meta property="og:image" content="https://github.com/Kennyc1012/MultiStateView/raw/master/art/error.png">
+<meta property="og:image" content="https://github.com/race604/FlyRefresh/blob/master/images/flyrefresh.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Yalantis/ToDoList/master/content_shot_to-do_dribbble.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Yalantis/Multi-Selection/develop/imgs/dribble.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Yalantis/PullToMakeSoup/master/PullToMakeSoupDemo/Resouces/recipe-finder.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/d406ac5a03a2b1fa5cf41fadc8d2408cb8709bdc/68747470733a2f2f6431337961637572716a676172612e636c6f756466726f6e742e6e65742f75736572732f3132353035362f73637265656e73686f74732f313635303331372f7265616c6573746174652d70756c6c5f312d322d332e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/3a24e22eb3f8338573dba0701c089c12f6b70f11/68747470733a2f2f6431337961637572716a676172612e636c6f756466726f6e742e6e65742f75736572732f3132353035362f73637265656e73686f74732f313632333133312f746f7572732d70756c6c2d616972706c616e655f322d322d332e676966">
+<meta property="og:image" content="https://github.com/tuesda/CircleRefreshLayout/blob/master/gif/circlerefresh.gif">
+<meta property="og:image" content="https://github.com/recruit-lifestyle/WaveSwipeRefreshLayout/blob/master/sc/animation.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/worldline/FoldableLayout/dev/screenshots/demo.gif">
+<meta property="og:image" content="https://github.com/CodeFalling/RecyclerViewSwipeDismiss/blob/master/RecyclerViewSwipeDismiss.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/2194c820b758d70a0bf525e14e1b7f3f135b6ece/687474703a2f2f692e696d6775722e636f6d2f756743424869482e6769665d28687474703a2f2f692e696d6775722e636f6d2f756743424869482e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/e8e4947b18c6998175e02c3ea8b5c898eea35cfd/687474703a2f2f692e696d6775722e636f6d2f776657477242532e6769665d28687474703a2f2f692e696d6775722e636f6d2f776657477242532e676966">
+<meta property="og:image" content="https://github.com/alorma/TimelineView/blob/master/screenshot.png">
+<meta property="og:image" content="https://github.com/Gnod/ParallaxListView/blob/master/img_sample.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Frank-Zhu/PullZoomView/master/art/pull-to-zoom.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/baoyongzhang/SwipeMenuListView/master/demo.gif">
+<meta property="og:image" content="https://github.com/wasabeef/awesome-android-ui/blob/master/art/discrollview.gif">
+<meta property="og:image" content="https://github.com/emilsjolander/StickyListHeaders/raw/master/demo.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/263db3cffd142dbbacf06fb43aaa5997ff1c243e/68747470733a2f2f7261772e6769746875622e636f6d2f6a706172646f676f2f4c697374427564646965732f6d61737465722f6172742f73637265656e73686f745f6c697374627564646965735f322e706e67">
+<meta property="og:image" content="https://github.com/wasabeef/awesome-android-ui/blob/master/art/ListBuddies.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo12.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo10.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo11.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo13.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo1.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo2.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo3.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo4.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo5.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo6.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo7.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo8.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/felipecsl/AsymmetricGridView/master/screenshots/ss_2_cols.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/felipecsl/AsymmetricGridView/master/screenshots/ss_5_cols.png">
+<meta property="og:image" content="https://github.com/wasabeef/awesome-android-ui/blob/master/art/DynamicGrid.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/97e5e0acd9bce5cc3d98b8dbb2b528cc3e98c3e9/68747470733a2f2f7261772e6769746875622e636f6d2f4744472d4b6f7265612f50696e7465726573744c696b6541646170746572566965772f6d61737465722f73637265656e73686f742e706e67">
+<meta property="og:image" content="http://www.23code.com/wp-content/uploads/2015/01/device-2015-01-27-134318.jpg">
+<meta property="og:image" content="https://camo.githubusercontent.com/a243ad5c2788730c40fc1d348e5ed85adb59c484/687474703a2f2f662e636c2e6c792f6974656d732f327a31423059304d3047304f326b316c334a30332f5472656e64696e672e706e67">
+<meta property="og:image" content="https://raw.githubusercontent.com/kanytu/android-parallax-recycleview/master/screenshots/screenshot.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/kanytu/android-parallax-recycleview/master/screenshots/parallaxtoolbar.gif">
+<meta property="og:image" content="https://github.com/wasabeef/awesome-android-ui/blob/master/art/BlurStickyHeaderListView.gif">
+<meta property="og:image" content="https://github.com/yqritc/RecyclerView-FlexibleDivider/blob/master/sample/sample1.gif">
+<meta property="og:image" content="https://github.com/yqritc/RecyclerView-FlexibleDivider/blob/master/sample/sample2.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/e30f6694c99cc4404b7654f74e3d1598665792ea/68747470733a2f2f6c68342e67677068742e636f6d2f787a6b62334e35384c48325473625f6747733075335f783831564f4c776c6863702d6634707a5f73525f69523376414b58664a6f416377426a4e37344c767a70564c453d683930302d7277">
+<meta property="og:image" content="https://camo.githubusercontent.com/e600e1392139be2db0f466f30c63ecd84af39080/68747470733a2f2f6c68352e67677068742e636f6d2f55743642795f69556e6b4e667a49626150427363386842655165466a5f3255584a685f3174667744646c544171476b6869523732415f417751304c304748334f4661673d683930302d7277">
+<meta property="og:image" content="https://camo.githubusercontent.com/89c3458b7404559a3a2bcc07b11abda23cb9f04f/687474703a2f2f692e696d6775722e636f6d2f496f7a557475636c2e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/8b8e323a4f7f904b6d6f5057ceaa28a81570af26/687474703a2f2f692e696d6775722e636f6d2f327a4277496c776c2e706e67">
+<meta property="og:image" content="https://github.com/yqritc/RecyclerView-MultipleViewTypesAdapter/blob/master/sample/sample.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/diftco/SwipeToAction/master/screenshots/swipetoaction.gif">
+<meta property="og:image" content="https://github.com/wasabeef/awesome-android-ui/blob/master/art/AdvancedRecyclerView.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/magiepooh/RecyclerItemDecoration/master/art/demo_vertical.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/magiepooh/RecyclerItemDecoration/master/art/demo_horizontal.gif">
+<meta property="og:image" content="https://github.com/ZieIony/MaterialRecents/blob/master/images/recents.gif">
+<meta property="og:image" content="https://github.com/Karumi/Dividers/blob/master/art/example.gif">
+<meta property="og:image" content="https://github.com/wasabeef/awesome-android-ui/blob/master/art/drag-select-recyclerview.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/2712b977a781964db02085035e43281773ab4ffa/687474703a2f2f692e696d6775722e636f6d2f49307a746f50772e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/9fe2a23efb0ab8222910a09e21234c0c313afc10/687474703a2f2f692e696d6775722e636f6d2f6235704a6a744c2e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/65f2d44e0e5064369aec8ee41838bd073e695975/68747470733a2f2f7261772e6769746875622e636f6d2f666c617669656e6c617572656e742f4e6f74426f72696e67416374696f6e4261722f6d61737465722f67726170686963732f6e6f74626f72696e6761622e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/nhaarman/ListViewAnimations/gh-pages/images/dynamiclistview.gif">
+<meta property="og:image" content="https://github.com/THEONE10211024/WaterDropListView/blob/master/demo/demo.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/912ee9a45b5ed7063bd6fe7634f8130953a7051d/687474703a2f2f37786b39646a2e636f6d312e7a302e676c622e636c6f7564646e2e636f6d2f726566726573686c61796f75742f73637265656e73686f74732f6267615f726566726573686c61796f7574312e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/7539fed2c320aecc0d47320586e8c2ee22a2d762/687474703a2f2f37786b39646a2e636f6d312e7a302e676c622e636c6f7564646e2e636f6d2f726566726573686c61796f75742f73637265656e73686f74732f6267615f726566726573686c61796f7574322e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/1f869f094c59adfef8a63f8f870c53092fae8d19/687474703a2f2f37786b39646a2e636f6d312e7a302e676c622e636c6f7564646e2e636f6d2f726566726573686c61796f75742f73637265656e73686f74732f6267615f726566726573686c61796f7574362e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/mikepenz/FastAdapter/develop/DEV/github/screenshots1.jpg">
+<meta property="og:image" content="https://camo.githubusercontent.com/8c9d67b4ad583b72f61f87ebc0ea9e34bce7544e/687474703a2f2f692e696d6775722e636f6d2f497375444636672e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/yll2wcf/YLListView/master/gif/1.gif">
+<meta property="og:updated_time" content="2017-03-29T09:48:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="列表 List - Android开源组件">
+<meta name="twitter:description" content="收集Android相关的列表组件库, 包含：ListView、GridView、RecyclerView、Refresh、LoadMore……">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/lurbas/ListItemView/master/readme/cover.png">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="夜的灯" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>列表 List - Android开源组件 | 夜的灯</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8349881c9f92999de4652aac9681a840";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Zero</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">探索新知识，突破自身技术壁垒</p>
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:jyg0124@126.com" title="Email"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Animation/">Animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cocos2d-x/">Cocos2d-x</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Custom/">Custom</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DEBUG调试/">DEBUG调试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dialog/">Dialog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Homebrew/">Homebrew</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Image/">Image</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ-IDEA/">IntelliJ IDEA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Layout/">Layout</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/List/">List</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Menu/">Menu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shadowsocks/">Shadowsocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Unity/">Unity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Utils/">Utils</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VPS/">VPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vultr/">Vultr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinkphp5/">thinkphp5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/列表/">列表</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动画/">动画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反编译/">反编译</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图片组件/">图片组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具类/">工具类</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/布局/">布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发工具/">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发框架/">开发框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源组件/">开源组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源项目/">开源项目</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/弹窗/">弹窗</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/快捷键/">快捷键</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游戏/">游戏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/破解/">破解</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/终端/">终端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络请求/">网络请求</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/自定义控件/">自定义控件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/菜单/">菜单</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">关于我</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Zero</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Zero</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">探索新知识，突破自身技术壁垒</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:jyg0124@126.com" title="Email"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-android-librarys/List" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/android-librarys/List/" class="article-date">
+      <time datetime="2017-03-24T04:14:12.000Z" itemprop="datePublished">2017-03-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        <h1 class="article-title" itemprop="name">
+      列表 List - Android开源组件
+    </h1>
+      </header>
+      
+      <div class="article-info article-info-post">
+        <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/开源组件/">开源组件</a>
+    </div>
+        <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/List/">List</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/列表/">列表</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开源组件/">开源组件</a></li></ul>
+    </div>
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="列表-List"><a href="#列表-List" class="headerlink" title="列表 List"></a>列表 List</h2><p>包含：ListView、GridView、RecyclerView、Refresh、LoadMore……</p>
+<p><a href="/android-librarys/Index/">&lt;==返回总纲==</a></p>
+<hr>
+<p><strong>ListItemView</strong>: <a href="https://github.com/lurbas/ListItemView" target="_blank" rel="external">https://github.com/lurbas/ListItemView</a></p>
+<p>基于 MD 实现的一些 List Item 的模板布局，可以帮助大家在开发的时候省时间</p>
+<p><img src="https://raw.githubusercontent.com/lurbas/ListItemView/master/readme/cover.png" width="600"></p>
+<hr>
+<p><strong>RendererRecyclerViewAdapter</strong>: <a href="https://github.com/vivchar/RendererRecyclerViewAdapter" target="_blank" rel="external">https://github.com/vivchar/RendererRecyclerViewAdapter</a></p>
+<p>A single adapter for the whole project</p>
+<p><img src="https://raw.githubusercontent.com/vivchar/RendererRecyclerViewAdapter/master/example_new.gif" width="320"></p>
+<hr>
+<p><strong>DiscreteScrollView</strong>: <a href="https://github.com/yarolegovich/DiscreteScrollView" target="_blank" rel="external">https://github.com/yarolegovich/DiscreteScrollView</a></p>
+<p>基于 RecyclerView 实现的横向滑动组件，超级漂亮和实用</p>
+<p><img src="https://raw.githubusercontent.com/yarolegovich/DiscreteScrollView/master/images/cards_shop.gif" width="320"> <img src="https://raw.githubusercontent.com/yarolegovich/DiscreteScrollView/master/images/cards_weather.gif" width="320"></p>
+<hr>
+<p><strong>vlayout</strong>: <a href="https://github.com/alibaba/vlayout" target="_blank" rel="external">https://github.com/alibaba/vlayout</a></p>
+<p>VirtualLayout是一个针对RecyclerView的LayoutManager扩展, 主要提供一整套布局方案和布局间的组件复用的问题</p>
+<p><img src="https://camo.githubusercontent.com/2b947a15f5502af5a4639a5927d68052ccfb54a3/687474703a2f2f696d67332e746263646e2e636e2f4c312f3436312f312f31623962666234323030393034376637356365653038616537343135303564653263373461633061" width="200"></p>
+<hr>
+<p><strong>ExpectAnim</strong>: <a href="https://github.com/florent37/ExpectAnim" target="_blank" rel="external">https://github.com/florent37/ExpectAnim</a></p>
+<p>通过描述来实现动画方案</p>
+<p><img src="https://raw.githubusercontent.com/florent37/ExpectAnim/master/media/sample.gif" width="320"><br><img src="https://raw.githubusercontent.com/florent37/ExpectAnim/master/media/scroll.gif" width="320"></p>
+<hr>
+<p><strong>SwipeCardview</strong>: <a href="https://github.com/iravul/SwipeCardview" target="_blank" rel="external">https://github.com/iravul/SwipeCardview</a></p>
+<p>SwipeCardview for listing item or products</p>
+<hr>
+<p><strong>ShimmerRecyclerView</strong>: <a href="https://github.com/sharish/ShimmerRecyclerView" target="_blank" rel="external">https://github.com/sharish/ShimmerRecyclerView</a></p>
+<p>ShimmerRecyclerView</p>
+<p><img src="https://raw.githubusercontent.com/sharish/ShimmerRecyclerView/master/screenshots/list_demo.gif" width="320"><br><img src="https://raw.githubusercontent.com/sharish/ShimmerRecyclerView/master/screenshots/grid_demo.gif" width="320"></p>
+<hr>
+<p><strong>SimpleRecyclerView</strong>: <a href="https://github.com/jaychang0917/SimpleRecyclerView" target="_blank" rel="external">https://github.com/jaychang0917/SimpleRecyclerView</a></p>
+<p>A RecyclerView extension for building list more easily</p>
+<p><img src="https://github.com/jaychang0917/SimpleRecyclerView/raw/master/art/basic_usage.gif" width="320"></p>
+<hr>
+<p><strong>RecyclerStickyHeaderView</strong>: <a href="https://github.com/TellH/RecyclerStickyHeaderView" target="_blank" rel="external">https://github.com/TellH/RecyclerStickyHeaderView</a></p>
+<p>在RecyclerView上实现吸顶布局</p>
+<p><img src="https://raw.githubusercontent.com/TellH/RecyclerStickyHeaderView/master/raw/effect.gif" width="320"></p>
+<hr>
+<p><strong>LayoutSwitch</strong>: <a href="https://github.com/gjiazhe/LayoutSwitch" target="_blank" rel="external">https://github.com/gjiazhe/LayoutSwitch</a></p>
+<p>实现 RecyclerView 布局切换动画的示例</p>
+<p><img src="https://raw.githubusercontent.com/gjiazhe/LayoutSwitch/master/screenshot/screenshot.gif" width="320"></p>
+<hr>
+<p><strong>excelPanel</strong>: <a href="https://github.com/zhouchaoyuan/excelPanel" target="_blank" rel="external">https://github.com/zhouchaoyuan/excelPanel</a></p>
+<p>Android 用 RecyclerView 实现的二维 Excel 效果组件</p>
+<p><img src="https://raw.githubusercontent.com/zhouchaoyuan/excelPanel/master/app/src/main/assets/roomFormDemo.gif" width="320"></p>
+<hr>
+<p><strong>ShimmerRecyclerView</strong>: <a href="https://github.com/sharish/ShimmerRecyclerView" target="_blank" rel="external">https://github.com/sharish/ShimmerRecyclerView</a></p>
+<p>类似 Facebook 加载时，条目的闪烁效果</p>
+<p><img src="https://raw.githubusercontent.com/sharish/ShimmerRecyclerView/master/screenshots/list_demo.gif" width="320"> <img src="https://raw.githubusercontent.com/sharish/ShimmerRecyclerView/master/screenshots/grid_demo.gif" width="320"></p>
+<hr>
+<p><strong>sectionedmergeadapter</strong>: <a href="https://github.com/abacritt/sectionedmergeadapter" target="_blank" rel="external">https://github.com/abacritt/sectionedmergeadapter</a></p>
+<p>Work with sub-sections in your Android ListView</p>
+<p><img src="https://raw.githubusercontent.com/abacritt/sectionedmergeadapter/master/app/Screenshot_20160724-231927.png" width="320"></p>
+<hr>
+<p><strong>TwinklingRefreshLayout</strong>: <a href="https://github.com/lcodecorex/TwinklingRefreshLayout" target="_blank" rel="external">https://github.com/lcodecorex/TwinklingRefreshLayout</a></p>
+<p>TwinklingRefreshLayout 小而强大的刷新控件，自带顺滑的越界回弹</p>
+<p><img src="https://github.com/lcodecorex/TwinklingRefreshLayout/raw/master/art/gif_recyclerview.gif" width="320"> <img src="https://github.com/lcodecorex/TwinklingRefreshLayout/raw/master/art/gif_recyclerview2.gif" width="320"></p>
+<hr>
+<p><strong>Paginate</strong>: <a href="https://github.com/MarkoMilos/Paginate" target="_blank" rel="external">https://github.com/MarkoMilos/Paginate</a></p>
+<p>下拉加载更多框架</p>
+<p><img src="https://raw.githubusercontent.com/MarkoMilos/Paginate/master/art/demo.gif" width="320"></p>
+<hr>
+<p><strong>EasyRecyclerView</strong>: <a href="https://github.com/zhuliyuan921112/EasyRecyclerView" target="_blank" rel="external">https://github.com/zhuliyuan921112/EasyRecyclerView</a></p>
+<p>一个下拉刷新上拉加载更多框架</p>
+<p><img src="https://camo.githubusercontent.com/7467ac57d7290756110b1949b71cdb455d517548/687474703a2f2f6f66316b74796b737a2e626b742e636c6f7564646e2e636f6d2f6572765f6d6174657269616c5f6865616465722e676966" width="320"></p>
+<hr>
+<p><strong>ScrollablePanel</strong>: <a href="https://github.com/Kelin-Hong/ScrollablePanel" target="_blank" rel="external">https://github.com/Kelin-Hong/ScrollablePanel</a></p>
+<p>支持多个方向滑动的 View，类似 Calendar 里的 UI 效果</p>
+<p><img src="https://raw.githubusercontent.com/Kelin-Hong/ScrollablePanel/master/art/ScrollablePanelDemo.gif" width="320"></p>
+<hr>
+<p><strong>ChipsLayoutManager</strong>: <a href="https://github.com/BelooS/ChipsLayoutManager" target="_blank" rel="external">https://github.com/BelooS/ChipsLayoutManager</a></p>
+<p>ANDROID. ChipsLayoutManager (SpanLayoutManager). A custom layout manager for RecyclerView which mimicric TextView span behaviour, flow layouts behaviour with support of amazing recyclerView features</p>
+<p><img src="https://github.com/BelooS/ChipsLayoutManager/raw/master/images/demo.gif" width="320"></p>
+<hr>
+<p><strong>DataBinding_For_RecyclerView</strong>: <a href="https://github.com/drstranges/DataBinding_For_RecyclerView" target="_blank" rel="external">https://github.com/drstranges/DataBinding_For_RecyclerView</a></p>
+<p>Android Data Binding for RecyclerView: flexible way <a href="https://habrahabr.ru/post/308872/" target="_blank" rel="external">https://habrahabr.ru/post/308872/</a></p>
+<p><img src="https://raw.githubusercontent.com/drstranges/DataBinding_For_RecyclerView/master/!_img/img1.png" width="320"></p>
+<hr>
+<p><strong>SmileRefresh</strong>: <a href="https://github.com/songixan/SmileRefresh" target="_blank" rel="external">https://github.com/songixan/SmileRefresh</a></p>
+<p>微笑下拉刷新。这是在 SwipeRefreshLayout基础上修改的下拉刷新库</p>
+<p><img src="https://camo.githubusercontent.com/baf0794018fbb0812ade7d741a94d34ac3500b94/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313631303133323032313335373530" width="320"></p>
+<hr>
+<p><strong>FriendGroupManage</strong>: <a href="https://github.com/ysq1051838264/FriendGroupManage" target="_blank" rel="external">https://github.com/ysq1051838264/FriendGroupManage</a></p>
+<p>仿qq分组管理，可以删除、增加、以及修改等等</p>
+<p><img src="https://raw.githubusercontent.com/ysq1051838264/FriendGroupManage/master/1.gif" width="320"></p>
+<hr>
+<p><strong>EasyHeaderFooterAdapter</strong>: <a href="https://github.com/rubengees/EasyHeaderFooterAdapter" target="_blank" rel="external">https://github.com/rubengees/EasyHeaderFooterAdapter</a></p>
+<p>An Android library which adds headers and footers to the RecyclerView</p>
+<p><img src="https://raw.githubusercontent.com/rubengees/EasyHeaderFooterAdapter/master/art/sample.gif" width="320"></p>
+<hr>
+<p><strong>StickyViewPagerGridHeaders</strong>: <a href="https://github.com/pchauhan/StickyViewPagerGridHeaders" target="_blank" rel="external">https://github.com/pchauhan/StickyViewPagerGridHeaders</a></p>
+<p>StickyGridView + ViewPager + Header</p>
+<p><img src="https://raw.githubusercontent.com/pchauhan/StickyViewPagerGridHeaders/master/Screenshots/ScreenOne.png" width="270"> <img src="https://raw.githubusercontent.com/pchauhan/StickyViewPagerGridHeaders/master/Screenshots/Screenhalfscroll.png" width="270"> <img src="https://raw.githubusercontent.com/pchauhan/StickyViewPagerGridHeaders/master/Screenshots/Screenfullscroll.png" width="270"></p>
+<hr>
+<p><strong>MjolnirRecyclerView</strong>: <a href="https://github.com/infinum/MjolnirRecyclerView" target="_blank" rel="external">https://github.com/infinum/MjolnirRecyclerView</a></p>
+<p>Provides a simple way to extend the default RecyclerView behaviour with support for headers, footers, empty view, DiffUtil and ArrayAdapter like methods</p>
+<hr>
+<p><strong>SnappyRecyclerAdapter</strong>: <a href="https://github.com/longbkiter07/SnappyRecyclerAdapter" target="_blank" rel="external">https://github.com/longbkiter07/SnappyRecyclerAdapter</a></p>
+<p>manage RecyclerViewAdapter easier</p>
+<hr>
+<p><strong>PinnedList-Android</strong>: <a href="https://github.com/Joseph82/PinnedList-Android" target="_blank" rel="external">https://github.com/Joseph82/PinnedList-Android</a></p>
+<p>This library allows you to create a list of items that are pinned by a floating label (text or image) on the left of the list</p>
+<p><img src="https://camo.githubusercontent.com/f5d88bebd99eccc89168d93c8c7ba31583733729/68747470733a2f2f7777772e64726f70626f782e636f6d2f732f79753235353862626d7633747763352f746578745f64656d6f312e6769663f7261773d74727565" width="220"> <img src="https://camo.githubusercontent.com/2bb257d1e851edcbde37313420cb7de1fccbf7af/68747470733a2f2f7777772e64726f70626f782e636f6d2f732f74376d3779643876683677346a69622f696d6167655f64656d6f312e6769663f7261773d74727565" width="220"></p>
+<hr>
+<p><strong>pinned-section-listview</strong>: <a href="https://github.com/beworker/pinned-section-listview" target="_blank" rel="external">https://github.com/beworker/pinned-section-listview</a></p>
+<p>选中的item置顶的List</p>
+<p><img src="https://raw.githubusercontent.com/beworker/pinned-section-listview/master/web/screen3.png" width="220"></p>
+<hr>
+<p><strong>DoubleStickyHeadersList</strong>: <a href="https://github.com/Kenber/DoubleStickyHeadersList" target="_blank" rel="external">https://github.com/Kenber/DoubleStickyHeadersList</a></p>
+<p>双Header的List</p>
+<p><img src="https://raw.githubusercontent.com/Kenber/DoubleStickyHeadersList/master/samplePicture/sample.gif" width="320"></p>
+<hr>
+<p><strong>CircleRecyclerView</strong>: <a href="https://github.com/kHRYSTAL/CircleRecyclerView" target="_blank" rel="external">https://github.com/kHRYSTAL/CircleRecyclerView</a></p>
+<p>CircleRecyclerView</p>
+<p><img src="https://raw.githubusercontent.com/kHRYSTAL/CircleRecyclerView/master/screenshot/screenshot1.gif" width="320"> <img src="https://raw.githubusercontent.com/kHRYSTAL/CircleRecyclerView/master/screenshot/screenshot2.gif" width="320"></p>
+<hr>
+<p><strong>android-ElasticListView</strong>: <a href="https://github.com/eschao/android-ElasticListView" target="_blank" rel="external">https://github.com/eschao/android-ElasticListView</a></p>
+<p>ListView 下拉刷新，上拉更多</p>
+<p><img src="https://raw.githubusercontent.com/eschao/android-ElasticListView/master/images/elasticlistview_updating.png" width="300"> <img src="https://raw.githubusercontent.com/eschao/android-ElasticListView/master/images/elasticlistview_loading.png" width="300"></p>
+<hr>
+<p><strong>RetailMeNotList</strong>: <a href="https://github.com/iielse/RetailMeNotList" target="_blank" rel="external">https://github.com/iielse/RetailMeNotList</a></p>
+<p>视差效果的 Item 滑动变大</p>
+<p><img src="https://github.com/iielse/RetailMeNotList/raw/master/previews/123456789.gif" width="320"> <img src="https://github.com/iielse/RetailMeNotList/raw/master/previews/987654321.gif" width="320"></p>
+<hr>
+<p><strong>realm-android-adapters</strong>: <a href="https://github.com/realm/realm-android-adapters" target="_blank" rel="external">https://github.com/realm/realm-android-adapters</a></p>
+<p>This repository holds adapters for combining Realm Java with Android UI components and framework classes</p>
+<hr>
+<p><strong>EasyRecycleAdapterHelper</strong>: <a href="https://github.com/HotBitmapGG/EasyRecycleAdapterHelper" target="_blank" rel="external">https://github.com/HotBitmapGG/EasyRecycleAdapterHelper</a></p>
+<p>一个轻量级简单实用的RecycleViewAdapter辅助类库</p>
+<p><img src="https://raw.githubusercontent.com/HotBitmapGG/EasyRecycleAdapterHelper/master/art/01.gif" width="320"> <img src="https://raw.githubusercontent.com/HotBitmapGG/EasyRecycleAdapterHelper/master/art/02.gif" width="320"></p>
+<hr>
+<p><strong>SmartisanPull</strong>: <a href="https://github.com/hougr/SmartisanPull" target="_blank" rel="external">https://github.com/hougr/SmartisanPull</a></p>
+<p>“锤子下拉”，东半球最优雅的下拉控件。也叫SmartisanRefreshableLayout</p>
+<p><img src="https://raw.githubusercontent.com/hougr/SmartisanPull/master/screenshot/smartisan_pull_small.gif" width="230"></p>
+<hr>
+<p><strong>AnimateFilterCalendarGridLayout</strong>: <a href="https://github.com/DevLight-Mobile-Agency/AnimateFilterCalendarGridLayout" target="_blank" rel="external">https://github.com/DevLight-Mobile-Agency/AnimateFilterCalendarGridLayout</a></p>
+<p>It is a layout like GridLayout. But children in it will fill the column. And you can filter your items with animation. And you can add animated calendar to your project.</p>
+<p><img src="https://camo.githubusercontent.com/5e017416bb7ab1281ced4b4be75b50d1e7ff156f/68747470733a2f2f6c68362e676f6f676c6575736572636f6e74656e742e636f6d2f2d4f4d5674354f77327473452f56736276626d4a4f6f75492f4141414141414141434c732f61516f417a5835684759772f773338362d683535312d6e6f2f6166676c2e676966" width="320"> <img src="https://camo.githubusercontent.com/8703b683fe9df6fa645bb27c2037746571a03713/68747470733a2f2f6c68342e676f6f676c6575736572636f6e74656e742e636f6d2f2d64586f556e476a474c48452f56736276627465685633492f4141414141414141434c732f45715942364141356659492f773339362d683535322d6e6f2f6163676c2e676966" width="320"></p>
+<hr>
+<p><strong>itemtouchhelper-extension</strong>: <a href="https://github.com/loopeer/itemtouchhelper-extension" target="_blank" rel="external">https://github.com/loopeer/itemtouchhelper-extension</a></p>
+<p>itemtouchhelper 左滑删除等操作</p>
+<p><img src="https://raw.githubusercontent.com/loopeer/itemtouchhelper-extension/master/screenshot/itemtouch_spring.gif" width="230"> <img src="https://raw.githubusercontent.com/loopeer/itemtouchhelper-extension/master/screenshot/itemtouch_recycler_width.gif" width="230"></p>
+<hr>
+<p><strong>RecyclerViewSnap</strong>: <a href="https://github.com/rubensousa/RecyclerViewSnap" target="_blank" rel="external">https://github.com/rubensousa/RecyclerViewSnap</a></p>
+<p>RecyclerView 边缘特效</p>
+<p><img src="https://raw.githubusercontent.com/rubensousa/RecyclerViewSnap/master/screens/snap_googleplay.gif" width="320"> <img src="https://raw.githubusercontent.com/rubensousa/RecyclerViewSnap/master/screens/snap_final.gif" width="320"></p>
+<hr>
+<p><strong>ListView-Snapshot-Demo</strong>: <a href="https://github.com/abhijith0505/ListView-Snapshot-Demo" target="_blank" rel="external">https://github.com/abhijith0505/ListView-Snapshot-Demo</a></p>
+<p>A demo android application that uses the listview-snapshot android library</p>
+<p><img src="https://raw.githubusercontent.com/abhijith0505/ListView-Snapshot-Demo/master/screenshot.jpg" width="320"></p>
+<hr>
+<p><strong>SelectableListDecoration</strong>: <a href="https://github.com/bhargavms/SelectableListDecoration" target="_blank" rel="external">https://github.com/bhargavms/SelectableListDecoration</a></p>
+<p>An Item decoration class for google design lib’s RecyclerView</p>
+<p><img src="https://raw.githubusercontent.com/bhargavms/SelectableListDecoration/master/assets/Selection_001.png" width="320"> <img src="https://raw.githubusercontent.com/bhargavms/SelectableListDecoration/master/assets/Selection_002.png" width="320"></p>
+<hr>
+<p><strong>SimpleRecycler</strong>: <a href="https://github.com/e16din/SimpleRecycler" target="_blank" rel="external">https://github.com/e16din/SimpleRecycler</a></p>
+<p>This library extends RecyclerView + Recycler Adapter</p>
+<hr>
+<p><strong>RecyclerRefreshLayout</strong>: <a href="https://github.com/dinuscxj/RecyclerRefreshLayout" target="_blank" rel="external">https://github.com/dinuscxj/RecyclerRefreshLayout</a></p>
+<p>A pull to refresh layout for android, the RecyclerRefreshLayout is based on the SwipeRefreshLayout</p>
+<p><img src="https://raw.githubusercontent.com/dinuscxj/RecyclerRefreshLayout/master/Preview/RecyclerRefreshLayoutNormal.gif?width=300" width="270"> <img src="https://raw.githubusercontent.com/dinuscxj/RecyclerRefreshLayout/master/Preview/RecyclerRefreshLayoutNoData.gif?width=300" width="270"> <img src="https://raw.githubusercontent.com/dinuscxj/RecyclerRefreshLayout/master/Preview/RecyclerRefreshLayoutFailure.gif?width=300" width="270"></p>
+<hr>
+<p><strong>AssemblyAdapter</strong>: <a href="https://github.com/xiaopansky/AssemblyAdapter" target="_blank" rel="external">https://github.com/xiaopansky/AssemblyAdapter</a></p>
+<p>Assembly Adapter Adapter is an extension library on Android, and with it you do not write the Adapter</p>
+<hr>
+<p><strong>OkAdapters</strong>: <a href="https://github.com/miguelbcr/OkAdapters" target="_blank" rel="external">https://github.com/miguelbcr/OkAdapters</a></p>
+<p>Wrappers for Android adapters to simply its api at a minimum</p>
+<hr>
+<p><strong>PopupBubble</strong>: <a href="https://github.com/webianks/PopupBubble" target="_blank" rel="external">https://github.com/webianks/PopupBubble</a></p>
+<p>Easily add and customise “New Post” popup button with the feeds (RecyclerView) of your app</p>
+<p><img src="https://camo.githubusercontent.com/3f8912b907378a5227100a1c6d2868d641a826c6/687474703a2f2f7777772e77656269616e6b732e636f6d2f706f707570627562626c652f322e706e67" width="320"> <img src="https://camo.githubusercontent.com/9374a2962d3bd61817569fc8483b651d2fbcd1b0/687474703a2f2f7777772e77656269616e6b732e636f6d2f706f707570627562626c652f332e706e67" width="320"></p>
+<hr>
+<p><strong>ExpandableRecyclerview-Databinding</strong>: <a href="https://github.com/zaihuishou/ExpandableRecyclerview-Databinding" target="_blank" rel="external">https://github.com/zaihuishou/ExpandableRecyclerview-Databinding</a></p>
+<p>ExpandableRecyclerview Databinding implemention</p>
+<p><img src="https://raw.githubusercontent.com/zaihuishou/ExpandableRecyclerview-Databinding/master/Screenshots.gif" width="320"></p>
+<hr>
+<p><strong>ItemPool</strong>: <a href="https://github.com/nekocode/ItemPool" target="_blank" rel="external">https://github.com/nekocode/ItemPool</a></p>
+<p>Decouple the item(/nested viewholder) from recyclerview’s adapter</p>
+<hr>
+<p><strong>epoxy</strong>: <a href="https://github.com/airbnb/epoxy" target="_blank" rel="external">https://github.com/airbnb/epoxy</a></p>
+<p>又一个显示recycleview复杂效果的库</p>
+<p><img src="https://raw.githubusercontent.com/airbnb/epoxy/master/epoxy-sample/epoxy_sample_app.gif" width="320"></p>
+<hr>
+<p><strong>groupie</strong>: <a href="https://github.com/Genius/groupie" target="_blank" rel="external">https://github.com/Genius/groupie</a></p>
+<p>Groupie helps you display and manage complex RecyclerView layouts</p>
+<p><img src="https://camo.githubusercontent.com/37f2d500453ef5c5441c7f68bc69ad1145460a9a/687474703a2f2f692e696d6775722e636f6d2f6566744f4530762e676966" width="320"></p>
+<hr>
+<p><strong>MultiTypeView</strong>: <a href="https://github.com/LuckyJayce/MultiTypeView" target="_blank" rel="external">https://github.com/LuckyJayce/MultiTypeView</a></p>
+<p>简化RecyclerView的多种type的adapter，Fragment可以动态添加到RecyclerView上，实现复杂的界面分多个模块开发</p>
+<p><img src="https://raw.githubusercontent.com/LuckyJayce/MultiTypeView/master/raw/1.png" width="320"></p>
+<hr>
+<p><strong>MultiType</strong>: <a href="https://github.com/drakeet/MultiType" target="_blank" rel="external">https://github.com/drakeet/MultiType</a></p>
+<p>一个列表显示多个不同条目</p>
+<p><img src="https://raw.githubusercontent.com/drakeet/MultiType/master/art/screenshot.png" width="320"></p>
+<hr>
+<p><strong>FunGameRefresh</strong>: <a href="https://github.com/Hitomis/FunGameRefresh" target="_blank" rel="external">https://github.com/Hitomis/FunGameRefresh</a></p>
+<p>好玩的下拉刷新控件，让我们一起来回味童年</p>
+<p><img src="https://raw.githubusercontent.com/Hitomis/FunGameRefresh/master/preview/HitBlock.gif" width="270"> <img src="https://raw.githubusercontent.com/Hitomis/FunGameRefresh/master/preview/BattleCity.gif" width="270"></p>
+<hr>
+<p><strong>PullToRefresh</strong>: <a href="https://github.com/lubeast/PullToRefresh" target="_blank" rel="external">https://github.com/lubeast/PullToRefresh</a></p>
+<p>A PullToRefresh widget. <a href="https://lubeast.github.io/PullToRefresh/" target="_blank" rel="external">https://lubeast.github.io/PullToRefresh/</a></p>
+<p><img src="https://camo.githubusercontent.com/f390437ba548be66a9e4c91389e5587000533c24/68747470733a2f2f7261772e6769746875622e636f6d2f6c7562656173742f50756c6c4c61756e6368526f636b65742f6d61737465722f73637265656e73686f74732f726f636b65742e676966" width="240"> <img src="https://camo.githubusercontent.com/3947994e16b8e19b744f254e69219c626527fe37/68747470733a2f2f7261772e6769746875622e636f6d2f6c7562656173742f50756c6c4c61756e6368526f636b65742f6d61737465722f73637265656e73686f74732f73756e72616973652e676966" width="240"></p>
+<hr>
+<p><strong>SlyceMessaging</strong>: <a href="https://github.com/snipsnap/SlyceMessaging" target="_blank" rel="external">https://github.com/snipsnap/SlyceMessaging</a></p>
+<p>Easily add Sticky Headers to your RecyclerView</p>
+<p><img src="https://raw.githubusercontent.com/snipsnap/SlyceMessaging/master/sample-photos/example.png" width="240"> <img src="https://raw.githubusercontent.com/snipsnap/SlyceMessaging/master/sample-photos/chat-with-image.png" width="240"></p>
+<hr>
+<p><strong>StickyHeaderListView</strong>: <a href="https://github.com/sfsheng0322/StickyHeaderListView" target="_blank" rel="external">https://github.com/sfsheng0322/StickyHeaderListView</a></p>
+<p>StickyHeaderListView 是基于实际需求做出的灵活可定制的UI功能，具体实现功能如下：<br>一、支持无限循环的广告位。<br>二、高度可动态配置的Header2和Header3（使用GridView实现）。<br>三、主要功能：分类、排序和筛选布局滑动到顶部后吸附、悬停。<br>四、自定义FilterView筛选控件，支持动画显示与动画隐藏。<br>五、支持标题栏背景颜色渐变、字体颜色渐变。<br>六、数据不足一屏动态添加空数据占位。<br>七、数据为空时，ListView加载暂无数据视图。<br>八、思路清晰、界面优美，添加ripple点击效果。<br>九、支持下拉刷新和上拉加载更多功能。  </p>
+<table><br>    <tr><br>        <td><img src="https://github.com/sfsheng0322/StickyHeaderListView/raw/master/screenshots/stickyheader.gif" style="width: 30%"></td><br>        <td><img src="https://github.com/sfsheng0322/StickyHeaderListView/raw/master/screenshots/stickyheader2.gif" style="width: 30%"></td><br>    </tr><br></table>
+
+<hr>
+<p><strong>ClearRecyclerAdapter</strong>: <a href="https://github.com/Prokky/ClearRecyclerAdapter" target="_blank" rel="external">https://github.com/Prokky/ClearRecyclerAdapter</a></p>
+<p>Boilerplate code free Adapter for RecyclerView</p>
+<hr>
+<p><strong>Endless-RecyclerView</strong>: <a href="https://github.com/ybq/Endless-RecyclerView" target="_blank" rel="external">https://github.com/ybq/Endless-RecyclerView</a></p>
+<p>加载更多 RecyclerView</p>
+<hr>
+<p><strong>SpringView</strong>: <a href="https://github.com/liaoinstan/SpringView" target="_blank" rel="external">https://github.com/liaoinstan/SpringView</a></p>
+<p>A custom view can pull up and down,support ScrollView,ListView,RecyclerView,WebView</p>
+<p><img src="https://github.com/liaoinstan/SpringView/blob/master/screenshot/1459212323072_s.gif" alt="1"> <img src="https://github.com/liaoinstan/SpringView/blob/master/screenshot/1459212372609_s.gif" alt="2"><br><img src="https://github.com/liaoinstan/SpringView/blob/master/screenshot/1459212462800_s.gif" alt="3"> <img src="https://github.com/liaoinstan/SpringView/blob/master/screenshot/1459212485237_s.gif" alt="4"></p>
+<hr>
+<p><strong>StickyHeaders</strong>: <a href="https://github.com/bgogetap/StickyHeaders" target="_blank" rel="external">https://github.com/bgogetap/StickyHeaders</a></p>
+<p>Easily add Sticky Headers to your RecyclerView</p>
+<p><img src="https://github.com/bgogetap/StickyHeaders/raw/master/art/demo.gif" width="270"></p>
+<hr>
+<p><strong>ExtendedRecyclerAdapter</strong>: <a href="https://github.com/sergiocasero/ExtendedRecyclerAdapter" target="_blank" rel="external">https://github.com/sergiocasero/ExtendedRecyclerAdapter</a></p>
+<p>Simple library for DRY recycler adapter</p>
+<p><img src="https://raw.githubusercontent.com/sergiocasero/ExtendedRecyclerAdapter/master/art/ExtendedRecyclerView.gif" width="270"></p>
+<hr>
+<p><strong>recycler-core</strong>: <a href="https://github.com/carrot/recycler-core" target="_blank" rel="external">https://github.com/carrot/recycler-core</a></p>
+<p>Multiple view type handling in RecyclerViews with 90% less tears</p>
+<p><img src="https://camo.githubusercontent.com/37e1cf21eef72546c34f463eba54d40e6ea34740/687474703a2f2f692e696d6775722e636f6d2f4e503757626f712e706e67" width="360"></p>
+<hr>
+<p><strong>RecyclerViewTools</strong>: <a href="https://github.com/eyeem/RecyclerViewTools" target="_blank" rel="external">https://github.com/eyeem/RecyclerViewTools</a></p>
+<p>Collection of tools for RecyclerView. Includes headers, sections, pull to refresh, etc</p>
+<hr>
+<p><strong>overscroll-bouncy-android</strong>: <a href="https://github.com/chthai64/overscroll-bouncy-android" target="_blank" rel="external">https://github.com/chthai64/overscroll-bouncy-android</a></p>
+<p>Overscroll bounce effect for Android</p>
+<p><img src="https://github.com/chthai64/overscroll-bouncy-android/raw/master/arts/OverscrollDemo.gif" width="320"></p>
+<hr>
+<p><strong>CircleRefreshLayout</strong>: <a href="https://github.com/tuesda/CircleRefreshLayout" target="_blank" rel="external">https://github.com/tuesda/CircleRefreshLayout</a></p>
+<p>a custom pull-to-refresh layout which contains a interesting animation</p>
+<p><img src="https://github.com/tuesda/CircleRefreshLayout/blob/master/gif/circlerefresh.gif" width="320"></p>
+<hr>
+<p><strong>SnappySmoothScroller</strong>: <a href="https://github.com/nshmura/SnappySmoothScroller" target="_blank" rel="external">https://github.com/nshmura/SnappySmoothScroller</a></p>
+<p>可流畅滚动的 Recyclerview</p>
+<p><img src="https://raw.githubusercontent.com/nshmura/SnappySmoothScroller/master/assets/demo.gif" width="320"></p>
+<hr>
+<p><strong>SwiftAdapter</strong>: <a href="https://github.com/vkondrav/SwiftAdapter" target="_blank" rel="external">https://github.com/vkondrav/SwiftAdapter</a></p>
+<p>可展开的 Recyclerview</p>
+<p><img src="https://camo.githubusercontent.com/7d442887b9fcf56f0244f698f63307fab73b453b/687474703a2f2f63646e2e73747265616d61626c652e636f6d2f696d6167652f686772692e6a7067" width="320"></p>
+<hr>
+<p><strong>ExpandableRecyclerview</strong>: <a href="https://github.com/zaihuishou/ExpandableRecyclerview" target="_blank" rel="external">https://github.com/zaihuishou/ExpandableRecyclerview</a></p>
+<p>可展开的 Recyclerview</p>
+<p><img src="https://raw.githubusercontent.com/zaihuishou/ExpandableRecyclerview/master/sample-screen.gif" width="320"></p>
+<hr>
+<p><strong>baseAdapter</strong>: <a href="https://github.com/hongyangAndroid/baseAdapter" target="_blank" rel="external">https://github.com/hongyangAndroid/baseAdapter</a></p>
+<p>Android 万能的Adapter for ListView,RecyclerView,GridView等，支持多种Item类型的情况</p>
+<p><img src="https://raw.githubusercontent.com/hongyangAndroid/baseAdapter/master/screenshot/single.png" width="320"> <img src="https://raw.githubusercontent.com/hongyangAndroid/baseAdapter/master/screenshot/rvadapter_01.png" width="320"></p>
+<hr>
+<p><strong>GridBuilder</strong>: <a href="https://github.com/Eason90/GridBuilder" target="_blank" rel="external">https://github.com/Eason90/GridBuilder</a></p>
+<p>A Builder of Android GridLayout</p>
+<p><img src="https://raw.githubusercontent.com/Eason90/GridBuilder/master/screenshots/GridBuilder_1.png" width="600"></p>
+<hr>
+<p><strong>power-adapters</strong>: <a href="https://github.com/NextFaze/power-adapters" target="_blank" rel="external">https://github.com/NextFaze/power-adapters</a></p>
+<p>Composable adapters for Android RecyclerViews and ListViews</p>
+<hr>
+<p><strong>rxlist-binder</strong>: <a href="https://github.com/s0nerik/rxlist-binder" target="_blank" rel="external">https://github.com/s0nerik/rxlist-binder</a></p>
+<p>Binds RxList with the RecyclerView.Adapter</p>
+<hr>
+<p><strong>WheelView</strong>: <a href="https://github.com/venshine/WheelView" target="_blank" rel="external">https://github.com/venshine/WheelView</a></p>
+<p>Android滚轮控件，基于ListView实现，可以自定义样式</p>
+<p><img src="https://raw.githubusercontent.com/venshine/WheelView/master/screenshot/screenshot.gif" width="280"> <img src="https://raw.githubusercontent.com/venshine/WheelView/master/screenshot/screenshot1.png" width="280"></p>
+<hr>
+<p><strong>FocusResize</strong>: <a href="https://github.com/borjabravo10/FocusResize" target="_blank" rel="external">https://github.com/borjabravo10/FocusResize</a></p>
+<p>RecyclerView 实现的焦点自动调整</p>
+<p><img src="https://raw.githubusercontent.com/borjabravo10/FocusResize/master/resources/focusResize.gif" width="320"></p>
+<hr>
+<p><strong>TEmptyView</strong>: <a href="https://github.com/barryhappy/TEmptyView" target="_blank" rel="external">https://github.com/barryhappy/TEmptyView</a></p>
+<p>TEmptyView是一个小轮子，可简单地设置EmptyView</p>
+<p><img src="https://raw.githubusercontent.com/barryhappy/TEmptyView/master/etc/demo1.png" width="320"> <img src="https://raw.githubusercontent.com/barryhappy/TEmptyView/master/etc/demo2.png" width="320"></p>
+<hr>
+<p><strong>HeaderAndFooterRecyclerView</strong>: <a href="https://github.com/cundong/HeaderAndFooterRecyclerView" target="_blank" rel="external">https://github.com/cundong/HeaderAndFooterRecyclerView</a></p>
+<p>A RecyclerView solution, Support addHeaderView, addFooterView, and page loading</p>
+<p><img src="https://raw.githubusercontent.com/cundong/HeaderAndFooterRecyclerView/master/art/art1.png" width="270"> <img src="https://raw.githubusercontent.com/cundong/HeaderAndFooterRecyclerView/master/art/art3.png" width="270"> <img src="https://raw.githubusercontent.com/cundong/HeaderAndFooterRecyclerView/master/art/art5.png" width="270"></p>
+<hr>
+<p><strong>LastAdapter</strong>: <a href="https://github.com/nitrico/LastAdapter" target="_blank" rel="external">https://github.com/nitrico/LastAdapter</a></p>
+<p>Don’t write a RecyclerView adapter again. Not even a ViewHolder!</p>
+<hr>
+<p><strong>Persei.android</strong>: <a href="https://github.com/android-cjj/Persei.android" target="_blank" rel="external">https://github.com/android-cjj/Persei.android</a></p>
+<p>android 版本 Persei</p>
+<p><img src="https://raw.githubusercontent.com/Yalantis/Persei/master/Assets/animation.gif" width="800"></p>
+<hr>
+<p><strong>RecyclerView-MultipleViewTypesAdapter</strong>: <a href="https://github.com/yqritc/RecyclerView-MultipleViewTypesAdapter" target="_blank" rel="external">https://github.com/yqritc/RecyclerView-MultipleViewTypesAdapter</a></p>
+<p>Android library defining adapter classes of RecyclerView to manage multiple view types</p>
+<p><img src="https://raw.githubusercontent.com/yqritc/RecyclerView-MultipleViewTypesAdapter/master/sample/sample.gif" width="300"></p>
+<hr>
+<p><strong>Toro</strong>: <a href="https://github.com/eneim/Toro" target="_blank" rel="external">https://github.com/eneim/Toro</a></p>
+<p>Video list auto playback made simple, specially built for RecyclerView</p>
+<p><img src="https://raw.githubusercontent.com/eneim/Toro/master/art/sample_2.gif" width="300"> <img src="https://raw.githubusercontent.com/eneim/Toro/master/art/sample_4.gif" width="300"></p>
+<hr>
+<p><strong>ListVideoPlay</strong>: <a href="https://github.com/brucetoo/ListVideoPlay" target="_blank" rel="external">https://github.com/brucetoo/ListVideoPlay</a></p>
+<p>Play video in ListView,RecyclerView,and support full-screen,and more feature about video play control</p>
+<p><img src="https://github.com/brucetoo/ListVideoPlay/raw/master/list_video_play.gif" width="300"></p>
+<hr>
+<p><strong>VideoListDemo</strong>: <a href="https://github.com/w1123440793/VideoListDemo" target="_blank" rel="external">https://github.com/w1123440793/VideoListDemo</a></p>
+<p>一个视频播放列表demo，视频播放使用的ijkplayer,正在播放视频拖动到不可见区域小窗口播放，可全屏切换</p>
+<p><img src="https://raw.githubusercontent.com/w1123440793/VideoListDemo/master/screenshots/vidiolist.gif" width="300"></p>
+<hr>
+<p><strong>Barandroid-sectioned-adapter</strong>: <a href="https://github.com/CardinalNow/android-sectioned-adapter" target="_blank" rel="external">https://github.com/CardinalNow/android-sectioned-adapter</a></p>
+<p>RecyclerView.Adapter 的封装，可自动排序并添加 header</p>
+<p><img src="https://camo.githubusercontent.com/3b85d647e98d540f0ea2be9850691771b430cf79/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f33333838303133382f5374616e646172644865616465722e706e67" width="320"> <img src="https://camo.githubusercontent.com/cb545f8abe903267a9a31df07c126b6b7682dce9/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f33333838303133382f437573746f6d486561646572732e706e67" width="320"></p>
+<hr>
+<p><strong>FastScroll</strong>: <a href="https://github.com/L4Digital/FastScroll" target="_blank" rel="external">https://github.com/L4Digital/FastScroll</a></p>
+<p>A ListView-like FastScroller for Android’s RecyclerView</p>
+<p><img src="https://raw.githubusercontent.com/L4Digital/FastScroll/master/fastscroll_example.png" width="320"></p>
+<hr>
+<p><strong>MaterialScrollBar</strong>: <a href="https://github.com/turing-tech/MaterialScrollBar" target="_blank" rel="external">https://github.com/turing-tech/MaterialScrollBar</a></p>
+<p>An Android library that brings the Material Design 5.1 sidebar to pre-5.1 devices</p>
+<p><img src="https://raw.githubusercontent.com/turing-tech/MaterialScrollBar/master/sample.png" width="320"></p>
+<hr>
+<p><strong>WaveSideBar</strong>: <a href="https://github.com/gjiazhe/WaveSideBar" target="_blank" rel="external">https://github.com/gjiazhe/WaveSideBar</a></p>
+<p>An index side bar with wave effect</p>
+<p><img src="https://raw.githubusercontent.com/gjiazhe/WaveSideBar/master/screenshot/gif.gif" width="270"> <img src="https://raw.githubusercontent.com/gjiazhe/WaveSideBar/master/screenshot/position_left.png" width="270"></p>
+<hr>
+<p><strong>Android-QuickSideBar</strong>: <a href="https://github.com/saiwu-bigkoo/Android-QuickSideBar" target="_blank" rel="external">https://github.com/saiwu-bigkoo/Android-QuickSideBar</a></p>
+<p>帮助快速查阅对应分组的侧边栏</p>
+<p><img src="https://raw.githubusercontent.com/saiwu-bigkoo/Android-QuickSideBar/master/preview/quicksidebardemo.gif" width="320"></p>
+<hr>
+<p><strong>SideBar</strong>: <a href="https://github.com/kongnanlive/SideBar" target="_blank" rel="external">https://github.com/kongnanlive/SideBar</a></p>
+<p>全新的快速索引导航栏，联系人字母排序侧边栏</p>
+<p><img src="https://raw.githubusercontent.com/kongnanlive/SideBar/master/gif5.gif" width="200"></p>
+<hr>
+<p><strong>AnimSideBar</strong>: <a href="https://github.com/AlexLiuSheng/AnimSideBar" target="_blank" rel="external">https://github.com/AlexLiuSheng/AnimSideBar</a></p>
+<p>A SiderBar base on Android that has a beautiful anim</p>
+<p><img src="https://cloud.githubusercontent.com/assets/12408339/15278798/0df854a2-1b50-11e6-962e-15cb94ecc113.gif" width="320"></p>
+<hr>
+<p><strong>SpringHeader</strong>: <a href="https://github.com/loopeer/SpringHeader" target="_blank" rel="external">https://github.com/loopeer/SpringHeader</a></p>
+<p>CoordinatorLayout 实现的下拉刷新</p>
+<p><img src="https://raw.githubusercontent.com/loopeer/SpringHeader/master/art/demo.gif" width="320"></p>
+<hr>
+<p><strong>AdapterDelegates-ListView</strong>: <a href="https://github.com/esafirm/AdapterDelegates-ListView" target="_blank" rel="external">https://github.com/esafirm/AdapterDelegates-ListView</a></p>
+<p>ListView Adapter 代理工具</p>
+<hr>
+<p><strong>SwipeActionAdapter</strong>: <a href="https://github.com/wdullaer/SwipeActionAdapter" target="_blank" rel="external">https://github.com/wdullaer/SwipeActionAdapter</a></p>
+<p>ListView 左滑右滑</p>
+<p><img src="https://camo.githubusercontent.com/d02997a8f88b797a1df02e768a822a2bf7e9daa5/68747470733a2f2f7261772e6769746875622e636f6d2f7764756c6c6165722f5377697065416374696f6e416461707465722f67682d70616765732f696d616765732f73776970655f322e706e67" width="400"> <img src="https://camo.githubusercontent.com/7215066edafdb957f51fa7c30bd1e62f74a1210e/68747470733a2f2f7261772e6769746875622e636f6d2f7764756c6c6165722f5377697065416374696f6e416461707465722f67682d70616765732f696d616765732f73776970655f312e706e67" width="400"></p>
+<hr>
+<p><strong>ParallaxRecyclerView</strong>: <a href="https://github.com/mzelzoghbi/ParallaxRecyclerView" target="_blank" rel="external">https://github.com/mzelzoghbi/ParallaxRecyclerView</a></p>
+<p>视差效果 RecyclerView</p>
+<p><img src="https://raw.githubusercontent.com/mzelzoghbi/ParallaxRecyclerView/master/gif_1.gif" width="240"> <img src="https://raw.githubusercontent.com/mzelzoghbi/ParallaxRecyclerView/master/gif_2.gif" width="240"></p>
+<hr>
+<p><strong>MultiChoiceRecyclerView</strong>: <a href="https://github.com/dvdciri/MultiChoiceRecyclerView" target="_blank" rel="external">https://github.com/dvdciri/MultiChoiceRecyclerView</a></p>
+<p>RecyclerView 实现的多选框架</p>
+<p><img src="https://raw.githubusercontent.com/dvdciri/MultiChoiceRecyclerView/master/example1.png" width="270"> <img src="https://raw.githubusercontent.com/dvdciri/MultiChoiceRecyclerView/master/example2.png" width="270"> <img src="https://raw.githubusercontent.com/dvdciri/MultiChoiceRecyclerView/master/example.png" width="270"></p>
+<hr>
+<p><strong>RecyclerViewEnhanced</strong>: <a href="https://github.com/nikhilpanju/RecyclerViewEnhanced" target="_blank" rel="external">https://github.com/nikhilpanju/RecyclerViewEnhanced</a></p>
+<p>RecyclerView 用法增强</p>
+<p><img src="https://raw.githubusercontent.com/nikhilpanju/RecyclerViewEnhanced/master/sample/src/common/images/Demo.gif" width="320"></p>
+<hr>
+<p><strong>CardStackView</strong>: <a href="https://github.com/loopeer/CardStackView" target="_blank" rel="external">https://github.com/loopeer/CardStackView</a></p>
+<p>Show something like cards with 3 kinds of animations</p>
+<p><img src="https://raw.githubusercontent.com/loopeer/CardStackView/master/screenshot/screenshot1.gif" width="320"> <img src="https://raw.githubusercontent.com/loopeer/CardStackView/master/screenshot/screenshot3.gif" width="320"></p>
+<hr>
+<p><strong>RecyclerViewUndoSwipe</strong>: <a href="https://github.com/HoneyNeutrons/RecyclerViewUndoSwipe" target="_blank" rel="external">https://github.com/HoneyNeutrons/RecyclerViewUndoSwipe</a></p>
+<p>超实用！！ Android RecyclerView Undo Swipe支持</p>
+<p><img src="https://camo.githubusercontent.com/633c9f0144b49b6a90edb18e44361f843010cd0f/687474703a2f2f696d6775722e636f6d2f523931554a716c2e676966" width="640"></p>
+<hr>
+<p><strong>flowlayoutmanager</strong>: <a href="https://github.com/xiaofeng-han/AndroidLibs/tree/master/flowlayoutmanager" target="_blank" rel="external">https://github.com/xiaofeng-han/AndroidLibs/tree/master/flowlayoutmanager</a></p>
+<p>FlowLayoutManager is a layoutManager that works with Android RecyclerView Widget</p>
+<p><img src="https://cloud.githubusercontent.com/assets/15362031/15170689/fe3117d6-16fc-11e6-8ffc-3e90b9bf5430.gif" width="320"></p>
+<hr>
+<p><strong>ExpandableDelegates</strong>: <a href="https://github.com/Marchuck/ExpandableDelegates" target="_blank" rel="external">https://github.com/Marchuck/ExpandableDelegates</a></p>
+<p>more easy way to add multiple delegates to your expandable recyclerView!</p>
+<hr>
+<p><strong>CommonAdapter</strong>: <a href="https://github.com/qyxxjd/CommonAdapter" target="_blank" rel="external">https://github.com/qyxxjd/CommonAdapter</a></p>
+<p>一个适用于ListView/GridView/RecyclerView的Adapter库,简化大量重复代码,支持多种布局,可自定义图片加载的实现</p>
+<p><img src="https://raw.githubusercontent.com/qyxxjd/CommonAdapter/master/screenshots/main.png" width="270"> <img src="https://raw.githubusercontent.com/qyxxjd/CommonAdapter/master/screenshots/simple.png" width="270"> <img src="https://raw.githubusercontent.com/qyxxjd/CommonAdapter/master/screenshots/multiple.png" width="270"></p>
+<hr>
+<p><strong>FlexibleAdapter</strong>: <a href="https://github.com/davideas/FlexibleAdapter" target="_blank" rel="external">https://github.com/davideas/FlexibleAdapter</a></p>
+<p>Adapter for SelectionMode, ViewHolders, Filter, FastScroller, Animations, Undo, Headers, Expandable, Draggable, Swipeable</p>
+<p><img src="https://raw.githubusercontent.com/davideas/FlexibleAdapter/master/screenshots/drag_grid_overall.png" width="270"> <img src="https://raw.githubusercontent.com/davideas/FlexibleAdapter/master/screenshots/undo_single_selection.png" width="270"> <img src="https://raw.githubusercontent.com/davideas/FlexibleAdapter/master/screenshots/swipe-to-dismiss2.png" width="270"></p>
+<hr>
+<p><strong>SnappingSwipingRecyclerView</strong>: <a href="https://github.com/CarlLee/SnappingSwipingRecyclerView" target="_blank" rel="external">https://github.com/CarlLee/SnappingSwipingRecyclerView</a></p>
+<p>似微信读书首页的长按之后滑动删除的特效和动画</p>
+<p><img src="https://raw.githubusercontent.com/CarlLee/SnappingSwipingRecyclerView/master/preview.gif" width="320"></p>
+<hr>
+<p><strong>EasyRecyclerView</strong>: <a href="https://github.com/diegodobelo/AndroidExpandingViewLibrary" target="_blank" rel="external">https://github.com/diegodobelo/AndroidExpandingViewLibrary</a></p>
+<p>展开收缩的View</p>
+<p><img src="https://d13yacurqjgara.cloudfront.net/users/226618/screenshots/2340386/shoping_list.gif" width="600"></p>
+<hr>
+<p><strong>StaggeredTextGridView</strong>: <a href="https://github.com/riontech-xten/StaggeredTextGridView" target="_blank" rel="external">https://github.com/riontech-xten/StaggeredTextGridView</a></p>
+<p>自定义瀑布流文本 GridView</p>
+<p><img src="https://raw.githubusercontent.com/riontech-xten/StaggeredTextGridView/master/Screenshot_2016-04-28-19-52-08.png" width="320"> <img src="https://raw.githubusercontent.com/riontech-xten/StaggeredTextGridView/master/Screenshot_2016-05-23-14-54-26.png" width="320"></p>
+<hr>
+<p><strong>EasyRecyclerView</strong>: <a href="https://github.com/Jude95/EasyRecyclerView" target="_blank" rel="external">https://github.com/Jude95/EasyRecyclerView</a></p>
+<p>常用的RecyclerView的各种需求封装进库</p>
+<p><img src="https://github.com/Jude95/EasyRecyclerView/blob/master/recycler3.gif" width="320"></p>
+<hr>
+<p><strong>InfiniteListView</strong>: <a href="https://github.com/ugurcany/InfiniteListView" target="_blank" rel="external">https://github.com/ugurcany/InfiniteListView</a></p>
+<p>上拉加载更多，下拉刷新</p>
+<p><img src="https://raw.githubusercontent.com/ugurcany/InfiniteListView/master/infinitelistview.gif" width="320"></p>
+<hr>
+<p><strong>StickyHeaders</strong>: <a href="https://github.com/ShamylZakariya/StickyHeaders" target="_blank" rel="external">https://github.com/ShamylZakariya/StickyHeaders</a></p>
+<p>Adapter and LayoutManager for Android RecyclerView which enables sticky header positioning</p>
+<p><img src="https://raw.githubusercontent.com/ShamylZakariya/StickyHeaders/master/readme-assets/video-addressbook.gif" width="320"> <img src="https://raw.githubusercontent.com/ShamylZakariya/StickyHeaders/master/readme-assets/video-callbacks.gif" width="320"></p>
+<hr>
+<p><strong>CalendarListview</strong>: <a href="https://github.com/traex/CalendarListview" target="_blank" rel="external">https://github.com/traex/CalendarListview</a></p>
+<p>CalendarListview provides a easy way to select dates with a calendar for API 10+</p>
+<p><img src="https://raw.githubusercontent.com/traex/CalendarListview/master/demo.gif" width="320"></p>
+<hr>
+<p><strong>BaseRecyclerViewAdapterHelper</strong>: <a href="https://github.com/CymChad/BaseRecyclerViewAdapterHelper" target="_blank" rel="external">https://github.com/CymChad/BaseRecyclerViewAdapterHelper</a></p>
+<p>Powerful and flexible RecyclerAdapter,www.recyclerview.org</p>
+<p><img src="https://github.com/CymChad/BaseRecyclerViewAdapterHelper/blob/master/demo_res/demo.gif" width="320"></p>
+<hr>
+<p><strong>RecyclerViewPresenter</strong>: <a href="https://github.com/kibotu/RecyclerViewPresenter" target="_blank" rel="external">https://github.com/kibotu/RecyclerViewPresenter</a></p>
+<p>Convenience library to handle different view types with different presenters in a single RecyclerView</p>
+<p><img src="https://raw.githubusercontent.com/kibotu/RecyclerViewPresenter/master/screenshot.png" width="300"></p>
+<hr>
+<p><strong>recyclerview-animators</strong>: <a href="https://github.com/wasabeef/recyclerview-animators" target="_blank" rel="external">https://github.com/wasabeef/recyclerview-animators</a></p>
+<p>An Android Animation library which easily add itemanimator to RecyclerView items.</p>
+<p><img src="https://github.com/wasabeef/recyclerview-animators/blob/master/art/demo.gif" width="160"><br><img src="https://github.com/wasabeef/recyclerview-animators/blob/master/art/demo2.gif" width="160"><br><img src="https://github.com/wasabeef/recyclerview-animators/blob/master/art/demo4.gif" width="160"><br><img src="https://github.com/wasabeef/recyclerview-animators/blob/master/art/demo3.gif" width="160"><br><img src="https://github.com/wasabeef/recyclerview-animators/blob/master/art/demo5.gif" width="160"></p>
+<hr>
+<p><strong>EasyAdapter</strong>: <a href="https://github.com/mzule/EasyAdapter" target="_blank" rel="external">https://github.com/mzule/EasyAdapter</a></p>
+<p>一种简单的 Adapter 解决方案，支持多种 ViewType，轻松创建 ViewHolder 模式 Adapter. 支持 ListView 和 RecyclerView</p>
+<hr>
+<p><strong>recyclerviewhelper</strong>: <a href="https://github.com/nisrulz/recyclerviewhelper" target="_blank" rel="external">https://github.com/nisrulz/recyclerviewhelper</a></p>
+<p>RecyclerView 超强助手</p>
+<hr>
+<p><strong>android-PullRefreshLayout</strong>: <a href="https://github.com/baoyongzhang/android-PullRefreshLayout" target="_blank" rel="external">https://github.com/baoyongzhang/android-PullRefreshLayout</a></p>
+<p>This component like SwipeRefreshLayout, it is more beautiful than SwipeRefreshLayout.</p>
+<p><img src="https://raw.githubusercontent.com/baoyongzhang/android-PullRefreshLayout/master/demo.gif" width="320"></p>
+<hr>
+<p><strong>android-Ultra-Pull-To-Refresh</strong>: <a href="https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh" target="_blank" rel="external">https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh</a></p>
+<p>Ultra Pull to Refresh for Android. Support all the views. <a href="http://android-ultra-ptr.liaohuqiu.net/" target="_blank" rel="external">http://android-ultra-ptr.liaohuqiu.net/</a></p>
+<p><img src="https://camo.githubusercontent.com/588a2ef2cdcfb6c71e88437df486226dd15605b3/687474703a2f2f737261696e2d6769746875622e71696e6975646e2e636f6d2f756c7472612d7074722f73746f72652d686f7573652d737472696e672d61727261792e676966" width="160"><br><img src="https://camo.githubusercontent.com/d3fbe757c87fddc94e998ebdd08ac55956aed1cf/687474703a2f2f737261696e2d6769746875622e71696e6975646e2e636f6d2f756c7472612d7074722f73746f72652d686f7573652d737472696e672e676966" width="160"><br><img src="https://camo.githubusercontent.com/4dfccd5a50f7d59b512300fce341a1217950603a/687474703a2f2f737261696e2d6769746875622e71696e6975646e2e636f6d2f756c7472612d7074722f6d6174657269616c2d7374796c652e676966" width="160"><br><img src="https://camo.githubusercontent.com/9033435ad82be43ccddc8203450f361ee270c724/687474703a2f2f737261696e2d6769746875622e71696e6975646e2e636f6d2f756c7472612d7074722f70756c6c2d746f2d726566726573682e676966" width="160"><br><img src="https://camo.githubusercontent.com/88cdf877aa0a1fb19506ecf3404447eba59e68cc/687474703a2f2f737261696e2d6769746875622e71696e6975646e2e636f6d2f756c7472612d7074722f6175746f2d726566726573682e676966" width="160"></p>
+<hr>
+<p><strong>Chris-Android-PullToRefresh</strong>: <a href="https://github.com/bboyfeiyu/Chris-Android-PullToRefresh" target="_blank" rel="external">https://github.com/bboyfeiyu/Chris-Android-PullToRefresh</a></p>
+<p>下拉刷新，上拉加载库</p>
+<p><img src="https://raw.githubusercontent.com/chrisbanes/Android-PullToRefresh/master/header_graphic.png" width="480"></p>
+<hr>
+<p><strong>RecyclerView-FastScroll</strong>: <a href="https://github.com/timusus/RecyclerView-FastScroll" target="_blank" rel="external">https://github.com/timusus/RecyclerView-FastScroll</a></p>
+<p>A simple FastScroller for Android’s RecyclerView</p>
+<p><img src="https://raw.githubusercontent.com/timusus/RecyclerView-FastScroll/master/screenshot.png" width="320"></p>
+<hr>
+<p><strong>Timeline-View</strong>: <a href="https://github.com/vipulasri/Timeline-View" target="_blank" rel="external">https://github.com/vipulasri/Timeline-View</a></p>
+<p>Android Timeline View is used to display views like Tracking of shipment/order, steppers etc</p>
+<p><img src="https://github.com/vipulasri/Timeline-View/blob/master/Screenshot1.png" width="320"></p>
+<hr>
+<p><strong>MultiStateView</strong>: <a href="https://github.com/Kennyc1012/MultiStateView" target="_blank" rel="external">https://github.com/Kennyc1012/MultiStateView</a></p>
+<p>Android View that displays different content based on its state</p>
+<p><img src="https://github.com/Kennyc1012/MultiStateView/blob/master/art/content.png" width="160"><br><img src="https://github.com/Kennyc1012/MultiStateView/blob/master/art/loading.png" width="160"><br><img src="https://github.com/Kennyc1012/MultiStateView/raw/master/art/empty.png" width="160"><br><img src="https://github.com/Kennyc1012/MultiStateView/raw/master/art/error.png" width="160"></p>
+<hr>
+<p><strong>FlyRefresh</strong>: <a href="https://github.com/race604/FlyRefresh" target="_blank" rel="external">https://github.com/race604/FlyRefresh</a></p>
+<p>The implementation of <a href="https://dribbble.com/shots/2067564-Replace" target="_blank" rel="external">https://dribbble.com/shots/2067564-Replace</a></p>
+<p><img src="https://github.com/race604/FlyRefresh/blob/master/images/flyrefresh.gif" width="320"></p>
+<hr>
+<p><strong>ToDoList</strong>: <a href="https://github.com/Yalantis/ToDoList" target="_blank" rel="external">https://github.com/Yalantis/ToDoList</a></p>
+<p>Yalantis 放出的一个新作品：ToDoList，拥有非常平滑漂亮的动画</p>
+<p><img src="https://raw.githubusercontent.com/Yalantis/ToDoList/master/content_shot_to-do_dribbble.gif" width="600"></p>
+<hr>
+<p><strong>Multi-Selection</strong>: <a href="https://github.com/Yalantis/Multi-Selection" target="_blank" rel="external">https://github.com/Yalantis/Multi-Selection</a></p>
+<p>Yalantis 放出的又一大作：Multi-Selection （优雅多选框），把选中的先存起来</p>
+<p><img src="https://raw.githubusercontent.com/Yalantis/Multi-Selection/develop/imgs/dribble.gif" width="600"></p>
+<hr>
+<p><strong>pull-to-make-soup</strong>: <a href="https://github.com/Yalantis/pull-to-make-soup" target="_blank" rel="external">https://github.com/Yalantis/pull-to-make-soup</a></p>
+<p>RecyclerView 下拉刷新</p>
+<p><img src="https://raw.githubusercontent.com/Yalantis/PullToMakeSoup/master/PullToMakeSoupDemo/Resouces/recipe-finder.gif" width="600"></p>
+<hr>
+<p><strong>Phoenix</strong>: <a href="https://github.com/Yalantis/Phoenix" target="_blank" rel="external">https://github.com/Yalantis/Phoenix</a></p>
+<p>Phoenix Pull-to-Refresh. <a href="https://yalantis.com/" target="_blank" rel="external">https://yalantis.com/</a></p>
+<p><img src="https://camo.githubusercontent.com/d406ac5a03a2b1fa5cf41fadc8d2408cb8709bdc/68747470733a2f2f6431337961637572716a676172612e636c6f756466726f6e742e6e65742f75736572732f3132353035362f73637265656e73686f74732f313635303331372f7265616c6573746174652d70756c6c5f312d322d332e676966" width="320"></p>
+<hr>
+<p><strong>Taurus</strong>: <a href="https://github.com/Yalantis/Taurus" target="_blank" rel="external">https://github.com/Yalantis/Taurus</a></p>
+<p>A little more fun for the pull-to-refresh interaction.<a href="https://yalantis.com/" target="_blank" rel="external">https://yalantis.com/</a></p>
+<p><img src="https://camo.githubusercontent.com/3a24e22eb3f8338573dba0701c089c12f6b70f11/68747470733a2f2f6431337961637572716a676172612e636c6f756466726f6e742e6e65742f75736572732f3132353035362f73637265656e73686f74732f313632333133312f746f7572732d70756c6c2d616972706c616e655f322d322d332e676966" width="320"></p>
+<hr>
+<p><strong>CircleRefreshLayout</strong>: <a href="https://github.com/tuesda/CircleRefreshLayout" target="_blank" rel="external">https://github.com/tuesda/CircleRefreshLayout</a></p>
+<p>a custom pull-to-refresh layout which contains a interesting animation.</p>
+<p><img src="https://github.com/tuesda/CircleRefreshLayout/blob/master/gif/circlerefresh.gif" width="320"></p>
+<hr>
+<p><strong>WaveSwipeRefreshLayout</strong>: <a href="https://github.com/recruit-lifestyle/WaveSwipeRefreshLayout" target="_blank" rel="external">https://github.com/recruit-lifestyle/WaveSwipeRefreshLayout</a></p>
+<p><a href="http://engineer.recruit-lifestyle.co.jp/techblog/2015-08-03-swipe-refresh-layout/" target="_blank" rel="external">http://engineer.recruit-lifestyle.co.jp/techblog/2015-08-03-swipe-refresh-layout/</a></p>
+<p><img src="https://github.com/recruit-lifestyle/WaveSwipeRefreshLayout/blob/master/sc/animation.gif" width="320"></p>
+<hr>
+<p><strong>FoldableLayout</strong>: <a href="https://github.com/worldline/FoldableLayout" target="_blank" rel="external">https://github.com/worldline/FoldableLayout</a></p>
+<p>An Android demo of a foldable layout implementation.</p>
+<p><img src="https://raw.githubusercontent.com/worldline/FoldableLayout/dev/screenshots/demo.gif" width="320"></p>
+<hr>
+<p><strong>SuperRecyclerView</strong>: <a href="https://github.com/Malinskiy/SuperRecyclerView" target="_blank" rel="external">https://github.com/Malinskiy/SuperRecyclerView</a></p>
+<p>Pumped up RecyclerView</p>
+<hr>
+<p><strong>RecyclerViewSwipeDismiss</strong>: <a href="https://github.com/CodeFalling/RecyclerViewSwipeDismiss" target="_blank" rel="external">https://github.com/CodeFalling/RecyclerViewSwipeDismiss</a></p>
+<p>A very easy-to-use and non-intrusive implement of Swipe to dismiss for RecyclerView.</p>
+<p><img src="https://github.com/CodeFalling/RecyclerViewSwipeDismiss/blob/master/RecyclerViewSwipeDismiss.gif" width="320"></p>
+<hr>
+<p><strong>FlabbyListView</strong>: <a href="https://github.com/jpardogo/FlabbyListView" target="_blank" rel="external">https://github.com/jpardogo/FlabbyListView</a></p>
+<p>Android library to display a ListView whose cells are not rigid but flabby and react to ListView scroll.</p>
+<p><img src="https://camo.githubusercontent.com/2194c820b758d70a0bf525e14e1b7f3f135b6ece/687474703a2f2f692e696d6775722e636f6d2f756743424869482e6769665d28687474703a2f2f692e696d6775722e636f6d2f756743424869482e676966" width="320"><br><img src="https://camo.githubusercontent.com/e8e4947b18c6998175e02c3ea8b5c898eea35cfd/687474703a2f2f692e696d6775722e636f6d2f776657477242532e6769665d28687474703a2f2f692e696d6775722e636f6d2f776657477242532e676966" width="320"></p>
+<hr>
+<p><strong>TimelineView</strong>: <a href="https://github.com/alorma/TimelineView" target="_blank" rel="external">https://github.com/alorma/TimelineView</a></p>
+<p>Cute timeline view for android</p>
+<p><img src="https://github.com/alorma/TimelineView/blob/master/screenshot.png" width="320"></p>
+<hr>
+<p><strong>ParallaxListView</strong>: <a href="https://github.com/Gnod/ParallaxListView" target="_blank" rel="external">https://github.com/Gnod/ParallaxListView</a></p>
+<p>A Android ListView Demo with a parallax effect header like Path.</p>
+<p><img src="https://github.com/Gnod/ParallaxListView/blob/master/img_sample.gif" width="320"></p>
+<hr>
+<p><strong>PullZoomView</strong>: <a href="https://github.com/Frank-Zhu/PullZoomView" target="_blank" rel="external">https://github.com/Frank-Zhu/PullZoomView</a></p>
+<p>An Android custom ListView and ScrollView with pull to zoom-in.</p>
+<p><img src="https://raw.githubusercontent.com/Frank-Zhu/PullZoomView/master/art/pull-to-zoom.gif" width="320"></p>
+<hr>
+<p><strong>SwipeMenuListView</strong>: <a href="https://github.com/baoyongzhang/SwipeMenuListView" target="_blank" rel="external">https://github.com/baoyongzhang/SwipeMenuListView</a></p>
+<p>A swipe menu for ListView.</p>
+<p><img src="https://raw.githubusercontent.com/baoyongzhang/SwipeMenuListView/master/demo.gif" width="320"></p>
+<hr>
+<p><strong>discrollview</strong>: <a href="https://github.com/flavienlaurent/discrollview" target="_blank" rel="external">https://github.com/flavienlaurent/discrollview</a></p>
+<p>Scroll + discover = DiscrollView</p>
+<p><img src="https://github.com/wasabeef/awesome-android-ui/blob/master/art/discrollview.gif" width="320"></p>
+<hr>
+<p><strong>StickyListHeaders</strong>: <a href="https://github.com/emilsjolander/StickyListHeaders" target="_blank" rel="external">https://github.com/emilsjolander/StickyListHeaders</a></p>
+<p>An android library for section headers that stick to the top</p>
+<p><img src="https://github.com/emilsjolander/StickyListHeaders/raw/master/demo.gif" width="320"></p>
+<hr>
+<p><strong>ListBuddies</strong>: <a href="https://github.com/jpardogo/ListBuddies" target="_blank" rel="external">https://github.com/jpardogo/ListBuddies</a></p>
+<p>Android library to achieve in an easy way, the behaviour of the home page in the Expedia app, with a pair of auto-scroll circular parallax ListViews.</p>
+<p><img src="https://camo.githubusercontent.com/263db3cffd142dbbacf06fb43aaa5997ff1c243e/68747470733a2f2f7261772e6769746875622e636f6d2f6a706172646f676f2f4c697374427564646965732f6d61737465722f6172742f73637265656e73686f745f6c697374627564646965735f322e706e67" width="320"><br><img src="https://github.com/wasabeef/awesome-android-ui/blob/master/art/ListBuddies.gif" width="320"></p>
+<hr>
+<p><strong>Android-ObservableScrollView</strong>: <a href="https://github.com/ksoichiro/Android-ObservableScrollView" target="_blank" rel="external">https://github.com/ksoichiro/Android-ObservableScrollView</a></p>
+<p>Android library to observe scroll events on scrollable views.<a href="http://ksoichiro.github.io/Android-ObservableScrollView/" target="_blank" rel="external">http://ksoichiro.github.io/Android-ObservableScrollView/</a></p>
+<p><img src="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo12.gif" width="160"><br><img src="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo10.gif" width="160"><br><img src="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo11.gif" width="160"><br><img src="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo13.gif" width="160"><br><img src="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo1.gif" width="160"><br><img src="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo2.gif" width="160"><br><img src="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo3.gif" width="160"><br><img src="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo4.gif" width="160"><br><img src="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo5.gif" width="160"><br><img src="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo6.gif" width="160"><br><img src="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo7.gif" width="160"><br><img src="https://raw.githubusercontent.com/ksoichiro/Android-ObservableScrollView/master/samples/images/demo8.gif" width="160"></p>
+<hr>
+<p><strong>AsymmetricGridView</strong>: <a href="https://github.com/felipecsl/AsymmetricGridView" target="_blank" rel="external">https://github.com/felipecsl/AsymmetricGridView</a></p>
+<p>Android ListView that mimics a GridView with asymmetric items. Supports items with row span and column span.<a href="http://felipecsl.com/AsymmetricGridView" target="_blank" rel="external">http://felipecsl.com/AsymmetricGridView</a></p>
+<p><img src="https://raw.githubusercontent.com/felipecsl/AsymmetricGridView/master/screenshots/ss_2_cols.png" width="320"><br><img src="https://raw.githubusercontent.com/felipecsl/AsymmetricGridView/master/screenshots/ss_5_cols.png" width="320"></p>
+<hr>
+<p><strong>DynamicGrid</strong>: <a href="https://github.com/askerov/DynamicGrid" target="_blank" rel="external">https://github.com/askerov/DynamicGrid</a></p>
+<p>Drag and drop GridView for Android</p>
+<p><img src="https://github.com/wasabeef/awesome-android-ui/blob/master/art/DynamicGrid.gif" width="320"></p>
+<hr>
+<p><strong>PinterestLikeAdapterView</strong>:  <a href="https://github.com/GDG-Korea/PinterestLikeAdapterView" target="_blank" rel="external">https://github.com/GDG-Korea/PinterestLikeAdapterView</a></p>
+<p> An Android multi column list view like Pinterest.</p>
+<p><img src="https://camo.githubusercontent.com/97e5e0acd9bce5cc3d98b8dbb2b528cc3e98c3e9/68747470733a2f2f7261772e6769746875622e636f6d2f4744472d4b6f7265612f50696e7465726573744c696b6541646170746572566965772f6d61737465722f73637265656e73686f742e706e67" width="320"></p>
+<hr>
+<p><strong>DragSortAdapter</strong>:  <a href="https://github.com/vinc3m1/DragSortAdapter" target="_blank" rel="external">https://github.com/vinc3m1/DragSortAdapter</a></p>
+<p> Drag and drop re-ordering adapter for RecyclerView</p>
+<p><img src="http://www.23code.com/wp-content/uploads/2015/01/device-2015-01-27-134318.jpg" width="320"></p>
+<hr>
+<p><strong>AndroidStaggeredGrid</strong>: <a href="https://github.com/etsy/AndroidStaggeredGrid" target="_blank" rel="external">https://github.com/etsy/AndroidStaggeredGrid</a></p>
+<p>An Android staggered grid view which supports multiple columns with rows of varying sizes.<a href="https://github.com/etsy/AndroidStaggeredGrid" target="_blank" rel="external">https://github.com/etsy/AndroidStaggeredGrid</a></p>
+<p><img src="https://camo.githubusercontent.com/a243ad5c2788730c40fc1d348e5ed85adb59c484/687474703a2f2f662e636c2e6c792f6974656d732f327a31423059304d3047304f326b316c334a30332f5472656e64696e672e706e67" width="320"></p>
+<hr>
+<p><strong>android-parallax-recyclerview</strong>: <a href="https://github.com/kanytu/android-parallax-recyclerview" target="_blank" rel="external">https://github.com/kanytu/android-parallax-recyclerview</a></p>
+<p>An adapter which could be used to achieve a parallax effect on RecyclerView.</p>
+<p><img src="https://raw.githubusercontent.com/kanytu/android-parallax-recycleview/master/screenshots/screenshot.gif" width="320"><br><img src="https://raw.githubusercontent.com/kanytu/android-parallax-recycleview/master/screenshots/parallaxtoolbar.gif" width="320"></p>
+<hr>
+<p><strong>BlurStickyHeaderListView</strong>: <a href="https://github.com/emmano/BlurStickyHeaderListView" target="_blank" rel="external">https://github.com/emmano/BlurStickyHeaderListView</a></p>
+<p>ListView with blur/parallax/sticky capabilities.</p>
+<p><img src="https://github.com/wasabeef/awesome-android-ui/blob/master/art/BlurStickyHeaderListView.gif" width="320"></p>
+<hr>
+<p><strong>RecyclerView-FlexibleDivider</strong>: <a href="https://github.com/yqritc/RecyclerView-FlexibleDivider" target="_blank" rel="external">https://github.com/yqritc/RecyclerView-FlexibleDivider</a></p>
+<p>Android library providing simple way to control divider items of RecyclerView.</p>
+<p><img src="https://github.com/yqritc/RecyclerView-FlexibleDivider/blob/master/sample/sample1.gif" width="320"><br><img src="https://github.com/yqritc/RecyclerView-FlexibleDivider/blob/master/sample/sample2.gif" width="320"></p>
+<hr>
+<p><strong>AndroidTreeView</strong>: <a href="https://github.com/bmelnychuk/AndroidTreeView" target="_blank" rel="external">https://github.com/bmelnychuk/AndroidTreeView</a></p>
+<p>AndroidTreeView. TreeView implementation for android.</p>
+<p><img src="https://camo.githubusercontent.com/e30f6694c99cc4404b7654f74e3d1598665792ea/68747470733a2f2f6c68342e67677068742e636f6d2f787a6b62334e35384c48325473625f6747733075335f783831564f4c776c6863702d6634707a5f73525f69523376414b58664a6f416377426a4e37344c767a70564c453d683930302d7277" width="320"><br><img src="https://camo.githubusercontent.com/e600e1392139be2db0f466f30c63ecd84af39080/68747470733a2f2f6c68352e67677068742e636f6d2f55743642795f69556e6b4e667a49626150427363386842655165466a5f3255584a685f3174667744646c544171476b6869523732415f417751304c304748334f4661673d683930302d7277" width="320"></p>
+<hr>
+<p><strong>RecyclerViewFastScroller</strong>: <a href="https://github.com/danoz73/RecyclerViewFastScroller" target="_blank" rel="external">https://github.com/danoz73/RecyclerViewFastScroller</a></p>
+<p>A Fast Scroller for the RecyclerView world!</p>
+<p><img src="https://camo.githubusercontent.com/89c3458b7404559a3a2bcc07b11abda23cb9f04f/687474703a2f2f692e696d6775722e636f6d2f496f7a557475636c2e706e67" width="320"><br><img src="https://camo.githubusercontent.com/8b8e323a4f7f904b6d6f5057ceaa28a81570af26/687474703a2f2f692e696d6775722e636f6d2f327a4277496c776c2e706e67" width="320"></p>
+<hr>
+<p><strong>RecyclerView-MultipleViewTypesAdapter</strong>: <a href="https://github.com/yqritc/RecyclerView-MultipleViewTypesAdapter" target="_blank" rel="external">https://github.com/yqritc/RecyclerView-MultipleViewTypesAdapter</a></p>
+<p>Android library defining adapter classes of RecyclerView to manage multiple view types</p>
+<p><img src="https://github.com/yqritc/RecyclerView-MultipleViewTypesAdapter/blob/master/sample/sample.gif" width="320"></p>
+<hr>
+<p><strong>SwipeToAction</strong>: <a href="https://github.com/diftco/SwipeToAction" target="_blank" rel="external">https://github.com/diftco/SwipeToAction</a></p>
+<p>An easy way to add a simple ‘swipe-and-do-something’ behavior to your <code>RecyclerView</code> items. Just like in Gmail or Inbox apps.</p>
+<p><img src="https://raw.githubusercontent.com/diftco/SwipeToAction/master/screenshots/swipetoaction.gif" width="320"></p>
+<hr>
+<p><strong>android-advancedrecyclerview</strong>: <a href="https://github.com/h6ah4i/android-advancedrecyclerview" target="_blank" rel="external">https://github.com/h6ah4i/android-advancedrecyclerview</a></p>
+<p>RecyclerView extension library which provides advanced features. (ex. Google’s Inbox app like swiping, Play Music app like drag and drop sorting)</p>
+<p><img src="https://github.com/wasabeef/awesome-android-ui/blob/master/art/AdvancedRecyclerView.gif" width="320"></p>
+<hr>
+<p><strong>RecyclerItemDecoration</strong>: <a href="https://github.com/magiepooh/RecyclerItemDecoration" target="_blank" rel="external">https://github.com/magiepooh/RecyclerItemDecoration</a></p>
+<p>ItemDecoration for RecyclerView using LinearLayoutManager for Android</p>
+<p><img src="https://raw.githubusercontent.com/magiepooh/RecyclerItemDecoration/master/art/demo_vertical.gif" width="320"><br><img src="https://raw.githubusercontent.com/magiepooh/RecyclerItemDecoration/master/art/demo_horizontal.gif" width="320"></p>
+<hr>
+<p><strong>MaterialRecents</strong>: <a href="https://github.com/ZieIony/MaterialRecents" target="_blank" rel="external">https://github.com/ZieIony/MaterialRecents</a></p>
+<p>Lollipop’s Recents container</p>
+<p><img src="https://github.com/ZieIony/MaterialRecents/blob/master/images/recents.gif" width="320"></p>
+<hr>
+<p><strong>Dividers</strong>: <a href="https://github.com/Karumi/Dividers" target="_blank" rel="external">https://github.com/Karumi/Dividers</a></p>
+<p>Dividers is a simple Android library to create easy separators for your RecyclerViews</p>
+<p><img src="https://github.com/Karumi/Dividers/blob/master/art/example.gif" width="320"></p>
+<hr>
+<p><strong>drag-select-recyclerview</strong>: <a href="https://github.com/afollestad/drag-select-recyclerview" target="_blank" rel="external">https://github.com/afollestad/drag-select-recyclerview</a></p>
+<p>Easy to implement Google Photos style multi-selection for RecyclerViews.<a href="http://aidanfollestad.com" target="_blank" rel="external">http://aidanfollestad.com</a></p>
+<p><img src="https://github.com/wasabeef/awesome-android-ui/blob/master/art/drag-select-recyclerview.gif" width="320"></p>
+<hr>
+<p><strong>sticky-headers-recyclerview</strong>: <a href="https://github.com/timehop/sticky-headers-recyclerview" target="_blank" rel="external">https://github.com/timehop/sticky-headers-recyclerview</a></p>
+<p>Sticky Headers decorator for Android’s RecyclerView</p>
+<p><img src="https://camo.githubusercontent.com/2712b977a781964db02085035e43281773ab4ffa/687474703a2f2f692e696d6775722e636f6d2f49307a746f50772e676966" width="320"><br><img src="https://camo.githubusercontent.com/9fe2a23efb0ab8222910a09e21234c0c313afc10/687474703a2f2f692e696d6775722e636f6d2f6235704a6a744c2e676966" width="480"></p>
+<hr>
+<p><strong>NotBoringActionBar</strong>: <a href="https://github.com/flavienlaurent/NotBoringActionBar" target="_blank" rel="external">https://github.com/flavienlaurent/NotBoringActionBar</a></p>
+<p>News Stand app makes the ActionBar not boring!</p>
+<p><img src="https://camo.githubusercontent.com/65f2d44e0e5064369aec8ee41838bd073e695975/68747470733a2f2f7261772e6769746875622e636f6d2f666c617669656e6c617572656e742f4e6f74426f72696e67416374696f6e4261722f6d61737465722f67726170686963732f6e6f74626f72696e6761622e676966" width="320"></p>
+<hr>
+<p><strong>ListViewAnimations</strong>: <a href="https://github.com/nhaarman/ListViewAnimations" target="_blank" rel="external">https://github.com/nhaarman/ListViewAnimations</a></p>
+<p>An Android library which allows developers to easily add animations to ListView items</p>
+<p><img src="https://raw.githubusercontent.com/nhaarman/ListViewAnimations/gh-pages/images/dynamiclistview.gif" width="320"></p>
+<hr>
+<p><strong>WaterDropListView</strong>: <a href="https://github.com/THEONE10211024/WaterDropListView" target="_blank" rel="external">https://github.com/THEONE10211024/WaterDropListView</a></p>
+<p>WaterDropListView，just like the iOS</p>
+<p><img src="https://github.com/THEONE10211024/WaterDropListView/blob/master/demo/demo.gif" width="320"></p>
+<hr>
+<p><strong>BGARefreshLayout-Android</strong>: <a href="https://github.com/bingoogolapple/BGARefreshLayout-Android" target="_blank" rel="external">https://github.com/bingoogolapple/BGARefreshLayout-Android</a></p>
+<p>多种下拉刷新效果、上拉加载更多、可配置自定义头部广告位</p>
+<p><img src="https://camo.githubusercontent.com/912ee9a45b5ed7063bd6fe7634f8130953a7051d/687474703a2f2f37786b39646a2e636f6d312e7a302e676c622e636c6f7564646e2e636f6d2f726566726573686c61796f75742f73637265656e73686f74732f6267615f726566726573686c61796f7574312e676966" width="270"><br><img src="https://camo.githubusercontent.com/7539fed2c320aecc0d47320586e8c2ee22a2d762/687474703a2f2f37786b39646a2e636f6d312e7a302e676c622e636c6f7564646e2e636f6d2f726566726573686c61796f75742f73637265656e73686f74732f6267615f726566726573686c61796f7574322e676966" width="270"><br><img src="https://camo.githubusercontent.com/1f869f094c59adfef8a63f8f870c53092fae8d19/687474703a2f2f37786b39646a2e636f6d312e7a302e676c622e636c6f7564646e2e636f6d2f726566726573686c61796f75742f73637265656e73686f74732f6267615f726566726573686c61796f7574362e676966" width="270"></p>
+<hr>
+<p><strong>FastAdapter</strong>: <a href="https://github.com/mikepenz/FastAdapter" target="_blank" rel="external">https://github.com/mikepenz/FastAdapter</a></p>
+<p>The bullet proof, fast and easy to use adapter library, which minimizes developing time when use RecyclerView… <a href="http://mikepenz.github.io/FastAdapter" target="_blank" rel="external">http://mikepenz.github.io/FastAdapter</a></p>
+<p><img src="https://raw.githubusercontent.com/mikepenz/FastAdapter/develop/DEV/github/screenshots1.jpg" width="640"></p>
+<hr>
+<p><strong>NestedTimeLineRecyclerView</strong>: <a href="https://github.com/ishratkhan/NestedTimeLineRecyclerView" target="_blank" rel="external">https://github.com/ishratkhan/NestedTimeLineRecyclerView</a></p>
+<p>It is a custom implementation of nested timeline view using RecyclerView</p>
+<p><img src="https://camo.githubusercontent.com/8c9d67b4ad583b72f61f87ebc0ea9e34bce7544e/687474703a2f2f692e696d6775722e636f6d2f497375444636672e676966" width="320"></p>
+<hr>
+<p><strong>YLListView</strong>: <a href="https://github.com/yll2wcf/YLListView" target="_blank" rel="external">https://github.com/yll2wcf/YLListView</a></p>
+<p>YLListView仿IOS弹簧效果的ListView</p>
+<p><img src="https://raw.githubusercontent.com/yll2wcf/YLListView/master/gif/1.gif" width="320"></p>
+<hr>
+      
+    </div>
+    
+  </div>
+  
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/android-librarys/List/">列表 List - Android开源组件</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Zero</a></p>
+        <p><span>发布时间:</span>2017-03-24 12:14</p>
+        <!-- <p><span>最后更新:</span>2017-03-29, 17:48:39</p> -->
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/android-librarys/List/" title="列表 List - Android开源组件">http://www.jiaoyigui.cn//android-librarys/List/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.jiaoyigui.cn//android-librarys/List/　　作者: Zero" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <!-- <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p> -->
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/android-librarys/Animation/">
+                    动画Animation - Android开源组件
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/android-librarys/Network/">
+                    网络请求 Network - Android开源组件
+                </a>
+            </div>
+        
+    </nav>
+  
+</article>
+<div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#列表-List"><span class="toc-number">1.</span> <span class="toc-text">列表 List</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+    <div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"列表 List - Android开源组件　| 夜的灯　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+    
+
+
+<div class="scroll" id="post-nav-button">
+        
+            <a href="/android-librarys/Animation/" title="上一篇: 动画Animation - Android开源组件">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/android-librarys/Network/" title="下一篇: 网络请求 Network - Android开源组件">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/opensource/Android/">Android开源项目</a></li><li class="post-list-item"><a class="post-list-link" href="/opensource/Index/">索引 - 开源项目</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Utils/">辅助工具类 Utils - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Menu/">菜单 Menu - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Custom/">自定义控件 Custom - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Dialog/">弹窗 Dialog - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Framework/">开发框架Framework - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Layout/">布局Layout - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Animation/">动画Animation - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/List/">列表 List - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Network/">网络请求 Network - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Image/">图片 Image - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/php/thinkphp5-install/">Thinkphp5快速入门</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Index/">总纲 - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android/Android-Decompile/">Android反编译</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-Java/">开发环境 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-iTerm2/">终端方案iTerm2 + Zsh - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-Homebrew/">包管理工具 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-keymap/">常用快捷键 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-settings/">系统使用 - Java程序员眼中的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/server/VPS/">VPS + Shadowsocks 可以是什么，做什么</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-Debug/">IntelliJ IDEA DEBUG调试</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-For-Mac-Keys/">IntelliJ IDEA For Mac 快捷键</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-Settings/">IntelliJ IDEA 主题、字体、编辑区主题、文件编码修改、乱码问题</a></li><li class="post-list-item"><a class="post-list-link" href="/hexo/Hexo-Install/">搭建 Hexo 博客--增强篇</a></li></ul>
+
+
+    <script>
+        
+    </script></div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i>
+                2017 Zero
+            </div>
+            <div class="footer-right">
+                <!-- <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i> -->
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide()" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+<script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>

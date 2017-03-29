@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Zero">
+
+
+
+<meta name="description" content="收集Android相关的 菜单 Menu 组件库, 包含：各种菜单Menu、列表菜单List、自定义菜单……">
+<meta property="og:type" content="article">
+<meta property="og:title" content="菜单 Menu - Android开源组件">
+<meta property="og:url" content="http://www.jiaoyigui.cn/android-librarys/Menu/index.html">
+<meta property="og:site_name" content="夜的灯">
+<meta property="og:description" content="收集Android相关的 菜单 Menu 组件库, 包含：各种菜单Menu、列表菜单List、自定义菜单……">
+<meta property="og:image" content="https://raw.githubusercontent.com/ImangazalievM/CircleMenu/master/art/preview.gif">
+<meta property="og:image" content="https://cloud.githubusercontent.com/assets/1766863/21596845/e0f10674-d162-11e6-9a6e-21614e66dff4.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/matthew-carroll/hover/gh-pages/images/screenrecords/hover-demo-screenrecord.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/matthew-carroll/hover/gh-pages/images/screenshots/hover-demo-homescreen.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/matthew-carroll/hover/gh-pages/images/screenshots/hover-demo-menu-intro.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/zaaach/TopRightMenu/master/art/screen.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/e09bb8fc50adba318c9f22174d1751c566f69530/68747470733a2f2f6431337961637572716a676172612e636c6f756466726f6e742e6e65742f75736572732f3439353739322f73637265656e73686f74732f323030333337362f7461625f6261725f616e696d6174696f6e5f66696e2d30322e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/Nightonke/BoomMenu/master/Pictures/text-inside-button.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Nightonke/BoomMenu/master/Pictures/ham-button.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/uin3566/AllAngleExpandableButton/master/screenshot/demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/devsideal/SquareMenu/master/assets/square_menu_v1.0.0.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/desnyki/InfinityMenu/master/art/demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Hitomis/SpinMenu/master/preview/menu_cyclic.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/xue5455/SmartMenu/master/screenshot/Gif.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/mzule/FantasySlide/master/sample.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/samsao/vertical_floating_menu/master/assets/CheckThisOut.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/whilu/PopMenuLayout/master/screenshots/device-2016-08-22-232610.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Brioal/SwipeMenuDemo/master/art/2.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Brioal/SwipeMenuDemo/master/art/6.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Brioal/SwipeMenuDemo/master/art/10.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/pmahsky/FloatingActionMenuAndroid/master/Screenshot/screenshot_roboto.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pmahsky/FloatingActionMenuAndroid/master/Screenshot/demo_gif.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ImangazalievM/QuickMenu/master/screenshots/1.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/ImangazalievM/QuickMenu/master/screenshots/2.jpg">
+<meta property="og:image" content="https://github.com/Nightonke/BoomMenu/blob/master/Pictures/show_circle.gif?raw=true">
+<meta property="og:image" content="https://github.com/Nightonke/BoomMenu/blob/master/Pictures/show_ham.gif?raw=true">
+<meta property="og:image" content="https://camo.githubusercontent.com/bab8d4d1061dca2957e0ad34b027faa7c5f76951/687474703a2f2f692e67697068792e636f6d2f6c3044454b484e7166777743546d5338552e676966">
+<meta property="og:image" content="https://github.com/bowyer-app/FabTransitionLayout/blob/master/art/bottomsheet.gif">
+<meta property="og:image" content="hhttps://github.com/bowyer-app/FabTransitionLayout/blob/master/art/toolbar.gif">
+<meta property="og:image" content="https://github.com/fanOfDemo/FloatMenuSample/blob/master/pickture/201605031543.gif">
+<meta property="og:image" content="https://github.com/fanOfDemo/FloatMenuSample/blob/master/pickture/201605041543.gif">
+<meta property="og:image" content="https://github.com/fafaldo/FABToolbar/blob/master/fabtoolbar.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/8f5ee2581e081729156c30ec506c4b70dc1eccb3/687474703a2f2f636872697372656e6b652e636f6d2f6173736574732f696e6c696e655f6472617765726172726f776472617761626c655f73616d706c652e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/a45273254d6db820e87b8291a0917420f542612c/68747470733a2f2f7261772e6769746875622e636f6d2f62616c7973762f6d6174657269616c2d6d656e752f6d61737465722f6172742f64656d6f5f6472617765722e676966">
+<meta property="og:image" content="https://github.com/futuresimple/android-floating-action-button/blob/master/screenshots/menu.gif">
+<meta property="og:image" content="https://github.com/futuresimple/android-floating-action-button/blob/master/screenshots/labels.png">
+<meta property="og:image" content="https://github.com/gowong/material-sheet-fab/blob/master/art/bgmonitor.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/183f464b177ffa9d0b35f396796ec64f37ce87db/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f36313064633033346a7731656a6f7175696476767367323038693036333075342e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/878e29e5defd2c64db4a5ec93119e133cab00807/687474703a2f2f7777322e73696e61696d672e636e2f6d773639302f36313064633033346a7731656a6f706c6170777471673230386e3065373464782e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/ogaclejapan/ArcLayout/master/art/demo1.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ogaclejapan/ArcLayout/master/art/demo2.gif">
+<meta property="og:image" content="https://github.com/oguzbilgener/CircularFloatingActionMenu/blob/master/assets/circularfab.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/cb6caa7a392d01d46bca9d9485c01fc173f55fac/68747470733a2f2f6431337961637572716a676172612e636c6f756466726f6e742e6e65742f75736572732f3132353035362f73637265656e73686f74732f313638393932322f6576656e74732d6d656e755f312d312d362e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/46c15734b552ce3afefa7efd1518909046b4677e/68747470733a2f2f6431337961637572716a676172612e636c6f756466726f6e742e6e65742f75736572732f3132353035362f73637265656e73686f74732f313738353237342f39396d696c65732d70726f66696c652d6c696768745f312d312d342e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/f044b38de3fed4496b98dff747b3bf6555ec67e4/68747470733a2f2f6431337961637572716a676172612e636c6f756466726f6e742e6e65742f75736572732f3439353739322f73637265656e73686f74732f323131333331342f64726166742d30332e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/wujingchao/MultiCardMenu/master/multi_card_menu_demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/saulmm/Curved-Fab-Reveal-Example/master/art/sample1.gif">
+<meta property="og:image" content="https://github.com/brucetoo/PinterestView/blob/master/mine1.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/a1c3b444734ca8fca1388b41cf5f56c850f8e019/687474703a2f2f692e696d6775722e636f6d2f6a6249364261792e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/59c05f7b5d3193845954e330e7e7392201a1f60a/687474703a2f2f692e696d6775722e636f6d2f5945744e426d6e2e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/be675a7fc622ab75d67d3b3cc27dc8ca2d98e4ec/687474703a2f2f692e696d6775722e636f6d2f424b6c6c7946592e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/21a922247f937a93bc8cf74288a939cf17d4963a/687474703a2f2f376c727a76622e636f6d312e7a302e676c622e636c6f7564646e2e636f6d2f7465737430372e676966">
+<meta property="og:updated_time" content="2017-03-29T09:48:45.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="菜单 Menu - Android开源组件">
+<meta name="twitter:description" content="收集Android相关的 菜单 Menu 组件库, 包含：各种菜单Menu、列表菜单List、自定义菜单……">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/ImangazalievM/CircleMenu/master/art/preview.gif">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="夜的灯" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>菜单 Menu - Android开源组件 | 夜的灯</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8349881c9f92999de4652aac9681a840";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Zero</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">探索新知识，突破自身技术壁垒</p>
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:jyg0124@126.com" title="Email"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Animation/">Animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cocos2d-x/">Cocos2d-x</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Custom/">Custom</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DEBUG调试/">DEBUG调试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dialog/">Dialog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Homebrew/">Homebrew</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Image/">Image</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ-IDEA/">IntelliJ IDEA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Layout/">Layout</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/List/">List</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Menu/">Menu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shadowsocks/">Shadowsocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Unity/">Unity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Utils/">Utils</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VPS/">VPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vultr/">Vultr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinkphp5/">thinkphp5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/列表/">列表</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动画/">动画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反编译/">反编译</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图片组件/">图片组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具类/">工具类</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/布局/">布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发工具/">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发框架/">开发框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源组件/">开源组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源项目/">开源项目</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/弹窗/">弹窗</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/快捷键/">快捷键</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游戏/">游戏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/破解/">破解</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/终端/">终端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络请求/">网络请求</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/自定义控件/">自定义控件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/菜单/">菜单</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">关于我</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Zero</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Zero</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">探索新知识，突破自身技术壁垒</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:jyg0124@126.com" title="Email"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-android-librarys/Menu" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/android-librarys/Menu/" class="article-date">
+      <time datetime="2017-03-24T10:14:12.000Z" itemprop="datePublished">2017-03-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        <h1 class="article-title" itemprop="name">
+      菜单 Menu - Android开源组件
+    </h1>
+      </header>
+      
+      <div class="article-info article-info-post">
+        <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/开源组件/">开源组件</a>
+    </div>
+        <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Menu/">Menu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开源组件/">开源组件</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/菜单/">菜单</a></li></ul>
+    </div>
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="菜单"><a href="#菜单" class="headerlink" title="菜单"></a>菜单</h2><p>包含：各种菜单Menu、列表菜单List、自定义菜单……</p>
+<p><a href="/android-librarys/Index/">&lt;==返回总纲==</a></p>
+<hr>
+<p><strong>CircleMenu</strong>: <a href="https://github.com/ImangazalievM/CircleMenu" target="_blank" rel="external">https://github.com/ImangazalievM/CircleMenu</a></p>
+<p>漂亮的 Android 圆形菜单</p>
+<p><img src="https://raw.githubusercontent.com/ImangazalievM/CircleMenu/master/art/preview.gif" width="320"></p>
+<hr>
+<p><strong>android-animated-menu-items</strong>: <a href="https://github.com/adonixis/android-animated-menu-items" target="_blank" rel="external">https://github.com/adonixis/android-animated-menu-items</a></p>
+<p>Android Toolbar 显示动态 Menu 菜单 Demo</p>
+<p><img src="https://cloud.githubusercontent.com/assets/1766863/21596845/e0f10674-d162-11e6-9a6e-21614e66dff4.gif" width="320"></p>
+<hr>
+<p><strong>hover</strong>: <a href="https://github.com/google/hover" target="_blank" rel="external">https://github.com/google/hover</a></p>
+<p>Google 放出的 Android 浮动菜单效果</p>
+<p><img src="https://raw.githubusercontent.com/matthew-carroll/hover/gh-pages/images/screenrecords/hover-demo-screenrecord.gif" width="270"> <img src="https://raw.githubusercontent.com/matthew-carroll/hover/gh-pages/images/screenshots/hover-demo-homescreen.png" width="270"> <img src="https://raw.githubusercontent.com/matthew-carroll/hover/gh-pages/images/screenshots/hover-demo-menu-intro.png" width="270"></p>
+<hr>
+<p><strong>TopRightMenu</strong>: <a href="https://github.com/zaaach/TopRightMenu" target="_blank" rel="external">https://github.com/zaaach/TopRightMenu</a></p>
+<p>类似手机QQ界面右上角的弹出菜单，使用 recyclerview 和 popupwindow 封装了一下</p>
+<p><img src="https://raw.githubusercontent.com/zaaach/TopRightMenu/master/art/screen.gif" width="320"></p>
+<hr>
+<p><strong>OfficialFoldingTabBar.Android</strong>: <a href="https://github.com/Yalantis/OfficialFoldingTabBar.Android" target="_blank" rel="external">https://github.com/Yalantis/OfficialFoldingTabBar.Android</a></p>
+<p>Folding Tab Bar and Tab Bar Menu</p>
+<p><img src="https://camo.githubusercontent.com/e09bb8fc50adba318c9f22174d1751c566f69530/68747470733a2f2f6431337961637572716a676172612e636c6f756466726f6e742e6e65742f75736572732f3439353739322f73637265656e73686f74732f323030333337362f7461625f6261725f616e696d6174696f6e5f66696e2d30322e676966" width="640"></p>
+<hr>
+<p><strong>BoomMenu</strong>: <a href="https://github.com/Nightonke/BoomMenu" target="_blank" rel="external">https://github.com/Nightonke/BoomMenu</a></p>
+<p>爆炸展开菜单的按钮，加入了更多的按钮和新特性</p>
+<p><img src="https://raw.githubusercontent.com/Nightonke/BoomMenu/master/Pictures/text-inside-button.gif" width="320"> <img src="https://raw.githubusercontent.com/Nightonke/BoomMenu/master/Pictures/ham-button.gif" width="320"></p>
+<hr>
+<p><strong>AllAngleExpandableButton</strong>: <a href="https://github.com/uin3566/AllAngleExpandableButton" target="_blank" rel="external">https://github.com/uin3566/AllAngleExpandableButton</a></p>
+<p>简单易用的可定制展开角度的button menu</p>
+<p><img src="https://raw.githubusercontent.com/uin3566/AllAngleExpandableButton/master/screenshot/demo.gif" width="320"></p>
+<hr>
+<p><strong>SquareMenu</strong>: <a href="https://github.com/devsideal/SquareMenu" target="_blank" rel="external">https://github.com/devsideal/SquareMenu</a></p>
+<p>Android 方块儿展开菜单</p>
+<p><img src="https://raw.githubusercontent.com/devsideal/SquareMenu/master/assets/square_menu_v1.0.0.gif" width="320"></p>
+<hr>
+<p><strong>InfinityMenu</strong>: <a href="https://github.com/desnyki/InfinityMenu" target="_blank" rel="external">https://github.com/desnyki/InfinityMenu</a></p>
+<p>Android library to create a sleek menu</p>
+<p><img src="https://raw.githubusercontent.com/desnyki/InfinityMenu/master/art/demo.gif" width="320"></p>
+<hr>
+<p><strong>SpinMenu</strong>: <a href="https://github.com/Hitomis/SpinMenu" target="_blank" rel="external">https://github.com/Hitomis/SpinMenu</a></p>
+<p>轮盘样式的 Fragment 选择菜单，可转动轮盘切换 Fragment</p>
+<p><img src="https://raw.githubusercontent.com/Hitomis/SpinMenu/master/preview/menu_cyclic.gif" width="320"></p>
+<hr>
+<p><strong>SmartMenu</strong>: <a href="https://github.com/xue5455/SmartMenu" target="_blank" rel="external">https://github.com/xue5455/SmartMenu</a></p>
+<p>一个好看的Float菜单</p>
+<p><img src="https://raw.githubusercontent.com/xue5455/SmartMenu/master/screenshot/Gif.gif" width="320"></p>
+<hr>
+<p><strong>FantasySlide</strong>: <a href="https://github.com/mzule/FantasySlide" target="_blank" rel="external">https://github.com/mzule/FantasySlide</a></p>
+<p>一个 DrawerLayout 的扩展,具有帅气的动画与创新的交互，一次手势完成滑出侧边栏与选择菜单</p>
+<p><img src="https://raw.githubusercontent.com/mzule/FantasySlide/master/sample.gif" width="320"></p>
+<hr>
+<p><strong>vertical_floating_menu</strong>: <a href="https://github.com/samsao/vertical_floating_menu" target="_blank" rel="external">https://github.com/samsao/vertical_floating_menu</a></p>
+<p>vertical_floating_menu</p>
+<p><img src="https://raw.githubusercontent.com/samsao/vertical_floating_menu/master/assets/CheckThisOut.gif" width="320"></p>
+<hr>
+<p><strong>popmenulayout</strong>: <a href="https://github.com/whilu/popmenulayout" target="_blank" rel="external">https://github.com/whilu/popmenulayout</a></p>
+<p>A multi level menu view(like WeChat subscription Accounts) library for Android</p>
+<p><img src="https://raw.githubusercontent.com/whilu/PopMenuLayout/master/screenshots/device-2016-08-22-232610.png" width="320"></p>
+<hr>
+<p><strong>SwipeMenuDemo</strong>: <a href="https://github.com/Brioal/SwipeMenuDemo" target="_blank" rel="external">https://github.com/Brioal/SwipeMenuDemo</a></p>
+<p>多达288种动画效果定制的侧滑菜单库</p>
+<p><img src="https://raw.githubusercontent.com/Brioal/SwipeMenuDemo/master/art/2.gif" width="200"> <img src="https://raw.githubusercontent.com/Brioal/SwipeMenuDemo/master/art/6.gif" width="200"> <img src="https://raw.githubusercontent.com/Brioal/SwipeMenuDemo/master/art/10.gif" width="200"></p>
+<hr>
+<p><strong>FloatingActionMenuAndroid</strong>: <a href="https://github.com/pmahsky/FloatingActionMenuAndroid" target="_blank" rel="external">https://github.com/pmahsky/FloatingActionMenuAndroid</a></p>
+<p>FloatingActionMenuAndroid</p>
+<p><img src="https://raw.githubusercontent.com/pmahsky/FloatingActionMenuAndroid/master/Screenshot/screenshot_roboto.png" width="320"> <img src="https://raw.githubusercontent.com/pmahsky/FloatingActionMenuAndroid/master/Screenshot/demo_gif.gif" width="320"></p>
+<hr>
+<p><strong>QuickMenu</strong>: <a href="https://github.com/ImangazalievM/QuickMenu" target="_blank" rel="external">https://github.com/ImangazalievM/QuickMenu</a></p>
+<p>Small library for creating menus with fast settings</p>
+<p><img src="https://raw.githubusercontent.com/ImangazalievM/QuickMenu/master/screenshots/1.jpg" width="320"> <img src="https://raw.githubusercontent.com/ImangazalievM/QuickMenu/master/screenshots/2.jpg" width="320"></p>
+<hr>
+<p><strong>BoomMenu</strong>: <a href="https://github.com/Nightonke/BoomMenu" target="_blank" rel="external">https://github.com/Nightonke/BoomMenu</a></p>
+<p>A menu which can … BOOM!</p>
+<p><img src="https://github.com/Nightonke/BoomMenu/blob/master/Pictures/show_circle.gif?raw=true" alt="Circle"> <img src="https://github.com/Nightonke/BoomMenu/blob/master/Pictures/show_ham.gif?raw=true" alt="Ham"></p>
+<hr>
+<p><strong>android-widget-fanmenu</strong>: <a href="https://github.com/BCGDV-ASIA/android-widget-fanmenu" target="_blank" rel="external">https://github.com/BCGDV-ASIA/android-widget-fanmenu</a></p>
+<p>A simple widget that can be used to display menu’s which can be animated in and out</p>
+<p><img src="https://camo.githubusercontent.com/bab8d4d1061dca2957e0ad34b027faa7c5f76951/687474703a2f2f692e67697068792e636f6d2f6c3044454b484e7166777743546d5338552e676966" width="320"></p>
+<hr>
+<p><strong>FabTransitionLayout</strong>: <a href="https://github.com/bowyer-app/FabTransitionLayout" target="_blank" rel="external">https://github.com/bowyer-app/FabTransitionLayout</a></p>
+<p>Provides the Floating Action Button Transition as specified in the Material Design Guide in a simple library</p>
+<p><img src="https://github.com/bowyer-app/FabTransitionLayout/blob/master/art/bottomsheet.gif" width="320"><br><img src="hhttps://github.com/bowyer-app/FabTransitionLayout/blob/master/art/toolbar.gif" width="320"></p>
+<hr>
+<p><strong>FloatMenuSample</strong>: <a href="https://github.com/fanOfDemo/FloatMenuSample" target="_blank" rel="external">https://github.com/fanOfDemo/FloatMenuSample</a></p>
+<p>android 悬浮窗菜单，可在launcher或app中使用</p>
+<p><img src="https://github.com/fanOfDemo/FloatMenuSample/blob/master/pickture/201605031543.gif" width="320"><br><img src="https://github.com/fanOfDemo/FloatMenuSample/blob/master/pickture/201605041543.gif" width="320"></p>
+<hr>
+<p><strong>FABToolbar</strong>: <a href="https://github.com/fafaldo/FABToolbar" target="_blank" rel="external">https://github.com/fafaldo/FABToolbar</a></p>
+<p>An implementation of Google design, with Floating Action Button transforming into toolbar.</p>
+<p><img src="https://github.com/fafaldo/FABToolbar/blob/master/fabtoolbar.gif" width="320"></p>
+<hr>
+<p><strong>DrawerArrowDrawable</strong>: <a href="https://github.com/ChrisRenke/DrawerArrowDrawable" target="_blank" rel="external">https://github.com/ChrisRenke/DrawerArrowDrawable</a></p>
+<p>Visual back-port of the rotating drawer-to-arrow drawable from Android L.</p>
+<p><img src="https://camo.githubusercontent.com/8f5ee2581e081729156c30ec506c4b70dc1eccb3/687474703a2f2f636872697372656e6b652e636f6d2f6173736574732f696e6c696e655f6472617765726172726f776472617761626c655f73616d706c652e676966" width="320"></p>
+<hr>
+<p><strong>material-menu</strong>: <a href="https://github.com/balysv/material-menu" target="_blank" rel="external">https://github.com/balysv/material-menu</a></p>
+<p>Animations for Android L drawer, back, dismiss and check icons.</p>
+<p><img src="https://camo.githubusercontent.com/a45273254d6db820e87b8291a0917420f542612c/68747470733a2f2f7261772e6769746875622e636f6d2f62616c7973762f6d6174657269616c2d6d656e752f6d61737465722f6172742f64656d6f5f6472617765722e676966" width="320"></p>
+<hr>
+<p><strong>android-floating-action-button</strong>: <a href="https://github.com/futuresimple/android-floating-action-button" target="_blank" rel="external">https://github.com/futuresimple/android-floating-action-button</a></p>
+<p>Floating Action Button for Android based on Material Design specification.</p>
+<p><img src="https://github.com/futuresimple/android-floating-action-button/blob/master/screenshots/menu.gif" width="320"><br><img src="https://github.com/futuresimple/android-floating-action-button/blob/master/screenshots/labels.png" width="320"></p>
+<hr>
+<p><strong>material-sheet-fab</strong>: <a href="https://github.com/gowong/material-sheet-fab" target="_blank" rel="external">https://github.com/gowong/material-sheet-fab</a></p>
+<p>Library that implements the floating action button to sheet transition from Google’s Material Design documentation.</p>
+<p><img src="https://github.com/gowong/material-sheet-fab/blob/master/art/bgmonitor.gif" width="320"></p>
+<hr>
+<p><strong>AndroidSwipeLayout</strong>: <a href="https://github.com/daimajia/AndroidSwipeLayout" target="_blank" rel="external">https://github.com/daimajia/AndroidSwipeLayout</a></p>
+<p>The Most Powerful Swipe Layout!</p>
+<p><img src="https://camo.githubusercontent.com/183f464b177ffa9d0b35f396796ec64f37ce87db/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f36313064633033346a7731656a6f7175696476767367323038693036333075342e676966" width="320"><br><img src="https://camo.githubusercontent.com/878e29e5defd2c64db4a5ec93119e133cab00807/687474703a2f2f7777322e73696e61696d672e636e2f6d773639302f36313064633033346a7731656a6f706c6170777471673230386e3065373464782e676966" width="320"></p>
+<hr>
+<p><strong>ArcLayout</strong>: <a href="https://github.com/ogaclejapan/ArcLayout" target="_blank" rel="external">https://github.com/ogaclejapan/ArcLayout</a></p>
+<p>A very simple arc layout library for Android</p>
+<p><img src="https://raw.githubusercontent.com/ogaclejapan/ArcLayout/master/art/demo1.gif" width="320"><br><img src="https://raw.githubusercontent.com/ogaclejapan/ArcLayout/master/art/demo2.gif" width="320"></p>
+<hr>
+<p><strong>CircularFloatingActionMenu</strong>: <a href="https://github.com/oguzbilgener/CircularFloatingActionMenu" target="_blank" rel="external">https://github.com/oguzbilgener/CircularFloatingActionMenu</a></p>
+<p>an animated circular menu for Android</p>
+<p><img src="https://github.com/oguzbilgener/CircularFloatingActionMenu/blob/master/assets/circularfab.gif" width="320"></p>
+<hr>
+<p><strong>Side-Menu.Android</strong>: <a href="https://github.com/Yalantis/Side-Menu.Android" target="_blank" rel="external">https://github.com/Yalantis/Side-Menu.Android</a></p>
+<p>Side menu with some categories to choose.<a href="https://yalantis.com/?utm_source=github" target="_blank" rel="external">https://yalantis.com/?utm_source=github</a></p>
+<p><img src="https://camo.githubusercontent.com/cb6caa7a392d01d46bca9d9485c01fc173f55fac/68747470733a2f2f6431337961637572716a676172612e636c6f756466726f6e742e6e65742f75736572732f3132353035362f73637265656e73686f74732f313638393932322f6576656e74732d6d656e755f312d312d362e676966" width="640"></p>
+<hr>
+<p><strong>Context-Menu.Android</strong>: <a href="https://github.com/Yalantis/Context-Menu.Android" target="_blank" rel="external">https://github.com/Yalantis/Context-Menu.Android</a></p>
+<p>You can easily add awesome animated context menu to your app.<a href="https://yalantis.com/?utm_source=github" target="_blank" rel="external">https://yalantis.com/?utm_source=github</a></p>
+<p><img src="https://camo.githubusercontent.com/46c15734b552ce3afefa7efd1518909046b4677e/68747470733a2f2f6431337961637572716a676172612e636c6f756466726f6e742e6e65742f75736572732f3132353035362f73637265656e73686f74732f313738353237342f39396d696c65732d70726f66696c652d6c696768745f312d312d342e676966" width="640"></p>
+<hr>
+<p><strong>GuillotineMenu-Android</strong>: <a href="https://github.com/Yalantis/GuillotineMenu-Android" target="_blank" rel="external">https://github.com/Yalantis/GuillotineMenu-Android</a></p>
+<p>Neat library, that provides a simple way to implement guillotine-styled animation.<a href="https://yalantis.com/?utm_source=github" target="_blank" rel="external">https://yalantis.com/?utm_source=github</a></p>
+<p><img src="https://camo.githubusercontent.com/f044b38de3fed4496b98dff747b3bf6555ec67e4/68747470733a2f2f6431337961637572716a676172612e636c6f756466726f6e742e6e65742f75736572732f3439353739322f73637265656e73686f74732f323131333331342f64726166742d30332e676966" width="320"></p>
+<hr>
+<p><strong>MultiCardMenu</strong>: <a href="https://github.com/wujingchao/MultiCardMenu" target="_blank" rel="external">https://github.com/wujingchao/MultiCardMenu</a></p>
+<p>A multicard menu that can open and close with animation on android</p>
+<p><img src="https://raw.githubusercontent.com/wujingchao/MultiCardMenu/master/multi_card_menu_demo.gif" width="320"></p>
+<hr>
+<p><strong>Curved-Fab-Reveal-Example</strong>: <a href="https://github.com/saulmm/Curved-Fab-Reveal-Example" target="_blank" rel="external">https://github.com/saulmm/Curved-Fab-Reveal-Example</a></p>
+<p>An animation that reveals a circular animation starting from a fab while the fab is moving with a curved motion.</p>
+<p><img src="https://raw.githubusercontent.com/saulmm/Curved-Fab-Reveal-Example/master/art/sample1.gif" width="320"></p>
+<hr>
+<p><strong>PinterestView</strong>: <a href="https://github.com/brucetoo/PinterestView" target="_blank" rel="external">https://github.com/brucetoo/PinterestView</a></p>
+<p>Pinterest like awesome menu control for Android</p>
+<p><img src="https://github.com/brucetoo/PinterestView/blob/master/mine1.gif" width="320"></p>
+<hr>
+<p><strong>BubbleActions</strong>: <a href="https://github.com/SamThompson/BubbleActions" target="_blank" rel="external">https://github.com/SamThompson/BubbleActions</a></p>
+<p>An open source implementation of the long press actions in the Pinterest app.</p>
+<p><img src="https://camo.githubusercontent.com/a1c3b444734ca8fca1388b41cf5f56c850f8e019/687474703a2f2f692e696d6775722e636f6d2f6a6249364261792e676966" width="270"> <img src="https://camo.githubusercontent.com/59c05f7b5d3193845954e330e7e7392201a1f60a/687474703a2f2f692e696d6775722e636f6d2f5945744e426d6e2e676966" width="270"> <img src="https://camo.githubusercontent.com/be675a7fc622ab75d67d3b3cc27dc8ca2d98e4ec/687474703a2f2f692e696d6775722e636f6d2f424b6c6c7946592e676966" width="270"></p>
+<hr>
+<p><strong>FloatingActionMenu</strong>: <a href="https://github.com/TristanWiley/FloatingActionMenu" target="_blank" rel="external">https://github.com/TristanWiley/FloatingActionMenu</a></p>
+<p>一个改进的浮动菜单</p>
+<p><img src="https://camo.githubusercontent.com/21a922247f937a93bc8cf74288a939cf17d4963a/687474703a2f2f376c727a76622e636f6d312e7a302e676c622e636c6f7564646e2e636f6d2f7465737430372e676966" width="320"></p>
+<hr>
+      
+    </div>
+    
+  </div>
+  
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/android-librarys/Menu/">菜单 Menu - Android开源组件</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Zero</a></p>
+        <p><span>发布时间:</span>2017-03-24 18:14</p>
+        <!-- <p><span>最后更新:</span>2017-03-29, 17:48:45</p> -->
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/android-librarys/Menu/" title="菜单 Menu - Android开源组件">http://www.jiaoyigui.cn//android-librarys/Menu/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.jiaoyigui.cn//android-librarys/Menu/　　作者: Zero" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <!-- <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p> -->
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/android-librarys/Utils/">
+                    辅助工具类 Utils - Android开源组件
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/android-librarys/Custom/">
+                    自定义控件 Custom - Android开源组件
+                </a>
+            </div>
+        
+    </nav>
+  
+</article>
+<div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#菜单"><span class="toc-number">1.</span> <span class="toc-text">菜单</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+    <div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"菜单 Menu - Android开源组件　| 夜的灯　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+    
+
+
+<div class="scroll" id="post-nav-button">
+        
+            <a href="/android-librarys/Utils/" title="上一篇: 辅助工具类 Utils - Android开源组件">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/android-librarys/Custom/" title="下一篇: 自定义控件 Custom - Android开源组件">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/opensource/Android/">Android开源项目</a></li><li class="post-list-item"><a class="post-list-link" href="/opensource/Index/">索引 - 开源项目</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Utils/">辅助工具类 Utils - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Menu/">菜单 Menu - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Custom/">自定义控件 Custom - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Dialog/">弹窗 Dialog - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Framework/">开发框架Framework - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Layout/">布局Layout - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Animation/">动画Animation - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/List/">列表 List - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Network/">网络请求 Network - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Image/">图片 Image - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/php/thinkphp5-install/">Thinkphp5快速入门</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Index/">总纲 - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android/Android-Decompile/">Android反编译</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-Java/">开发环境 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-iTerm2/">终端方案iTerm2 + Zsh - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-Homebrew/">包管理工具 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-keymap/">常用快捷键 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-settings/">系统使用 - Java程序员眼中的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/server/VPS/">VPS + Shadowsocks 可以是什么，做什么</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-Debug/">IntelliJ IDEA DEBUG调试</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-For-Mac-Keys/">IntelliJ IDEA For Mac 快捷键</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-Settings/">IntelliJ IDEA 主题、字体、编辑区主题、文件编码修改、乱码问题</a></li><li class="post-list-item"><a class="post-list-link" href="/hexo/Hexo-Install/">搭建 Hexo 博客--增强篇</a></li></ul>
+
+
+    <script>
+        
+    </script></div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i>
+                2017 Zero
+            </div>
+            <div class="footer-right">
+                <!-- <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i> -->
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide()" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+<script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>

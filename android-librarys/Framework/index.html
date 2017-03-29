@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Zero">
+
+
+
+<meta name="description" content="收集Android相关的开发框架Framework组件库, 包含：各种快速开发框架、测试框架、系统框架、插件补丁框架、设计模式框架、主题切换框架……">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开发框架Framework - Android开源组件">
+<meta property="og:url" content="http://www.jiaoyigui.cn/android-librarys/Framework/index.html">
+<meta property="og:site_name" content="夜的灯">
+<meta property="og:description" content="收集Android相关的开发框架Framework组件库, 包含：各种快速开发框架、测试框架、系统框架、插件补丁框架、设计模式框架、主题切换框架……">
+<meta property="og:image" content="https://camo.githubusercontent.com/67394e25cf3beda3caa901c54e44a074d7d7c27e/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313235323633382d353934633237356236366135336539622e706e673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430">
+<meta property="og:image" content="https://camo.githubusercontent.com/fa70071b3310bb98a865c560f320bd2d325d78fb/687474703a2f2f692e696d6775722e636f6d2f546f62344132322e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/8906ef6aad16b32871365386f3042a0dc5dce505/687474703a2f2f692e696d6775722e636f6d2f79416939426d352e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/d5e0b48f2e1ed7472c84f1fe32a7767439fc19fc/687474703a2f2f692e696d6775722e636f6d2f6e757445554b452e6a7067">
+<meta property="og:image" content="https://camo.githubusercontent.com/9f3f711562a2b14ca721163bebec282785b597b2/687474703a2f2f3766766a37302e636f6d312e7a302e676c622e636c6f7564646e2e636f6d2f64796e616d69632d6c6f61642d766965772e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/Tencent/tinker/dev/assets/tinker.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/dodola/AnoleFix/master/screenshot/2.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/5948fb2a1f9c0ec487383669be1cdbed22d38c87/687474703a2f2f692e696d6775722e636f6d2f34724d4b314b4b2e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/AndreiD/SimpleChat/master/simple_chat_gif.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/badoo/Chateau/master/doc/conversations-screenshot.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/badoo/Chateau/master/doc/chat-screenshot.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/4ac0f97e5e63ff2dd802f3dd91a804511623c2c5/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f2d43374258414b314c685a6b2f57474653586e56365576492f41414141414141414869772f372d7239646d644e794149736a734f75655a4943563750536f4c746b504f454241434c63422f73302f4d56502e6a7067">
+<meta property="og:image" content="https://raw.githubusercontent.com/MaksTuev/ferro/master/ferro.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/tianzhijiexian/DBinding/master/pic/gen_vm.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/3ec1975d481fbe1fa3b2bbe7d875041af8af2b73/687474703a2f2f7777772e616e64726561732d736368726164652e64652f6173736574732f65787465726e616c2f616e696d6174696f6e312e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/1e24553ed0f0a853e11e912e344978b590f4937d/687474703a2f2f7777772e616e64726561732d736368726164652e64652f6173736574732f65787465726e616c2f73637265656e2d6e65787573352d322e6a7067">
+<meta property="og:image" content="https://camo.githubusercontent.com/8b4e3975d80aecdeb9f12f428a8c6f088b180d60/687474703a2f2f7777772e616e64726561732d736368726164652e64652f6173736574732f65787465726e616c2f616e696d6174696f6e322e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/ff8b2151ae5da9366229944d21fda6616193f510/687474703a2f2f7777772e616e64726561732d736368726164652e64652f6173736574732f65787465726e616c2f73637265656e2d6e65787573352d332e6a7067">
+<meta property="og:image" content="https://github.com/SuperMan42/MVP/raw/master/hpw.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/andrzejchm/DroidMVP/develop/mvp-diagram.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/ernestoyaquello/vertical-stepper-form/master/stepper-example.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/bcf83fcb62ea59719976bc9e482bdd2b972604f8/68747470733a2f2f686162726173746f726167652e6f72672f66696c65732f6163372f6533632f3666352f61633765336336663565656334663439386162353065353937363036666161352e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/AppLozic/Applozic-Android-SDK/master/img/android.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/ecc61cd7891461f7f839c47a58f47ac15b114cc7/687474703a2f2f6c696e6b6564696e2e6769746875622e696f2f50616c44422f646f632f7468726f7567687075742e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/5b16b19cd524b0fc3307ae37d96bf939295f0d4f/687474703a2f2f6c696e6b6564696e2e6769746875622e636f6d2f50616c44422f646f632f6d656d6f72792e706e67">
+<meta property="og:image" content="https://raw.githubusercontent.com/ximsfei/Res/master/skin-demo/red_3.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/ximsfei/Res/master/skin-demo/white_3.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/ximsfei/Res/master/skin-demo/night_3.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/garretyoder/Colorful/master/screenshots/art1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/garretyoder/Colorful/master/screenshots/art2.png">
+<meta property="og:image" content="http://images0.cnblogs.com/blog2015/275810/201508/232033560975081.jpg">
+<meta property="og:image" content="https://github.com/Karumi/Rosie/blob/master/art/screencast.gif">
+<meta property="og:updated_time" content="2017-03-29T09:48:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="开发框架Framework - Android开源组件">
+<meta name="twitter:description" content="收集Android相关的开发框架Framework组件库, 包含：各种快速开发框架、测试框架、系统框架、插件补丁框架、设计模式框架、主题切换框架……">
+<meta name="twitter:image" content="https://camo.githubusercontent.com/67394e25cf3beda3caa901c54e44a074d7d7c27e/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313235323633382d353934633237356236366135336539622e706e673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="夜的灯" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>开发框架Framework - Android开源组件 | 夜的灯</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8349881c9f92999de4652aac9681a840";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Zero</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">探索新知识，突破自身技术壁垒</p>
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:jyg0124@126.com" title="Email"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Animation/">Animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cocos2d-x/">Cocos2d-x</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Custom/">Custom</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DEBUG调试/">DEBUG调试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dialog/">Dialog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Homebrew/">Homebrew</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Image/">Image</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ-IDEA/">IntelliJ IDEA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Layout/">Layout</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/List/">List</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Menu/">Menu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shadowsocks/">Shadowsocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Unity/">Unity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Utils/">Utils</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VPS/">VPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vultr/">Vultr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinkphp5/">thinkphp5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/列表/">列表</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动画/">动画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反编译/">反编译</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图片组件/">图片组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具类/">工具类</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/布局/">布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发工具/">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发框架/">开发框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源组件/">开源组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源项目/">开源项目</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/弹窗/">弹窗</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/快捷键/">快捷键</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游戏/">游戏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/破解/">破解</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/终端/">终端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络请求/">网络请求</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/自定义控件/">自定义控件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/菜单/">菜单</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">关于我</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Zero</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Zero</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">探索新知识，突破自身技术壁垒</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:jyg0124@126.com" title="Email"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-android-librarys/Framework" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/android-librarys/Framework/" class="article-date">
+      <time datetime="2017-03-24T07:14:12.000Z" itemprop="datePublished">2017-03-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        <h1 class="article-title" itemprop="name">
+      开发框架Framework - Android开源组件
+    </h1>
+      </header>
+      
+      <div class="article-info article-info-post">
+        <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/Android开源组件/">Android开源组件</a>
+    </div>
+        <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Framework/">Framework</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发框架/">开发框架</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开源组件/">开源组件</a></li></ul>
+    </div>
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="开发框架-Framework"><a href="#开发框架-Framework" class="headerlink" title="开发框架 Framework"></a>开发框架 Framework</h2><p>包含：各种快速开发框架、测试框架、系统框架、插件补丁框架、设计模式框架、主题切换框架……</p>
+<p><a href="/android-librarys/Index/">&lt;==返回总纲==</a></p>
+<hr>
+<p><strong>android-tips-tricks</strong>：<a href="https://github.com/nisrulz/android-tips-tricks" target="_blank" rel="external">https://github.com/nisrulz/android-tips-tricks</a></p>
+<p>Android 开发的一些 Tips 集合</p>
+<hr>
+<p><strong>Android-Code-Style</strong>：<a href="https://github.com/LoranWong/Android-Code-Style" target="_blank" rel="external">https://github.com/LoranWong/Android-Code-Style</a></p>
+<p>初心网络安卓组代码规范说明</p>
+<hr>
+<p><strong>AndroidStandardDevelop</strong>：<a href="https://github.com/Blankj/AndroidStandardDevelop" target="_blank" rel="external">https://github.com/Blankj/AndroidStandardDevelop</a></p>
+<p>安卓开发规范</p>
+<hr>
+<p><strong>material-design-data</strong>：<a href="https://github.com/Luosunce/material-design-data" target="_blank" rel="external">https://github.com/Luosunce/material-design-data</a></p>
+<p>关于 Material Design 的一切资料都在这里</p>
+<hr>
+<p><strong>python-for-android</strong>：<a href="https://github.com/kivy/python-for-android" target="_blank" rel="external">https://github.com/kivy/python-for-android</a></p>
+<p>用 Python 开发 Android 应用程序</p>
+<hr>
+<p><strong>MVPArt</strong>：<a href="https://github.com/JessYanCoding/MVPArt" target="_blank" rel="external">https://github.com/JessYanCoding/MVPArt</a></p>
+<p>A New Android MVP Architecture <a href="http://www.jianshu.com/p/ac51c9b88af3" target="_blank" rel="external">http://www.jianshu.com/p/ac51c9b88af3</a></p>
+<hr>
+<p><strong>MVPArms</strong>：<a href="https://github.com/JessYanCoding/MVPArms" target="_blank" rel="external">https://github.com/JessYanCoding/MVPArms</a></p>
+<p>一个整合了大量主流开源项目的Android Mvp快速搭建框架</p>
+<hr>
+<p><strong>atlas</strong>：<a href="https://github.com/alibaba/atlas" target="_blank" rel="external">https://github.com/alibaba/atlas</a></p>
+<p>Atlas - 带你重返App开发的田园时代</p>
+<hr>
+<p><strong>ak-universal-android-helper</strong>：<a href="https://github.com/kumar-aakash86/ak-universal-android-helper" target="_blank" rel="external">https://github.com/kumar-aakash86/ak-universal-android-helper</a></p>
+<p>安卓开发助手</p>
+<hr>
+<p><strong>SampleApp</strong>: <a href="https://github.com/saveendhiman/SampleApp" target="_blank" rel="external">https://github.com/saveendhiman/SampleApp</a></p>
+<p>安卓快速开发框架</p>
+<hr>
+<p><strong>BGAScaffolding-Android</strong>: <a href="https://github.com/bingoogolapple/BGAScaffolding-Android" target="_blank" rel="external">https://github.com/bingoogolapple/BGAScaffolding-Android</a></p>
+<p>Android MVC、MVP、MVVM 项目开发脚手架</p>
+<hr>
+<p><strong>FunctionalAndroidReference</strong>: <a href="https://github.com/pakoito/FunctionalAndroidReference" target="_blank" rel="external">https://github.com/pakoito/FunctionalAndroidReference</a></p>
+<p>Showcase project of Functional Reactive Programming on Android, using RxJava. <a href="http://tinyurl.com/RxDroidcon16" target="_blank" rel="external">http://tinyurl.com/RxDroidcon16</a></p>
+<hr>
+<p><strong>Pluto-Android</strong>: <a href="https://github.com/minggo620/Pluto-Android" target="_blank" rel="external">https://github.com/minggo620/Pluto-Android</a></p>
+<p>Android应用开发通用框架</p>
+<p><img src="https://camo.githubusercontent.com/67394e25cf3beda3caa901c54e44a074d7d7c27e/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313235323633382d353934633237356236366135336539622e706e673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430" width="480"></p>
+<hr>
+<p><strong>AndroidMVPAuthenticationBoilerPlate</strong>: <a href="https://github.com/TakeoffAndroid/AndroidMVPAuthenticationBoilerPlate" target="_blank" rel="external">https://github.com/TakeoffAndroid/AndroidMVPAuthenticationBoilerPlate</a></p>
+<p>Login/Signup app which handles boiler plate Validation logics using MVP design patterns with SQLite Database</p>
+<p><img src="https://camo.githubusercontent.com/fa70071b3310bb98a865c560f320bd2d325d78fb/687474703a2f2f692e696d6775722e636f6d2f546f62344132322e676966" width="190"> <img src="https://camo.githubusercontent.com/8906ef6aad16b32871365386f3042a0dc5dce505/687474703a2f2f692e696d6775722e636f6d2f79416939426d352e676966" width="190"></p>
+<hr>
+<p><strong>AppAddUpdate</strong>: <a href="https://github.com/kingwang666/AppAddUpdate" target="_blank" rel="external">https://github.com/kingwang666/AppAddUpdate</a></p>
+<p>Android app 增量更新</p>
+<p><img src="https://camo.githubusercontent.com/d5e0b48f2e1ed7472c84f1fe32a7767439fc19fc/687474703a2f2f692e696d6775722e636f6d2f6e757445554b452e6a7067" width="270"></p>
+<hr>
+<p><strong>rexxar-android</strong>: <a href="https://github.com/douban/rexxar-android" target="_blank" rel="external">https://github.com/douban/rexxar-android</a></p>
+<p>豆瓣的混合开发框架 – Rexxar</p>
+<hr>
+<p><strong>patchrom_miui</strong>: <a href="https://github.com/MiCode/patchrom_miui" target="_blank" rel="external">https://github.com/MiCode/patchrom_miui</a></p>
+<p>MIUI 8 系统</p>
+<hr>
+<p><strong>dynamic-load-view</strong>: <a href="https://github.com/kot32go/dynamic-load-view" target="_blank" rel="external">https://github.com/kot32go/dynamic-load-view</a></p>
+<p>Dynamic-load-view 能够动态加载外部apk中的View以及资源，能够热修复线上View，以及模块化更新</p>
+<p><img src="https://camo.githubusercontent.com/9f3f711562a2b14ca721163bebec282785b597b2/687474703a2f2f3766766a37302e636f6d312e7a302e676c622e636c6f7564646e2e636f6d2f64796e616d69632d6c6f61642d766965772e676966" width="640"></p>
+<hr>
+<p><strong>Robust</strong>: <a href="https://github.com/Meituan-Dianping/Robust" target="_blank" rel="external">https://github.com/Meituan-Dianping/Robust</a></p>
+<p>美团的新一代热更新系统Robust，对Android版本无差别兼容。无需发版就可以做到随时修改线上bug，快速对重大线上问题作出反应，补丁修补成功率高达99.9%</p>
+<hr>
+<p><strong>tinker</strong>: <a href="https://github.com/Tencent/tinker" target="_blank" rel="external">https://github.com/Tencent/tinker</a></p>
+<p>腾讯热修复方法 tinker</p>
+<p><img src="https://raw.githubusercontent.com/Tencent/tinker/dev/assets/tinker.png" width="640"></p>
+<hr>
+<p><strong>AnoleFix</strong>: <a href="https://github.com/dodola/AnoleFix" target="_blank" rel="external">https://github.com/dodola/AnoleFix</a></p>
+<p>Another hotfix 另一个热修复方案 Alpha，来自InstantRun 和 Robust 类似</p>
+<p><img src="https://raw.githubusercontent.com/dodola/AnoleFix/master/screenshot/2.png" width="320"></p>
+<hr>
+<p><strong>delta</strong>: <a href="https://github.com/byteam/delta" target="_blank" rel="external">https://github.com/byteam/delta</a></p>
+<p>Android热修复与增量升级，基于微信Tinker原理</p>
+<hr>
+<p><strong>Amigo</strong>: <a href="https://github.com/eleme/Amigo" target="_blank" rel="external">https://github.com/eleme/Amigo</a></p>
+<p>A hotfix library for Android platform, and not just this…</p>
+<hr>
+<p><strong>Tinker_imitator</strong>: <a href="https://github.com/zzz40500/Tinker_imitator" target="_blank" rel="external">https://github.com/zzz40500/Tinker_imitator</a></p>
+<p>微信热更新方案实践</p>
+<hr>
+<p><strong>SmartGo</strong>: <a href="https://github.com/Sausure/SmartGo" target="_blank" rel="external">https://github.com/Sausure/SmartGo</a></p>
+<p>An easier way to launch framework components</p>
+<hr>
+<p><strong>green-coffee</strong>: <a href="https://github.com/mauriciotogneri/green-coffee" target="_blank" rel="external">https://github.com/mauriciotogneri/green-coffee</a></p>
+<p>Android library that allows you to run Cucumber scenarios in your instrumentation tests</p>
+<p><img src="https://camo.githubusercontent.com/5948fb2a1f9c0ec487383669be1cdbed22d38c87/687474703a2f2f692e696d6775722e636f6d2f34724d4b314b4b2e676966" width="600"></p>
+<hr>
+<p><strong>abtestgen</strong>: <a href="https://github.com/imperial-crystalline-recursion/abtestgen" target="_blank" rel="external">https://github.com/imperial-crystalline-recursion/abtestgen</a></p>
+<p>An Android library for generating simple A/B tests</p>
+<hr>
+<p><strong>restito</strong>: <a href="https://github.com/mkotsur/restito" target="_blank" rel="external">https://github.com/mkotsur/restito</a></p>
+<p>Restito - mocking framework for testing rest clients</p>
+<hr>
+<p><strong>SimpleChat</strong>: <a href="https://github.com/AndreiD/SimpleChat" target="_blank" rel="external">https://github.com/AndreiD/SimpleChat</a></p>
+<p>The best room chat system for Android. Real-time, IRC Style using firebase as database</p>
+<p><img src="https://raw.githubusercontent.com/AndreiD/SimpleChat/master/simple_chat_gif.gif" width="800"></p>
+<hr>
+<p><strong>easydatabinding</strong>: <a href="https://github.com/joxad/easydatabinding" target="_blank" rel="external">https://github.com/joxad/easydatabinding</a></p>
+<p>This project goal is to create activity fragment and views, with less code to be more efficient on the view models</p>
+<hr>
+<p><strong>Chateau</strong>: <a href="https://github.com/badoo/Chateau" target="_blank" rel="external">https://github.com/badoo/Chateau</a></p>
+<p>Chateau is a framework for adding (or improving) chat functionality in any Android app</p>
+<p><img src="https://raw.githubusercontent.com/badoo/Chateau/master/doc/conversations-screenshot.png" width="320"> <img src="https://raw.githubusercontent.com/badoo/Chateau/master/doc/chat-screenshot.png" width="320"></p>
+<hr>
+<p><strong>ZeusPlugin</strong>: <a href="https://github.com/iReaderAndroid/ZeusPlugin" target="_blank" rel="external">https://github.com/iReaderAndroid/ZeusPlugin</a></p>
+<p>Android下插件补丁的开发框架</p>
+<hr>
+<p><strong>test-butler</strong>: <a href="https://github.com/linkedin/test-butler" target="_blank" rel="external">https://github.com/linkedin/test-butler</a></p>
+<p>Reliable Android Testing, at your service</p>
+<hr>
+<p><strong>Scoper</strong>: <a href="https://github.com/bgogetap/Scoper" target="_blank" rel="external">https://github.com/bgogetap/Scoper</a></p>
+<p>Lightweight Dagger 2 scoped component management library</p>
+<hr>
+<p><strong>Froggy</strong>: <a href="https://github.com/BullyBoo/Froggy" target="_blank" rel="external">https://github.com/BullyBoo/Froggy</a></p>
+<p>Simple Mvp Implementation</p>
+<hr>
+<p><strong>andiag-mvp</strong>: <a href="https://github.com/iagocanalejas/andiag-mvp" target="_blank" rel="external">https://github.com/iagocanalejas/andiag-mvp</a></p>
+<p>Library to help developers build full MVP apps</p>
+<hr>
+<p><strong>avenging</strong>: <a href="https://github.com/JoaquimLey/avenging" target="_blank" rel="external">https://github.com/JoaquimLey/avenging</a></p>
+<p>MVP - Android no Dagger or RxJava example <a href="http://joaquimley.com" target="_blank" rel="external">http://joaquimley.com</a></p>
+<hr>
+<p><strong>ThirtyInch</strong>: <a href="https://github.com/grandcentrix/ThirtyInch" target="_blank" rel="external">https://github.com/grandcentrix/ThirtyInch</a></p>
+<p>a MVP library for Android</p>
+<hr>
+<p><strong>Auster</strong>: <a href="https://github.com/Prokky/Auster" target="_blank" rel="external">https://github.com/Prokky/Auster</a></p>
+<p>Simple lightweight MVP library for Android</p>
+<hr>
+<p><strong>MVP-RX-Android-Sample</strong>: <a href="https://github.com/ahmedeltaher/MVP-RX-Android-Sample" target="_blank" rel="external">https://github.com/ahmedeltaher/MVP-RX-Android-Sample</a></p>
+<p>A sample to showcase MVP pattern with RX-Android, Retrofit 2.0</p>
+<p><img src="https://camo.githubusercontent.com/4ac0f97e5e63ff2dd802f3dd91a804511623c2c5/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f2d43374258414b314c685a6b2f57474653586e56365576492f41414141414141414869772f372d7239646d644e794149736a734f75655a4943563750536f4c746b504f454241434c63422f73302f4d56502e6a7067" width="640"></p>
+<hr>
+<p><strong>ferro</strong>: <a href="https://github.com/MaksTuev/ferro" target="_blank" rel="external">https://github.com/MaksTuev/ferro</a></p>
+<p>Simple and powerful MVP library for Android</p>
+<p><img src="https://raw.githubusercontent.com/MaksTuev/ferro/master/ferro.gif" width="640"></p>
+<hr>
+<p><strong>Hook</strong>: <a href="https://github.com/renaudcerrato/Hook" target="_blank" rel="external">https://github.com/renaudcerrato/Hook</a></p>
+<p>Minimalist, annotation based, hook framework for Android built on top of AspectJ</p>
+<hr>
+<p><strong>VirtualApp</strong>: <a href="https://github.com/asLody/VirtualApp" target="_blank" rel="external">https://github.com/asLody/VirtualApp</a></p>
+<p>App 虚拟空间，类似 LBE 双开空间</p>
+<hr>
+<p><strong>DBinding</strong>: <a href="https://github.com/tianzhijiexian/DBinding" target="_blank" rel="external">https://github.com/tianzhijiexian/DBinding</a></p>
+<p>巧妙、灵活的databinding改造库</p>
+<p><img src="https://raw.githubusercontent.com/tianzhijiexian/DBinding/master/pic/gen_vm.gif" width="640"></p>
+<hr>
+<p><strong>weex</strong>: <a href="https://github.com/alibaba/weex" target="_blank" rel="external">https://github.com/alibaba/weex</a></p>
+<p>A framework for building Mobile cross-platform UI <a href="http://alibaba.github.io/weex" target="_blank" rel="external">http://alibaba.github.io/weex</a></p>
+<hr>
+<p><strong>AppDynamicFramework</strong>: <a href="https://github.com/xiyouMc/AppDynamicFramework" target="_blank" rel="external">https://github.com/xiyouMc/AppDynamicFramework</a></p>
+<p>本框架是在 Dynamic-load-apk上层进行的封装。增加插件动态加载到libs目录和针对模块Service的注入。本框架使DynamicLoad更加实用。</p>
+<hr>
+<p><strong>android-design-template</strong>：<a href="https://github.com/andreasschrade/android-design-template" target="_blank" rel="external">https://github.com/andreasschrade/android-design-template</a></p>
+<p>Android Design 设计模板</p>
+<p><img src="https://camo.githubusercontent.com/3ec1975d481fbe1fa3b2bbe7d875041af8af2b73/687474703a2f2f7777772e616e64726561732d736368726164652e64652f6173736574732f65787465726e616c2f616e696d6174696f6e312e676966" width="200"> <img src="https://camo.githubusercontent.com/1e24553ed0f0a853e11e912e344978b590f4937d/687474703a2f2f7777772e616e64726561732d736368726164652e64652f6173736574732f65787465726e616c2f73637265656e2d6e65787573352d322e6a7067" width="200"> <img src="https://camo.githubusercontent.com/8b4e3975d80aecdeb9f12f428a8c6f088b180d60/687474703a2f2f7777772e616e64726561732d736368726164652e64652f6173736574732f65787465726e616c2f616e696d6174696f6e322e676966" width="200"> <img src="https://camo.githubusercontent.com/ff8b2151ae5da9366229944d21fda6616193f510/687474703a2f2f7777772e616e64726561732d736368726164652e64652f6173736574732f65787465726e616c2f73637265656e2d6e65787573352d332e6a7067" width="200"></p>
+<hr>
+<p><strong>mvp-helpers</strong>：<a href="https://github.com/BlackBoxVision/mvp-helpers" target="_blank" rel="external">https://github.com/BlackBoxVision/mvp-helpers</a></p>
+<p>Helper classes to build Android Apps through MVP pattern in a faster way <a href="https://blackboxvision.github.io/mvp" target="_blank" rel="external">https://blackboxvision.github.io/mvp</a></p>
+<hr>
+<p><strong>AndroidMvc</strong>：<a href="https://github.com/kejunxia/AndroidMvc" target="_blank" rel="external">https://github.com/kejunxia/AndroidMvc</a></p>
+<p>Android MVC/MVP/MVVM framework <a href="http://kejunxia.github.io/AndroidMvc" target="_blank" rel="external">http://kejunxia.github.io/AndroidMvc</a></p>
+<hr>
+<p><strong>android-base-mvp</strong>：<a href="https://github.com/derohimat/android-base-mvp" target="_blank" rel="external">https://github.com/derohimat/android-base-mvp</a></p>
+<p>Android Base MVP Concept with RXJava, Dagger, Event Bus, Retrofit, Glide, OkHTTP</p>
+<hr>
+<p><strong>MVP</strong>：<a href="https://github.com/SuperMan42/MVP" target="_blank" rel="external">https://github.com/SuperMan42/MVP</a></p>
+<p>App based on Material Design + MVP + Rxjava + Retrofit + Okhttp + Glide</p>
+<p><img src="https://github.com/SuperMan42/MVP/raw/master/hpw.gif" width="320"></p>
+<hr>
+<p><strong>AMVP</strong>：<a href="https://github.com/rubensousa/AMVP" target="_blank" rel="external">https://github.com/rubensousa/AMVP</a></p>
+<p>A simple Model-View-Presenter library for Android</p>
+<hr>
+<p><strong>RainbowMVP</strong>：<a href="https://github.com/Ne1c/RainbowMVP" target="_blank" rel="external">https://github.com/Ne1c/RainbowMVP</a></p>
+<p>Lightweight Android MVP library with easy implementation</p>
+<hr>
+<p><strong>DroidMVP</strong>：<a href="https://github.com/andrzejchm/DroidMVP" target="_blank" rel="external">https://github.com/andrzejchm/DroidMVP</a></p>
+<p>安卓 MVP 开发框架</p>
+<p><img src="https://raw.githubusercontent.com/andrzejchm/DroidMVP/develop/mvp-diagram.png" width="600"></p>
+<hr>
+<p><strong>AndroidArchitectureCollection</strong>：<a href="https://github.com/CameloeAnthony/AndroidArchitectureCollection" target="_blank" rel="external">https://github.com/CameloeAnthony/AndroidArchitectureCollection</a></p>
+<p>安卓架构文章合集（a collection of android Architecture）</p>
+<hr>
+<p><strong>vertical-stepper-form</strong>：<a href="https://github.com/ernestoyaquello/vertical-stepper-form" target="_blank" rel="external">https://github.com/ernestoyaquello/vertical-stepper-form</a></p>
+<p>This Android library implements a vertical stepper form following Google Material Design guidelines</p>
+<p><img src="https://raw.githubusercontent.com/ernestoyaquello/vertical-stepper-form/master/stepper-example.gif" width="260"></p>
+<hr>
+<p><strong>Basic</strong>：<a href="https://github.com/meikoz/Basic" target="_blank" rel="external">https://github.com/meikoz/Basic</a></p>
+<p>简单好用的 MVP 开发框架</p>
+<hr>
+<p><strong>Kubwa</strong>：<a href="https://github.com/WesleyElliott/Kubwa" target="_blank" rel="external">https://github.com/WesleyElliott/Kubwa</a></p>
+<p>An Annotation based validation library for use with Android’s DataBinding library in an MVVM architecture</p>
+<hr>
+<p><strong>PokeMVVM</strong>：<a href="https://github.com/evant/PokeMVVM" target="_blank" rel="external">https://github.com/evant/PokeMVVM</a></p>
+<p>A playground for MVVM style architecture on Android</p>
+<hr>
+<p><strong>android-mvvm</strong>：<a href="https://github.com/A-Zaiats/android-mvvm" target="_blank" rel="external">https://github.com/A-Zaiats/android-mvvm</a></p>
+<p>A Model-View-ViewModel library for Android apps. Check Android-mvvm page for more information</p>
+<hr>
+<p><strong>MVVMLight</strong>：<a href="https://github.com/Kelin-Hong/MVVMLight" target="_blank" rel="external">https://github.com/Kelin-Hong/MVVMLight</a></p>
+<p>一个Android MVVM 轻量级工具库，主要目的是更快捷方便的构建Android MVVM应用程序</p>
+<hr>
+<p><strong>Moxy</strong>: <a href="https://github.com/Arello-Mobile/Moxy" target="_blank" rel="external">https://github.com/Arello-Mobile/Moxy</a></p>
+<p>MVP 开发框架</p>
+<p><img src="https://camo.githubusercontent.com/bcf83fcb62ea59719976bc9e482bdd2b972604f8/68747470733a2f2f686162726173746f726167652e6f72672f66696c65732f6163372f6533632f3666352f61633765336336663565656334663439386162353065353937363036666161352e676966" width="800"></p>
+<hr>
+<p><strong>RNCryptorNative</strong>：<a href="https://github.com/TGIO/RNCryptorNative" target="_blank" rel="external">https://github.com/TGIO/RNCryptorNative</a></p>
+<p>Android JNI model implementation of Rob Napier’s RNCryptor</p>
+<hr>
+<p><strong>tesela</strong>：<a href="https://github.com/raycoarana/tesela" target="_blank" rel="external">https://github.com/raycoarana/tesela</a></p>
+<p>Tesela simplifies dealing with background threads and UI work in Model-View-Presenter</p>
+<hr>
+<p><strong>awex</strong>：<a href="https://github.com/raycoarana/awex" target="_blank" rel="external">https://github.com/raycoarana/awex</a></p>
+<p>AWEX (Android Work EXecutor) is a thread pool to execute tasks that uses Promises to deliver results</p>
+<hr>
+<p><strong>Android-MVVMFramework</strong>：<a href="https://github.com/saiwu-bigkoo/Android-MVVMFramework" target="_blank" rel="external">https://github.com/saiwu-bigkoo/Android-MVVMFramework</a></p>
+<p>Using Databing and Retrofit to build a fast MVVM framework</p>
+<hr>
+<p><strong>AndroidBase</strong>：<a href="https://github.com/huangwm1984/AndroidBase" target="_blank" rel="external">https://github.com/huangwm1984/AndroidBase</a></p>
+<p>采用谷歌官方MVP架构以及RxJava对项目进行封装重构</p>
+<hr>
+<p><strong>LoonAndroid3</strong>：<a href="https://github.com/gdpancheng/LoonAndroid3" target="_blank" rel="external">https://github.com/gdpancheng/LoonAndroid3</a></p>
+<p>完全用注解的方式开发安卓应用，外包专用</p>
+<hr>
+<p><strong>ConditionWatcher</strong>：<a href="https://github.com/AzimoLabs/ConditionWatcher" target="_blank" rel="external">https://github.com/AzimoLabs/ConditionWatcher</a></p>
+<p>自动测试框架</p>
+<hr>
+<p><strong>AndroidUnitTest</strong>: <a href="https://github.com/florent37/AndroidUnitTest" target="_blank" rel="external">https://github.com/florent37/AndroidUnitTest</a></p>
+<p>Save time &amp; clear your unit tests on Android</p>
+<hr>
+<p><strong>Folio</strong>：<a href="https://github.com/frostymarvelous/Folio" target="_blank" rel="external">https://github.com/frostymarvelous/Folio</a></p>
+<p>A Page based navigation framework for Android with a simplified lifecycle and easy transition animations</p>
+<hr>
+<p><strong>Navigator</strong>：<a href="https://github.com/fingerlinks/Navigator" target="_blank" rel="external">https://github.com/fingerlinks/Navigator</a></p>
+<p>Navigator is a library allows you easily develop an Android application which only navigated by Fragments <a href="http://fingerlinks.github.io/Navigator" target="_blank" rel="external">http://fingerlinks.github.io/Navigator</a></p>
+<hr>
+<p><strong>VRDroid</strong>：<a href="https://github.com/babysource/VRDroid" target="_blank" rel="external">https://github.com/babysource/VRDroid</a></p>
+<p>VR Player for android</p>
+<hr>
+<p><strong>Applozic-Android-SDK</strong>：<a href="https://github.com/AppLozic/Applozic-Android-SDK" target="_blank" rel="external">https://github.com/AppLozic/Applozic-Android-SDK</a></p>
+<p>安卓实时聊天框架</p>
+<p><img src="https://raw.githubusercontent.com/AppLozic/Applozic-Android-SDK/master/img/android.png" width="260"></p>
+<hr>
+<p><strong>AndRouter</strong>：<a href="https://github.com/campusappcn/AndRouter" target="_blank" rel="external">https://github.com/campusappcn/AndRouter</a></p>
+<p><a href="http://sixwolf.net/blog/2016/03/23/Android%E8%B7%AF%E7%94%B1%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1/" target="_blank" rel="external">Android路由框架</a></p>
+<hr>
+<p><strong>PalDB</strong>:<a href="https://github.com/linkedin/PalDB" target="_blank" rel="external">https://github.com/linkedin/PalDB</a></p>
+<p>PalDB is an embeddable write-once key-value store written in Java.</p>
+<p><img src="https://camo.githubusercontent.com/ecc61cd7891461f7f839c47a58f47ac15b114cc7/687474703a2f2f6c696e6b6564696e2e6769746875622e696f2f50616c44422f646f632f7468726f7567687075742e706e67" width="320"><br><img src="https://camo.githubusercontent.com/5b16b19cd524b0fc3307ae37d96bf939295f0d4f/687474703a2f2f6c696e6b6564696e2e6769746875622e636f6d2f50616c44422f646f632f6d656d6f72792e706e67" width="320"></p>
+<hr>
+<p><strong>NightModel</strong>: <a href="https://github.com/achenglike/NightModel" target="_blank" rel="external">https://github.com/achenglike/NightModel</a></p>
+<p>a night model lib for easy change app’s night theme</p>
+<hr>
+<p><strong>Android-skin-support</strong>: <a href="https://github.com/ximsfei/Android-skin-support" target="_blank" rel="external">https://github.com/ximsfei/Android-skin-support</a></p>
+<p>一款用心去做的Android 换肤框架, 极低的学习成本, 极好的用户体验. 只需要两行代码, 就可以实现换肤</p>
+<p><img src="https://raw.githubusercontent.com/ximsfei/Res/master/skin-demo/red_3.png" width="120"> <img src="https://raw.githubusercontent.com/ximsfei/Res/master/skin-demo/white_3.png" width="120"> <img src="https://raw.githubusercontent.com/ximsfei/Res/master/skin-demo/night_3.png" width="120"></p>
+<hr>
+<p><strong>Colorful</strong>：<a href="https://github.com/garretyoder/Colorful" target="_blank" rel="external">https://github.com/garretyoder/Colorful</a></p>
+<p>安卓动态换肤</p>
+<p><img src="https://raw.githubusercontent.com/garretyoder/Colorful/master/screenshots/art1.png" width="320"> <img src="https://raw.githubusercontent.com/garretyoder/Colorful/master/screenshots/art2.png" width="320"></p>
+<hr>
+<p><strong>MultipleTheme</strong>：<a href="https://github.com/dersoncheng/MultipleTheme" target="_blank" rel="external">https://github.com/dersoncheng/MultipleTheme</a></p>
+<p>Android换肤／夜间模式的Android框架，配合theme和换肤控件框架可以做到无缝切换换肤（无需重启应用和当前页面）。 This framework of Android app support multiple theme(such as day/night mode) and needn’t finish current application or current activity when you switch theme-mode.</p>
+<hr>
+<p><strong>xUtils3</strong>: <a href="https://github.com/wyouflf/xUtils3" target="_blank" rel="external">https://github.com/wyouflf/xUtils3</a></p>
+<p>android 快速开发框架 xUtils 的升级版本</p>
+<hr>
+<p><strong>xUtils</strong>: <a href="https://github.com/wyouflf/xUtils" target="_blank" rel="external">https://github.com/wyouflf/xUtils</a></p>
+<p>android 快速开发框架 orm, bitmap, http, view inject…</p>
+<hr>
+<p><strong>afinal</strong>: <a href="https://github.com/yangfuhai/afinal" target="_blank" rel="external">https://github.com/yangfuhai/afinal</a></p>
+<p>Afinal是一个android的ioc，orm框架，内置了四大模块功能：FinalAcitivity,FinalBitmap,FinalDb,FinalHttp。通过finalActivity，我们可以通过注解的方式进行绑定ui和事件。通过finalBitmap，我们可以方便的加载bitmap图片，而无需考虑oom等问题。通过finalDB模块，我们一行代码就可以对android的sqlite数据库进行增删改查。通过FinalHttp模块，我们可以以ajax形式请求http数据。</p>
+<hr>
+<p><strong>KJFrameForAndroid</strong>: <a href="https://github.com/kymjs/KJFrameForAndroid" target="_blank" rel="external">https://github.com/kymjs/KJFrameForAndroid</a></p>
+<p>安卓快速开发框架，简单易用，快速，安全</p>
+<hr>
+<p><strong>ThinkAndroid</strong>: <a href="https://github.com/white-cat/ThinkAndroid" target="_blank" rel="external">https://github.com/white-cat/ThinkAndroid</a></p>
+<p>ThinkAndroid是一个免费的开源的、简易的、遵循Apache2开源协议发布的Android开发框架，其开发宗旨是简单、快速的进行 Android应用程序的开发，包含Android mvc、简易sqlite orm、ioc模块、封装Android httpclitent的http模块, 具有快速构建文件缓存功能，无需考虑缓存文件的格式，都可以非常轻松的实现缓存，它还基于文件缓存模块实现了图片缓存功能， 在android中加载的图片的时候，对oom的问题，和对加载图片错位的问题都轻易解决。他还包括了一个手机开发中经常应用的实用工具类， 如日志管理，配置文件管理，android下载器模块，网络切换检测等等工具。<a href="http://www.thinkandroid.cn" target="_blank" rel="external">http://www.thinkandroid.cn</a></p>
+<hr>
+<p><strong>AndroidFine</strong>: <a href="https://github.com/tianshaojie/AndroidFine" target="_blank" rel="external">https://github.com/tianshaojie/AndroidFine</a></p>
+<ul>
+<li>沉浸式状态栏，界面更漂亮</li>
+<li>PagerSlidingTabStrip，导航标签文字颜色和选中时文字颜色，都可以通过xml设置</li>
+<li>启动导航图SplashActivity，或许不用改就可以用</li>
+<li>查看大图，集成了PhotoView的可用Activity，你不用再写了</li>
+<li>QuickAdapter快速的Adapter开发，不用在重复写ViewHolder类</li>
+<li>PullToRefresh、PullToZoomView，这些常用的看demo吧</li>
+<li><a href="http://tianshaojie.github.io/android-code-style" target="_blank" rel="external">Android编码规范</a>，简单才能规范</li>
+</ul>
+<p>精致Demo</p>
+<p><img src="http://images0.cnblogs.com/blog2015/275810/201508/232033560975081.jpg" width="320"></p>
+<hr>
+<p><strong>FastAndroid</strong>: <a href="https://github.com/huntermr/FastAndroid" target="_blank" rel="external">https://github.com/huntermr/FastAndroid</a></p>
+<p>一个封装了多方面开源库后基于 MVP 模式的一个 Android 快速开发框架。</p>
+<hr>
+<p><strong>UltimateAndroid</strong>: <a href="https://github.com/cymcsg/UltimateAndroid" target="_blank" rel="external">https://github.com/cymcsg/UltimateAndroid</a></p>
+<p>UltimateAndroid is a rapid development framework for developing your apps <a href="http://cymcsg.github.io/UltimateAndroid" target="_blank" rel="external">http://cymcsg.github.io/UltimateAndroid</a></p>
+<hr>
+<p><strong>FastDev4Android</strong>: <a href="https://github.com/jiangqqlmj/FastDev4Android" target="_blank" rel="external">https://github.com/jiangqqlmj/FastDev4Android</a></p>
+<p>Android快速开发框架，采用AndroidStudio进行开发。 预想集成工具包,采用MVP开发模式,EventBus数据分发,沉浸式状态栏,ORM,网络请求(HTTPClint,Volley,OkHttps),数据解析,依赖注入(AndroidAnnotations),xutils,图片异步加载，二维码扫描等等，后续会进行逐步添加 <a href="http://blog.csdn.net/developer_jiangqq" target="_blank" rel="external">http://blog.csdn.net/developer_jiangqq</a></p>
+<hr>
+<p><strong>Rosie</strong>: <a href="https://github.com/Karumi/Rosie" target="_blank" rel="external">https://github.com/Karumi/Rosie</a></p>
+<p>Rosie is an Android framework to create applications following the principles of <a href="https://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html" target="_blank" rel="external">Clean Architecture</a></p>
+<p><img src="https://github.com/Karumi/Rosie/blob/master/art/screencast.gif" width="320"></p>
+<hr>
+<p><strong>KBinding</strong>: <a href="https://github.com/BennyWang/KBinding" target="_blank" rel="external">https://github.com/BennyWang/KBinding</a></p>
+<p>Android MVVM framework write in kotlin, develop Android has never been so fun.</p>
+<hr>
+      
+    </div>
+    
+  </div>
+  
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/android-librarys/Framework/">开发框架Framework - Android开源组件</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Zero</a></p>
+        <p><span>发布时间:</span>2017-03-24 15:14</p>
+        <!-- <p><span>最后更新:</span>2017-03-29, 17:48:00</p> -->
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/android-librarys/Framework/" title="开发框架Framework - Android开源组件">http://www.jiaoyigui.cn//android-librarys/Framework/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.jiaoyigui.cn//android-librarys/Framework/　　作者: Zero" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <!-- <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p> -->
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/android-librarys/Dialog/">
+                    弹窗 Dialog - Android开源组件
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/android-librarys/Layout/">
+                    布局Layout - Android开源组件
+                </a>
+            </div>
+        
+    </nav>
+  
+</article>
+<div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#开发框架-Framework"><span class="toc-number">1.</span> <span class="toc-text">开发框架 Framework</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+    <div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"开发框架Framework - Android开源组件　| 夜的灯　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+    
+
+
+<div class="scroll" id="post-nav-button">
+        
+            <a href="/android-librarys/Dialog/" title="上一篇: 弹窗 Dialog - Android开源组件">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/android-librarys/Layout/" title="下一篇: 布局Layout - Android开源组件">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/opensource/Android/">Android开源项目</a></li><li class="post-list-item"><a class="post-list-link" href="/opensource/Index/">索引 - 开源项目</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Utils/">辅助工具类 Utils - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Menu/">菜单 Menu - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Custom/">自定义控件 Custom - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Dialog/">弹窗 Dialog - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Framework/">开发框架Framework - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Layout/">布局Layout - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Animation/">动画Animation - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/List/">列表 List - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Network/">网络请求 Network - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Image/">图片 Image - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/php/thinkphp5-install/">Thinkphp5快速入门</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Index/">总纲 - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android/Android-Decompile/">Android反编译</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-Java/">开发环境 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-iTerm2/">终端方案iTerm2 + Zsh - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-Homebrew/">包管理工具 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-keymap/">常用快捷键 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-settings/">系统使用 - Java程序员眼中的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/server/VPS/">VPS + Shadowsocks 可以是什么，做什么</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-Debug/">IntelliJ IDEA DEBUG调试</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-For-Mac-Keys/">IntelliJ IDEA For Mac 快捷键</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-Settings/">IntelliJ IDEA 主题、字体、编辑区主题、文件编码修改、乱码问题</a></li><li class="post-list-item"><a class="post-list-link" href="/hexo/Hexo-Install/">搭建 Hexo 博客--增强篇</a></li></ul>
+
+
+    <script>
+        
+    </script></div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i>
+                2017 Zero
+            </div>
+            <div class="footer-right">
+                <!-- <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i> -->
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide()" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+<script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>

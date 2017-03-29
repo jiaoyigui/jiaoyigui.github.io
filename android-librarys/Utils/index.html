@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Zero">
+
+
+
+<meta name="description" content="收集Android相关的 辅助工具类 Utils 组件库, 包含：各种工具类、辅助类、管理类……">
+<meta property="og:type" content="article">
+<meta property="og:title" content="辅助工具类 Utils - Android开源组件">
+<meta property="og:url" content="http://www.jiaoyigui.cn/android-librarys/Utils/index.html">
+<meta property="og:site_name" content="夜的灯">
+<meta property="og:description" content="收集Android相关的 辅助工具类 Utils 组件库, 包含：各种工具类、辅助类、管理类……">
+<meta property="og:image" content="https://raw.githubusercontent.com/Ansh1234/AppDataReader/master/appstoragereader.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/7f9fe86c1371f5435aafb998df2d6952fa2ea000/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313835373838372d656236313962313831356436346261332e6769663f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970">
+<meta property="og:image" content="https://raw.githubusercontent.com/jrummyapps/android-shell/master/demo/src/main/res/mipmap-xxxhdpi/ic_launcher.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/czy1121/overlaypermission/master/screenshot2.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/00207b0c98de0cec744b2c2a696cf4e4e5cc454c/687474703a2f2f63616e6b696e676170702e6769746875622e696f2f323031362f30362f30322f6163636573732d666c6f61742f616374696f6e2e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/openstf/stf/master/doc/7s_usage.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/32f13ca5e698e3a40fa04b4f83df9240dbbee063/687474703a2f2f692e696d6775722e636f6d2f5835336b6c555a2e6769663f31">
+<meta property="og:image" content="https://raw.githubusercontent.com/l123456789jy/ijkplayer/master/66.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Kyson/MemoryMonitor/master/ART/mm_preview.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/kevalpatel2106/Prevent-Screen-Off/master/assets/Prevent_screen_off.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/ba1666aa84ec083accb9fc982e961e7a05fd0361/68747470733a2f2f7331342e706f7374696d672e6f72672f3573337363716639742f73637265656e2e706e67">
+<meta property="og:image" content="https://raw.githubusercontent.com/YouJZ/HybridBridge/master/demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/rm3l/maoni/master/doc/screenshots/raw/maoni_2.3.1.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/GHdeng/NetMonitor/master/NetMonitor2.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/jineshfrancs/SyncIt/master/screens/screen1.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/YoKeyword/Fragmentation/master/gif/demo.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/YoKeyword/Fragmentation/master/gif/wechat.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/YoKeyword/Fragmentation/master/gif/nested.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/mugku/ActiveHashTag/master/pic/pic.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/redknotmiaoyuqiao/MyOpenGL/master/img/one.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/redknotmiaoyuqiao/MyOpenGL/master/img/ten.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/themores/AntCaves/master/img/IMG_3063(20170311-183321).jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/chenenyu/Router/master/static/screenshot.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/e3fa7baf5a19bbd47d2cdede656262c9d300e791/687474703a2f2f692e67697068792e636f6d2f6c33765261764e4c306151664c327476612e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/ce665f81a40ad2e6be1b8c3eb2c8846e59e4f347/68747470733a2f2f7333322e706f7374696d672e6f72672f7273666974677039782f656e646f73636f70655f62616e6e65722e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/72bcb530f4ba53173de534350e61d8b410bfaa12/687474703a2f2f7777342e73696e61696d672e636e2f6c617267652f3836653266663835677731663274326434307765346a32316765306d35677a312e6a7067">
+<meta property="og:image" content="https://camo.githubusercontent.com/fca4d6ebedcef761b39f3f4fda56c5cbef1a45ac/68747470733a2f2f6f6f6f2e306f302e6f6f6f2f323031362f31322f31332f353834663761303434653166612e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/ffff627417220fc33fd868a092a7419db48d476c/68747470733a2f2f6f6f6f2e306f302e6f6f6f2f323031362f31322f31332f353834663761343233306162612e706e67">
+<meta property="og:image" content="https://raw.githubusercontent.com/amitshekhariitbhu/Android-Debug-Database/master/assets/debugdb.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pavel163/ProbeTools/master/1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/amitshekhariitbhu/Android-Debug-Database/master/assets/debugdb.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/skyhacker2/SQLiteOnWeb-Android/master/screenshots/2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/a-voyager/AutoInstaller/master/imgs/GIF.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/beworker/featured/master/web/diagram.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/1c2ab552211f7a0e78eaed76488916e1c9d1fac9/687474703a2f2f7777772e636c6970617274626573742e636f6d2f636c6970617274732f6463372f6564372f6463376564373447692e706e67">
+<meta property="og:image" content="https://raw.githubusercontent.com/nisrulz/packagehunter/master/img/sc1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/nisrulz/packagehunter/master/img/sc2.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/0327cda5b531ab6f2b803abe295c42225668d28d/687474703a2f2f7777772e7533636f64696e672e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031362f30362f312e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/facebook/network-connection-class/master/docs/images/bandwidth_averaging.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/7a478c9eb83af712d69eec9cea62f7e0f74222f6/68747470733a2f2f7777332e73696e61696d672e636e2f6c617267652f303036744e62527767793166646875673136646e686a33306b6d306234676c752e6a7067">
+<meta property="og:image" content="https://github.com/czy1121/update/raw/master/screenshot1.png">
+<meta property="og:image" content="https://github.com/czy1121/update/raw/master/screenshot4.png">
+<meta property="og:image" content="https://github.com/hummatli/MAHAndroidUpdater/blob/master/imgs/updater_dlg.png">
+<meta property="og:image" content="https://github.com/hummatli/MAHAndroidUpdater/blob/master/imgs/restricter_dlg.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/yjfnypeu/UpdatePlugin/master/screenshots/default_strategy.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/yjfnypeu/UpdatePlugin/master/screenshots/default_all_dialog_show.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/yjfnypeu/UpdatePlugin/master/screenshots/default_auto_install.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/8e0be231005184234cf715c5fc40bfbc0dac5bbb/68747470733a2f2f7261772e6769746875622e636f6d2f6665696369656e2f616e64726f69642d6175746f2d7570646174652f6d61737465722f73637265656e73686f74732f73616d706c652e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/039c92955ce092a2e81cd6d4cd5203f31bf32c92/68747470733a2f2f7261772e6769746875622e636f6d2f6665696369656e2f616e64726f69642d6175746f2d7570646174652f6d61737465722f73637265656e73686f74732f6469616c6f672e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/0c8c7c906d9cc6d517ae05c501920864add59c32/687474703a2f2f3778737778662e636f6d322e7a302e676c622e636c6f7564646e2e636f6d2f626c6f672f6a732e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/Skykai521/ECTranslation/master/img/translation_img.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/shaohui10086/ShareUtil/master/preview/shareutil_share.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/shaohui10086/ShareUtil/master/preview/shareutil_login.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/df05b7b65a599ff861770b06e2d78f459defc0da/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313231363033322d396363316635393663353835643433642e6769663f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970">
+<meta property="og:image" content="https://raw.githubusercontent.com/AzimoLabs/AndroidKeyboardWatcher/master/art/keyboard_shown.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Jacksgong/JKeybordPanelSwitch/master/art/non-fullscreen_resolved.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/Jacksgong/JKeybordPanelSwitch/master/art/adjust_resolved.gif">
+<meta property="og:image" content="https://lh3.googleusercontent.com/AP5TSBhKZPshN1XR_0ifvU6D0_sU7rL6GJb3Pn0Czlwp4EhwW69adKGh_8558_L_2A=h900-rw">
+<meta property="og:image" content="https://raw.githubusercontent.com/mzule/ActivityRouter/master/gif/router.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/mzule/ActivityRouter/master/gif/http.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/tianzhijiexian/UiBlock/master/images/demo02.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tianzhijiexian/UiBlock/master/images/demo03.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/devsideal/AutoCrashReporter/master/assets/acr_demo.gif">
+<meta property="og:image" content="https://github.com/bugtags/Bugtags-Android/blob/master/screenshot/usage.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/dfqin/PermissionGrantor/master/grant1.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/dfqin/PermissionGrantor/master/grant2.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/dfqin/PermissionGrantor/master/grant3.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/AnirudhLoya/Kotlin-Android-Permissions-DeviceInfo/master/device-2016-09-24-183505.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/AnirudhLoya/Kotlin-Android-Permissions-DeviceInfo/master/call_permission.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/holidaycheck/Permissify/master/art/sample_record.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/jksiezni/permissive/gh-pages/images/screenshots/educate_up_front.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jksiezni/permissive/gh-pages/images/screenshots/educate_in_context.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jksiezni/permissive/gh-pages/images/screenshots/ask_in_context.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/b0d132cc990213eb71ac0139163ff5f60efd71d1/687474703a2f2f61632d636e797634376c612e636c6f7564646e2e636f6d2f646162313765333731343630313138372e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/shiraji/permissions-dispatcher-plugin/master/website/images/pd.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/ParkSangGwon/TedPermission/master/Screenshot.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/6863a1cb3f7e3fb57a8f70d99e8bcc8d00b4f0bb/687474703a2f2f7069632e796f756d6f62696c652e6f72672f696d6763646e2f4170702d7065726d697373696f6e732d636f6d696e672d696e2d416e64726f69642d4d2e6a7067">
+<meta property="og:image" content="https://github.com/Karumi/Dexter/blob/master/art/sample.gif">
+<meta property="og:image" content="https://github.com/00ec454/Ask/blob/master/asset/permission_1.png">
+<meta property="og:image" content="https://github.com/00ec454/Ask/blob/master/asset/rationale.png">
+<meta property="og:image" content="https://github.com/kaknazaveshtakipishi/PermissionEverywhere/blob/master/art/screenshot.png">
+<meta property="og:image" content="https://github.com/pengwei1024/apkReSign/blob/master/screenshots/screenshot01.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/AzimoLabs/AndroidKeyboardWatcher/master/art/keyboard_shown.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/9b5fc15a1484dddcf4d86b646b3896ea368926a6/687474703a2f2f692e696d6775722e636f6d2f746e65415541462e706e67">
+<meta property="og:image" content="https://raw.githubusercontent.com/elvishew/XLog/master/images/classic_log.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/munix/LogcatTextView/master/screenshots/example.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jraska/Console/master/images/sample_screen.png">
+<meta property="og:image" content="https://github.com/pedrovgs/Lynx/blob/master/art/screenshot_demo_1.gif">
+<meta property="og:image" content="https://github.com/fatangare/LogcatViewer/blob/master/Images/mainview.png">
+<meta property="og:image" content="https://github.com/fatangare/LogcatViewer/blob/master/Images/filter.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/753ce906b6ba7cff9d2d0c3e66c783139e934bfd/687474703a2f2f3778697a65382e636f6d312e7a302e676c622e636c6f7564646e2e636f6d2f6a6c6f675f73616d706c652e676966">
+<meta property="og:image" content="https://raw.githubusercontent.com/Muyangmin/Android-PLog/master/ScreenShot.png">
+<meta property="og:image" content="https://github.com/ZhaoKaiQiang/KLog/blob/master/image/demo.gif">
+<meta property="og:image" content="https://github.com/orhanobut/logger/blob/master/images/custom-tag.png">
+<meta property="og:image" content="https://github.com/bluelinelabs/LoganSquare/blob/master/docs/benchmarks.jpg">
+<meta property="og:image" content="https://camo.githubusercontent.com/679c1c2da9b22e690b99de8c232408b52fcc8639/687474703a2f2f3778737778662e636f6d322e7a302e676c622e71696e697563646e2e636f6d2f626c6f672f5265636f766572792e706e67">
+<meta property="og:image" content="https://github.com/Ereza/CustomActivityOnCrash/blob/master/images/frontpage.png">
+<meta property="og:image" content="https://github.com/orhanobut/bee/blob/master/images/bee_settings.png">
+<meta property="og:image" content="https://github.com/orhanobut/bee/blob/master/images/bee_info.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/nukc/ApkMultiChannelPlugin/master/art/setting.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/baoyongzhang/ApkChannelBuilder/master/Screenshots/storyboard.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/SSOOnline/ApkCustomizationTool/master/screenshot/2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lfkdsk/JustWeTools/master/picture/markdown.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lfkdsk/JustWeTools/master/picture/VerTextView.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lfkdsk/JustWeTools/master/picture/gif.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/lfkdsk/JustWeTools/master/picture/clock.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lingochamp/FileDownloader/master/art/serial_tasks_demo.gif">
+<meta property="og:image" content="https://github.com/square/leakcanary/blob/master/assets/screenshot.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lqcandqq13/BlockCanaryEx/master/sample.png">
+<meta property="og:image" content="https://github.com/moduth/blockcanary/blob/master/art/shot1.png">
+<meta property="og:image" content="https://cloud.githubusercontent.com/assets/7868514/12535227/6b03940a-c2b7-11e5-91c7-c0c71d76295d.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/frogermcs/androiddevmetrics/master/art/activities_metrics.png">
+<meta property="og:image" content="https://github.com/hummatli/MAHAds/blob/master/imgs/exit_dlg.png">
+<meta property="og:image" content="https://github.com/hummatli/MAHAds/blob/master/imgs/programs_dlg.png">
+<meta property="og:updated_time" content="2017-03-29T09:49:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="辅助工具类 Utils - Android开源组件">
+<meta name="twitter:description" content="收集Android相关的 辅助工具类 Utils 组件库, 包含：各种工具类、辅助类、管理类……">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Ansh1234/AppDataReader/master/appstoragereader.gif">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="夜的灯" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>辅助工具类 Utils - Android开源组件 | 夜的灯</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8349881c9f92999de4652aac9681a840";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Zero</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">探索新知识，突破自身技术壁垒</p>
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:jyg0124@126.com" title="Email"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Animation/">Animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cocos2d-x/">Cocos2d-x</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Custom/">Custom</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DEBUG调试/">DEBUG调试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dialog/">Dialog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Homebrew/">Homebrew</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Image/">Image</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ-IDEA/">IntelliJ IDEA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Layout/">Layout</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/List/">List</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Menu/">Menu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shadowsocks/">Shadowsocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Unity/">Unity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Utils/">Utils</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VPS/">VPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vultr/">Vultr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinkphp5/">thinkphp5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/列表/">列表</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动画/">动画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反编译/">反编译</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图片组件/">图片组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具类/">工具类</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/布局/">布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发工具/">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发框架/">开发框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源组件/">开源组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源项目/">开源项目</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/弹窗/">弹窗</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/快捷键/">快捷键</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游戏/">游戏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/破解/">破解</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/终端/">终端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络请求/">网络请求</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/自定义控件/">自定义控件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/菜单/">菜单</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">关于我</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Zero</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Zero</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">探索新知识，突破自身技术壁垒</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:jyg0124@126.com" title="Email"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-android-librarys/Utils" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/android-librarys/Utils/" class="article-date">
+      <time datetime="2017-03-24T11:14:12.000Z" itemprop="datePublished">2017-03-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        <h1 class="article-title" itemprop="name">
+      辅助工具类 Utils - Android开源组件
+    </h1>
+      </header>
+      
+      <div class="article-info article-info-post">
+        <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/开源组件/">开源组件</a>
+    </div>
+        <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Utils/">Utils</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具类/">工具类</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开源组件/">开源组件</a></li></ul>
+    </div>
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="辅助工具类-Utils"><a href="#辅助工具类-Utils" class="headerlink" title="辅助工具类 Utils"></a>辅助工具类 Utils</h1><p>包含：各种工具类、辅助类、管理类……</p>
+<p><a href="/android-librarys/Index/">&lt;==返回总纲==</a></p>
+<hr>
+<p><strong>Awesome_API</strong>: <a href="https://github.com/marktony/Awesome_API/blob/master/Chinese.md" target="_blank" rel="external">https://github.com/marktony/Awesome_API/blob/master/Chinese.md</a></p>
+<p>收集中国国内可用API</p>
+<hr>
+<p><strong>commons-lang</strong>: <a href="https://github.com/apache/commons-lang" target="_blank" rel="external">https://github.com/apache/commons-lang</a></p>
+<p>Apache Commons Lang, a package of Java utility classes for the classes that are in java.lang’s hierarchy, or are considered to be so standard as to justify existence in java.lang.</p>
+<hr>
+<p><strong>okio</strong>: <a href="https://github.com/square/okio" target="_blank" rel="external">https://github.com/square/okio</a></p>
+<p>A modern I/O API for Java <a href="http://square.github.io/okio/1.x/okio" target="_blank" rel="external">http://square.github.io/okio/1.x/okio</a></p>
+<hr>
+<p><strong>Multiples</strong>: <a href="https://github.com/MFlisar/Multiples" target="_blank" rel="external">https://github.com/MFlisar/Multiples</a></p>
+<p>Based one Java Pair this library offers Triples, Quadriples and more (3 to 10 items)</p>
+<hr>
+<p><strong>SQLite2XL</strong>: <a href="https://github.com/androidmads/SQLite2XL" target="_blank" rel="external">https://github.com/androidmads/SQLite2XL</a></p>
+<p>Library to Convert SQLite to Excel</p>
+<hr>
+<p><strong>jOOR</strong>: <a href="https://github.com/jOOQ/jOOR" target="_blank" rel="external">https://github.com/jOOQ/jOOR</a></p>
+<p>简单易用的安卓反射库</p>
+<hr>
+<p><strong>PDD</strong>: <a href="https://github.com/jparkie/PDD" target="_blank" rel="external">https://github.com/jparkie/PDD</a></p>
+<p>Advanced Bloom Filter Based Algorithms for Efficient Approximate Data De-Duplication in Streams</p>
+<hr>
+<p><strong>realjavascript</strong>: <a href="https://github.com/sanjulr/realjavascript" target="_blank" rel="external">https://github.com/sanjulr/realjavascript</a></p>
+<p>RealJavaScript enables dynamic scripting in Java</p>
+<hr>
+<p><strong>strman-java</strong>: <a href="https://github.com/shekhargulati/strman-java" target="_blank" rel="external">https://github.com/shekhargulati/strman-java</a></p>
+<p>A Java 8 string manipulation library. It is inspired by <a href="https://github.com/dleitee/strman" target="_blank" rel="external">https://github.com/dleitee/strman</a></p>
+<hr>
+<p><strong>CommonPrintProvider</strong>: <a href="https://github.com/GrassQing/CommonPrintProvider" target="_blank" rel="external">https://github.com/GrassQing/CommonPrintProvider</a></p>
+<p>通用型热敏打印机接口（wifi，蓝牙）</p>
+<hr>
+<p><strong>AppDataReader</strong>: <a href="https://github.com/Ansh1234/AppDataReader" target="_blank" rel="external">https://github.com/Ansh1234/AppDataReader</a></p>
+<p>应用中读取 sp 和数据库</p>
+<p><img src="https://raw.githubusercontent.com/Ansh1234/AppDataReader/master/appstoragereader.gif" width="320"></p>
+<hr>
+<p><strong>AppMethodOrder</strong>: <a href="https://github.com/zjw-swun/AppMethodOrder" target="_blank" rel="external">https://github.com/zjw-swun/AppMethodOrder</a></p>
+<p>一个能让你了解所有函数调用顺序的Android库（无需侵入式代码）</p>
+<p><img src="https://camo.githubusercontent.com/7f9fe86c1371f5435aafb998df2d6952fa2ea000/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313835373838372d656236313962313831356436346261332e6769663f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970" width="320"></p>
+<hr>
+<p><strong>AnalysisApp</strong>: <a href="https://github.com/fengzhizi715/AnalysisApp" target="_blank" rel="external">https://github.com/fengzhizi715/AnalysisApp</a></p>
+<p>快速分析某个app使用哪些sdk的java小工具</p>
+<hr>
+<p><strong>android-shell</strong>: <a href="https://github.com/jrummyapps/android-shell" target="_blank" rel="external">https://github.com/jrummyapps/android-shell</a></p>
+<p>Execute shell commands on Android</p>
+<p><img src="https://raw.githubusercontent.com/jrummyapps/android-shell/master/demo/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="180"></p>
+<hr>
+<p><strong>Encryption</strong>: <a href="https://github.com/simbiose/Encryption" target="_blank" rel="external">https://github.com/simbiose/Encryption</a></p>
+<p>java 字符串加解密</p>
+<hr>
+<p><strong>java-aes-crypto</strong>: <a href="https://github.com/tozny/java-aes-crypto" target="_blank" rel="external">https://github.com/tozny/java-aes-crypto</a></p>
+<p>java 字符串加解密</p>
+<hr>
+<p><strong>Store</strong>: <a href="https://github.com/NYTimes/Store" target="_blank" rel="external">https://github.com/NYTimes/Store</a></p>
+<p>Store是一个异步数据加载和缓存数据的库</p>
+<hr>
+<p><strong>BuildPropEditor</strong>: <a href="https://github.com/jrummyapps/BuildPropEditor" target="_blank" rel="external">https://github.com/jrummyapps/BuildPropEditor</a></p>
+<p>Easily edit your build.prop file on Android</p>
+<hr>
+<p><strong>redexer</strong>: <a href="https://github.com/plum-umd/redexer" target="_blank" rel="external">https://github.com/plum-umd/redexer</a></p>
+<p>The Redexer binary instrumentation framework for Dalvik bytecode</p>
+<hr>
+<p><strong>adt4j</strong>: <a href="https://github.com/sviperll/adt4j" target="_blank" rel="external">https://github.com/sviperll/adt4j</a></p>
+<p>adt4j - Algebraic Data Types for Java</p>
+<hr>
+<p><strong>droidReverse</strong>: <a href="https://github.com/Juude/droidReverse" target="_blank" rel="external">https://github.com/Juude/droidReverse</a></p>
+<p>android 逆向工程工具集</p>
+<hr>
+<p><strong>AndroidProcesses</strong>: <a href="https://github.com/jaredrummler/AndroidProcesses" target="_blank" rel="external">https://github.com/jaredrummler/AndroidProcesses</a></p>
+<p>Get running processes on Android</p>
+<hr>
+<p><strong>HFunc</strong>: <a href="https://github.com/TangXiaoLv/HFunc" target="_blank" rel="external">https://github.com/TangXiaoLv/HFunc</a></p>
+<p>Java实现高阶函数，类似Python，支持串行并行计算，适用于Java和Android</p>
+<hr>
+<p><strong>scytale</strong>: <a href="https://github.com/yakivmospan/scytale" target="_blank" rel="external">https://github.com/yakivmospan/scytale</a></p>
+<p>Android Key 生成，存储，加密工具库</p>
+<hr>
+<p><strong>AccessibilityUtil</strong>: <a href="https://github.com/xuyisheng/AccessibilityUtil" target="_blank" rel="external">https://github.com/xuyisheng/AccessibilityUtil</a></p>
+<p>AccessibilityService Utils</p>
+<hr>
+<p><strong>overlaypermission</strong>: <a href="https://github.com/czy1121/overlaypermission" target="_blank" rel="external">https://github.com/czy1121/overlaypermission</a></p>
+<p>悬浮窗权限兼容库</p>
+<p><img src="https://raw.githubusercontent.com/czy1121/overlaypermission/master/screenshot2.png" width="320"></p>
+<hr>
+<p><strong>XiaomiPJ</strong>: <a href="https://github.com/CankingApp/XiaomiPJ" target="_blank" rel="external">https://github.com/CankingApp/XiaomiPJ</a></p>
+<p>小米悬浮窗全自动完美一键开启</p>
+<p><img src="https://camo.githubusercontent.com/00207b0c98de0cec744b2c2a696cf4e4e5cc454c/687474703a2f2f63616e6b696e676170702e6769746875622e696f2f323031362f30362f30322f6163636573732d666c6f61742f616374696f6e2e676966" width="320"></p>
+<hr>
+<p><strong>stf</strong>: <a href="https://github.com/openstf/stf" target="_blank" rel="external">https://github.com/openstf/stf</a></p>
+<p>浏览器控制管理手机引用</p>
+<p><img src="https://raw.githubusercontent.com/openstf/stf/master/doc/7s_usage.gif" width="700"></p>
+<hr>
+<p><strong>smart-scheduler-android</strong>: <a href="https://github.com/hypertrack/smart-scheduler-android" target="_blank" rel="external">https://github.com/hypertrack/smart-scheduler-android</a></p>
+<p>Android 智能 Scheduler，根据用户手机场景，决定任务执行方式</p>
+<p><img src="https://camo.githubusercontent.com/32f13ca5e698e3a40fa04b4f83df9240dbbee063/687474703a2f2f692e696d6775722e636f6d2f5835336b6c555a2e6769663f31" width="320"></p>
+<hr>
+<p><strong>ijkplayer</strong>: <a href="https://github.com/l123456789jy/ijkplayer" target="_blank" rel="external">https://github.com/l123456789jy/ijkplayer</a></p>
+<p>在ijkplayer编译的bilibili开源编译版本上，去掉失败的依赖，增加对https支持</p>
+<p><img src="https://raw.githubusercontent.com/l123456789jy/ijkplayer/master/66.png" width="320"></p>
+<hr>
+<p><strong>MemoryMonitor</strong>: <a href="https://github.com/Kyson/MemoryMonitor" target="_blank" rel="external">https://github.com/Kyson/MemoryMonitor</a></p>
+<p>内存监控器</p>
+<p><img src="https://raw.githubusercontent.com/Kyson/MemoryMonitor/master/ART/mm_preview.gif" width="320"></p>
+<hr>
+<p><strong>mathjs-android</strong>: <a href="https://github.com/niltonvasques/mathjs-android" target="_blank" rel="external">https://github.com/niltonvasques/mathjs-android</a></p>
+<p>An android wrapper library to mathjs.org javascript library</p>
+<hr>
+<p><strong>Napkin</strong>: <a href="https://github.com/AleksanderMielczarek/Napkin" target="_blank" rel="external">https://github.com/AleksanderMielczarek/Napkin</a></p>
+<p>Common scopes and qualifiers for Dagger 2</p>
+<hr>
+<p><strong>ThinRPlugin</strong>: <a href="https://github.com/mogujie/ThinRPlugin" target="_blank" rel="external">https://github.com/mogujie/ThinRPlugin</a></p>
+<p>apk 瘦身之去除android中的R.class</p>
+<hr>
+<p><strong>Prevent-Screen-Off</strong>: <a href="https://github.com/kevalpatel2106/Prevent-Screen-Off" target="_blank" rel="external">https://github.com/kevalpatel2106/Prevent-Screen-Off</a></p>
+<p>用户盯着屏幕时保持屏幕常亮</p>
+<p><img src="https://raw.githubusercontent.com/kevalpatel2106/Prevent-Screen-Off/master/assets/Prevent_screen_off.gif" width="540"></p>
+<hr>
+<p><strong>ForceTouch</strong>: <a href="https://github.com/michelelacorte/ForceTouch" target="_blank" rel="external">https://github.com/michelelacorte/ForceTouch</a></p>
+<p>Simple implementation of ForceTouch on Android</p>
+<p><img src="https://camo.githubusercontent.com/ba1666aa84ec083accb9fc982e961e7a05fd0361/68747470733a2f2f7331342e706f7374696d672e6f72672f3573337363716639742f73637265656e2e706e67" width="320"></p>
+<hr>
+<p><strong>Fingerprint2Sleep</strong>: <a href="https://github.com/ztc1997/Fingerprint2Sleep" target="_blank" rel="external">https://github.com/ztc1997/Fingerprint2Sleep</a></p>
+<p>自定义 Android 指纹识别快捷方式</p>
+<hr>
+<p><strong>RootHelper</strong>: <a href="https://github.com/AndroidDeveloperLB/RootHelper" target="_blank" rel="external">https://github.com/AndroidDeveloperLB/RootHelper</a></p>
+<p>An extension to use libsuperuser library more easily</p>
+<hr>
+<p><strong>AndroidPush</strong>: <a href="https://github.com/jiang111/AndroidPush" target="_blank" rel="external">https://github.com/jiang111/AndroidPush</a></p>
+<p>更方便的将各个rom厂商自己的推送服务进行集成,并统一管理</p>
+<hr>
+<p><strong>SQLiteParser</strong>: <a href="https://github.com/jrvansuita/SQLiteParser" target="_blank" rel="external">https://github.com/jrvansuita/SQLiteParser</a></p>
+<p>This project comes in handy when you want to write a sql statement easily and smarter</p>
+<hr>
+<p><strong>AndroidMapperObject</strong>: <a href="https://github.com/Gperez88/AndroidMapperObject" target="_blank" rel="external">https://github.com/Gperez88/AndroidMapperObject</a></p>
+<p>MapperObject which it is a library that allows you to transfer data between two objects</p>
+<hr>
+<p><strong>SensorAnnotations</strong>: <a href="https://github.com/dvoiss/SensorAnnotations" target="_blank" rel="external">https://github.com/dvoiss/SensorAnnotations</a></p>
+<p>Sensor 注解：实现当传感器参数发生变化的时候，自动调用特定函数</p>
+<hr>
+<p><strong>MaterialValues</strong>: <a href="https://github.com/AoDevBlue/MaterialValues" target="_blank" rel="external">https://github.com/AoDevBlue/MaterialValues</a></p>
+<p>Material Design 中那些标准的设计常量</p>
+<hr>
+<p><strong>libretorrent</strong>: <a href="https://github.com/proninyaroslav/libretorrent" target="_blank" rel="external">https://github.com/proninyaroslav/libretorrent</a></p>
+<p>基于 libtorrent 实现的种子下载客户端</p>
+<hr>
+<p><strong>StanKoUtils</strong>: <a href="https://github.com/stan-ko/StanKoUtils" target="_blank" rel="external">https://github.com/stan-ko/StanKoUtils</a></p>
+<p>Set of handy classes</p>
+<hr>
+<p><strong>intentbuilder</strong>: <a href="https://github.com/Trikke/intentbuilder" target="_blank" rel="external">https://github.com/Trikke/intentbuilder</a></p>
+<p>IntentBuilder is a type safe way of creating intents and populating them with extras. Use them with your Activities and Services</p>
+<hr>
+<p><strong>HybridBridge</strong>: <a href="https://github.com/YouJZ/HybridBridge" target="_blank" rel="external">https://github.com/YouJZ/HybridBridge</a></p>
+<p>A basic framework for Android hybrid development, bridge between JavaScript and java</p>
+<p><img src="https://raw.githubusercontent.com/YouJZ/HybridBridge/master/demo.gif" width="320"></p>
+<hr>
+<p><strong>WebViewJavascriptBridge</strong>: <a href="https://github.com/jesse01/WebViewJavascriptBridge" target="_blank" rel="external">https://github.com/jesse01/WebViewJavascriptBridge</a></p>
+<p>WebViewJavascriptBridge for Android</p>
+<hr>
+<p><strong>SimpleJavaJsBridge</strong>: <a href="https://github.com/niuxiaowei/SimpleJavaJsBridge" target="_blank" rel="external">https://github.com/niuxiaowei/SimpleJavaJsBridge</a></p>
+<p>JS 与 Java 通信的简单桥梁</p>
+<hr>
+<p><strong>stag-java</strong>: <a href="https://github.com/vimeo/stag-java" target="_blank" rel="external">https://github.com/vimeo/stag-java</a></p>
+<p>Stag improves Gson performance by automatically generating reflection-less TypeAdapters for your model objects</p>
+<hr>
+<p><strong>medium-android-sdk-unofficial</strong>: <a href="https://github.com/KingsMentor/medium-android-sdk-unofficial" target="_blank" rel="external">https://github.com/KingsMentor/medium-android-sdk-unofficial</a></p>
+<p>Unoffical implementation of medium api for android</p>
+<hr>
+<p><strong>PhoneNumberValidator</strong>: <a href="https://github.com/KingsMentor/PhoneNumberValidator" target="_blank" rel="external">https://github.com/KingsMentor/PhoneNumberValidator</a></p>
+<p>This library helps make sure the number is valid for the selected country</p>
+<hr>
+<p><strong>ButterKnifeLite</strong>: <a href="https://github.com/janishar/ButterKnifeLite" target="_blank" rel="external">https://github.com/janishar/ButterKnifeLite</a></p>
+<p>Light version of the concept of ButterKnife</p>
+<hr>
+<p><strong>apk-dependency-graph</strong>: <a href="https://github.com/alexzaitsev/apk-dependency-graph" target="_blank" rel="external">https://github.com/alexzaitsev/apk-dependency-graph</a></p>
+<p>解析apk包，图表展示依赖及结构</p>
+<hr>
+<p><strong>truetime-android</strong>: <a href="https://github.com/instacart/truetime-android" target="_blank" rel="external">https://github.com/instacart/truetime-android</a></p>
+<p>获取当前时间，可自定义时间服务器</p>
+<hr>
+<p><strong>SamLocationAndGeocoding</strong>: <a href="https://github.com/kingsammalik/SamLocationAndGeocoding" target="_blank" rel="external">https://github.com/kingsammalik/SamLocationAndGeocoding</a></p>
+<p>跟踪用户位置地址</p>
+<hr>
+<p><strong>AppAuth-Android</strong>: <a href="https://github.com/openid/AppAuth-Android" target="_blank" rel="external">https://github.com/openid/AppAuth-Android</a></p>
+<p>Android client SDK for communicating with OAuth 2.0 and OpenID Connect providers</p>
+<hr>
+<p><strong>Pury</strong>: <a href="https://github.com/NikitaKozlov/Pury" target="_blank" rel="external">https://github.com/NikitaKozlov/Pury</a></p>
+<p>测量多事件耗时</p>
+<hr>
+<p><strong>maoni-email</strong>: <a href="https://github.com/rm3l/maoni-email" target="_blank" rel="external">https://github.com/rm3l/maoni-email</a></p>
+<p>Android 收集用户基本信息利器，比如 App 崩溃后的地理位置，GPS网络状态，当前页面截屏等</p>
+<hr>
+<p><strong>maoni</strong>: <a href="https://github.com/rm3l/maoni" target="_blank" rel="external">https://github.com/rm3l/maoni</a></p>
+<p>Android 收集用户基本信息利器，比如 App 崩溃后的地理位置，GPS网络状态，当前页面截屏等</p>
+<p><img src="https://raw.githubusercontent.com/rm3l/maoni/master/doc/screenshots/raw/maoni_2.3.1.gif" width="320"></p>
+<hr>
+<p><strong>XTML</strong>: <a href="https://github.com/metalurgus/XTML" target="_blank" rel="external">https://github.com/metalurgus/XTML</a></p>
+<p>GSON analog for serialization/deserialization of Java objects into HTML code and back</p>
+<hr>
+<p><strong>DBC-Android</strong>: <a href="https://github.com/busybusy/DBC-Android" target="_blank" rel="external">https://github.com/busybusy/DBC-Android</a></p>
+<p>Fluent design by contract constructs for android</p>
+<hr>
+<p><strong>NetMonitor</strong>: <a href="https://github.com/GHdeng/NetMonitor" target="_blank" rel="external">https://github.com/GHdeng/NetMonitor</a></p>
+<p>使用广播监听网络变化更新UI</p>
+<p><img src="https://raw.githubusercontent.com/GHdeng/NetMonitor/master/NetMonitor2.gif" width="320"></p>
+<hr>
+<p><strong>LocalNetwork</strong>: <a href="https://github.com/itsJoKr/LocalNetwork" target="_blank" rel="external">https://github.com/itsJoKr/LocalNetwork</a></p>
+<p>两设备通过 Wifi 通信</p>
+<hr>
+<p><strong>AnalyticsKit-Android</strong>: <a href="https://github.com/busybusy/AnalyticsKit-Android" target="_blank" rel="external">https://github.com/busybusy/AnalyticsKit-Android</a></p>
+<p>Analytics framework for Android</p>
+<hr>
+<p><strong>icepick</strong>: <a href="https://github.com/frankiesardo/icepick" target="_blank" rel="external">https://github.com/frankiesardo/icepick</a></p>
+<p>好用的状态保存库</p>
+<hr>
+<p><strong>SyncIt</strong>: <a href="https://github.com/jineshfrancs/SyncIt" target="_blank" rel="external">https://github.com/jineshfrancs/SyncIt</a></p>
+<p>SyncIt will call a method implemented in your activity to notify data connection changes</p>
+<p><img src="https://raw.githubusercontent.com/jineshfrancs/SyncIt/master/screens/screen1.gif" width="270"></p>
+<hr>
+<p><strong>SafelyAndroid</strong>: <a href="https://github.com/Piasy/SafelyAndroid" target="_blank" rel="external">https://github.com/Piasy/SafelyAndroid</a></p>
+<p>打造健壮的安卓APP，从此告别 Activity Not Found、Activity State Loss 和 fragment transaction 中的 NPE</p>
+<hr>
+<p><strong>ActivityCommWithFragment</strong>: <a href="https://github.com/niuxiaowei/ActivityCommWithFragment" target="_blank" rel="external">https://github.com/niuxiaowei/ActivityCommWithFragment</a></p>
+<p>解决activity与fragment之间互相通信的一种方案</p>
+<hr>
+<p><strong>AirCycle</strong>: <a href="https://github.com/simonpercic/AirCycle" target="_blank" rel="external">https://github.com/simonpercic/AirCycle</a></p>
+<p>Flexible binding of Android Activity lifecycle callbacks to fields</p>
+<hr>
+<p><strong>fragment-back</strong>: <a href="https://github.com/skoumalcz/fragment-back" target="_blank" rel="external">https://github.com/skoumalcz/fragment-back</a></p>
+<p>Fragment 回退处理库</p>
+<hr>
+<p><strong>Fragmentation</strong>: <a href="https://github.com/YoKeyword/Fragmentation" target="_blank" rel="external">https://github.com/YoKeyword/Fragmentation</a></p>
+<p>为”单Activity ＋ 多Fragment”,”多模块Activity + 多Fragment”架构而生，帮你大大简化使用过程，轻松解决各种复杂嵌套等问题，修复了官方Fragment库中存在的一些BUG</p>
+<p><img src="https://raw.githubusercontent.com/YoKeyword/Fragmentation/master/gif/demo.gif" width="270"> <img src="https://raw.githubusercontent.com/YoKeyword/Fragmentation/master/gif/wechat.gif" width="270"> <img src="https://raw.githubusercontent.com/YoKeyword/Fragmentation/master/gif/nested.gif" width="270"></p>
+<hr>
+<p><strong>FragmentArgs</strong>: <a href="https://github.com/itsJoKr/FragmentArgs" target="_blank" rel="external">https://github.com/itsJoKr/FragmentArgs</a></p>
+<p>Fragment 参数传递</p>
+<hr>
+<p><strong>FingerprintAuthDemo</strong>: <a href="https://github.com/pro100svitlo/FingerprintAuthDemo" target="_blank" rel="external">https://github.com/pro100svitlo/FingerprintAuthDemo</a></p>
+<p>指纹认证</p>
+<hr>
+<p><strong>fingerlock</strong>: <a href="https://github.com/aitorvs/fingerlock" target="_blank" rel="external">https://github.com/aitorvs/fingerlock</a></p>
+<p>指纹认证</p>
+<hr>
+<p><strong>java-object-diff</strong>: <a href="https://github.com/SQiShER/java-object-diff" target="_blank" rel="external">https://github.com/SQiShER/java-object-diff</a></p>
+<p>Library to diff and merge Java objects with ease <a href="http://sqisher.github.io/java-object-diff/" target="_blank" rel="external">http://sqisher.github.io/java-object-diff/</a></p>
+<hr>
+<p><strong>ActiveHashTag</strong>: <a href="https://github.com/mugku/ActiveHashTag" target="_blank" rel="external">https://github.com/mugku/ActiveHashTag</a></p>
+<p>Android HashTag Lib</p>
+<p><img src="https://raw.githubusercontent.com/mugku/ActiveHashTag/master/pic/pic.gif" width="600"></p>
+<hr>
+<p><strong>Save-to-Activity</strong>: <a href="https://github.com/Metroxe/Save-to-Activity" target="_blank" rel="external">https://github.com/Metroxe/Save-to-Activity</a></p>
+<p>This library is an easy to use series of commands to interact with a hashmap across multiple fragments attached to any running activity</p>
+<hr>
+<p><strong>DataAutoAccess</strong>: <a href="https://github.com/ThirtyDegreesRay/DataAutoAccess" target="_blank" rel="external">https://github.com/ThirtyDegreesRay/DataAutoAccess</a></p>
+<p>Android由于系统内存不足时，activity被杀死时的数据存取方案</p>
+<hr>
+<p><strong>Preservely</strong>: <a href="https://github.com/samiuelson/Preservely" target="_blank" rel="external">https://github.com/samiuelson/Preservely</a></p>
+<p>安卓横竖屏变化处理库</p>
+<hr>
+<p><strong>java-error-handler</strong>: <a href="https://github.com/Workable/java-error-handler" target="_blank" rel="external">https://github.com/Workable/java-error-handler</a></p>
+<p>异常处理</p>
+<hr>
+<p><strong>java-object-diff</strong>: <a href="https://github.com/SQiShER/java-object-diff" target="_blank" rel="external">https://github.com/SQiShER/java-object-diff</a></p>
+<p>Library to diff and merge Java objects with ease <a href="http://sqisher.github.io/java-object-diff/" target="_blank" rel="external">http://sqisher.github.io/java-object-diff/</a></p>
+<hr>
+<p><strong>Android-ORM</strong>: <a href="https://github.com/Jamling/Android-ORM" target="_blank" rel="external">https://github.com/Jamling/Android-ORM</a></p>
+<p>Android ORM (Aorm) in an ORM implementation on Android platform</p>
+<hr>
+<p><strong>ResourcesPoet</strong>: <a href="https://github.com/Commit451/ResourcesPoet" target="_blank" rel="external">https://github.com/Commit451/ResourcesPoet</a></p>
+<p>Like JavaPoet, but for Android XML Resources</p>
+<hr>
+<p><strong>root-tools</strong>: <a href="https://github.com/rarnu/root-tools" target="_blank" rel="external">https://github.com/rarnu/root-tools</a></p>
+<p>RootTools 是一款专注于给 root 后的用户提供方便的软件</p>
+<hr>
+<p><strong>android-autoprovider</strong>: <a href="https://github.com/futuresimple/android-autoprovider" target="_blank" rel="external">https://github.com/futuresimple/android-autoprovider</a></p>
+<p>Utility for creating ContentProviders without boilerplate and with heavy customization options</p>
+<hr>
+<p><strong>spek</strong>: <a href="https://github.com/JetBrains/spek" target="_blank" rel="external">https://github.com/JetBrains/spek</a></p>
+<p>A specification framework for Kotlin</p>
+<hr>
+<p><strong>ktlint</strong>: <a href="https://github.com/shyiko/ktlint" target="_blank" rel="external">https://github.com/shyiko/ktlint</a></p>
+<p>An anti-bikeshedding Kotlin linter with built-in formatter</p>
+<hr>
+<p><strong>tiger</strong>: <a href="https://github.com/google/tiger" target="_blank" rel="external">https://github.com/google/tiger</a></p>
+<p>java依赖注入</p>
+<hr>
+<p><strong>dagger</strong>: <a href="https://github.com/google/dagger" target="_blank" rel="external">https://github.com/google/dagger</a></p>
+<p>传说中的 dagger2，依赖注入</p>
+<hr>
+<p><strong>Splitties</strong>: <a href="https://github.com/LouisCAD/Splitties" target="_blank" rel="external">https://github.com/LouisCAD/Splitties</a></p>
+<p>安卓复制粘贴工具类</p>
+<hr>
+<p><strong>android-priority-jobqueue</strong>: <a href="https://github.com/yigit/android-priority-jobqueue" target="_blank" rel="external">https://github.com/yigit/android-priority-jobqueue</a></p>
+<p>A Job Queue specifically written for Android to easily schedule jobs (tasks) that run in the background</p>
+<hr>
+<p><strong>concurrent</strong>: <a href="https://github.com/onehilltech/concurrent" target="_blank" rel="external">https://github.com/onehilltech/concurrent</a></p>
+<p>安卓并发解决方案库</p>
+<hr>
+<p><strong>NinePatchChunk</strong>: <a href="https://github.com/Anatolii/NinePatchChunk" target="_blank" rel="external">https://github.com/Anatolii/NinePatchChunk</a></p>
+<p>Simple Android library which allows you to create a chunk for NinePatchDrawable at runtime</p>
+<hr>
+<p><strong>mock-api</strong>: <a href="https://github.com/shanbay/mock-api" target="_blank" rel="external">https://github.com/shanbay/mock-api</a></p>
+<p>A json-api-mock framework for Android</p>
+<hr>
+<p><strong>MidiDroid</strong>: <a href="https://github.com/pdrogfer/MidiDroid" target="_blank" rel="external">https://github.com/pdrogfer/MidiDroid</a></p>
+<p>MIDI library for Android, ready to use in Android Studio projects</p>
+<hr>
+<p><strong>AdBlockerDetector</strong>: <a href="https://github.com/Swisyn/AdBlockerDetector" target="_blank" rel="external">https://github.com/Swisyn/AdBlockerDetector</a></p>
+<p>This project proposes an open source library that can detect most of ad blockers</p>
+<hr>
+<p><strong>SugarTask</strong>: <a href="https://github.com/mthli/SugarTask" target="_blank" rel="external">https://github.com/mthli/SugarTask</a></p>
+<p>Android lifecycle safety task with sugar code style</p>
+<hr>
+<p><strong>fastlane</strong>: <a href="https://github.com/fastlane/fastlane" target="_blank" rel="external">https://github.com/fastlane/fastlane</a></p>
+<p>The easiest way to automate building and releasing your iOS and Android apps <a href="https://fastlane.tools" target="_blank" rel="external">https://fastlane.tools</a></p>
+<hr>
+<p><strong>MyOpenGL</strong>: <a href="https://github.com/redknotmiaoyuqiao/MyOpenGL" target="_blank" rel="external">https://github.com/redknotmiaoyuqiao/MyOpenGL</a></p>
+<p>Android 上使用 NDK 编写 OpenGL ES 3.0</p>
+<p><img src="https://raw.githubusercontent.com/redknotmiaoyuqiao/MyOpenGL/master/img/one.gif" width="320"> <img src="https://raw.githubusercontent.com/redknotmiaoyuqiao/MyOpenGL/master/img/ten.gif" width="320"></p>
+<hr>
+<p><strong>UsbSerial</strong>: <a href="https://github.com/felHR85/UsbSerial" target="_blank" rel="external">https://github.com/felHR85/UsbSerial</a></p>
+<p>Usb serial controller for Android</p>
+<hr>
+<p><strong>AntCaves</strong>: <a href="https://github.com/themores/AntCaves" target="_blank" rel="external">https://github.com/themores/AntCaves</a></p>
+<p>Android Router 框架，取名为AntCaves，中文名”蚁穴“</p>
+<p><img src="https://raw.githubusercontent.com/themores/AntCaves/master/img/IMG_3063(20170311-183321).jpg" width="320"></p>
+<hr>
+<p><strong>Router</strong>: <a href="https://github.com/chenenyu/Router" target="_blank" rel="external">https://github.com/chenenyu/Router</a></p>
+<p>简单、灵活的路由框架</p>
+<p><img src="https://raw.githubusercontent.com/chenenyu/Router/master/static/screenshot.gif" width="320"></p>
+<hr>
+<p><strong>krouter</strong>: <a href="https://github.com/denisidoro/krouter" target="_blank" rel="external">https://github.com/denisidoro/krouter</a></p>
+<p>A lightweight Android activity router</p>
+<hr>
+<p><strong>Router</strong>: <a href="https://github.com/yjfnypeu/Router" target="_blank" rel="external">https://github.com/yjfnypeu/Router</a></p>
+<p>一款简单的Android端用于Activity跳转的路由框架</p>
+<hr>
+<p><strong>router</strong>: <a href="https://github.com/eyeem/router" target="_blank" rel="external">https://github.com/eyeem/router</a></p>
+<p>Dynamic in app URL router for Android</p>
+<hr>
+<p><strong>KeyHide</strong>: <a href="https://github.com/Hamadakram/KeyHide" target="_blank" rel="external">https://github.com/Hamadakram/KeyHide</a></p>
+<p>KeyHide</p>
+<hr>
+<p><strong>keyboard-dismisser</strong>: <a href="https://github.com/GabrielSamojlo/keyboard-dismisser" target="_blank" rel="external">https://github.com/GabrielSamojlo/keyboard-dismisser</a></p>
+<p>Dismiss your keyboard by tapping anywhere outside it</p>
+<p><img src="https://camo.githubusercontent.com/e3fa7baf5a19bbd47d2cdede656262c9d300e791/687474703a2f2f692e67697068792e636f6d2f6c33765261764e4c306151664c327476612e676966" width="260"></p>
+<hr>
+<p><strong>Teleprinter</strong>: <a href="https://github.com/Commit451/Teleprinter" target="_blank" rel="external">https://github.com/Commit451/Teleprinter</a></p>
+<p>Android keyboard helper</p>
+<hr>
+<p><strong>AnySoftKeyboard</strong>: <a href="https://github.com/AnySoftKeyboard/AnySoftKeyboard" target="_blank" rel="external">https://github.com/AnySoftKeyboard/AnySoftKeyboard</a></p>
+<p>Android (f/w 1.5+) on screen keyboard for multiple languages <a href="http://anysoftkeyboard.github.io/" target="_blank" rel="external">http://anysoftkeyboard.github.io/</a></p>
+<hr>
+<p><strong>decorator</strong>: <a href="https://github.com/eyeem/decorator" target="_blank" rel="external">https://github.com/eyeem/decorator</a></p>
+<p>Dynamic inheritance library</p>
+<hr>
+<p><strong>Tabbels</strong>: <a href="https://github.com/FireZenk/Tabbels" target="_blank" rel="external">https://github.com/FireZenk/Tabbels</a></p>
+<p>A crazy idea about bringing functional programming to Java, in an elegant way</p>
+<hr>
+<p><strong>android-selfsigned</strong>: <a href="https://github.com/onehilltech/android-selfsigned" target="_blank" rel="external">https://github.com/onehilltech/android-selfsigned</a></p>
+<p>A simple library for supporting self-signed certificates in Android</p>
+<hr>
+<p><strong>AndroidDecompiler</strong>: <a href="https://github.com/dirkvranckaert/AndroidDecompiler" target="_blank" rel="external">https://github.com/dirkvranckaert/AndroidDecompiler</a></p>
+<p>Decompile any APK</p>
+<hr>
+<p><strong>apk-decompiler</strong>: <a href="https://github.com/dwatling/apk-decompiler" target="_blank" rel="external">https://github.com/dwatling/apk-decompiler</a></p>
+<p>Android APK Decompiler</p>
+<hr>
+<p><strong>RTMPCHybirdEngine-Android</strong>: <a href="https://github.com/AnyRTC/RTMPCHybirdEngine-Android" target="_blank" rel="external">https://github.com/AnyRTC/RTMPCHybirdEngine-Android</a></p>
+<p>基于RTMP和RTC混合引擎的在线视频连麦互动直播</p>
+<hr>
+<p><strong>Endoscope</strong>: <a href="https://github.com/hypeapps/Endoscope" target="_blank" rel="external">https://github.com/hypeapps/Endoscope</a></p>
+<p>Endoscope - RTSP live video streamer for android devices via Wi-Fi</p>
+<p><img src="https://camo.githubusercontent.com/ce665f81a40ad2e6be1b8c3eb2c8846e59e4f347/68747470733a2f2f7333322e706f7374696d672e6f72672f7273666974677039782f656e646f73636f70655f62616e6e65722e706e67" width="800"></p>
+<hr>
+<p><strong>LayoutFormatter</strong>: <a href="https://github.com/drakeet/LayoutFormatter" target="_blank" rel="external">https://github.com/drakeet/LayoutFormatter</a></p>
+<p>安卓布局格式化</p>
+<p><img src="https://camo.githubusercontent.com/72bcb530f4ba53173de534350e61d8b410bfaa12/687474703a2f2f7777342e73696e61696d672e636e2f6c617267652f3836653266663835677731663274326434307765346a32316765306d35677a312e6a7067" width="800"></p>
+<hr>
+<p><strong>Dream-Catcher</strong>: <a href="https://github.com/misakuo/Dream-Catcher" target="_blank" rel="external">https://github.com/misakuo/Dream-Catcher</a></p>
+<p>在Chrome DevTools内查看Android设备上所有HTTP(S)流量</p>
+<p><img src="https://camo.githubusercontent.com/fca4d6ebedcef761b39f3f4fda56c5cbef1a45ac/68747470733a2f2f6f6f6f2e306f302e6f6f6f2f323031362f31322f31332f353834663761303434653166612e706e67" width="320"> <img src="https://camo.githubusercontent.com/ffff627417220fc33fd868a092a7419db48d476c/68747470733a2f2f6f6f6f2e306f302e6f6f6f2f323031362f31322f31332f353834663761343233306162612e706e67" width="540"></p>
+<hr>
+<p><strong>Stetho-Couchbase</strong>: <a href="https://github.com/RobotPajamas/Stetho-Couchbase" target="_blank" rel="external">https://github.com/RobotPajamas/Stetho-Couchbase</a></p>
+<p>Stetho-Couchbase is a plugin for Stetho to enable visualizing and debugging Android Couchbase databases in Chrome</p>
+<p><img src="https://raw.githubusercontent.com/amitshekhariitbhu/Android-Debug-Database/master/assets/debugdb.png" width="640"></p>
+<hr>
+<p><strong>ProbeTools</strong>: <a href="https://github.com/pavel163/ProbeTools" target="_blank" rel="external">https://github.com/pavel163/ProbeTools</a></p>
+<p>ProbeTools displays the data from the Database and SharedPreferences in the browser</p>
+<p><img src="https://raw.githubusercontent.com/pavel163/ProbeTools/master/1.png" width="640"></p>
+<hr>
+<p><strong>Android-Debug-Database</strong>: <a href="https://github.com/amitshekhariitbhu/Android-Debug-Database" target="_blank" rel="external">https://github.com/amitshekhariitbhu/Android-Debug-Database</a></p>
+<p>通过网页来查看 Android 本机数据库和 SharedPreference 数据</p>
+<p><img src="https://raw.githubusercontent.com/amitshekhariitbhu/Android-Debug-Database/master/assets/debugdb.png" width="640"></p>
+<hr>
+<p><strong>SQLiteOnWeb-Android</strong>: <a href="https://github.com/skyhacker2/SQLiteOnWeb-Android" target="_blank" rel="external">https://github.com/skyhacker2/SQLiteOnWeb-Android</a></p>
+<p>通过浏览器管理sqlite数据库</p>
+<p><img src="https://raw.githubusercontent.com/skyhacker2/SQLiteOnWeb-Android/master/screenshots/2.png" width="640"></p>
+<hr>
+<p><strong>LitePal</strong>: <a href="https://github.com/LitePalFramework/LitePal" target="_blank" rel="external">https://github.com/LitePalFramework/LitePal</a></p>
+<p>Android Sqlite ORM，让数据库操作更便捷</p>
+<hr>
+<p><strong>droitatedDB</strong>: <a href="https://github.com/arconsis/droitatedDB" target="_blank" rel="external">https://github.com/arconsis/droitatedDB</a></p>
+<p>droitatedDB is a lightweight framework, which frees you from the burden of dealing with the Android SQLite database directly</p>
+<hr>
+<p><strong>CopyExternalDB</strong>: <a href="https://github.com/emrekose26/CopyExternalDB" target="_blank" rel="external">https://github.com/emrekose26/CopyExternalDB</a></p>
+<p>数据库复制</p>
+<hr>
+<p><strong>AutoGo</strong>: <a href="https://github.com/TellH/AutoGo" target="_blank" rel="external">https://github.com/TellH/AutoGo</a></p>
+<p>Ease your code, easy go</p>
+<hr>
+<p><strong>AndroidMiscUtils</strong>: <a href="https://github.com/nillith/AndroidMiscUtils" target="_blank" rel="external">https://github.com/nillith/AndroidMiscUtils</a></p>
+<p>Android Utils for context and thread</p>
+<hr>
+<p><strong>Versionberg</strong>: <a href="https://github.com/rockerhieu/Versionberg" target="_blank" rel="external">https://github.com/rockerhieu/Versionberg</a></p>
+<p>每次 commit 自动生成版本号</p>
+<hr>
+<p><strong>AutoVersion</strong>: <a href="https://github.com/nillith/AutoVersion" target="_blank" rel="external">https://github.com/nillith/AutoVersion</a></p>
+<p>根据 commit 数自动生成版本号</p>
+<hr>
+<p><strong>UniPinyin</strong>: <a href="https://github.com/nillith/UniPinyin" target="_blank" rel="external">https://github.com/nillith/UniPinyin</a></p>
+<p>Java 汉语拼音查询工具。支持CJK基本字符集及扩充区A的中文汉字，共26679个，其中多音字6769个。</p>
+<hr>
+<p><strong>essentials</strong>: <a href="https://github.com/greenrobot/essentials" target="_blank" rel="external">https://github.com/greenrobot/essentials</a></p>
+<p>General purpose utilities and hash functions for Android and Java (aka java-common)</p>
+<hr>
+<p><strong>ContentManager</strong>: <a href="https://github.com/stfalcon-studio/ContentManager" target="_blank" rel="external">https://github.com/stfalcon-studio/ContentManager</a></p>
+<p>Library what helps getting photo or video from device gallery, from a cloud or from a camera</p>
+<hr>
+<p><strong>InputValidator</strong>: <a href="https://github.com/jordanterry/InputValidator" target="_blank" rel="external">https://github.com/jordanterry/InputValidator</a></p>
+<p>An Android library helps to validate input content</p>
+<hr>
+<p><strong>Scripto</strong>: <a href="https://github.com/ImangazalievM/Scripto" target="_blank" rel="external">https://github.com/ImangazalievM/Scripto</a></p>
+<p>Library for easy call JS-functions from Java</p>
+<hr>
+<p><strong>AutoInstaller</strong>: <a href="https://github.com/a-voyager/AutoInstaller" target="_blank" rel="external">https://github.com/a-voyager/AutoInstaller</a></p>
+<p>应用自动静默更新安装库</p>
+<p><img src="https://raw.githubusercontent.com/a-voyager/AutoInstaller/master/imgs/GIF.gif" width="320"></p>
+<hr>
+<p><strong>AndroidStudioTemplates</strong>: <a href="https://github.com/WanAndroid/AndroidStudioTemplates" target="_blank" rel="external">https://github.com/WanAndroid/AndroidStudioTemplates</a></p>
+<p>Templates for Android Studio</p>
+<hr>
+<p><strong>FlatBuffer</strong>: <a href="https://github.com/amitshekhariitbhu/FlatBuffer" target="_blank" rel="external">https://github.com/amitshekhariitbhu/FlatBuffer</a></p>
+<p>This app shows how fast flat buffer works when we compare it with json</p>
+<hr>
+<p><strong>Knight</strong>: <a href="https://github.com/zjutkz/Knight" target="_blank" rel="external">https://github.com/zjutkz/Knight</a></p>
+<p>使用 java apt and javapoet 技术实现的安卓换肤库</p>
+<hr>
+<p><strong>AES256PasswordBasedEncryption-Decryption</strong>: <a href="https://github.com/rishelarora/AES256PasswordBasedEncryption-Decryption" target="_blank" rel="external">https://github.com/rishelarora/AES256PasswordBasedEncryption-Decryption</a></p>
+<p>AES256 加解密</p>
+<hr>
+<p><strong>featured</strong>: <a href="https://github.com/beworker/featured" target="_blank" rel="external">https://github.com/beworker/featured</a></p>
+<p>Simple yet powerful composition library for Android</p>
+<p><img src="https://raw.githubusercontent.com/beworker/featured/master/web/diagram.png" width="800"></p>
+<hr>
+<p><strong>Blorm</strong>: <a href="https://github.com/daniel-martins-IR/Blorm" target="_blank" rel="external">https://github.com/daniel-martins-IR/Blorm</a></p>
+<p>Blorm is a field validation lib for android</p>
+<p><img src="https://camo.githubusercontent.com/1c2ab552211f7a0e78eaed76488916e1c9d1fac9/687474703a2f2f7777772e636c6970617274626573742e636f6d2f636c6970617274732f6463372f6564372f6463376564373447692e706e67" width="320"></p>
+<hr>
+<p><strong>Hermes</strong>: <a href="https://github.com/Xiaofei-it/Hermes" target="_blank" rel="external">https://github.com/Xiaofei-it/Hermes</a></p>
+<p>简单易用的安卓进程间通信IPC框架</p>
+<hr>
+<p><strong>ToyRoom</strong>: <a href="https://github.com/eleme/ToyRoom" target="_blank" rel="external">https://github.com/eleme/ToyRoom</a></p>
+<p>饿了么开发的一套面向业务逻辑的编程库-ToyRoom</p>
+<hr>
+<p><strong>HermesEventBus</strong>: <a href="https://github.com/eleme/HermesEventBus" target="_blank" rel="external">https://github.com/eleme/HermesEventBus</a></p>
+<p>饿了么开源的Android跨进程事件分发框架</p>
+<hr>
+<p><strong>gimBUS</strong>: <a href="https://github.com/PGSSoft/gimBUS" target="_blank" rel="external">https://github.com/PGSSoft/gimBUS</a></p>
+<p>Event bus for Android with fine-grained delivery thread control</p>
+<hr>
+<p><strong>AndroidEventBus</strong>: <a href="https://github.com/hehonghui/AndroidEventBus" target="_blank" rel="external">https://github.com/hehonghui/AndroidEventBus</a></p>
+<p>A lightweight eventbus library for android, simplifies communication between Activities, Fragments, Threads, Services, etc</p>
+<hr>
+<p><strong>eventbus3-intellij-plugin</strong>: <a href="https://github.com/likfe/eventbus3-intellij-plugin" target="_blank" rel="external">https://github.com/likfe/eventbus3-intellij-plugin</a></p>
+<p>eventbus3 可用事件跳转 Android Studio 插件</p>
+<hr>
+<p><strong>EventBus</strong>: <a href="https://github.com/greenrobot/EventBus" target="_blank" rel="external">https://github.com/greenrobot/EventBus</a></p>
+<p>Android optimized event bus that simplifies communication between Activities, Fragments, Threads, Services, etc. Less code, better quality. <a href="http://greenrobot.org/eventbus/" target="_blank" rel="external">http://greenrobot.org/eventbus/</a></p>
+<hr>
+<p><strong>Android-Pay</strong>: <a href="https://github.com/mayubao/Android-Pay" target="_blank" rel="external">https://github.com/mayubao/Android-Pay</a></p>
+<p>支持微信和支付宝两种主流支付的集成库， 两行代码实现微信支付， 三行代码实现支付宝支付</p>
+<hr>
+<p><strong>AndroidPay</strong>: <a href="https://github.com/hanbaokun/AndroidPay" target="_blank" rel="external">https://github.com/hanbaokun/AndroidPay</a></p>
+<p>微信支付和支付宝支付快速接入，可以直接拷贝代码到项目中使用</p>
+<hr>
+<p><strong>blankapp-validation</strong>: <a href="https://github.com/lijy91/blankapp-validation" target="_blank" rel="external">https://github.com/lijy91/blankapp-validation</a></p>
+<p>Android 表单验证库，用方法链构建你的验证规则</p>
+<hr>
+<p><strong>artdumper</strong>: <a href="https://github.com/Qihoo360/artdumper" target="_blank" rel="external">https://github.com/Qihoo360/artdumper</a></p>
+<p>android5.0之后，从oat文件中dump出来dex的工具</p>
+<hr>
+<p><strong>WHC_ScanUnreferenceImageTool</strong>: <a href="https://github.com/netyouli/WHC_ScanUnreferenceImageTool" target="_blank" rel="external">https://github.com/netyouli/WHC_ScanUnreferenceImageTool</a></p>
+<p>扫描项目里没有使用的图片工具，删除没有引用的图片以减小打包体积</p>
+<hr>
+<p><strong>packagehunter</strong>: <a href="https://github.com/nisrulz/packagehunter" target="_blank" rel="external">https://github.com/nisrulz/packagehunter</a></p>
+<p>捕获安卓应用信息</p>
+<p><img src="https://raw.githubusercontent.com/nisrulz/packagehunter/master/img/sc1.png" width="300"> <img src="https://raw.githubusercontent.com/nisrulz/packagehunter/master/img/sc2.png" width="300"></p>
+<hr>
+<p><strong>NavigationViewFragmentAdapters</strong>: <a href="https://github.com/patloew/NavigationViewFragmentAdapters" target="_blank" rel="external">https://github.com/patloew/NavigationViewFragmentAdapters</a></p>
+<p>Fragment 管理</p>
+<hr>
+<p><strong>PullSwitcher</strong>: <a href="https://github.com/loopeer/PullSwitcher" target="_blank" rel="external">https://github.com/loopeer/PullSwitcher</a></p>
+<p>方便 Fragment 切换的工具</p>
+<hr>
+<p><strong>Jolyglot</strong>: <a href="https://github.com/VictorAlbertos/Jolyglot" target="_blank" rel="external">https://github.com/VictorAlbertos/Jolyglot</a></p>
+<p>Agnostic Json abstraction to perform data binding operations for Android and Java</p>
+<hr>
+<p><strong>EasyWeather</strong>: <a href="https://github.com/code-crusher/EasyWeather" target="_blank" rel="external">https://github.com/code-crusher/EasyWeather</a></p>
+<p>天气，Easy and quick weather fetching from OpenWeatherMap API for Android</p>
+<hr>
+<p><strong>OpenWeatherMap-Android</strong>: <a href="https://github.com/seventhmoon/OpenWeatherMap-Android" target="_blank" rel="external">https://github.com/seventhmoon/OpenWeatherMap-Android</a></p>
+<p>天气，OpenWeatherMap Library and Sample</p>
+<hr>
+<p><strong>RemoveButterKnife</strong>: <a href="https://github.com/u3shadow/RemoveButterKnife" target="_blank" rel="external">https://github.com/u3shadow/RemoveButterKnife</a></p>
+<p>帮助去掉 ButterKnife 库的 android studio 插件</p>
+<p><img src="https://camo.githubusercontent.com/0327cda5b531ab6f2b803abe295c42225668d28d/687474703a2f2f7777772e7533636f64696e672e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031362f30362f312e676966" width="600"></p>
+<hr>
+<p><strong>MaterialDesignIcons</strong>: <a href="https://github.com/MrBIMC/MaterialDesignIcons" target="_blank" rel="external">https://github.com/MrBIMC/MaterialDesignIcons</a></p>
+<p>Lib that imports all the vector drawables from www.materialdesignicons.com into your R.drawable/</p>
+<hr>
+<p><strong>network-connection-class</strong>: <a href="https://github.com/facebook/network-connection-class" target="_blank" rel="external">https://github.com/facebook/network-connection-class</a></p>
+<p>facebook 出品的网速监测</p>
+<p><img src="https://raw.githubusercontent.com/facebook/network-connection-class/master/docs/images/bandwidth_averaging.png" width="640"></p>
+<hr>
+<p><strong>AndroidRandom</strong>: <a href="https://github.com/slmyldz/AndroidRandom" target="_blank" rel="external">https://github.com/slmyldz/AndroidRandom</a></p>
+<p>Simple random data generator for Android</p>
+<hr>
+<p><strong>reminder</strong>: <a href="https://github.com/OneCodeLabs/reminder" target="_blank" rel="external">https://github.com/OneCodeLabs/reminder</a></p>
+<p>保持 View 状态直到下次数据更新</p>
+<hr>
+<p><strong>GroupOfX</strong>: <a href="https://github.com/blipinsk/GroupOfX" target="_blank" rel="external">https://github.com/blipinsk/GroupOfX</a></p>
+<p>When Android’s Pair class is just not enough</p>
+<hr>
+<p><strong>user-validator</strong>: <a href="https://github.com/ShootrNetwork/user-validator" target="_blank" rel="external">https://github.com/ShootrNetwork/user-validator</a></p>
+<p>Library to validate username, email and passwords</p>
+<hr>
+<p><strong>agera-event-bus</strong>: <a href="https://github.com/drakeet/agera-event-bus" target="_blank" rel="external">https://github.com/drakeet/agera-event-bus</a></p>
+<p>一个关于 Agera 的裤子 用法和 RxBus 基本一样的 Agera Event Bus</p>
+<hr>
+<p><strong>AppUpdate</strong>: <a href="https://github.com/fccaikai/AppUpdate" target="_blank" rel="external">https://github.com/fccaikai/AppUpdate</a></p>
+<p>app更新</p>
+<p><img src="https://camo.githubusercontent.com/7a478c9eb83af712d69eec9cea62f7e0f74222f6/68747470733a2f2f7777332e73696e61696d672e636e2f6c617267652f303036744e62527767793166646875673136646e686a33306b6d306234676c752e6a7067" width="600"></p>
+<hr>
+<p><strong>LessCode-Update</strong>: <a href="https://github.com/openproject/LessCode-Update" target="_blank" rel="external">https://github.com/openproject/LessCode-Update</a></p>
+<p>兼容 Android7.0+ app更新</p>
+<hr>
+<p><strong>force-update</strong>: <a href="https://github.com/skoumalcz/force-update" target="_blank" rel="external">https://github.com/skoumalcz/force-update</a></p>
+<p>app 强制更新</p>
+<hr>
+<p><strong>UpdateApp</strong>: <a href="https://github.com/yaming116/UpdateApp" target="_blank" rel="external">https://github.com/yaming116/UpdateApp</a></p>
+<p>开箱即用的app更新，主要负责软件下载、软件安装等</p>
+<hr>
+<p><strong>update</strong>: <a href="https://github.com/czy1121/update" target="_blank" rel="external">https://github.com/czy1121/update</a></p>
+<p>清晰灵活简单易用的应用更新库</p>
+<p><img src="https://github.com/czy1121/update/raw/master/screenshot1.png" width="320"> <img src="https://github.com/czy1121/update/raw/master/screenshot4.png" width="320"></p>
+<hr>
+<p><strong>MAHAndroidUpdater</strong>: <a href="https://github.com/hummatli/MAHAndroidUpdater" target="_blank" rel="external">https://github.com/hummatli/MAHAndroidUpdater</a></p>
+<p>Android app update checker</p>
+<p><img src="https://github.com/hummatli/MAHAndroidUpdater/blob/master/imgs/updater_dlg.png" width="200px"> <img src="https://github.com/hummatli/MAHAndroidUpdater/blob/master/imgs/restricter_dlg.png" width="200px"></p>
+<hr>
+<p><strong>UpdatePlugin</strong>: <a href="https://github.com/yjfnypeu/UpdatePlugin" target="_blank" rel="external">https://github.com/yjfnypeu/UpdatePlugin</a></p>
+<p>可任意定制的app更新组件</p>
+<p><img src="https://raw.githubusercontent.com/yjfnypeu/UpdatePlugin/master/screenshots/default_strategy.gif" width="270"> <img src="https://raw.githubusercontent.com/yjfnypeu/UpdatePlugin/master/screenshots/default_all_dialog_show.gif" width="270"> <img src="https://raw.githubusercontent.com/yjfnypeu/UpdatePlugin/master/screenshots/default_auto_install.gif" width="270"></p>
+<hr>
+<p><strong>android-auto-update</strong>: <a href="https://github.com/feicien/android-auto-update" target="_blank" rel="external">https://github.com/feicien/android-auto-update</a></p>
+<p>Android 应用自动更新</p>
+<p><img src="https://camo.githubusercontent.com/8e0be231005184234cf715c5fc40bfbc0dac5bbb/68747470733a2f2f7261772e6769746875622e636f6d2f6665696369656e2f616e64726f69642d6175746f2d7570646174652f6d61737465722f73637265656e73686f74732f73616d706c652e706e67" width="320"> <img src="https://camo.githubusercontent.com/039c92955ce092a2e81cd6d4cd5203f31bf32c92/68747470733a2f2f7261772e6769746875622e636f6d2f6665696369656e2f616e64726f69642d6175746f2d7570646174652f6d61737465722f73637265656e73686f74732f6469616c6f672e706e67" width="320"></p>
+<hr>
+<p><strong>RainbowBridge</strong>: <a href="https://github.com/Sunzxyong/RainbowBridge" target="_blank" rel="external">https://github.com/Sunzxyong/RainbowBridge</a></p>
+<p>A safe JsBridge framework!</p>
+<p><img src="https://camo.githubusercontent.com/0c8c7c906d9cc6d517ae05c501920864add59c32/687474703a2f2f3778737778662e636f6d322e7a302e676c622e636c6f7564646e2e636f6d2f626c6f672f6a732e676966" width="320"></p>
+<hr>
+<p><strong>android-proguards</strong>: <a href="https://github.com/yongjhih/android-proguards" target="_blank" rel="external">https://github.com/yongjhih/android-proguards</a></p>
+<p>AAR proguards</p>
+<hr>
+<p><strong>AndroidProguardPlugin</strong>: <a href="https://github.com/zhonghanwen/AndroidProguardPlugin" target="_blank" rel="external">https://github.com/zhonghanwen/AndroidProguardPlugin</a></p>
+<p>生成混淆代码的 Android Studio 插件</p>
+<hr>
+<p><strong>RealmRepository</strong>: <a href="https://github.com/AleksanderMielczarek/RealmRepository" target="_blank" rel="external">https://github.com/AleksanderMielczarek/RealmRepository</a></p>
+<p>Generate Realm repositories</p>
+<hr>
+<p><strong>Kolumbus</strong>: <a href="https://github.com/MGaetan89/Kolumbus" target="_blank" rel="external">https://github.com/MGaetan89/Kolumbus</a></p>
+<p>浏览应用 Realm 数据库</p>
+<hr>
+<p><strong>RealmContactsForAndroid</strong>: <a href="https://github.com/SergioDim3nsions/RealmContactsForAndroid" target="_blank" rel="external">https://github.com/SergioDim3nsions/RealmContactsForAndroid</a></p>
+<p>This is an example for realm database in android</p>
+<hr>
+<p><strong>RebDroid</strong>: <a href="https://github.com/Snakeice/RebDroid" target="_blank" rel="external">https://github.com/Snakeice/RebDroid</a></p>
+<p>Realm DB browser and editor</p>
+<hr>
+<p><strong>requery</strong>: <a href="https://github.com/requery/requery" target="_blank" rel="external">https://github.com/requery/requery</a></p>
+<p>轻量但功能强大的ORM和SQL查询生成， 支持RxJava和Java8</p>
+<hr>
+<p><strong>material-design-dimens</strong>: <a href="https://github.com/DmitryMalkovich/material-design-dimens" target="_blank" rel="external">https://github.com/DmitryMalkovich/material-design-dimens</a></p>
+<p>MD 设计中的尺寸和颜色指导</p>
+<hr>
+<p><strong>FastBle</strong>: <a href="https://github.com/Jasonchenlijian/FastBle" target="_blank" rel="external">https://github.com/Jasonchenlijian/FastBle</a></p>
+<p>Android BLE 蓝牙开发框架，使用回调方式处理，搜索、连接、notify、indicate、读、写等一系列蓝牙操作</p>
+<hr>
+<p><strong>android-lite-bluetoothLE</strong>: <a href="https://github.com/litesuits/android-lite-bluetoothLE" target="_blank" rel="external">https://github.com/litesuits/android-lite-bluetoothLE</a></p>
+<p>Android低功耗蓝牙便捷操作框架，基于回调，完成蓝牙设备交互就像发送网络请求一样简单</p>
+<hr>
+<p><strong>android-utility</strong>: <a href="https://github.com/aaabidunique/android-utility" target="_blank" rel="external">https://github.com/aaabidunique/android-utility</a></p>
+<p>A handy set of utility for android</p>
+<hr>
+<p><strong>android-utils</strong>: <a href="https://github.com/nisrulz/android-utils" target="_blank" rel="external">https://github.com/nisrulz/android-utils</a></p>
+<p>Repository consisting of utility scripts/classes/packages</p>
+<hr>
+<p><strong>AndroidUtilCode</strong>: <a href="https://github.com/Blankj/AndroidUtilCode" target="_blank" rel="external">https://github.com/Blankj/AndroidUtilCode</a></p>
+<p>AndroidUtilCode</p>
+<hr>
+<p><strong>NonViewUtils</strong>: <a href="https://github.com/android-quick-dev/NonViewUtils" target="_blank" rel="external">https://github.com/android-quick-dev/NonViewUtils</a></p>
+<p>Android常用工具类</p>
+<hr>
+<p><strong>AndroidUtils</strong>: <a href="https://github.com/fengjingyu/AndroidUtils" target="_blank" rel="external">https://github.com/fengjingyu/AndroidUtils</a></p>
+<p>Android常用工具类</p>
+<hr>
+<p><strong>AndroidUtils</strong>: <a href="https://github.com/HJXANDHMR/AndroidUtils" target="_blank" rel="external">https://github.com/HJXANDHMR/AndroidUtils</a></p>
+<p>Android常用工具类</p>
+<hr>
+<p><strong>AndroidUtils</strong>: <a href="https://github.com/WuXiaolong/AndroidUtils" target="_blank" rel="external">https://github.com/WuXiaolong/AndroidUtils</a></p>
+<p>Android常用工具类</p>
+<hr>
+<p><strong>android-common</strong>: <a href="https://github.com/litesuits/android-common" target="_blank" rel="external">https://github.com/litesuits/android-common</a></p>
+<p>安卓开发通用类、辅助类、工具类的集合</p>
+<hr>
+<p><strong>Lazy</strong>: <a href="https://github.com/l123456789jy/Lazy" target="_blank" rel="external">https://github.com/l123456789jy/Lazy</a></p>
+<p>整理的常用的工具类，值得收藏</p>
+<hr>
+<p><strong>android-lite-go</strong>: <a href="https://github.com/litesuits/android-lite-go" target="_blank" rel="external">https://github.com/litesuits/android-lite-go</a></p>
+<p>LiteGo是一款基于Java语言的「异步并发类库」</p>
+<hr>
+<p><strong>ECTranslation</strong>: <a href="https://github.com/Skykai521/ECTranslation" target="_blank" rel="external">https://github.com/Skykai521/ECTranslation</a></p>
+<p>Android Studio 翻译插件,可以将英文翻译为中文.</p>
+<p><img src="https://raw.githubusercontent.com/Skykai521/ECTranslation/master/img/translation_img.png" width="640"></p>
+<hr>
+<p><strong>lib_download</strong>: <a href="https://github.com/wangdanlizhiyun/lib_download" target="_blank" rel="external">https://github.com/wangdanlizhiyun/lib_download</a></p>
+<p>处理异步下载的库</p>
+<hr>
+<p><strong>Fuse</strong>: <a href="https://github.com/kittinunf/Fuse" target="_blank" rel="external">https://github.com/kittinunf/Fuse</a></p>
+<p>Kotlin 语言编写的安卓 cache 库</p>
+<hr>
+<p><strong>ObservableScheduler</strong>: <a href="https://github.com/jiang111/ObservableScheduler" target="_blank" rel="external">https://github.com/jiang111/ObservableScheduler</a></p>
+<p>更好的管理线程间跳转的库</p>
+<hr>
+<p><strong>ShareUtil</strong>: <a href="https://github.com/shaohui10086/ShareUtil" target="_blank" rel="external">https://github.com/shaohui10086/ShareUtil</a></p>
+<p>简单的Android社会化分享登录库，一行代码搞定</p>
+<p><img src="https://raw.githubusercontent.com/shaohui10086/ShareUtil/master/preview/shareutil_share.gif" width="320"> <img src="https://raw.githubusercontent.com/shaohui10086/ShareUtil/master/preview/shareutil_login.gif" width="320"></p>
+<hr>
+<p><strong>IntentShare</strong>: <a href="https://github.com/tvbarthel/IntentShare" target="_blank" rel="external">https://github.com/tvbarthel/IntentShare</a></p>
+<p>提升”分享”体验的库</p>
+<hr>
+<p><strong>Sensey</strong>: <a href="https://github.com/nisrulz/Sensey" target="_blank" rel="external">https://github.com/nisrulz/Sensey</a></p>
+<p>手势检测</p>
+<hr>
+<p><strong>AsyncTaskScheduler</strong>: <a href="https://github.com/SilenceDut/AsyncTaskScheduler" target="_blank" rel="external">https://github.com/SilenceDut/AsyncTaskScheduler</a></p>
+<p>AsyncTask 替代者</p>
+<hr>
+<p><strong>thinr</strong>: <a href="https://github.com/bjoernQ/thinr" target="_blank" rel="external">https://github.com/bjoernQ/thinr</a></p>
+<p>AsyncTask 替代者</p>
+<hr>
+<p><strong>android-hidden-api</strong>: <a href="https://github.com/anggrayudi/android-hidden-api" target="_blank" rel="external">https://github.com/anggrayudi/android-hidden-api</a></p>
+<p>可直接查看、访问安卓 hide 与 internal API</p>
+<hr>
+<p><strong>RNCryptorNative</strong>: <a href="https://github.com/TGIO/RNCryptorNative" target="_blank" rel="external">https://github.com/TGIO/RNCryptorNative</a></p>
+<p>安卓加解密</p>
+<hr>
+<p><strong>PiracyChecker</strong>: <a href="https://github.com/javiersantos/PiracyChecker" target="_blank" rel="external">https://github.com/javiersantos/PiracyChecker</a></p>
+<p>保护你的 app 以防破解</p>
+<hr>
+<p><strong>multibackstack</strong>: <a href="https://github.com/JetradarMobile/multibackstack" target="_blank" rel="external">https://github.com/JetradarMobile/multibackstack</a></p>
+<p>安卓 回退栈管理</p>
+<hr>
+<p><strong>phrase</strong>: <a href="https://github.com/square/phrase" target="_blank" rel="external">https://github.com/square/phrase</a></p>
+<p>安卓 格式化字符串的库</p>
+<hr>
+<p><strong>UVCCamera</strong>: <a href="https://github.com/saki4510t/UVCCamera" target="_blank" rel="external">https://github.com/saki4510t/UVCCamera</a></p>
+<p>library and sample to access to UVC web camera on non-rooted Android device</p>
+<hr>
+<p><strong>AndroidUsbCamera</strong>: <a href="https://github.com/quanhua92/AndroidUsbCamera" target="_blank" rel="external">https://github.com/quanhua92/AndroidUsbCamera</a></p>
+<p>Use USB Webcam on non-rooted Android devices with UVCCamera library from saki4510t(above)</p>
+<hr>
+<p><strong>ParcelCheck</strong>: <a href="https://github.com/Commit451/ParcelCheck" target="_blank" rel="external">https://github.com/Commit451/ParcelCheck</a></p>
+<p>Simple test to see if all models in project correctly implement Parcelable</p>
+<hr>
+<p><strong>SimpleNFC</strong>: <a href="https://github.com/tawaasalage/SimpleNFC" target="_blank" rel="external">https://github.com/tawaasalage/SimpleNFC</a></p>
+<p>This is a sample project that include NFC value reading using insanely easy way</p>
+<hr>
+<p><strong>nordpol</strong>: <a href="https://github.com/fidesmo/nordpol" target="_blank" rel="external">https://github.com/fidesmo/nordpol</a></p>
+<p>The Android Support Library for NFC</p>
+<hr>
+<p><strong>ASimpleCache</strong>: <a href="https://github.com/yangfuhai/ASimpleCache" target="_blank" rel="external">https://github.com/yangfuhai/ASimpleCache</a></p>
+<p>一个为android制定的 轻量级的 开源缓存框架</p>
+<hr>
+<p><strong>android-UCToast</strong>: <a href="https://github.com/liaohuqiu/android-UCToast" target="_blank" rel="external">https://github.com/liaohuqiu/android-UCToast</a></p>
+<p>开机自动启动的 Service 监听剪切板。复制之后，在屏幕顶部显示一个悬浮窗，显示剪贴板内容。点击悬浮窗，跳转到 Activity 页面显示</p>
+<hr>
+<p><strong>KeyBoardDemo</strong>: <a href="https://github.com/wobiancao/KeyBoardDemo" target="_blank" rel="external">https://github.com/wobiancao/KeyBoardDemo</a></p>
+<p>Android 软键盘和emoji表情切换方案，和微信几乎一样的体验</p>
+<p><img src="https://camo.githubusercontent.com/df05b7b65a599ff861770b06e2d78f459defc0da/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f313231363033322d396363316635393663353835643433642e6769663f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970" width="320"></p>
+<hr>
+<p><strong>AndroidKeyboardWatcher</strong>: <a href="https://github.com/AzimoLabs/AndroidKeyboardWatcher" target="_blank" rel="external">https://github.com/AzimoLabs/AndroidKeyboardWatcher</a></p>
+<p>Software keyboard open/close watcher for Android</p>
+<p><img src="https://raw.githubusercontent.com/AzimoLabs/AndroidKeyboardWatcher/master/art/keyboard_shown.png" width="320"></p>
+<hr>
+<p><strong>android-keyboardlistener</strong>: <a href="https://github.com/ravindu1024/android-keyboardlistener" target="_blank" rel="external">https://github.com/ravindu1024/android-keyboardlistener</a></p>
+<p>An Android Keyboard visibility listener</p>
+<hr>
+<p><strong>JKeyboardPanelSwitch</strong>: <a href="https://github.com/Jacksgong/JKeyboardPanelSwitch" target="_blank" rel="external">https://github.com/Jacksgong/JKeyboardPanelSwitch</a></p>
+<p>Android键盘面板冲突 布局闪动处理方案</p>
+<p><img src="https://raw.githubusercontent.com/Jacksgong/JKeybordPanelSwitch/master/art/non-fullscreen_resolved.gif" width="320"> <img src="https://raw.githubusercontent.com/Jacksgong/JKeybordPanelSwitch/master/art/adjust_resolved.gif" width="320"></p>
+<hr>
+<p><strong>redex</strong>: <a href="https://github.com/facebook/redex" target="_blank" rel="external">https://github.com/facebook/redex</a></p>
+<p>facebook 出品的 apk 包优化工具 —— <a href="https://code.facebook.com/posts/1480969635539475/optimizing-android-bytecode-with-redex" target="_blank" rel="external">Optimizing Android bytecode with ReDex</a></p>
+<hr>
+<p><strong>enjarify</strong>: <a href="https://github.com/google/enjarify" target="_blank" rel="external">https://github.com/google/enjarify</a></p>
+<p>Enjarify is a tool for translating Dalvik bytecode to equivalent Java bytecode</p>
+<hr>
+<p><strong>CompositeAndroid</strong>: <a href="https://github.com/passsy/CompositeAndroid" target="_blank" rel="external">https://github.com/passsy/CompositeAndroid</a></p>
+<p>Composition over inheritance for Android components like Activity or Fragment</p>
+<hr>
+<p><strong>Dexer</strong>: <a href="https://github.com/zjutkz/Dexer" target="_blank" rel="external">https://github.com/zjutkz/Dexer</a></p>
+<p>一个轻量级的dex解析器</p>
+<hr>
+<p><strong>android-classyshark</strong>: <a href="https://github.com/google/android-classyshark" target="_blank" rel="external">https://github.com/google/android-classyshark</a></p>
+<p>apk 反编译工具</p>
+<hr>
+<p><strong>CipherSharedPrefs</strong>: <a href="https://github.com/Ufkoku/CipherSharedPrefs" target="_blank" rel="external">https://github.com/Ufkoku/CipherSharedPrefs</a></p>
+<p>Android shared preferences 加解密</p>
+<hr>
+<p><strong>secure-preferences</strong>: <a href="https://github.com/HussainDerry/secure-preferences" target="_blank" rel="external">https://github.com/HussainDerry/secure-preferences</a></p>
+<p>Android shared preferences AES 加解密</p>
+<hr>
+<p><strong>easyPrefs</strong>: <a href="https://github.com/Xstar97/easyPrefs" target="_blank" rel="external">https://github.com/Xstar97/easyPrefs</a></p>
+<p>easily use android preferences(the easy way!)</p>
+<hr>
+<p><strong>preferator</strong>: <a href="https://github.com/Sloy/preferator" target="_blank" rel="external">https://github.com/Sloy/preferator</a></p>
+<p>开发辅助工具，帮助你快速的在 Android 端修改 SharedPreference，以达到测试的目的</p>
+<hr>
+<p><strong>UniversalPreferences</strong>: <a href="https://github.com/Zookey/UniversalPreferences" target="_blank" rel="external">https://github.com/Zookey/UniversalPreferences</a></p>
+<p>use Shared Preferences in an easy way</p>
+<hr>
+<p><strong>tiamat</strong>: <a href="https://github.com/hotchemi/tiamat" target="_blank" rel="external">https://github.com/hotchemi/tiamat</a></p>
+<p>Reactive SharedPreferences code generator for Android</p>
+<hr>
+<p><strong>EncryptedPreferences</strong>: <a href="https://github.com/PDDStudio/EncryptedPreferences" target="_blank" rel="external">https://github.com/PDDStudio/EncryptedPreferences</a></p>
+<p>SharedPreferences AES-256 加密</p>
+<hr>
+<p><strong>Secured-Preference-Store</strong>: <a href="https://github.com/iamMehedi/Secured-Preference-Store" target="_blank" rel="external">https://github.com/iamMehedi/Secured-Preference-Store</a></p>
+<p>SharedPreferences 加密</p>
+<hr>
+<p><strong>Secured-Preference-Store</strong>: <a href="https://github.com/iamMehedi/Secured-Preference-Store" target="_blank" rel="external">https://github.com/iamMehedi/Secured-Preference-Store</a></p>
+<p>Easy SharedPreference 封装库A SharedPreference wrapper for Android that encrypts the content with 256 bit AES encryption. The Encryption key is securely stored in device’s KeyStore</p>
+<hr>
+<p><strong>Android-Shared-Preferences-TinyDB-</strong>: <a href="https://github.com/mukeshsolanki/Android-Shared-Preferences-TinyDB-" target="_blank" rel="external">https://github.com/mukeshsolanki/Android-Shared-Preferences-TinyDB-</a></p>
+<p>Easy SharedPreference 封装库</p>
+<hr>
+<p><strong>esperandro</strong>: <a href="https://github.com/dkunzler/esperandro" target="_blank" rel="external">https://github.com/dkunzler/esperandro</a></p>
+<p>Easy SharedPreference Engine foR ANDROid <a href="http://dkunzler.github.io/esperandro" target="_blank" rel="external">http://dkunzler.github.io/esperandro</a></p>
+<hr>
+<p><strong>AnyPref</strong>: <a href="https://github.com/NashLegend/AnyPref" target="_blank" rel="external">https://github.com/NashLegend/AnyPref</a></p>
+<p>SharedPreferences实用工具类，可直接保存与读取实例对象，SharedPreferences中的ORM</p>
+<hr>
+<p><strong>Prefs</strong>: <a href="https://github.com/GrenderG/Prefs" target="_blank" rel="external">https://github.com/GrenderG/Prefs</a></p>
+<p>Simple Android SharedPreferences wrapper</p>
+<hr>
+<p><strong>TurboDex</strong>: <a href="https://github.com/asLody/TurboDex" target="_blank" rel="external">https://github.com/asLody/TurboDex</a></p>
+<p>在Android瞬间加载Dex</p>
+<hr>
+<p><strong>legend</strong>: <a href="https://github.com/asLody/legend" target="_blank" rel="external">https://github.com/asLody/legend</a></p>
+<p>A framework for hook java methods</p>
+<hr>
+<p><strong>deviceinfo</strong>: <a href="https://github.com/eyeem/deviceinfo" target="_blank" rel="external">https://github.com/eyeem/deviceinfo</a></p>
+<p>Easy info about Android device</p>
+<hr>
+<p><strong>easydeviceinfo</strong>: <a href="https://github.com/nisrulz/easydeviceinfo" target="_blank" rel="external">https://github.com/nisrulz/easydeviceinfo</a></p>
+<p>Android library to get device information in a super easy way</p>
+<p><img src="https://lh3.googleusercontent.com/AP5TSBhKZPshN1XR_0ifvU6D0_sU7rL6GJb3Pn0Czlwp4EhwW69adKGh_8558_L_2A=h900-rw" width="320"></p>
+<hr>
+<p><strong>NavigationViewManager</strong>: <a href="https://github.com/rubensousa/NavigationViewManager" target="_blank" rel="external">https://github.com/rubensousa/NavigationViewManager</a></p>
+<p>A simple helper library to separate navigation logic from your MainActivity and reduce boilerplate</p>
+<hr>
+<p><strong>ActivityRouter</strong>: <a href="https://github.com/mzule/ActivityRouter" target="_blank" rel="external">https://github.com/mzule/ActivityRouter</a></p>
+<p>Router activities</p>
+<p><img src="https://raw.githubusercontent.com/mzule/ActivityRouter/master/gif/router.gif" width="320"> <img src="https://raw.githubusercontent.com/mzule/ActivityRouter/master/gif/http.gif" width="320"></p>
+<hr>
+<p><strong>UIBlock</strong>: <a href="https://github.com/tianzhijiexian/UIBlock" target="_blank" rel="external">https://github.com/tianzhijiexian/UIBlock</a></p>
+<p>代替 fragment 的轻量级解耦UI的类，解决 fragment 嵌套问题</p>
+<p><img src="https://raw.githubusercontent.com/tianzhijiexian/UiBlock/master/images/demo02.png" width="480"> <img src="https://raw.githubusercontent.com/tianzhijiexian/UiBlock/master/images/demo03.jpg" width="480"></p>
+<hr>
+<p><strong>AutoCrashReporter</strong>: <a href="https://github.com/devsideal/AutoCrashReporter" target="_blank" rel="external">https://github.com/devsideal/AutoCrashReporter</a></p>
+<p>ACR is an android library to simplify crash detection while your app is under development, crash will be automatically detect by the library then app tester/user can easily send the crash report on one click to developer that will help him to fix the issue</p>
+<p><img src="https://raw.githubusercontent.com/devsideal/AutoCrashReporter/master/assets/acr_demo.gif" width="280"></p>
+<hr>
+<p><strong>android-easy-crash-handle</strong>: <a href="https://github.com/Mauiie/android-easy-crash-handle" target="_blank" rel="external">https://github.com/Mauiie/android-easy-crash-handle</a></p>
+<p>一个很容易使用的Android异常捕获、收集、提交的组件</p>
+<hr>
+<p><strong>Bugtags-Android</strong>: <a href="https://github.com/bugtags/Bugtags-Android" target="_blank" rel="external">https://github.com/bugtags/Bugtags-Android</a></p>
+<p>Simple and effective bug &amp; crash reporting tool for Android apps <a href="http://bugtags.com/" target="_blank" rel="external">http://bugtags.com/</a></p>
+<p><img src="https://github.com/bugtags/Bugtags-Android/blob/master/screenshot/usage.gif" width="320"></p>
+<hr>
+<p><strong>PermissionGrantor</strong>: <a href="https://github.com/dfqin/PermissionGrantor" target="_blank" rel="external">https://github.com/dfqin/PermissionGrantor</a></p>
+<p>一行代码搞定Android6.0动态权限授权</p>
+<p><img src="https://raw.githubusercontent.com/dfqin/PermissionGrantor/master/grant1.gif" width="270"> <img src="https://raw.githubusercontent.com/dfqin/PermissionGrantor/master/grant2.gif" width="270"> <img src="https://raw.githubusercontent.com/dfqin/PermissionGrantor/master/grant3.gif" width="270"></p>
+<hr>
+<p><strong>PermissionManager</strong>: <a href="https://github.com/TheBrownArrow/PermissionManager" target="_blank" rel="external">https://github.com/TheBrownArrow/PermissionManager</a></p>
+<p>Permission Manager is easily manage Android Marshmallow and nougat runtime permissions</p>
+<hr>
+<p><strong>PermissionManager</strong>: <a href="https://github.com/AdamMc331/PermissionsManager" target="_blank" rel="external">https://github.com/AdamMc331/PermissionsManager</a></p>
+<p>PermissionsManager library that has base activity and fragment that extend from AppCompatActivity to ease with the handling of runtime permissions</p>
+<hr>
+<p><strong>PermissionHelper</strong>: <a href="https://github.com/nirav-tukadiya/PermissionHelper" target="_blank" rel="external">https://github.com/nirav-tukadiya/PermissionHelper</a></p>
+<p>6.0 运行时权限助手</p>
+<hr>
+<p><strong>Simplify-Permissions</strong>: <a href="https://github.com/anshulagarwal06/Simplify-Permissions" target="_blank" rel="external">https://github.com/anshulagarwal06/Simplify-Permissions</a></p>
+<p>Framework to simplify android marshmallow permission support</p>
+<hr>
+<p><strong>permissionHelper</strong>: <a href="https://github.com/firetrap/permissionHelper" target="_blank" rel="external">https://github.com/firetrap/permissionHelper</a></p>
+<p>Android 6.0 Permission Helper</p>
+<hr>
+<p><strong>Kotlin-Android-Permissions-DeviceInfo</strong>: <a href="https://github.com/AnirudhLoya/Kotlin-Android-Permissions-DeviceInfo" target="_blank" rel="external">https://github.com/AnirudhLoya/Kotlin-Android-Permissions-DeviceInfo</a></p>
+<p>Android 6.0权限管理 Kotlin way</p>
+<p><img src="https://raw.githubusercontent.com/AnirudhLoya/Kotlin-Android-Permissions-DeviceInfo/master/device-2016-09-24-183505.png" width="320"> <img src="https://raw.githubusercontent.com/AnirudhLoya/Kotlin-Android-Permissions-DeviceInfo/master/call_permission.png" width="320"></p>
+<hr>
+<p><strong>Permissify</strong>: <a href="https://github.com/holidaycheck/Permissify" target="_blank" rel="external">https://github.com/holidaycheck/Permissify</a></p>
+<p>Android 又一个6.0权限管理</p>
+<p><img src="https://raw.githubusercontent.com/holidaycheck/Permissify/master/art/sample_record.gif" width="290"></p>
+<hr>
+<p><strong>allowme</strong>: <a href="https://github.com/aitorvs/allowme" target="_blank" rel="external">https://github.com/aitorvs/allowme</a></p>
+<p>Simple library to handle Android M permissions</p>
+<hr>
+<p><strong>permissive</strong>: <a href="https://github.com/jksiezni/permissive" target="_blank" rel="external">https://github.com/jksiezni/permissive</a></p>
+<p>A lightweight Android library for permissions handling at runtime</p>
+<p><img src="https://raw.githubusercontent.com/jksiezni/permissive/gh-pages/images/screenshots/educate_up_front.png" width="270"> <img src="https://raw.githubusercontent.com/jksiezni/permissive/gh-pages/images/screenshots/educate_in_context.png" width="270"> <img src="https://raw.githubusercontent.com/jksiezni/permissive/gh-pages/images/screenshots/ask_in_context.png" width="270"></p>
+<hr>
+<p><strong>FcPermissions</strong>: <a href="https://github.com/lypeer/FcPermissions" target="_blank" rel="external">https://github.com/lypeer/FcPermissions</a></p>
+<p>6.0权限管理</p>
+<p><img src="https://camo.githubusercontent.com/b0d132cc990213eb71ac0139163ff5f60efd71d1/687474703a2f2f61632d636e797634376c612e636c6f7564646e2e636f6d2f646162313765333731343630313138372e676966" width="230"></p>
+<hr>
+<p><strong>PermissionDispatcher</strong>: <a href="https://github.com/a1018875550/PermissionDispatcher" target="_blank" rel="external">https://github.com/a1018875550/PermissionDispatcher</a></p>
+<p>6.0权限管理，适配 miui 系统</p>
+<hr>
+<p><strong>HeiPermission</strong>: <a href="https://github.com/forJrking/HeiPermission" target="_blank" rel="external">https://github.com/forJrking/HeiPermission</a></p>
+<p>一句代码搞定 Android M 动态权限检测</p>
+<hr>
+<p><strong>PrivilegedTask</strong>: <a href="https://github.com/nillith/PrivilegedTask" target="_blank" rel="external">https://github.com/nillith/PrivilegedTask</a></p>
+<p>An android runtime permissions utility simplifies the requesting and decoupling tasks from Activity and Fragment</p>
+<hr>
+<p><strong>PermissionUtils</strong>: <a href="https://github.com/rebus007/PermissionUtils" target="_blank" rel="external">https://github.com/rebus007/PermissionUtils</a></p>
+<p>Check marshmallow permission easily <a href="https://rebus007.github.io/PermissionUtils/" target="_blank" rel="external">https://rebus007.github.io/PermissionUtils/</a></p>
+<hr>
+<p><strong>permissionHelper</strong>: <a href="https://github.com/ayz4sci/permissionHelper" target="_blank" rel="external">https://github.com/ayz4sci/permissionHelper</a></p>
+<p>permissionHelper for Android M</p>
+<hr>
+<p><strong>EasyPermissions</strong>: <a href="https://github.com/lalosoft/EasyPermissions" target="_blank" rel="external">https://github.com/lalosoft/EasyPermissions</a></p>
+<p>A simple android library to request permissions in runtime</p>
+<hr>
+<p><strong>easypermissions</strong>: <a href="https://github.com/googlesamples/easypermissions" target="_blank" rel="external">https://github.com/googlesamples/easypermissions</a></p>
+<p>Simplify Android M system permissions</p>
+<hr>
+<p><strong>permissions-dispatcher-plugin</strong>:<a href="https://github.com/shiraji/permissions-dispatcher-plugin" target="_blank" rel="external">https://github.com/shiraji/permissions-dispatcher-plugin</a></p>
+<p>IntelliJ plugin for supporting PermissionsDispatcher</p>
+<p><img src="https://raw.githubusercontent.com/shiraji/permissions-dispatcher-plugin/master/website/images/pd.gif" width="600"></p>
+<hr>
+<p><strong>TedPermission</strong>: <a href="https://github.com/ParkSangGwon/TedPermission" target="_blank" rel="external">https://github.com/ParkSangGwon/TedPermission</a></p>
+<p>Easy check permission library for Android Marshmallow</p>
+<p><img src="https://raw.githubusercontent.com/ParkSangGwon/TedPermission/master/Screenshot.png" width="480"></p>
+<hr>
+<p><strong>App-Runtime-Permissions-Android</strong>: <a href="https://github.com/mukeshsolanki/App-Runtime-Permissions-Android" target="_blank" rel="external">https://github.com/mukeshsolanki/App-Runtime-Permissions-Android</a></p>
+<p>Speed up your work with new Runtime Permissions introduced in Android M</p>
+<p><img src="https://camo.githubusercontent.com/6863a1cb3f7e3fb57a8f70d99e8bcc8d00b4f0bb/687474703a2f2f7069632e796f756d6f62696c652e6f72672f696d6763646e2f4170702d7065726d697373696f6e732d636f6d696e672d696e2d416e64726f69642d4d2e6a7067" width="300"></p>
+<hr>
+<p><strong>Dexter</strong>: <a href="https://github.com/Karumi/Dexter" target="_blank" rel="external">https://github.com/Karumi/Dexter</a></p>
+<p>Android library that simplifies the process of requesting permissions at runtime. <a href="http://karumi.com" target="_blank" rel="external">http://karumi.com</a></p>
+<p><img src="https://github.com/Karumi/Dexter/blob/master/art/sample.gif" width="320"></p>
+<hr>
+<p><strong>Ask</strong>: <a href="https://github.com/00ec454/Ask" target="_blank" rel="external">https://github.com/00ec454/Ask</a></p>
+<p>Android runtime permission make easy</p>
+<p><img src="https://github.com/00ec454/Ask/blob/master/asset/permission_1.png" width="320"> <img src="https://github.com/00ec454/Ask/blob/master/asset/rationale.png" width="320"></p>
+<hr>
+<p><strong>AndroidPopWinPermission</strong>: <a href="https://github.com/bunnyblue/AndroidPopWinPermission" target="_blank" rel="external">https://github.com/bunnyblue/AndroidPopWinPermission</a></p>
+<p>Android SYSTEM_ALERT PERMISSION CHECK</p>
+<hr>
+<p><strong>PermissionEverywhere</strong>: <a href="https://github.com/kaknazaveshtakipishi/PermissionEverywhere" target="_blank" rel="external">https://github.com/kaknazaveshtakipishi/PermissionEverywhere</a></p>
+<p>Library enables to request a permission from any Context(Service, IntentService, etc)</p>
+<p><img src="https://github.com/kaknazaveshtakipishi/PermissionEverywhere/blob/master/art/screenshot.png" width="320"></p>
+<hr>
+<p><strong>keytool-importkeypair</strong>: <a href="https://github.com/getfatday/keytool-importkeypair" target="_blank" rel="external">https://github.com/getfatday/keytool-importkeypair</a></p>
+<p>为已存在的签名文件添加系统权限签名，可直接编译运行</p>
+<hr>
+<p><strong>apkReSign</strong>: <a href="https://github.com/pengwei1024/apkReSign" target="_blank" rel="external">https://github.com/pengwei1024/apkReSign</a></p>
+<p>安卓一键重签名工具</p>
+<p><img src="https://github.com/pengwei1024/apkReSign/blob/master/screenshots/screenshot01.png" width="320"></p>
+<hr>
+<p><strong>AndroidKeyboardWatcher</strong>: <a href="https://github.com/AzimoLabs/AndroidKeyboardWatcher" target="_blank" rel="external">https://github.com/AzimoLabs/AndroidKeyboardWatcher</a></p>
+<p>Software keyboard open/close watcher for Android</p>
+<p><img src="https://raw.githubusercontent.com/AzimoLabs/AndroidKeyboardWatcher/master/art/keyboard_shown.png" width="320"></p>
+<hr>
+<p><strong>Treasure</strong>: <a href="https://github.com/baoyongzhang/Treasure" target="_blank" rel="external">https://github.com/baoyongzhang/Treasure</a></p>
+<p>Very easy to use wrapper library for Android SharePreferences</p>
+<p><code>Treasure</code>是一个Android平台上基于<code>SharePreferences</code>的偏好存储库，只需要定义接口，无需编写实现。运行时0反射，不仅使用方便而且性能和原生写法几乎无差别。</p>
+<hr>
+<p><strong>Favor</strong>: <a href="https://github.com/soarcn/Favor" target="_blank" rel="external">https://github.com/soarcn/Favor</a></p>
+<p>A easy way to use android sharepreference <a href="http://cocosw.com/Favor/" target="_blank" rel="external">http://cocosw.com/Favor/</a></p>
+<hr>
+<p><strong>android-sql-logging</strong>：<a href="https://github.com/explodes/android-sql-logging" target="_blank" rel="external">https://github.com/explodes/android-sql-logging</a></p>
+<p>App-local sql logging with viewer activity</p>
+<p><img src="https://camo.githubusercontent.com/9b5fc15a1484dddcf4d86b646b3896ea368926a6/687474703a2f2f692e696d6775722e636f6d2f746e65415541462e706e67" width="400"></p>
+<hr>
+<p><strong>FLogger</strong>：<a href="https://github.com/cyfonly/FLogger" target="_blank" rel="external">https://github.com/cyfonly/FLogger</a></p>
+<p>基于双缓冲队列、多刷盘机制的超轻量级 java 日志</p>
+<hr>
+<p><strong>LogFilter</strong>：<a href="https://github.com/smart-fun/LogFilter" target="_blank" rel="external">https://github.com/smart-fun/LogFilter</a></p>
+<p>Simple Android library which filters Logs, for example by keeping only ERROR LOGS in RELEASE MODE</p>
+<hr>
+<p><strong>XLog</strong>：<a href="https://github.com/Qiu800820/XLog" target="_blank" rel="external">https://github.com/Qiu800820/XLog</a></p>
+<p>追踪上线BUG,自动保存,管理LOG,一键上传</p>
+<hr>
+<p><strong>xLog</strong>：<a href="https://github.com/elvishew/xLog" target="_blank" rel="external">https://github.com/elvishew/xLog</a></p>
+<p>Android logger, simple and pretty, powerful and flexible, all you need is here</p>
+<p><img src="https://raw.githubusercontent.com/elvishew/XLog/master/images/classic_log.png" width="640"></p>
+<hr>
+<p><strong>LogcatTextView</strong>：<a href="https://github.com/munix/LogcatTextView" target="_blank" rel="external">https://github.com/munix/LogcatTextView</a></p>
+<p>帮助你在 App 端，查看 Logcat 输出信息</p>
+<p><img src="https://raw.githubusercontent.com/munix/LogcatTextView/master/screenshots/example.png" width="400"></p>
+<hr>
+<p><strong>Console</strong>：<a href="https://github.com/jraska/Console" target="_blank" rel="external">https://github.com/jraska/Console</a></p>
+<p>可在手机上查看 <code>logcat</code></p>
+<p><img src="https://raw.githubusercontent.com/jraska/Console/master/images/sample_screen.png" width="400"></p>
+<hr>
+<p><strong>Lynx</strong>：<a href="https://github.com/pedrovgs/Lynx" target="_blank" rel="external">https://github.com/pedrovgs/Lynx</a></p>
+<p>可在手机上查看 <code>logcat</code></p>
+<p><img src="https://github.com/pedrovgs/Lynx/blob/master/art/screenshot_demo_1.gif" width="320"></p>
+<hr>
+<p><strong>LogcatViewer</strong>: <a href="https://github.com/fatangare/LogcatViewer" target="_blank" rel="external">https://github.com/fatangare/LogcatViewer</a></p>
+<p>可在手机上查看 <code>logcat</code></p>
+<p><img src="https://github.com/fatangare/LogcatViewer/blob/master/Images/mainview.png" width="240"> <img src="https://github.com/fatangare/LogcatViewer/blob/master/Images/filter.png" width="320"></p>
+<hr>
+<p><strong>jlog</strong>: <a href="https://github.com/JiongBull/jlog" target="_blank" rel="external">https://github.com/JiongBull/jlog</a></p>
+<p>jlog是一款针对Android开发者的日志工具</p>
+<p><img src="https://camo.githubusercontent.com/753ce906b6ba7cff9d2d0c3e66c783139e934bfd/687474703a2f2f3778697a65382e636f6d312e7a302e676c622e636c6f7564646e2e636f6d2f6a6c6f675f73616d706c652e676966" width="640"></p>
+<hr>
+<p><strong>Android-PLog</strong>: <a href="https://github.com/Muyangmin/Android-PLog" target="_blank" rel="external">https://github.com/Muyangmin/Android-PLog</a></p>
+<p>Android 专用日志封装库，轻巧易用，高扩展性</p>
+<p><img src="https://raw.githubusercontent.com/Muyangmin/Android-PLog/master/ScreenShot.png" width="640"></p>
+<hr>
+<p><strong>KLog</strong>: <a href="https://github.com/ZhaoKaiQiang/KLog" target="_blank" rel="external">https://github.com/ZhaoKaiQiang/KLog</a></p>
+<p>Android LogCat 工具类，支持行号、所在函数、点击自动跳转、Json格式自定解析打印等功能。</p>
+<p><img src="https://github.com/ZhaoKaiQiang/KLog/blob/master/image/demo.gif" width="640"></p>
+<hr>
+<p><strong>logger</strong>: <a href="https://github.com/orhanobut/logger" target="_blank" rel="external">https://github.com/orhanobut/logger</a></p>
+<p>Simple, pretty and powerful logger for android</p>
+<p><img src="https://github.com/orhanobut/logger/blob/master/images/custom-tag.png" width="480"></p>
+<hr>
+<p><strong>shelly</strong>: <a href="https://github.com/jtribe/shelly" target="_blank" rel="external">https://github.com/jtribe/shelly</a></p>
+<p>Fluent API for common <strong>Intent</strong> use-cases for Android</p>
+<p>This library wraps Intents with a clean and simple to understand interface for a number of specific use-cases.</p>
+<p>eg: Sharing some text and a url, the url is appended onto the text such that this shares “text with url <a href="http://www.jtribe.com.au" target="_blank" rel="external">http://www.jtribe.com.au</a>“:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><div class="line">Shelly.share(context)</div><div class="line">  .text(<span class="string">"text with url"</span>)</div><div class="line">  .url(<span class="string">"http://www.jtribe.com.au"</span>)</div><div class="line">  .send();</div></pre></td></tr></table></figure>
+<hr>
+<p><strong>LoganSquare</strong>: <a href="https://github.com/bluelinelabs/LoganSquare" target="_blank" rel="external">https://github.com/bluelinelabs/LoganSquare</a></p>
+<p>Screaming fast JSON parsing and serialization library for Android.</p>
+<p><img src="https://github.com/bluelinelabs/LoganSquare/blob/master/docs/benchmarks.jpg" width="640"></p>
+<hr>
+<p><strong>Recovery</strong>: <a href="https://github.com/Sunzxyong/Recovery" target="_blank" rel="external">https://github.com/Sunzxyong/Recovery</a></p>
+<p>App 崩溃后，帮助你恢复现场并查看崩溃信息的库，在开发阶段相当实用，建议大家集成进去节省些开发时间</p>
+<p><img src="https://camo.githubusercontent.com/679c1c2da9b22e690b99de8c232408b52fcc8639/687474703a2f2f3778737778662e636f6d322e7a302e676c622e71696e697563646e2e636f6d2f626c6f672f5265636f766572792e706e67" width="640"></p>
+<hr>
+<p><strong>FireCrasher</strong>: <a href="https://github.com/osama-raddad/FireCrasher" target="_blank" rel="external">https://github.com/osama-raddad/FireCrasher</a></p>
+<p>FireCrasher is a Uncaught Exceptions handler library for android</p>
+<hr>
+<p><strong>CustomActivityOnCrash</strong>: <a href="https://github.com/Ereza/CustomActivityOnCrash" target="_blank" rel="external">https://github.com/Ereza/CustomActivityOnCrash</a></p>
+<p>Android library that allows launching a custom activity when your app crashes, instead of showing the hated “Unfortunately, X has stopped” dialog.</p>
+<p><img src="https://github.com/Ereza/CustomActivityOnCrash/blob/master/images/frontpage.png" width="640"></p>
+<hr>
+<p><strong>bee</strong>: <a href="https://github.com/orhanobut/bee" target="_blank" rel="external">https://github.com/orhanobut/bee</a></p>
+<p>Debug and QA tool for android</p>
+<p><img src="https://github.com/orhanobut/bee/blob/master/images/bee_settings.png" width="320"> <img src="https://github.com/orhanobut/bee/blob/master/images/bee_info.png" width="320"></p>
+<hr>
+<p><strong>walle</strong>: <a href="https://github.com/Meituan-Dianping/walle" target="_blank" rel="external">https://github.com/Meituan-Dianping/walle</a></p>
+<p>Android Signature V2 Scheme签名下的新一代渠道包打包神器</p>
+<hr>
+<p><strong>ApkMultiChannelPlugin</strong>: <a href="https://github.com/nukc/ApkMultiChannelPlugin" target="_blank" rel="external">https://github.com/nukc/ApkMultiChannelPlugin</a></p>
+<p>Android 多渠道打包的 Android Studio / IDEA 插件</p>
+<p><img src="https://raw.githubusercontent.com/nukc/ApkMultiChannelPlugin/master/art/setting.png" width="320"></p>
+<hr>
+<p><strong>ApkChannelBuilder</strong>: <a href="https://github.com/baoyongzhang/ApkChannelBuilder" target="_blank" rel="external">https://github.com/baoyongzhang/ApkChannelBuilder</a></p>
+<p>一个 Mac App，用于 Apk 多渠道打包</p>
+<p><img src="https://raw.githubusercontent.com/baoyongzhang/ApkChannelBuilder/master/Screenshots/storyboard.png" width="480"></p>
+<hr>
+<p><strong>ApkCustomizationTool</strong>: <a href="https://github.com/SSOOnline/ApkCustomizationTool" target="_blank" rel="external">https://github.com/SSOOnline/ApkCustomizationTool</a></p>
+<p>apk多渠道打包定制工具</p>
+<p><img src="https://raw.githubusercontent.com/SSOOnline/ApkCustomizationTool/master/screenshot/2.png" width="480"></p>
+<hr>
+<p><strong>LessCode</strong>: <a href="https://github.com/openproject/LessCode" target="_blank" rel="external">https://github.com/openproject/LessCode</a></p>
+<p>less code, more efficient for android</p>
+<hr>
+<p><strong>JustWeTools</strong>: <a href="https://github.com/lfkdsk/JustWeTools" target="_blank" rel="external">https://github.com/lfkdsk/JustWeTools</a></p>
+<p>Some useful tools</p>
+<p><img src="https://raw.githubusercontent.com/lfkdsk/JustWeTools/master/picture/markdown.png" width="320"> <img src="https://raw.githubusercontent.com/lfkdsk/JustWeTools/master/picture/VerTextView.png" width="320"> <img src="https://raw.githubusercontent.com/lfkdsk/JustWeTools/master/picture/gif.gif" width="480"> <img src="https://raw.githubusercontent.com/lfkdsk/JustWeTools/master/picture/clock.png" width="240"></p>
+<p>–</p>
+<p><strong>FileDownloader</strong>: <a href="https://github.com/lingochamp/FileDownloader" target="_blank" rel="external">https://github.com/lingochamp/FileDownloader</a></p>
+<p>Multitask、Breakpoint-resume、High-concurrency、Simple to use、Single-process</p>
+<p><img src="https://raw.githubusercontent.com/lingochamp/FileDownloader/master/art/serial_tasks_demo.gif" width="320"></p>
+<hr>
+<p><strong>freeline</strong>: <a href="https://github.com/alibaba/freeline" target="_blank" rel="external">https://github.com/alibaba/freeline</a></p>
+<p>阿里开源的Android平台上的秒级编译方案</p>
+<hr>
+<p><strong>leakcanary</strong>: <a href="https://github.com/square/leakcanary" target="_blank" rel="external">https://github.com/square/leakcanary</a></p>
+<p>A memory leak detection library for Android and Java.</p>
+<p><img src="https://github.com/square/leakcanary/blob/master/assets/screenshot.png" width="480"></p>
+<hr>
+<p><strong>BlockCanaryEx</strong>: <a href="https://github.com/lqcandqq13/BlockCanaryEx" target="_blank" rel="external">https://github.com/lqcandqq13/BlockCanaryEx</a></p>
+<p>blockcanary 升级版</p>
+<p><img src="https://raw.githubusercontent.com/lqcandqq13/BlockCanaryEx/master/sample.png" width="320"></p>
+<hr>
+<p><strong>AndroidPerformanceMonitor</strong>: <a href="https://github.com/markzhai/AndroidPerformanceMonitor" target="_blank" rel="external">https://github.com/markzhai/AndroidPerformanceMonitor</a></p>
+<p>(blockcanary)安卓卡顿检测. <a href="http://blog.zhaiyifan.cn/2016/01/16/BlockCanaryTransparentPerformanceMonitor/" target="_blank" rel="external">http://blog.zhaiyifan.cn/2016/01/16/BlockCanaryTransparentPerformanceMonitor/</a></p>
+<p><img src="https://github.com/moduth/blockcanary/blob/master/art/shot1.png" width="320"></p>
+<hr>
+<p><strong>GT</strong>: <a href="https://github.com/TencentOpen/GT" target="_blank" rel="external">https://github.com/TencentOpen/GT</a></p>
+<p>GT（随身调）是APP的<code>随身调试</code>平台，它是直接运行在手机上的“集成调试环境”(IDTE, Integrated Debug Environment)。</p>
+<p><img src="https://cloud.githubusercontent.com/assets/7868514/12535227/6b03940a-c2b7-11e5-91c7-c0c71d76295d.png" width="320"></p>
+<hr>
+<p><strong>moshi</strong>: <a href="https://github.com/square/moshi" target="_blank" rel="external">https://github.com/square/moshi</a></p>
+<p>A modern JSON library for Android and Java.</p>
+<hr>
+<p><strong>LocationManager</strong>: <a href="https://github.com/yayaa/LocationManager" target="_blank" rel="external">https://github.com/yayaa/LocationManager</a></p>
+<p>Simplify getting user’s location for Android</p>
+<hr>
+<p><strong>MarsDaemon</strong>: <a href="https://github.com/Marswin/MarsDaemon" target="_blank" rel="external">https://github.com/Marswin/MarsDaemon</a></p>
+<p>一个轻量级的库，配置几行代码，就可以实现在 android 上实现进程常驻，也就是在系统强杀下，以及 360 获取 root 权限下，clean master 获取 root 权限下都无法杀死进程</p>
+<hr>
+<p><strong>BluetoothHelper</strong>: <a href="https://github.com/a-voyager/BluetoothHelper" target="_blank" rel="external">https://github.com/a-voyager/BluetoothHelper</a></p>
+<p>Bluetooth Helper Library.—-蓝牙操作库</p>
+<hr>
+<p><strong>Bleep</strong>: <a href="https://github.com/tamir7/Bleep" target="_blank" rel="external">https://github.com/tamir7/Bleep</a></p>
+<p>Thin wrapper around the Android Bluetooth LE API</p>
+<hr>
+<p><strong>AndroidDevMetrics</strong>: <a href="https://github.com/frogermcs/AndroidDevMetrics" target="_blank" rel="external">https://github.com/frogermcs/AndroidDevMetrics</a></p>
+<p>Performance metrics library for Android development (includes dagger2metrics)</p>
+<p><img src="https://raw.githubusercontent.com/frogermcs/androiddevmetrics/master/art/activities_metrics.png" width="480"></p>
+<hr>
+<p><strong>MAHAds</strong>: <a href="https://github.com/hummatli/MAHAds" target="_blank" rel="external">https://github.com/hummatli/MAHAds</a></p>
+<p>Library for advertisement own apps through your other apps</p>
+<h2 id=""><a href="#" class="headerlink" title=" "></a><img src="https://github.com/hummatli/MAHAds/blob/master/imgs/exit_dlg.png" width="200px"> <img src="https://github.com/hummatli/MAHAds/blob/master/imgs/programs_dlg.png" width="200px"></h2>
+      
+    </div>
+    
+  </div>
+  
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/android-librarys/Utils/">辅助工具类 Utils - Android开源组件</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Zero</a></p>
+        <p><span>发布时间:</span>2017-03-24 19:14</p>
+        <!-- <p><span>最后更新:</span>2017-03-29, 17:49:00</p> -->
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/android-librarys/Utils/" title="辅助工具类 Utils - Android开源组件">http://www.jiaoyigui.cn//android-librarys/Utils/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.jiaoyigui.cn//android-librarys/Utils/　　作者: Zero" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <!-- <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p> -->
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/opensource/Index/">
+                    索引 - 开源项目
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/android-librarys/Menu/">
+                    菜单 Menu - Android开源组件
+                </a>
+            </div>
+        
+    </nav>
+  
+</article>
+<div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#辅助工具类-Utils"><span class="toc-number">1.</span> <span class="toc-text">辅助工具类 Utils</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#"><span class="toc-number">1.1.</span> <span class="toc-text"> </span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+    <div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"辅助工具类 Utils - Android开源组件　| 夜的灯　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+    
+
+
+<div class="scroll" id="post-nav-button">
+        
+            <a href="/opensource/Index/" title="上一篇: 索引 - 开源项目">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/android-librarys/Menu/" title="下一篇: 菜单 Menu - Android开源组件">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/opensource/Android/">Android开源项目</a></li><li class="post-list-item"><a class="post-list-link" href="/opensource/Index/">索引 - 开源项目</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Utils/">辅助工具类 Utils - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Menu/">菜单 Menu - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Custom/">自定义控件 Custom - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Dialog/">弹窗 Dialog - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Framework/">开发框架Framework - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Layout/">布局Layout - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Animation/">动画Animation - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/List/">列表 List - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Network/">网络请求 Network - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Image/">图片 Image - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/php/thinkphp5-install/">Thinkphp5快速入门</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Index/">总纲 - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android/Android-Decompile/">Android反编译</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-Java/">开发环境 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-iTerm2/">终端方案iTerm2 + Zsh - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-Homebrew/">包管理工具 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-keymap/">常用快捷键 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-settings/">系统使用 - Java程序员眼中的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/server/VPS/">VPS + Shadowsocks 可以是什么，做什么</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-Debug/">IntelliJ IDEA DEBUG调试</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-For-Mac-Keys/">IntelliJ IDEA For Mac 快捷键</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-Settings/">IntelliJ IDEA 主题、字体、编辑区主题、文件编码修改、乱码问题</a></li><li class="post-list-item"><a class="post-list-link" href="/hexo/Hexo-Install/">搭建 Hexo 博客--增强篇</a></li></ul>
+
+
+    <script>
+        
+    </script></div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i>
+                2017 Zero
+            </div>
+            <div class="footer-right">
+                <!-- <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i> -->
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide()" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+<script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>

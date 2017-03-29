@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Zero">
+
+
+
+<meta name="description" content="收集Android相关的网络请求 Network 组件库, 包含：包含各种网络请求框架、工具类……">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络请求 Network - Android开源组件">
+<meta property="og:url" content="http://www.jiaoyigui.cn/android-librarys/Network/index.html">
+<meta property="og:site_name" content="夜的灯">
+<meta property="og:description" content="收集Android相关的网络请求 Network 组件库, 包含：包含各种网络请求框架、工具类……">
+<meta property="og:image" content="https://raw.githubusercontent.com/yanzhenjie/AndServer/master/image/web_assets.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/yanzhenjie/AndServer/master/image/web_assets_son.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jgilfelt/chuck/master/assets/chuck.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/iammert/StatusView/master/art/art.gif">
+<meta property="og:image" content="https://camo.githubusercontent.com/8793befd30b01197b3f85d27e7faabb320e4c298/68747470733a2f2f6b656966657273746f6e652e636f6d2f6e6f6e65742f6e6f6e65742d62616e6e65722e706e67">
+<meta property="og:image" content="https://raw.githubusercontent.com/WeMobileDev/article/master/assets/mars/mars.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/b4c6b1106a6d8905510f3333796d67fe8f396d13/68747470733a2f2f6769616e742e6766796361742e636f6d2f57656172794e65636573736172794661747461696c656464756e6e6172742e676966">
+<meta property="og:image" content="https://camo.githubusercontent.com/fb0a9c25a5055710f868fd0efb41dfe5d87a7e69/68747470733a2f2f7333322e706f7374696d672e6f72672f3963643237653864682f53637265656e5f53686f745f323031365f30365f31355f61745f335f33335f315f30375f504d2e706e67">
+<meta property="og:image" content="https://raw.githubusercontent.com/charbgr/SeismicInterceptor/master/seismic_interceptor_sample.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/jkbrzt/httpie/master/httpie.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/robinxdroid/XDroidRequest/master/1.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/robinxdroid/XDroidRequest/master/2.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/pengjianbo/OkHttpFinal/master/images/okhttpfinal.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/jeasonlzy/Screenshots/master/okgo/demo13.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/jeasonlzy/Screenshots/master/okgo/demo8.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/jeasonlzy/Screenshots/master/okgo/demo9.gif">
+<meta property="og:updated_time" content="2017-03-29T09:48:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="网络请求 Network - Android开源组件">
+<meta name="twitter:description" content="收集Android相关的网络请求 Network 组件库, 包含：包含各种网络请求框架、工具类……">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/yanzhenjie/AndServer/master/image/web_assets.png">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="夜的灯" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>网络请求 Network - Android开源组件 | 夜的灯</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8349881c9f92999de4652aac9681a840";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Zero</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">探索新知识，突破自身技术壁垒</p>
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:jyg0124@126.com" title="Email"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Animation/">Animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cocos2d-x/">Cocos2d-x</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Custom/">Custom</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DEBUG调试/">DEBUG调试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dialog/">Dialog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Homebrew/">Homebrew</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Image/">Image</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ-IDEA/">IntelliJ IDEA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Layout/">Layout</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/List/">List</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Menu/">Menu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shadowsocks/">Shadowsocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Unity/">Unity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Utils/">Utils</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VPS/">VPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vultr/">Vultr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinkphp5/">thinkphp5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/列表/">列表</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动画/">动画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反编译/">反编译</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图片组件/">图片组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具类/">工具类</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/布局/">布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发工具/">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发框架/">开发框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源组件/">开源组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源项目/">开源项目</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/弹窗/">弹窗</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/快捷键/">快捷键</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游戏/">游戏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/破解/">破解</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/终端/">终端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络请求/">网络请求</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/自定义控件/">自定义控件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/菜单/">菜单</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">关于我</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Zero</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Zero</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">探索新知识，突破自身技术壁垒</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:jyg0124@126.com" title="Email"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-android-librarys/Network" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/android-librarys/Network/" class="article-date">
+      <time datetime="2017-03-24T03:14:12.000Z" itemprop="datePublished">2017-03-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        <h1 class="article-title" itemprop="name">
+      网络请求 Network - Android开源组件
+    </h1>
+      </header>
+      
+      <div class="article-info article-info-post">
+        <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a><a class="article-category-link" href="/categories/Android/开源组件/">开源组件</a>
+    </div>
+        <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Network/">Network</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开源组件/">开源组件</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络请求/">网络请求</a></li></ul>
+    </div>
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="网络请求-Network"><a href="#网络请求-Network" class="headerlink" title="网络请求 Network"></a>网络请求 Network</h2><p>包含各种网络请求框架、工具类</p>
+<p><a href="/android-librarys/Index/">&lt;==返回总纲==</a></p>
+<hr>
+<p><strong>AndServer</strong>: <a href="https://github.com/yanzhenjie/AndServer" target="_blank" rel="external">https://github.com/yanzhenjie/AndServer</a></p>
+<p>AndServer—原生 Android 做Web开发</p>
+<p><img src="https://raw.githubusercontent.com/yanzhenjie/AndServer/master/image/web_assets.png" width="270"> <img src="https://raw.githubusercontent.com/yanzhenjie/AndServer/master/image/web_assets_son.png" width="270"></p>
+<hr>
+<p><strong>LoggingInterceptor</strong>: <a href="https://github.com/ihsanbal/LoggingInterceptor" target="_blank" rel="external">https://github.com/ihsanbal/LoggingInterceptor</a></p>
+<p>OkHttp 请求和响应日志拦截器</p>
+<hr>
+<p><strong>OkCacheControl</strong>: <a href="https://github.com/ncornette/OkCacheControl" target="_blank" rel="external">https://github.com/ncornette/OkCacheControl</a></p>
+<p>OkHttp 和 Retrofit 缓存工具</p>
+<hr>
+<p><strong>chuck</strong>: <a href="https://github.com/jgilfelt/chuck" target="_blank" rel="external">https://github.com/jgilfelt/chuck</a></p>
+<p>Android App 内网络调试工具，超实用</p>
+<p><img src="https://raw.githubusercontent.com/jgilfelt/chuck/master/assets/chuck.gif" width="320"></p>
+<hr>
+<p><strong>StatusView</strong>: <a href="https://github.com/iammert/StatusView" target="_blank" rel="external">https://github.com/iammert/StatusView</a></p>
+<p>简洁优雅的网络状态提示</p>
+<p><img src="https://raw.githubusercontent.com/iammert/StatusView/master/art/art.gif" width="270"></p>
+<hr>
+<p><strong>nonet</strong>: <a href="https://github.com/keiferstone/nonet" target="_blank" rel="external">https://github.com/keiferstone/nonet</a></p>
+<p>安卓网络连接监测</p>
+<p><img src="https://camo.githubusercontent.com/8793befd30b01197b3f85d27e7faabb320e4c298/68747470733a2f2f6b656966657273746f6e652e636f6d2f6e6f6e65742f6e6f6e65742d62616e6e65722e706e67" width="320"></p>
+<hr>
+<p><strong>jurl</strong>: <a href="https://github.com/anthonynsimon/jurl" target="_blank" rel="external">https://github.com/anthonynsimon/jurl</a></p>
+<p>Fast and simple URL parsing for Java, with UTF-8 and path resolving support</p>
+<hr>
+<p><strong>dnsproxy2</strong>: <a href="https://github.com/cernekee/dnsproxy2" target="_blank" rel="external">https://github.com/cernekee/dnsproxy2</a></p>
+<p>DNS proxy for Android 4.3+</p>
+<hr>
+<p><strong>HTTPDNSLib</strong>: <a href="https://github.com/CNSRE/HTTPDNSLib" target="_blank" rel="external">https://github.com/CNSRE/HTTPDNSLib</a></p>
+<p>全局精确流量调度新思路-HttpDNS服务详解</p>
+<hr>
+<p><strong>retrocache</strong>: <a href="https://github.com/iagocanalejas/retrocache" target="_blank" rel="external">https://github.com/iagocanalejas/retrocache</a></p>
+<p>This library provides an easy way for configure retrofit for use a 2 layer cache (RAM and Disk)</p>
+<hr>
+<p><strong>mars</strong>: <a href="https://github.com/Tencent/mars" target="_blank" rel="external">https://github.com/Tencent/mars</a></p>
+<p>Mars 是微信官方的跨平台跨业务的终端基础组件</p>
+<p><img src="https://raw.githubusercontent.com/WeMobileDev/article/master/assets/mars/mars.png" width="640"></p>
+<hr>
+<p><strong>RxUnfurl</strong>: <a href="https://github.com/Schinizer/RxUnfurl" target="_blank" rel="external">https://github.com/Schinizer/RxUnfurl</a></p>
+<p>网址解析并预览</p>
+<p><img src="https://camo.githubusercontent.com/b4c6b1106a6d8905510f3333796d67fe8f396d13/68747470733a2f2f6769616e742e6766796361742e636f6d2f57656172794e65636573736172794661747461696c656464756e6e6172742e676966" width="320"></p>
+<hr>
+<p><strong>Pacman</strong>: <a href="https://github.com/rahulchowdhury/Pacman" target="_blank" rel="external">https://github.com/rahulchowdhury/Pacman</a></p>
+<p>Easy &amp; Simple Parallel API Calls Manager for Java and Android</p>
+<hr>
+<p><strong>Milano</strong>: <a href="https://github.com/IntruderShanky/Milano" target="_blank" rel="external">https://github.com/IntruderShanky/Milano</a></p>
+<p>A powerful android library to handle cookies</p>
+<hr>
+<p><strong>jus</strong>: <a href="https://github.com/apptik/jus" target="_blank" rel="external">https://github.com/apptik/jus</a></p>
+<p>Flexible and Easy HTTP/REST Communication library for Java and Android</p>
+<hr>
+<p><strong>SimpleRestClientHelper</strong>: <a href="https://github.com/ravi123shanker/SimpleRestClientHelper" target="_blank" rel="external">https://github.com/ravi123shanker/SimpleRestClientHelper</a></p>
+<p>Simplest library to implement rest client APIs using okhttp3 in your app</p>
+<hr>
+<p><strong>Perfecto</strong>: <a href="https://github.com/developer-shivam/Perfecto" target="_blank" rel="external">https://github.com/developer-shivam/Perfecto</a></p>
+<p>Http Connection calls made easy</p>
+<hr>
+<p><strong>Curl-Logger-interceptor</strong>: <a href="https://github.com/grapesnberries/Curl-Logger-interceptor" target="_blank" rel="external">https://github.com/grapesnberries/Curl-Logger-interceptor</a></p>
+<p>Library for logging your Retrofit requests as cURL in logcat</p>
+<p><img src="https://camo.githubusercontent.com/fb0a9c25a5055710f868fd0efb41dfe5d87a7e69/68747470733a2f2f7333322e706f7374696d672e6f72672f3963643237653864682f53637265656e5f53686f745f323031365f30365f31355f61745f335f33335f315f30375f504d2e706e67" width="800"></p>
+<hr>
+<p><strong>SeismicInterceptor</strong>: <a href="https://github.com/charbgr/SeismicInterceptor" target="_blank" rel="external">https://github.com/charbgr/SeismicInterceptor</a></p>
+<p>A lightweight OkHttp interceptor</p>
+<p><img src="https://raw.githubusercontent.com/charbgr/SeismicInterceptor/master/seismic_interceptor_sample.gif" width="320"></p>
+<hr>
+<p><strong>Thunder</strong>: <a href="https://github.com/qiugang/Thunder" target="_blank" rel="external">https://github.com/qiugang/Thunder</a></p>
+<p>OkHttp with UIThread and lifecycle safety callback</p>
+<hr>
+<p><strong>okir</strong>: <a href="https://github.com/rafaeltoledo/okir" target="_blank" rel="external">https://github.com/rafaeltoledo/okir</a></p>
+<p>A helper class that implements both an Espresso IdlingResource and an OkHttp Interceptor</p>
+<hr>
+<p><strong>HttpAgent</strong>: <a href="https://github.com/studioidan/HttpAgent" target="_blank" rel="external">https://github.com/studioidan/HttpAgent</a></p>
+<p>一个穿着 <code>HttpURLConnection</code> 的裤子的网络请求库</p>
+<hr>
+<p><strong>NoHttp</strong>: <a href="https://github.com/yanzhenjie/NoHttp" target="_blank" rel="external">https://github.com/yanzhenjie/NoHttp</a></p>
+<p>NoHttp支持大文件、多文件上传、文件下载、自动维持Cookie、异步/同步请求，多种Http缓存模式，302/303重定向, 支持代理服务器. <a href="http://www.nohttp.net" target="_blank" rel="external">http://www.nohttp.net</a></p>
+<hr>
+<p><strong>AndroidNetworking</strong>: <a href="https://github.com/amitshekhariitbhu/AndroidNetworking" target="_blank" rel="external">https://github.com/amitshekhariitbhu/AndroidNetworking</a></p>
+<p>Android Networking <a href="http://amitshekhariitbhu.github.io/AndroidNetworking" target="_blank" rel="external">http://amitshekhariitbhu.github.io/AndroidNetworking</a></p>
+<hr>
+<p><strong>android-sdcard-helper</strong>: <a href="https://github.com/yaming116/android-sdcard-helper" target="_blank" rel="external">https://github.com/yaming116/android-sdcard-helper</a></p>
+<p>一个可以把数据库存在sdcard的工具</p>
+<hr>
+<p><strong>retrofit-agera-call-adapter</strong>: <a href="https://github.com/drakeet/retrofit-agera-call-adapter" target="_blank" rel="external">https://github.com/drakeet/retrofit-agera-call-adapter</a></p>
+<p>Retrofit Agera Call Adapter</p>
+<hr>
+<p><strong>OptimusHTTP</strong>: <a href="https://github.com/nisrulz/OptimusHTTP" target="_blank" rel="external">https://github.com/nisrulz/OptimusHTTP</a></p>
+<p>Android library that simplifies networking in android via an async http client <a href="http://nisrulz.github.io/OptimusHTTP" target="_blank" rel="external">http://nisrulz.github.io/OptimusHTTP</a></p>
+<hr>
+<p><strong>RestVolley</strong>: <a href="https://github.com/HujiangTechnology/RestVolley" target="_blank" rel="external">https://github.com/HujiangTechnology/RestVolley</a></p>
+<p>A Http request framework based on Volley and OkHttp that supports rest api requesting, image loading, downloading, uploading etc.</p>
+<hr>
+<p><strong>httpie</strong>: <a href="https://github.com/jkbrzt/httpie" target="_blank" rel="external">https://github.com/jkbrzt/httpie</a></p>
+<p>CLI HTTP client, user-friendly curl replacement with intuitive UI, JSON support, syntax highlighting, wget-like downloads, extensions, etc. <a href="http://httpie.org" target="_blank" rel="external">http://httpie.org</a></p>
+<p><img src="https://raw.githubusercontent.com/jkbrzt/httpie/master/httpie.png" width="320"></p>
+<hr>
+<p><strong>LiteHttpPrj</strong>: <a href="https://github.com/hyongbai/LiteHttpPrj" target="_blank" rel="external">https://github.com/hyongbai/LiteHttpPrj</a></p>
+<p>A lite android http library</p>
+<hr>
+<p><strong>XDroidRequest</strong>: <a href="https://github.com/robinxdroid/XDroidRequest" target="_blank" rel="external">https://github.com/robinxdroid/XDroidRequest</a></p>
+<p>一款Android 网络请求框架</p>
+<p><img src="https://raw.githubusercontent.com/robinxdroid/XDroidRequest/master/1.jpg" width="320"> <img src="https://raw.githubusercontent.com/robinxdroid/XDroidRequest/master/2.jpg" width="320"></p>
+<hr>
+<p><strong>AndroidSocketClient</strong>: <a href="https://github.com/vilyever/AndroidSocketClient" target="_blank" rel="external">https://github.com/vilyever/AndroidSocketClient</a></p>
+<p>一个封装好的 android socket 网络请求库</p>
+<hr>
+<p><strong>RxVolley</strong>: <a href="https://github.com/kymjs/RxVolley" target="_blank" rel="external">https://github.com/kymjs/RxVolley</a></p>
+<p>RxVolley = Volley + RxJava + OkHttp <a href="http://rxvolley.mydoc.io/" target="_blank" rel="external">http://rxvolley.mydoc.io/</a></p>
+<hr>
+<p><strong>okhttp</strong>: <a href="https://github.com/square/okhttp" target="_blank" rel="external">https://github.com/square/okhttp</a></p>
+<p>An HTTP+SPDY client for Android and Java applications.</p>
+<hr>
+<p><strong>OkHttpFinal</strong>: <a href="https://github.com/pengjianbo/OkHttpFinal" target="_blank" rel="external">https://github.com/pengjianbo/OkHttpFinal</a></p>
+<p>OkHttp封装的一个简单易用HTTP请求, OkHttp文件下载管理地址<a href="https://github.com/pengjianbo/FileDownloaderFinal" target="_blank" rel="external">https://github.com/pengjianbo/FileDownloaderFinal</a></p>
+<p><img src="https://raw.githubusercontent.com/pengjianbo/OkHttpFinal/master/images/okhttpfinal.jpg" width="640"></p>
+<hr>
+<p><strong>retrofit1-okhttp3-client</strong>: <a href="https://github.com/JakeWharton/retrofit1-okhttp3-client" target="_blank" rel="external">https://github.com/JakeWharton/retrofit1-okhttp3-client</a></p>
+<p>A OkHttp 3 client implementation for Retrofit 1</p>
+<hr>
+<p><strong>okhttp-OkGo</strong>: <a href="https://github.com/jeasonlzy/okhttp-OkGo" target="_blank" rel="external">https://github.com/jeasonlzy/okhttp-OkGo</a></p>
+<p>OkHttpUtils-2.0.0 升级后改名 OkGo，全新完美支持RxJava，比Retrofit更简单易用</p>
+<p><img src="https://raw.githubusercontent.com/jeasonlzy/Screenshots/master/okgo/demo13.gif" width="270"> <img src="https://raw.githubusercontent.com/jeasonlzy/Screenshots/master/okgo/demo8.gif" width="270"> <img src="https://raw.githubusercontent.com/jeasonlzy/Screenshots/master/okgo/demo9.gif" width="270"></p>
+<hr>
+<p><strong>okhttp-utils</strong>: <a href="https://github.com/hongyangAndroid/okhttp-utils" target="_blank" rel="external">https://github.com/hongyangAndroid/okhttp-utils</a></p>
+<p>鸿神出品的okhttp的辅助类 <a href="http://blog.csdn.net/lmj623565791/article/details/47911083" target="_blank" rel="external">http://blog.csdn.net/lmj623565791/article/details/47911083</a></p>
+<hr>
+<p><strong>OkHttpPlus</strong>: <a href="https://github.com/ZhaoKaiQiang/OkHttpPlus" target="_blank" rel="external">https://github.com/ZhaoKaiQiang/OkHttpPlus</a></p>
+<p>OkHttp封装，支持GET、POST、UI线程回调、JSON格式解析、链式调用、小文件上传下载及进度监听等功能</p>
+<hr>
+<p><strong>android-async-http</strong>: <a href="https://github.com/loopj/android-async-http" target="_blank" rel="external">https://github.com/loopj/android-async-http</a></p>
+<p>An Asynchronous HTTP Library for Android</p>
+<hr>
+<p><strong>retrofit</strong>: <a href="https://github.com/square/retrofit" target="_blank" rel="external">https://github.com/square/retrofit</a></p>
+<p>Type-safe HTTP client for Android and Java by Square, Inc.</p>
+<hr>
+<p><strong>Netroid</strong>: <a href="http://www.open-open.com/lib/view/open1402825446810.html" target="_blank" rel="external">http://www.open-open.com/lib/view/open1402825446810.html</a></p>
+<p>Netroid是一个基于Volley 实现的Android Http库。提供执行网络请求、缓存返回结果、批量图片加载、大文件断点下载的常见Http交互功能。致力于避免每个项目重复开发基础Http功能，实现显著地缩短开发周期的愿景。</p>
+<hr>
+<p><strong>Volley的基本用法</strong>: <a href="http://blog.csdn.net/guolin_blog/article/details/17482095" target="_blank" rel="external">http://blog.csdn.net/guolin_blog/article/details/17482095</a></p>
+<p>谷歌自产的网络请求框架</p>
+<hr>
+<p><strong>AndroidNetworkDemo</strong>: <a href="https://github.com/dodocat/AndroidNetworkDemo" target="_blank" rel="external">https://github.com/dodocat/AndroidNetworkDemo</a></p>
+<p>A demo show how to use Volley with OkHttp and https.同步发于<a href="http://www.jianshu.com/p/e58161cbc3a4" target="_blank" rel="external">简书</a></p>
+<hr>
+      
+    </div>
+    
+  </div>
+  
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/android-librarys/Network/">网络请求 Network - Android开源组件</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Zero</a></p>
+        <p><span>发布时间:</span>2017-03-24 11:14</p>
+        <!-- <p><span>最后更新:</span>2017-03-29, 17:48:52</p> -->
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/android-librarys/Network/" title="网络请求 Network - Android开源组件">http://www.jiaoyigui.cn//android-librarys/Network/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.jiaoyigui.cn//android-librarys/Network/　　作者: Zero" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <!-- <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p> -->
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/android-librarys/List/">
+                    列表 List - Android开源组件
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/android-librarys/Image/">
+                    图片 Image - Android开源组件
+                </a>
+            </div>
+        
+    </nav>
+  
+</article>
+<div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#网络请求-Network"><span class="toc-number">1.</span> <span class="toc-text">网络请求 Network</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+    <div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"网络请求 Network - Android开源组件　| 夜的灯　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+    
+
+
+<div class="scroll" id="post-nav-button">
+        
+            <a href="/android-librarys/List/" title="上一篇: 列表 List - Android开源组件">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/android-librarys/Image/" title="下一篇: 图片 Image - Android开源组件">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/opensource/Android/">Android开源项目</a></li><li class="post-list-item"><a class="post-list-link" href="/opensource/Index/">索引 - 开源项目</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Utils/">辅助工具类 Utils - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Menu/">菜单 Menu - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Custom/">自定义控件 Custom - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Dialog/">弹窗 Dialog - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Framework/">开发框架Framework - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Layout/">布局Layout - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Animation/">动画Animation - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/List/">列表 List - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Network/">网络请求 Network - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Image/">图片 Image - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/php/thinkphp5-install/">Thinkphp5快速入门</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Index/">总纲 - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android/Android-Decompile/">Android反编译</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-Java/">开发环境 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-iTerm2/">终端方案iTerm2 + Zsh - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-Homebrew/">包管理工具 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-keymap/">常用快捷键 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-settings/">系统使用 - Java程序员眼中的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/server/VPS/">VPS + Shadowsocks 可以是什么，做什么</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-Debug/">IntelliJ IDEA DEBUG调试</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-For-Mac-Keys/">IntelliJ IDEA For Mac 快捷键</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-Settings/">IntelliJ IDEA 主题、字体、编辑区主题、文件编码修改、乱码问题</a></li><li class="post-list-item"><a class="post-list-link" href="/hexo/Hexo-Install/">搭建 Hexo 博客--增强篇</a></li></ul>
+
+
+    <script>
+        
+    </script></div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i>
+                2017 Zero
+            </div>
+            <div class="footer-right">
+                <!-- <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i> -->
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide()" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+<script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
