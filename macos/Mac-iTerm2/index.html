@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Zero">
+
+
+
+<meta name="description" content="大家都说 iTerm2 是 Mac 下最好的终端，试试也无妨">
+<meta property="og:type" content="article">
+<meta property="og:title" content="终端方案iTerm2 + Zsh - Java程序员的Mac OS">
+<meta property="og:url" content="http://www.jiaoyigui.cn/macos/Mac-iTerm2/index.html">
+<meta property="og:site_name" content="夜的灯">
+<meta property="og:description" content="大家都说 iTerm2 是 Mac 下最好的终端，试试也无妨">
+<meta property="og:image" content="http://img.youmeek.com/2016/Mac-iTerm2-1.jpg">
+<meta property="og:image" content="http://img.youmeek.com/2016/Mac-iTerm2-2.jpg">
+<meta property="og:image" content="http://img.youmeek.com/2016/Mac-iTerm2-3.jpg">
+<meta property="og:updated_time" content="2017-03-29T08:08:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="终端方案iTerm2 + Zsh - Java程序员的Mac OS">
+<meta name="twitter:description" content="大家都说 iTerm2 是 Mac 下最好的终端，试试也无妨">
+<meta name="twitter:image" content="http://img.youmeek.com/2016/Mac-iTerm2-1.jpg">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="夜的灯" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>终端方案iTerm2 + Zsh - Java程序员的Mac OS | 夜的灯</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8349881c9f92999de4652aac9681a840";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Zero</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">探索新知识，突破自身技术壁垒</p>
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:jyg0124@126.com" title="Email"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DEBUG调试/">DEBUG调试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Homebrew/">Homebrew</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ-IDEA/">IntelliJ IDEA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shadowsocks/">Shadowsocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VPS/">VPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vultr/">Vultr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinkphp5/">thinkphp5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反编译/">反编译</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发工具/">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源项目/">开源项目</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/快捷键/">快捷键</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/破解/">破解</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/终端/">终端</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">关于我</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Zero</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Zero</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">探索新知识，突破自身技术壁垒</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:jyg0124@126.com" title="Email"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-macos/Mac-iTerm2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/macos/Mac-iTerm2/" class="article-date">
+      <time datetime="2016-10-29T14:23:10.000Z" itemprop="datePublished">2016-10-29</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        <h1 class="article-title" itemprop="name">
+      终端方案iTerm2 + Zsh - Java程序员的Mac OS
+    </h1>
+      </header>
+      
+      <div class="article-info article-info-post">
+        <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Mac/">Mac</a>
+    </div>
+        <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/">Mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/终端/">终端</a></li></ul>
+    </div>
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<h2 id="本文初衷"><a href="#本文初衷" class="headerlink" title="本文初衷"></a>本文初衷</h2><ul>
+<li>整理自己脑袋中、收藏中的那些资料，来一次清空，让自己重新开始。</li>
+<li>帮助 Mac 后来者，减少他/她入门成本</li>
+<li>如果你不是后台开发者，一般不需要用到这个东西，可以不用学的。如果你非要学，那你可以认为你现在看到的东西和在 Linux 上看到的没啥本质的区别，做好这个准备，对你很重要。</li>
+</ul>
+<h2 id="先总结"><a href="#先总结" class="headerlink" title="先总结"></a>先总结</h2><ul>
+<li>iTerm2 比 Mac 默认的 Terminal 终端好用，配合 Zsh 确实更加得体</li>
+<li><strong>牢记：</strong> 装了 zsh 之后，修改终端配置就变成了：<code>vim ~/.zshrc</code>，而不是：<code>vim ~/.bash_profile</code>，所以以后看到别人的文章中需要：<code>vim ~/.bash_profile</code>，那你自己要变通思想过来。</li>
+<li>同时更新修改后的配置文件也从：<code>source ~/.bash_profile</code>，变成了：<code>source ~/.zshrc</code>，当然还有其他取取巧方式，这里不谈。</li>
+</ul>
+<h2 id="iTerm2-知识"><a href="#iTerm2-知识" class="headerlink" title="iTerm2 知识"></a>iTerm2 知识</h2><h3 id="iTerm2-是什么"><a href="#iTerm2-是什么" class="headerlink" title="iTerm2 是什么"></a>iTerm2 是什么</h3><ul>
+<li>术语定义<ul>
+<li>iTerm2 官网：<a href="http://iterm2.com/" target="_blank" rel="external">http://iterm2.com/</a></li>
+<li>wiki 介绍：<a href="https://en.wikipedia.org/wiki/ITerm2" target="_blank" rel="external">https://en.wikipedia.org/wiki/ITerm2</a></li>
+<li>iTerm2 作者意思：Mac 的默认终端 Terminal 太难用了，我们开发一个新的终端来代替它吧。</li>
+</ul>
+</li>
+<li>同类常见技术<ul>
+<li><code>Terminal</code></li>
+</ul>
+</li>
+<li>学习前提/依赖<ul>
+<li>一点英文</li>
+<li>一点 Unix/Linux 系统的思想</li>
+<li>一点 Shell 概念</li>
+</ul>
+</li>
+</ul>
+<h3 id="为什么会出现"><a href="#为什么会出现" class="headerlink" title="为什么会出现"></a>为什么会出现</h3><ul>
+<li>有些操作，命令行或者说脚本的方式效率是远高于 GUI 界面操作的，这个概念需要用过 Unix/Linux 做过开发的人会懂，特别是搞运维的。如果你不理解，可以找一些运维的视频教程来看看，会有很多事情的处理都是搞脚本的做的。</li>
+</ul>
+<h3 id="哪些人不喜欢-iTerm2"><a href="#哪些人不喜欢-iTerm2" class="headerlink" title="哪些人不喜欢 iTerm2"></a>哪些人不喜欢 iTerm2</h3><ul>
+<li>设计师？</li>
+<li>前端开发者？可能真正的好前端开发者也是会经常用终端的，因为 node.js 的 npm 就有很多命令。</li>
+<li>不喜欢学习的，因为这里面涉及到很多 Unix/Linux 系统的知识点，很枯燥，而且很多快捷键需要背，需要花很多精力。</li>
+</ul>
+<h3 id="为什么学习-iTerm2"><a href="#为什么学习-iTerm2" class="headerlink" title="为什么学习 iTerm2"></a>为什么学习 iTerm2</h3><ul>
+<li>作为后端开发者必须学会的一个技能，不管是为了简化安装一些软件或是处理一些事情，还有工作中的后端程序的软件部署，都会跟 shell 打交道。</li>
+</ul>
+<h3 id="安装-iTerm2"><a href="#安装-iTerm2" class="headerlink" title="安装 iTerm2"></a>安装 iTerm2</h3><ul>
+<li>在安装之前先说下前提，你的 Mac 必须装有：Homebrew，等下 zsh 要用到。<ul>
+<li>如果你不知道 Homebrew 是做什么，可以查看我写的另外一篇文章：<a href="http://code.youmeek.com/2016/11/27/2016/11/Mac-Homebrew/" target="_blank" rel="external">一个Java程序员眼中的Mac OS（系列五：包管理工具）</a></li>
+</ul>
+</li>
+<li>下载 iTerm 2<ul>
+<li>当前时间（2016-10-31）最新版为：3.0.10</li>
+<li>下载地址，官网：<a href="https://iterm2.com/" target="_blank" rel="external">https://iterm2.com/</a></li>
+</ul>
+</li>
+<li>安装 iTerm 2<ul>
+<li>官网下载下来是一个 zip 压缩包，解压出来有一个 <code>.app</code> 文件，双击运行即可安装，或是拖到应用程序里面。</li>
+</ul>
+</li>
+<li>更改配色方案<ul>
+<li>目前大家喜欢设置的配色方案为 solarized，iTerm2 默认是有带的，如果没有则访问：<a href="https://github.com/altercation/solarized" target="_blank" rel="external">https://github.com/altercation/solarized</a><ul>
+<li>在项目中找到 solarized/iterm2-colors-solarized 目录，下面有两个文件：Solarized Dark.itermcolors 和 Solarized Light.itermcolors，双击这两个文件就可以把配置文件导入到 iTerm 里了。</li>
+</ul>
+</li>
+<li>更改后的配色最终效果如下图：已经截图了。同时还要再切换到 Text 标签，把 <code>Draw bold text in bold font</code> 的勾去掉。</li>
+<li><img src="http://img.youmeek.com/2016/Mac-iTerm2-1.jpg" alt="iTerm2介绍"></li>
+</ul>
+</li>
+</ul>
+<h3 id="iTerm2-软件特色"><a href="#iTerm2-软件特色" class="headerlink" title="iTerm2 软件特色"></a>iTerm2 软件特色</h3><ul>
+<li>智能选中<ul>
+<li>在 iTerm2 中，连续双击选中，连续三击选中整行，连续四击智能选中（智能规则可配置），可以识别网址，引号引起的字符串，邮箱地址等。</li>
+<li>在 iTerm2 中，选中即复制。即任何选中状态的字符串都被放到了系统剪切板中。</li>
+</ul>
+</li>
+<li>Hotkey Window (快速调出窗口)<ul>
+<li>这个非常好用，默认是没有设置，需要自己设置下。</li>
+<li>实际使用时我们经常会遇到这种场景：有时候只是执行几行命令，然后就不再使用它。可是我们还是必须要打开终端，使用完成后关闭它。但是用 iTerm2 这个功能只要按快捷键，出来虚化的终端，输入命令，然后再把光标放在其他地方自动就消息了。</li>
+<li>设置和效果如下图：<ul>
+<li><img src="http://img.youmeek.com/2016/Mac-iTerm2-2.jpg" alt="iTerm2介绍"></li>
+<li><img src="http://img.youmeek.com/2016/Mac-iTerm2-3.jpg" alt="iTerm2介绍"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>iTerm2 常用快捷键<ul>
+<li>这篇文章配了很多图，如果你想更加具体地了解可以看这篇文章，我不想截图了：<a href="http://swiftcafe.io/2015/07/25/iterm/" target="_blank" rel="external">http://swiftcafe.io/2015/07/25/iterm/</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">快捷键</th>
+<th style="text-align:left">介绍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">输入的命令开头字符 + Command + ;</td>
+<td style="text-align:left">根据输入的前缀历史记录自动补全</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + ;</td>
+<td style="text-align:left">根据历史记录自动补全</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + [ 或 command + ]</td>
+<td style="text-align:left">切换屏幕</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + enter</td>
+<td style="text-align:left">进入全屏模式，再按一次返回</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 鼠标单击</td>
+<td style="text-align:left">可以打开文件，文件夹和链接（iTerm2 是可以对显示的内容进行点击的哦）</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + n</td>
+<td style="text-align:left">新建新的 Window 窗口</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + t</td>
+<td style="text-align:left">新建标签页</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + w</td>
+<td style="text-align:left">关闭当前标签或是窗口</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + d</td>
+<td style="text-align:left">竖直分屏</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + r</td>
+<td style="text-align:left">清屏</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + /</td>
+<td style="text-align:left">按完之后，整个屏幕变成白茫茫的，而光标位置是一个小圆圈清除显示出来</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 方向键</td>
+<td style="text-align:left">切换标签页</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 数字</td>
+<td style="text-align:left">切换到指定数字标签页</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + f</td>
+<td style="text-align:left">查找，所查找的内容会被自动复制 ,输入查找的部分字符，找到匹配的值按 tab，即可复制，带有补全功能</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + option + e</td>
+<td style="text-align:left">全屏并排展示所有已经打开的标签页，带有可以搜索。</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Option + b</td>
+<td style="text-align:left">历史回放，i类似视频录像的东西，有记录你最近时间内的操作。有一个类似播放器的进度条可以拖动查看你做了什么。存放内容设置（Preferences -&gt; Genernal -&gt; Instant Replay）。</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Option + 数字</td>
+<td style="text-align:left">切换 Window 窗口</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + shift + d</td>
+<td style="text-align:left">水平分屏</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + shift + h</td>
+<td style="text-align:left">查看剪贴板历史，在光标位置下方会出现一列你输入过的历史记录</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Shift + m</td>
+<td style="text-align:left">可以保存当前位置，之后可以按Command + Shift + j跳回这个位置。</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + shift + alt + w</td>
+<td style="text-align:left">关闭所有窗口</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + u</td>
+<td style="text-align:left">清空当前行，无论光标在什么位置</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + a</td>
+<td style="text-align:left">移动到行首</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + e</td>
+<td style="text-align:left">移动到行尾</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + f</td>
+<td style="text-align:left">向前移动，相当于方向键右</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + b</td>
+<td style="text-align:left">向后移动，相当于方向键左</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + p</td>
+<td style="text-align:left">上一条命令，相当于方向键上</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + n</td>
+<td style="text-align:left">下一条命令，相当于方向键下</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + r</td>
+<td style="text-align:left">搜索历史命令</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + y</td>
+<td style="text-align:left">召回最近用命令删除的文字</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + h</td>
+<td style="text-align:left">删除光标之前的字符</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + d</td>
+<td style="text-align:left">删除光标所在位置的字符</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + w</td>
+<td style="text-align:left">删除光标之前的单词</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + k</td>
+<td style="text-align:left">删除从光标到行尾的内容</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + c</td>
+<td style="text-align:left">结束当前状态，另起一行</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + t</td>
+<td style="text-align:left">交换光标和之前的字符</td>
+</tr>
+</tbody>
+</table>
+<h3 id="安装-Zsh-oh-my-Zsh"><a href="#安装-Zsh-oh-my-Zsh" class="headerlink" title="安装 Zsh + oh-my-Zsh"></a>安装 Zsh + oh-my-Zsh</h3><ul>
+<li>Zsh 官网：<a href="https://www.zsh.org/" target="_blank" rel="external">https://www.zsh.org/</a></li>
+<li>oh-my-Zsh 官网：<a href="http://ohmyz.sh/" target="_blank" rel="external">http://ohmyz.sh/</a></li>
+<li>先说下：Zsh 和 oh-my-Zsh 的关系<ul>
+<li>Zsh 是 Shell 中的一种，什么 Shell 你可以再搜索下，简单粗暴讲就是一个：命令解释器，你输入什么命令，它就执行什么，这个东西再 Unix 世界还有其他几个。</li>
+<li>由于 Zsh 配置门槛有点高，或者说需要专门花时间去了解 Zsh 才能配置好一个好用的 Zsh，也因为这样，用户也就相对少了。</li>
+<li>直到有一天 oh-my-Zsh 的作者诞生，他想要整理出一个配置框架出来，让大家直接使用他的这个公认最好的 Zsh 配置，省去繁琐的配置过程。所以，oh-my-Zsh 就诞生了，它只是会了让你减少 Zsh 的配置，然后又可以好好享受 Zsh 这个 Shell。</li>
+</ul>
+</li>
+<li>Mac 和一般 Linux 默认的 shell 是 bash，一般人都觉得不好用，我作为一般人，也喜欢 Zsh，所以这里就用 Zsh。</li>
+<li>为了简化配置 Zsh 过程，我们这里选择 oh-my-Zsh 这个配置库，这是目前大家公认好用的配置。</li>
+<li>打开终端，先安装 git（已经安装的跳过该步骤），输入命令：<code>brew install git</code></li>
+<li>打开终端，安装 wget 工具，输入命令：<code>brew install wget</code></li>
+<li>打开终端，安装 Zsh：<code>brew install Zsh</code></li>
+<li>打开终端，安装 oh-my-Zsh：<code>sh -c &quot;$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-Zsh/master/tools/install.sh -O -)&quot;</code><ul>
+<li>下载完后，会提示你输入当前登录系统的用户密码，输入完成之后就会从 bash 切换到 Zsh，如果你没有输入密码直接跳过了，可以运行该命令进行手动切换：<code>chsh -s /bin/Zsh 你当前系统用户名</code></li>
+<li>切换完成之后，关掉终端，重新打开终端即可</li>
+</ul>
+</li>
+<li>如果你需要修改 oh-my-Zsh 的主题，和安装 Zsh 插件，具体可以看我过去整理的这篇文章：<a href="https://github.com/judasn/Linux-Tutorial/blob/master/Zsh.md" target="_blank" rel="external">Zsh 入门</a></li>
+</ul>
+<h3 id="Zsh-软件特色"><a href="#Zsh-软件特色" class="headerlink" title="Zsh 软件特色"></a>Zsh 软件特色</h3><ul>
+<li>不区分大小写智能提示。我是不喜欢大小写区分的那种人，所以用了 zsh 之后，经常按 Tab 进行提示。</li>
+<li>此外按下 tab 键显示出所有待选项后，再按一次 tab 键，即进入选择模式，进入选择模式后，按 tab 切向下一个选项，按 shift + tab 键切向上一个选项，ctrl+f/b/n/p 可以向前后左右切换。</li>
+<li>kill + 空格键 + Tab键，列出运行的进程，要啥哪个进程不需要再知道 PID 了，当然了 zsh，提供了让你知道 PID 的方法：<ul>
+<li>比如输入：kill vim，再按下 tab，会变成：kill 5643</li>
+</ul>
+</li>
+<li><code>ls **/*</code>，分层级地列出当前目录下所有文件及目录，并递归目录</li>
+<li><code>ls *.png</code> 查找当前目录下所有 png 文件</li>
+<li><code>ls **/*.png</code> 递归查找</li>
+<li>zsh 的目录跳转很智能，你无需输入 cd 就可直接输入路径即可。比如：<code>..</code> 表示后退一级目录，<code>../../</code> 表示后退两级，依次类推。</li>
+<li>在命令窗口中输入：<code>d</code>，将列出当前 session 访问过的所有目录，再按提示的数字即可进入相应目录。</li>
+<li>给 man 命令增加结果高亮显示：<ul>
+<li>编辑配置文件：<code>vim ~/.zshrc</code>，增加下面内容：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># man context highlight</span></div><div class="line"><span class="built_in">export</span> LESS_TERMCAP_mb=$<span class="string">'\E[01;31m'</span>       <span class="comment"># begin blinking</span></div><div class="line"><span class="built_in">export</span> LESS_TERMCAP_md=$<span class="string">'\E[01;38;5;74m'</span>  <span class="comment"># begin bold</span></div><div class="line"><span class="built_in">export</span> LESS_TERMCAP_me=$<span class="string">'\E[0m'</span>           <span class="comment"># end mode</span></div><div class="line"><span class="built_in">export</span> LESS_TERMCAP_se=$<span class="string">'\E[0m'</span>           <span class="comment"># end standout-mode</span></div><div class="line"><span class="built_in">export</span> LESS_TERMCAP_so=$<span class="string">'\E[38;5;246m'</span>    <span class="comment"># begin standout-mode - info box</span></div><div class="line"><span class="built_in">export</span> LESS_TERMCAP_ue=$<span class="string">'\E[0m'</span>           <span class="comment"># end underline</span></div><div class="line"><span class="built_in">export</span> LESS_TERMCAP_us=$<span class="string">'\E[04;38;5;146m'</span> <span class="comment"># begin underline</span></div></pre></td></tr></table></figure>
+<ul>
+<li>刷新配置文件：<code>source ~/.zshrc</code>，重新查看 man 的命令就可以有高亮了。</li>
+</ul>
+<h3 id="关于搭配上-tmux"><a href="#关于搭配上-tmux" class="headerlink" title="关于搭配上 tmux"></a>关于搭配上 tmux</h3><ul>
+<li>这个我觉得不是人人都需要的东西，如果经常用终端，或是运维人员可以考虑学这个东西，我的资料也是网上找的，你们可以自己找一下。</li>
+</ul>
+<h2 id="资料整理"><a href="#资料整理" class="headerlink" title="资料整理"></a>资料整理</h2><ul>
+<li>来自 Google 过程中的资料（真心感谢这些作者）：<ul>
+<li><a href="http://www.jianshu.com/p/3291de46f3ff" target="_blank" rel="external">Mac 终端命令大全</a></li>
+<li><a href="http://wiki.jikexueyuan.com/project/mac-dev-setup/iterm.html" target="_blank" rel="external">http://wiki.jikexueyuan.com/project/mac-dev-setup/iterm.html</a></li>
+<li><a href="http://wulfric.me/2015/08/iterm2/" target="_blank" rel="external">http://wulfric.me/2015/08/iterm2/</a></li>
+<li><a href="http://yanghui.name/blog/2015/07/19/make-all-command-through-proxy/" target="_blank" rel="external">http://yanghui.name/blog/2015/07/19/make-all-command-through-proxy/</a></li>
+<li><a href="https://segmentfault.com/a/1190000003001555" target="_blank" rel="external">https://segmentfault.com/a/1190000003001555</a></li>
+<li><a href="http://www.wklken.me/posts/2015/08/06/linux-tmux.html" target="_blank" rel="external">http://www.wklken.me/posts/2015/08/06/linux-tmux.html</a></li>
+<li><a href="http://www.dreamxu.com/mac-terminal/" target="_blank" rel="external">http://www.dreamxu.com/mac-terminal/</a></li>
+<li><a href="http://zhaozhiming.github.io/blog/2015/11/22/save-and-restore-your-tmux/" target="_blank" rel="external">http://zhaozhiming.github.io/blog/2015/11/22/save-and-restore-your-tmux/</a></li>
+<li><a href="http://cenalulu.github.io/linux/tmux/" target="_blank" rel="external">http://cenalulu.github.io/linux/tmux/</a></li>
+<li><a href="http://blog.csdn.net/gatieme/article/details/49301037" target="_blank" rel="external">http://blog.csdn.net/gatieme/article/details/49301037</a></li>
+<li><a href="http://blog.jobbole.com/87278/" target="_blank" rel="external">http://blog.jobbole.com/87278/</a></li>
+<li><a href="http://wulfric.me/2015/08/zsh/" target="_blank" rel="external">http://wulfric.me/2015/08/zsh/</a></li>
+<li><a href="http://hujiandong.com/2016/09/11/iterm2/" target="_blank" rel="external">http://hujiandong.com/2016/09/11/iterm2/</a></li>
+<li><a href="http://www.jianshu.com/p/68ef9d2e1653" target="_blank" rel="external">http://www.jianshu.com/p/68ef9d2e1653</a></li>
+<li><a href="http://swiftcafe.io/2015/07/25/iterm/" target="_blank" rel="external">http://swiftcafe.io/2015/07/25/iterm/</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><ul>
+<li>如果你需要它就你就好好学习，如果你的职业现在完全用不到，那就把这篇文章加收藏，有需要再打开，不希望你花时间多做一些没有太大意义的事情。</li>
+</ul>
+      
+    </div>
+    
+  </div>
+  
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/macos/Mac-iTerm2/">终端方案iTerm2 + Zsh - Java程序员的Mac OS</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Zero</a></p>
+        <p><span>发布时间:</span>2016-10-29 22:23</p>
+        <!-- <p><span>最后更新:</span>2017-03-29, 16:08:15</p> -->
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/macos/Mac-iTerm2/" title="终端方案iTerm2 + Zsh - Java程序员的Mac OS">http://www.jiaoyigui.cn//macos/Mac-iTerm2/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.jiaoyigui.cn//macos/Mac-iTerm2/　　作者: Zero" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <!-- <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p> -->
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/macos/Mac-Java/">
+                    开发环境 - Java程序员的Mac OS
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/macos/Mac-Homebrew/">
+                    包管理工具 - Java程序员的Mac OS
+                </a>
+            </div>
+        
+    </nav>
+  
+</article>
+<div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#本文初衷"><span class="toc-number">1.</span> <span class="toc-text">本文初衷</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#先总结"><span class="toc-number">2.</span> <span class="toc-text">先总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#iTerm2-知识"><span class="toc-number">3.</span> <span class="toc-text">iTerm2 知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#iTerm2-是什么"><span class="toc-number">3.1.</span> <span class="toc-text">iTerm2 是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么会出现"><span class="toc-number">3.2.</span> <span class="toc-text">为什么会出现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#哪些人不喜欢-iTerm2"><span class="toc-number">3.3.</span> <span class="toc-text">哪些人不喜欢 iTerm2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么学习-iTerm2"><span class="toc-number">3.4.</span> <span class="toc-text">为什么学习 iTerm2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-iTerm2"><span class="toc-number">3.5.</span> <span class="toc-text">安装 iTerm2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#iTerm2-软件特色"><span class="toc-number">3.6.</span> <span class="toc-text">iTerm2 软件特色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-Zsh-oh-my-Zsh"><span class="toc-number">3.7.</span> <span class="toc-text">安装 Zsh + oh-my-Zsh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Zsh-软件特色"><span class="toc-number">3.8.</span> <span class="toc-text">Zsh 软件特色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关于搭配上-tmux"><span class="toc-number">3.9.</span> <span class="toc-text">关于搭配上 tmux</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#资料整理"><span class="toc-number">4.</span> <span class="toc-text">资料整理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">5.</span> <span class="toc-text">结束语</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+    <div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"终端方案iTerm2 + Zsh - Java程序员的Mac OS　| 夜的灯　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+    
+
+
+<div class="scroll" id="post-nav-button">
+        
+            <a href="/macos/Mac-Java/" title="上一篇: 开发环境 - Java程序员的Mac OS">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/macos/Mac-Homebrew/" title="下一篇: 包管理工具 - Java程序员的Mac OS">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/android/Android-OpenSource/">Android相关开源项目收藏</a></li><li class="post-list-item"><a class="post-list-link" href="/php/thinkphp5-install/">Thinkphp5快速入门</a></li><li class="post-list-item"><a class="post-list-link" href="/android/Android-Decompile/">Android反编译</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-Java/">开发环境 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-iTerm2/">终端方案iTerm2 + Zsh - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-Homebrew/">包管理工具 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-keymap/">常用快捷键 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-settings/">系统使用 - Java程序员眼中的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/server/VPS/">VPS + Shadowsocks 可以是什么，做什么</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-Debug/">IntelliJ IDEA DEBUG调试</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-For-Mac-Keys/">IntelliJ IDEA For Mac 快捷键</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-Settings/">IntelliJ IDEA 主题、字体、编辑区主题、文件编码修改、乱码问题</a></li><li class="post-list-item"><a class="post-list-link" href="/hexo/Hexo-Install/">搭建 Hexo 博客--增强篇</a></li></ul>
+
+
+    <script>
+        
+    </script></div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i>
+                2017 Zero
+            </div>
+            <div class="footer-right">
+                <!-- <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i> -->
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide()" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+<script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>

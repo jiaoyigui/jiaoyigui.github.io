@@ -5,24 +5,1702 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.jiaoyigui.cn/"/>
-  <updated>2017-03-29T04:43:32.000Z</updated>
+  <updated>2017-03-24T03:26:04.000Z</updated>
   <id>http://www.jiaoyigui.cn/</id>
   
   <author>
-    <name>焦义贵</name>
+    <name>Zero</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>IntelliJ IDEA For Mac 快捷键</title>
-    <link href="http://www.jiaoyigui.cn/2017/03/29/IntelliJ-IDEA-For-Mac-%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-    <id>http://www.jiaoyigui.cn/2017/03/29/IntelliJ-IDEA-For-Mac-快捷键/</id>
-    <published>2017-03-29T04:30:03.000Z</published>
-    <updated>2017-03-29T04:43:32.000Z</updated>
+    <title>Android相关开源项目收藏</title>
+    <link href="http://www.jiaoyigui.cn//android/Android-OpenSource/"/>
+    <id>http://www.jiaoyigui.cn//android/Android-OpenSource/</id>
+    <published>2017-03-24T03:14:12.000Z</published>
+    <updated>2017-03-24T03:26:04.000Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="Mac键盘符号和修饰键说明"><a href="#Mac键盘符号和修饰键说明" class="headerlink" title="Mac键盘符号和修饰键说明"></a>Mac键盘符号和修饰键说明</h4><ul>
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.jiaoyigui.cn/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Android" scheme="http://www.jiaoyigui.cn/tags/Android/"/>
+    
+      <category term="github" scheme="http://www.jiaoyigui.cn/tags/github/"/>
+    
+      <category term="开源项目" scheme="http://www.jiaoyigui.cn/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Thinkphp5快速入门</title>
+    <link href="http://www.jiaoyigui.cn//php/thinkphp5-install/"/>
+    <id>http://www.jiaoyigui.cn//php/thinkphp5-install/</id>
+    <published>2017-03-24T02:29:52.000Z</published>
+    <updated>2017-03-29T07:43:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h2><pre><code>PHP &gt;= 5.4.0
+PDO PHP Extension
+MBstring PHP Extension
+CURL PHP Extension
+</code></pre><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="MacOs安装Composer"><a href="#MacOs安装Composer" class="headerlink" title="MacOs安装Composer"></a>MacOs安装Composer</h3><figure class="highlight groovy"><table><tr><td class="code"><pre><div class="line">curl -sS <span class="string">https:</span><span class="comment">//getcomposer.org/installer | php</span></div><div class="line">mv composer.phar <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>composer</div></pre></td></tr></table></figure>
+<h3 id="使用Composer初始化tp5"><a href="#使用Composer初始化tp5" class="headerlink" title="使用Composer初始化tp5"></a>使用Composer初始化tp5</h3><figure class="highlight dsconfig"><table><tr><td class="code"><pre><div class="line"><span class="string">composer </span><span class="built_in">create-project</span> <span class="string">topthink/</span><span class="string">think </span><span class="string">blog </span> <span class="built_in">--prefer-dist</span></div></pre></td></tr></table></figure>
+<h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><figure class="highlight stylus"><table><tr><td class="code"><pre><div class="line">project  应用部署目录</div><div class="line">├─application           应用目录（可设置）</div><div class="line">│  ├─common             公共模块目录（可更改）</div><div class="line">│  ├─index              模块目录(可更改)</div><div class="line">│  │  ├─config<span class="selector-class">.php</span>      模块配置文件</div><div class="line">│  │  ├─common<span class="selector-class">.php</span>      模块函数文件</div><div class="line">│  │  ├─controller      控制器目录</div><div class="line">│  │  ├─model           模型目录</div><div class="line">│  │  ├─view            视图目录</div><div class="line">│  │  └─ ...            更多类库目录</div><div class="line">│  ├─command<span class="selector-class">.php</span>        命令行工具配置文件</div><div class="line">│  ├─common<span class="selector-class">.php</span>         应用公共（函数）文件</div><div class="line">│  ├─config<span class="selector-class">.php</span>         应用（公共）配置文件</div><div class="line">│  ├─database<span class="selector-class">.php</span>       数据库配置文件</div><div class="line">│  ├─tags<span class="selector-class">.php</span>           应用行为扩展定义文件</div><div class="line">│  └─route<span class="selector-class">.php</span>          路由配置文件</div><div class="line">├─extend                扩展类库目录（可定义）</div><div class="line">├─public                WEB 部署目录（对外访问目录）</div><div class="line">│  ├─static             静态资源存放目录(css,js,image)</div><div class="line">│  ├─index<span class="selector-class">.php</span>          应用入口文件</div><div class="line">│  ├─router<span class="selector-class">.php</span>         快速测试文件</div><div class="line">│  └─<span class="selector-class">.htaccess</span>          用于 apache 的重写</div><div class="line">├─runtime               应用的运行时目录（可写，可设置）</div><div class="line">├─vendor                第三方类库目录（Composer）</div><div class="line">├─thinkphp              框架系统目录</div><div class="line">│  ├─lang               语言包目录</div><div class="line">│  ├─library            框架核心类库目录</div><div class="line">│  │  ├─think           Think 类库包目录</div><div class="line">│  │  └─traits          系统 Traits 目录</div><div class="line">│  ├─tpl                系统模板目录</div><div class="line">│  ├─<span class="selector-class">.htaccess</span>          用于 apache 的重写</div><div class="line">│  ├─<span class="selector-class">.travis</span><span class="selector-class">.yml</span>        CI 定义文件</div><div class="line">│  ├─base<span class="selector-class">.php</span>           基础定义文件</div><div class="line">│  ├─composer<span class="selector-class">.json</span>      composer 定义文件</div><div class="line">│  ├─console<span class="selector-class">.php</span>        控制台入口文件</div><div class="line">│  ├─convention<span class="selector-class">.php</span>     惯例配置文件</div><div class="line">│  ├─helper<span class="selector-class">.php</span>         助手函数文件（可选）</div><div class="line">│  ├─LICENSE<span class="selector-class">.txt</span>        授权说明文件</div><div class="line">│  ├─phpunit<span class="selector-class">.xml</span>        单元测试配置文件</div><div class="line">│  ├─README<span class="selector-class">.md</span>          README 文件</div><div class="line">│  └─start<span class="selector-class">.php</span>          框架引导文件</div><div class="line">├─build<span class="selector-class">.php</span>             自动生成定义文件（参考）</div><div class="line">├─composer<span class="selector-class">.json</span>         composer 定义文件</div><div class="line">├─LICENSE<span class="selector-class">.txt</span>           授权说明文件</div><div class="line">├─README<span class="selector-class">.md</span>             README 文件</div><div class="line">├─think                 命令行入口文件</div></pre></td></tr></table></figure>
+<h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><p>首先是Controller：<br>位于application/index/controller/Index.php有一个默认的Index类：<br>本来它return的是开始页面，现在改为hello world。</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line"><span class="keyword">namespace</span>   <span class="title">app</span>\<span class="title">index</span>\<span class="title">controller</span>;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Index</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">index</span><span class="params">()</span></span></div><div class="line">        &#123;</div><div class="line">            <span class="keyword">return</span>  <span class="string">'Hello,World!'</span>;</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>然后我们再继承Controller类：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line"><span class="keyword">namespace</span> <span class="title">app</span>\<span class="title">index</span>\<span class="title">controller</span>;</div><div class="line"><span class="keyword">use</span> <span class="title">think</span>\<span class="title">Controller</span>;<span class="comment">//引入Controller类</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Index</span> <span class="keyword">extends</span> <span class="title">Controller</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">index</span><span class="params">($name=<span class="string">'world'</span>)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;assign(<span class="string">'name'</span>,$name);</div><div class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;fetch();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>我们向页面传递一个带有默认值的参数name。</p>
+<p>然后是View：<br>thinkphph采用模板渲染，模板存在View文件夹下，默认是没有View文件夹的，我们自己创建：<br>在application/index 目录下面创建一个 view 目录,在view目录下再建一个index目录，然后添加模板文件hello.html,整个路径： view/index/index.html</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><div class="line"><span class="params">&lt;html&gt;</span></div><div class="line"><span class="params">&lt;head&gt;</span></div><div class="line"><span class="params">&lt;title&gt;</span><span class="class">hello </span>&#123;$name&#125;<span class="params">&lt;/title&gt;</span></div><div class="line"><span class="params">&lt;/head&gt;</span></div><div class="line"><span class="params">&lt;body&gt;</span></div><div class="line">    <span class="class">hello </span>&#123;$name&#125;!</div><div class="line"><span class="params">&lt;/body&gt;</span></div><div class="line"><span class="params">&lt;/html&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><p>这里采用MySQL数据库，在blog表下建一个数据库：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">exists</span> think_data(</div><div class="line">    <span class="keyword">id</span> <span class="built_in">int</span>(<span class="number">8</span>) <span class="keyword">not</span> <span class="literal">null</span> auto_increment primary <span class="keyword">key</span>,</div><div class="line">    <span class="keyword">data</span> <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">not</span> <span class="literal">null</span></div><div class="line">)<span class="keyword">engine</span>=MyISAM <span class="keyword">default</span> <span class="keyword">charset</span>=utf8;</div></pre></td></tr></table></figure>
+<p>再插入几条数据就行；<br>然后在 application/database.php下进行配置：</p>
+<figure class="highlight dart"><table><tr><td class="code"><pre><div class="line"><span class="keyword">return</span> [</div><div class="line">    <span class="comment">// 数据库类型</span></div><div class="line">    <span class="string">'type'</span>           =&gt; <span class="string">'mysql'</span>,</div><div class="line">    <span class="comment">// 服务器地址</span></div><div class="line">    <span class="string">'hostname'</span>       =&gt; <span class="string">'127.0.0.1'</span>,</div><div class="line">    <span class="comment">// 数据库名</span></div><div class="line">    <span class="string">'database'</span>       =&gt; <span class="string">'blog'</span>,</div><div class="line">    <span class="comment">// 用户名</span></div><div class="line">    <span class="string">'username'</span>       =&gt; <span class="string">'root'</span>,</div><div class="line">    <span class="comment">// 密码</span></div><div class="line">    <span class="string">'password'</span>       =&gt; <span class="string">'123456'</span>,</div><div class="line">    <span class="comment">// 端口</span></div><div class="line">    <span class="string">'hostport'</span>       =&gt; <span class="string">''</span>,</div><div class="line">    <span class="comment">// 连接dsn</span></div><div class="line">    <span class="string">'dsn'</span>            =&gt; <span class="string">''</span>,</div><div class="line">    <span class="comment">// 数据库连接参数</span></div><div class="line">    <span class="string">'params'</span>         =&gt; [],</div><div class="line">    <span class="comment">// 数据库编码默认采用utf8</span></div><div class="line">    <span class="string">'charset'</span>        =&gt; <span class="string">'utf8'</span>,</div><div class="line">    <span class="comment">// 数据库表前缀</span></div><div class="line">    <span class="string">'prefix'</span>         =&gt; <span class="string">'think_'</span>,</div><div class="line">    <span class="comment">// 数据库调试模式</span></div><div class="line">    <span class="string">'debug'</span>          =&gt; <span class="keyword">true</span>,</div></pre></td></tr></table></figure>
+<p>修改controller下的Index类：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line"><span class="keyword">namespace</span> <span class="title">app</span>\<span class="title">index</span>\<span class="title">controller</span>;</div><div class="line"><span class="keyword">use</span> <span class="title">think</span>\<span class="title">Controller</span>;</div><div class="line"><span class="keyword">use</span> <span class="title">think</span>\<span class="title">Db</span>;<span class="comment">//引入数据库</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Index</span> <span class="keyword">extends</span> <span class="title">Controller</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">index</span><span class="params">($name=<span class="string">'world'</span>)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;assign(<span class="string">'name'</span>,$name);</div><div class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;fetch();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">dbtest</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        $data = Db::name(<span class="string">'data'</span>)-&gt;find();</div><div class="line">        <span class="keyword">$this</span>-&gt;assign(<span class="string">'result'</span>,$data);</div><div class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;fetch();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>再在view下的index目录下建一个dbtest.html渲染：</p>
+<figure class="highlight dust"><table><tr><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="template-variable">&#123;$result.id---$result.data&#125;</span><span class="xml"></span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      学习搭建thinkphp5
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.jiaoyigui.cn/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="php" scheme="http://www.jiaoyigui.cn/categories/%E6%8A%80%E6%9C%AF/php/"/>
+    
+      <category term="thinkphp5" scheme="http://www.jiaoyigui.cn/categories/%E6%8A%80%E6%9C%AF/php/thinkphp5/"/>
+    
+    
+      <category term="thinkphp5" scheme="http://www.jiaoyigui.cn/tags/thinkphp5/"/>
+    
+      <category term="php" scheme="http://www.jiaoyigui.cn/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android反编译</title>
+    <link href="http://www.jiaoyigui.cn//android/Android-Decompile/"/>
+    <id>http://www.jiaoyigui.cn//android/Android-Decompile/</id>
+    <published>2017-03-23T10:22:22.000Z</published>
+    <updated>2017-03-29T06:43:32.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.jiaoyigui.cn/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Android" scheme="http://www.jiaoyigui.cn/tags/Android/"/>
+    
+      <category term="反编译" scheme="http://www.jiaoyigui.cn/tags/%E5%8F%8D%E7%BC%96%E8%AF%91/"/>
+    
+      <category term="破解" scheme="http://www.jiaoyigui.cn/tags/%E7%A0%B4%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开发环境 - Java程序员的Mac OS</title>
+    <link href="http://www.jiaoyigui.cn//macos/Mac-Java/"/>
+    <id>http://www.jiaoyigui.cn//macos/Mac-Java/</id>
+    <published>2016-10-30T15:21:40.000Z</published>
+    <updated>2017-03-29T07:27:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<h2 id="本文初衷"><a href="#本文初衷" class="headerlink" title="本文初衷"></a>本文初衷</h2><ul>
+<li>整理自己脑袋中、收藏中的那些资料，来一次清空，让自己重新开始。</li>
+<li>帮助 Mac 后来者，减少他/她入门成本</li>
+<li>如果你不是 Java 开发者，本章对你没啥太大意义。</li>
+</ul>
+<h2 id="先总结"><a href="#先总结" class="headerlink" title="先总结"></a>先总结</h2><ul>
+<li>本篇文章没有细到一步一步截图的地步，需要有 Windows 下 Java 开发经验，以及 Linux 部署 Java 环境为基础。</li>
+<li>其实 Java 相关的开发环境，不管是 Windows、Mac、Linux 其实本质都一样的，都是改路径，改系统变量，如果你还用 IntelliJ IDEA 这种 IDE，有些压根就不需要系统变量了。</li>
+<li>各系统的路径差异说明：<ul>
+<li>Windows 的路径结构是这样的：<code>D:\360Downloads\HotFix</code></li>
+<li>Mac/Linux 的路径结构是这样的：<code>/usr/local</code></li>
+<li>没用过 Unix 系统的人会很不爽这种路径结构，其实嘛我觉得是 Windows 那种路径结构不好。</li>
+</ul>
+</li>
+<li>系统变量的更改位置，Mac/Linux 一般都是习惯在终端改，Windows 一般在 GUI，但是本质 Windows 也是可以在 cmd 改的，只是 Windows 的终端真的是太差劲了。</li>
+</ul>
+<h2 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h2><ul>
+<li>官网下载 JDK7：<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html" target="_blank" rel="external">http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html</a></li>
+<li>官网下载 JDK8：<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="external">http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a></li>
+<li>Java 开发环境理论上一般都是这个优先安装的。</li>
+<li>安装过程和 Windows 没啥区别，都是下一步下一步，只是比 Windows 简单，连安装路径都不需要改而已，所以这里不截图了。</li>
+<li>我这边不管是 Windows、Mac、Linux，只要开发环境，JAVA_HOME 我都是 JDK8，同时还装有 JDK6、JDK7，在使用 IntelliJ IDEA 的时候，我可以同时使用三个版本的 JDK。</li>
+<li>JDK 的环境变量是要添加的，我这边可以贴一下。</li>
+<li>在本系列前面的章节中我已经说明了，我这边是 Zsh 环境，所以我需要编辑这个配置文件：<code>vim ~/.zshrc</code></li>
+<li>如果你是 bash，你需要编辑的是这个：<code>vim ~/.bash_profile</code></li>
+<li>修改后之后刷新配置文件我是：<code>source ~/.zshrc</code></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># JDK 1.8</span></div><div class="line">JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home</div><div class="line">JRE_HOME=<span class="variable">$JAVA_HOME</span>/jre</div><div class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$JAVA_HOME</span>/bin</div><div class="line">CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</div><div class="line"><span class="built_in">export</span> JAVA_HOME</div><div class="line"><span class="built_in">export</span> JRE_HOME</div><div class="line"><span class="built_in">export</span> PATH</div><div class="line"><span class="built_in">export</span> CLASSPATH</div></pre></td></tr></table></figure>
+<h2 id="IntelliJ-IDEA"><a href="#IntelliJ-IDEA" class="headerlink" title="IntelliJ IDEA"></a>IntelliJ IDEA</h2><ul>
+<li>官网下载：<a href="http://www.jetbrains.com/idea/" target="_blank" rel="external">http://www.jetbrains.com/idea/</a></li>
+<li>最优秀的 IDE，没有之一，我所有的生产力硬件设备都是为了支持它而购买的，所以内存一定要够大。</li>
+<li>下面的 Maven、Tomcat 都是依赖于 IntelliJ IDEA 运行的，所以本质上我只要搞定 IntelliJ IDEA，其他的 Java 开发环境 IntelliJ IDEA 都会帮我们解决。</li>
+<li>关于 IntelliJ IDEA Mac 下安装/配置等相关，请看我写的这个系列，里面有详细说明：<a href="https://www.jiaoyigui.cn/2016/03/IntelliJ-IDEA-Settings/">IntelliJ IDEA 简体中文专题教程</a></li>
+<li>在 IntelliJ IDEA 有几个特别的地方我单独拿出来讲讲吧：<ul>
+<li>如果启动 Tomcat 的时候报：<code>Permission denied</code>，你则可以：打开终端，进入 Tomcat\bin 目录，然后执行：<code>chmod 777 *.sh</code></li>
+<li>如果启动 Tomcat 之后，控制台乱码了，并且你确认你在 IntelliJ IDEA 的 Preferences 中设置的控制台字体是支持中文的，那你可以尝试下在 Tomcat VM 参数上加上：<code>-Dfile.encoding=UTF-8</code></li>
+<li>Git 的路径配置：<code>Preferences -- Version Control -- Git -- Path to Git executable</code> 的值是：<code>/usr/local/git/bin/git</code></li>
+<li>如果你已经看过前面的：<a href="http://www.jiaoyigui.cn/2016/10/Mac-iTerm2/">一个Java程序员眼中的Mac OS（系列六：终端方案iTerm2 + Zsh）</a>，假设你也已经安装了 zsh<ul>
+<li>那你的 IntelliJ IDEA 终端路径可以改成 zsh 的，配置方法在 <code>Preferences -- Tools -- Terminal -- Shell path</code> 的值改为是：<code>/bin/zsh</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>IntelliJ IDEA 在 Mac 下的配置文件保存路径<ul>
+<li>下面内容中：<code>XXXXXX</code>，表示 IntelliJ IDEA 的版本号，IntelliJ IDEA 的配置目录是跟版本号有关系的。</li>
+<li><code>/Users/你的用户名/Library/Application Support/IntelliJIdeaXXXXXX</code>，用于保存安装的插件</li>
+<li><code>/Users/你的用户名/Library/Caches/IntelliJIdeaXXXXXX</code>，用于保存缓存、日志、以及本地的版本控制信息（local history 这个功能）</li>
+<li><code>/Users/你的用户名/Library/Preferences/IntelliJIdeaXXXXXX</code>，用于保存你的个人配置、授权文件，等价于 Windows 下的 <code>config</code> 目录</li>
+</ul>
+</li>
+</ul>
+<h2 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h2><ul>
+<li>官网下载：<a href="http://maven.apache.org/download.cgi" target="_blank" rel="external">http://maven.apache.org/download.cgi</a></li>
+<li>Maven 是绿色版的，任何系统都适用。</li>
+<li>安装方式和 Windows、Linux 没啥本质区别，都是把 zip 文件夹解压，然后新增几个系统变量，修改 Maven 配置文件参数。</li>
+<li>如果你不懂 Maven 相关知识可以查看</li>
+<li>我是把 Maven 解压后，直接把 Windows 的 settings.xml 复制过来，修改下该文件本地仓库的路径，其他没啥可以改的了。</li>
+<li>然后本地仓库的那些依赖包是直接从 Windows 下拷贝过来的，这个是任何系统下都兼容的，不需要额外处理。</li>
+<li>最后再用 IntelliJ IDEA 对 Maven 的配置路径重新做了修改。</li>
+<li>以上这些点都需要你对 Maven 和 IntelliJ IDEA 有了解，对于这两个东西我也在本文章都贴了相关的文章链接，我这里不多说了，学习总是需要花时间的。</li>
+<li>Maven 的环境变量是要添加的，我这边可以贴一下：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">MAVEN_HOME=/Users/jiaoyigui/my_software/work_software/maven3.3.9</div><div class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$MAVEN_HOME</span>/bin</div><div class="line"><span class="built_in">export</span> MAVEN_HOME</div><div class="line"><span class="built_in">export</span> PATH</div></pre></td></tr></table></figure>
+<h2 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h2><ul>
+<li>官网下载 Tomcat 7：<a href="http://tomcat.apache.org/download-70.cgi" target="_blank" rel="external">http://tomcat.apache.org/download-70.cgi</a></li>
+<li>官网下载 Tomcat 8：<a href="http://tomcat.apache.org/download-80.cgi" target="_blank" rel="external">http://tomcat.apache.org/download-80.cgi</a></li>
+<li>Tomcat 在 Windows 下虽然有安装版本，但是一般开发环境我们都不会下载安装版本的，所以假设你也是下载 zip 的压缩版本，这个版本任何系统都是通用的。</li>
+<li>因为是开发环境，所以不需要配置 CATALINA_HOME 变量，直接用 IntelliJ IDEA 指向 Tomcat 的解压目录即可，如果不懂，还是看我本文上面贴的 IntelliJ IDEA 系列教程地址。</li>
+</ul>
+<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><ul>
+<li>官网下载 MySQL 5.6：<a href="http://dev.mysql.com/downloads/mysql/5.6.html#downloads" target="_blank" rel="external">http://dev.mysql.com/downloads/mysql/5.6.html#downloads</a></li>
+<li>官网下载 MySQL 5.7：<a href="http://dev.mysql.com/downloads/mysql/" target="_blank" rel="external">http://dev.mysql.com/downloads/mysql/</a></li>
+<li>MySQL 官网提供的 Mac 系统的安装包，是下一步下一步安装类型的，没啥难度，大家自己试一下。</li>
+<li>有几个点需要注意的是：<ul>
+<li>如何重置 root 密码：<ul>
+<li>打开：<code>系统偏好设置 -- 底部的 MySQL -- 点击：Stop MySQL Server</code>，根据提示输入你的 Mac 用户密码。</li>
+<li>打开终端，输入命令：<code>sudo /usr/local/mysql/bin/mysqld_safe --skip-grant-tables</code>，根据提示输入你的 Mac 用户密码，然后这个终端就这样放着，别动</li>
+<li>再打开一个新的终端，输入命令：<code>sudo /usr/local/mysql/bin/mysql -u root</code>，根据提示输入你的 Mac 用户密码，密码如果无误的话，此时就进入：<code>mysql &gt;</code> 这种状态下。</li>
+<li>在：<code>mysql &gt;</code> 这种状态下输入命令：<code>UPDATE user SET authentication_string=PASSWORD(&#39;123456&#39;) WHERE User=&#39;root&#39;;FLUSH PRIVILEGES;</code>，我把密码重置为：<code>123456</code> 了。</li>
+</ul>
+</li>
+<li>MySQL 配置文件设置<ul>
+<li>Mac 下的 MySQL 默认是没有 my.ini 或是 my.cnf 文件的，需要我们自己复制一个出来。</li>
+<li>通过终端进入这个目录：<code>cd /usr/local/mysql/support-files/</code>，从该目录下随便找一个 <code>.cnf</code> 的文件，复制命名为：<code>my.cnf</code>，然后按照 MySQL 的配置规则配置这个文件。</li>
+<li>然后把这个 <code>my.cnf</code> 的文件复制到 <code>/etc</code> 目录下</li>
+<li>重启 MySQL 服务即可</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><ul>
+<li>官网下载：<a href="http://git-scm.com/download/mac" target="_blank" rel="external">http://git-scm.com/download/mac</a></li>
+<li>安装过程和 Windows 没啥区别，都是下一步下一步。</li>
+<li>IntelliJ IDEA 对 Git 的支持很好，也不需要额外配置什么，IntelliJ IDEA 的 Git 操作都很便捷强烈使用 IntelliJ IDEA 作为 Git 的 GUI 操作工具。</li>
+</ul>
+<h2 id="Tower"><a href="#Tower" class="headerlink" title="Tower"></a>Tower</h2><ul>
+<li>官网下载： <a href="https://www.git-tower.com" target="_blank" rel="external">https://www.git-tower.com</a></li>
+<li>安装过程和 Windows 没啥区别，都是下一步下一步。</li>
+<li>使用方便，有着完善git项目开发流程</li>
+</ul>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><ul>
+<li>感谢 JetBrains 这样的公司存在，让我省去很多麻烦。</li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      如果只是单纯以开发 Java 应用为准星，Mac 其实没啥特别的
+    
+    </summary>
+    
+      <category term="Mac" scheme="http://www.jiaoyigui.cn/categories/Mac/"/>
+    
+    
+      <category term="Mac" scheme="http://www.jiaoyigui.cn/tags/Mac/"/>
+    
+      <category term="Java" scheme="http://www.jiaoyigui.cn/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>终端方案iTerm2 + Zsh - Java程序员的Mac OS</title>
+    <link href="http://www.jiaoyigui.cn//macos/Mac-iTerm2/"/>
+    <id>http://www.jiaoyigui.cn//macos/Mac-iTerm2/</id>
+    <published>2016-10-29T14:23:10.000Z</published>
+    <updated>2017-03-29T08:08:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<h2 id="本文初衷"><a href="#本文初衷" class="headerlink" title="本文初衷"></a>本文初衷</h2><ul>
+<li>整理自己脑袋中、收藏中的那些资料，来一次清空，让自己重新开始。</li>
+<li>帮助 Mac 后来者，减少他/她入门成本</li>
+<li>如果你不是后台开发者，一般不需要用到这个东西，可以不用学的。如果你非要学，那你可以认为你现在看到的东西和在 Linux 上看到的没啥本质的区别，做好这个准备，对你很重要。</li>
+</ul>
+<h2 id="先总结"><a href="#先总结" class="headerlink" title="先总结"></a>先总结</h2><ul>
+<li>iTerm2 比 Mac 默认的 Terminal 终端好用，配合 Zsh 确实更加得体</li>
+<li><strong>牢记：</strong> 装了 zsh 之后，修改终端配置就变成了：<code>vim ~/.zshrc</code>，而不是：<code>vim ~/.bash_profile</code>，所以以后看到别人的文章中需要：<code>vim ~/.bash_profile</code>，那你自己要变通思想过来。</li>
+<li>同时更新修改后的配置文件也从：<code>source ~/.bash_profile</code>，变成了：<code>source ~/.zshrc</code>，当然还有其他取取巧方式，这里不谈。</li>
+</ul>
+<h2 id="iTerm2-知识"><a href="#iTerm2-知识" class="headerlink" title="iTerm2 知识"></a>iTerm2 知识</h2><h3 id="iTerm2-是什么"><a href="#iTerm2-是什么" class="headerlink" title="iTerm2 是什么"></a>iTerm2 是什么</h3><ul>
+<li>术语定义<ul>
+<li>iTerm2 官网：<a href="http://iterm2.com/" target="_blank" rel="external">http://iterm2.com/</a></li>
+<li>wiki 介绍：<a href="https://en.wikipedia.org/wiki/ITerm2" target="_blank" rel="external">https://en.wikipedia.org/wiki/ITerm2</a></li>
+<li>iTerm2 作者意思：Mac 的默认终端 Terminal 太难用了，我们开发一个新的终端来代替它吧。</li>
+</ul>
+</li>
+<li>同类常见技术<ul>
+<li><code>Terminal</code></li>
+</ul>
+</li>
+<li>学习前提/依赖<ul>
+<li>一点英文</li>
+<li>一点 Unix/Linux 系统的思想</li>
+<li>一点 Shell 概念</li>
+</ul>
+</li>
+</ul>
+<h3 id="为什么会出现"><a href="#为什么会出现" class="headerlink" title="为什么会出现"></a>为什么会出现</h3><ul>
+<li>有些操作，命令行或者说脚本的方式效率是远高于 GUI 界面操作的，这个概念需要用过 Unix/Linux 做过开发的人会懂，特别是搞运维的。如果你不理解，可以找一些运维的视频教程来看看，会有很多事情的处理都是搞脚本的做的。</li>
+</ul>
+<h3 id="哪些人不喜欢-iTerm2"><a href="#哪些人不喜欢-iTerm2" class="headerlink" title="哪些人不喜欢 iTerm2"></a>哪些人不喜欢 iTerm2</h3><ul>
+<li>设计师？</li>
+<li>前端开发者？可能真正的好前端开发者也是会经常用终端的，因为 node.js 的 npm 就有很多命令。</li>
+<li>不喜欢学习的，因为这里面涉及到很多 Unix/Linux 系统的知识点，很枯燥，而且很多快捷键需要背，需要花很多精力。</li>
+</ul>
+<h3 id="为什么学习-iTerm2"><a href="#为什么学习-iTerm2" class="headerlink" title="为什么学习 iTerm2"></a>为什么学习 iTerm2</h3><ul>
+<li>作为后端开发者必须学会的一个技能，不管是为了简化安装一些软件或是处理一些事情，还有工作中的后端程序的软件部署，都会跟 shell 打交道。</li>
+</ul>
+<h3 id="安装-iTerm2"><a href="#安装-iTerm2" class="headerlink" title="安装 iTerm2"></a>安装 iTerm2</h3><ul>
+<li>在安装之前先说下前提，你的 Mac 必须装有：Homebrew，等下 zsh 要用到。<ul>
+<li>如果你不知道 Homebrew 是做什么，可以查看我写的另外一篇文章：<a href="http://code.youmeek.com/2016/11/27/2016/11/Mac-Homebrew/" target="_blank" rel="external">一个Java程序员眼中的Mac OS（系列五：包管理工具）</a></li>
+</ul>
+</li>
+<li>下载 iTerm 2<ul>
+<li>当前时间（2016-10-31）最新版为：3.0.10</li>
+<li>下载地址，官网：<a href="https://iterm2.com/" target="_blank" rel="external">https://iterm2.com/</a></li>
+</ul>
+</li>
+<li>安装 iTerm 2<ul>
+<li>官网下载下来是一个 zip 压缩包，解压出来有一个 <code>.app</code> 文件，双击运行即可安装，或是拖到应用程序里面。</li>
+</ul>
+</li>
+<li>更改配色方案<ul>
+<li>目前大家喜欢设置的配色方案为 solarized，iTerm2 默认是有带的，如果没有则访问：<a href="https://github.com/altercation/solarized" target="_blank" rel="external">https://github.com/altercation/solarized</a><ul>
+<li>在项目中找到 solarized/iterm2-colors-solarized 目录，下面有两个文件：Solarized Dark.itermcolors 和 Solarized Light.itermcolors，双击这两个文件就可以把配置文件导入到 iTerm 里了。</li>
+</ul>
+</li>
+<li>更改后的配色最终效果如下图：已经截图了。同时还要再切换到 Text 标签，把 <code>Draw bold text in bold font</code> 的勾去掉。</li>
+<li><img src="http://img.youmeek.com/2016/Mac-iTerm2-1.jpg" alt="iTerm2介绍"></li>
+</ul>
+</li>
+</ul>
+<h3 id="iTerm2-软件特色"><a href="#iTerm2-软件特色" class="headerlink" title="iTerm2 软件特色"></a>iTerm2 软件特色</h3><ul>
+<li>智能选中<ul>
+<li>在 iTerm2 中，连续双击选中，连续三击选中整行，连续四击智能选中（智能规则可配置），可以识别网址，引号引起的字符串，邮箱地址等。</li>
+<li>在 iTerm2 中，选中即复制。即任何选中状态的字符串都被放到了系统剪切板中。</li>
+</ul>
+</li>
+<li>Hotkey Window (快速调出窗口)<ul>
+<li>这个非常好用，默认是没有设置，需要自己设置下。</li>
+<li>实际使用时我们经常会遇到这种场景：有时候只是执行几行命令，然后就不再使用它。可是我们还是必须要打开终端，使用完成后关闭它。但是用 iTerm2 这个功能只要按快捷键，出来虚化的终端，输入命令，然后再把光标放在其他地方自动就消息了。</li>
+<li>设置和效果如下图：<ul>
+<li><img src="http://img.youmeek.com/2016/Mac-iTerm2-2.jpg" alt="iTerm2介绍"></li>
+<li><img src="http://img.youmeek.com/2016/Mac-iTerm2-3.jpg" alt="iTerm2介绍"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>iTerm2 常用快捷键<ul>
+<li>这篇文章配了很多图，如果你想更加具体地了解可以看这篇文章，我不想截图了：<a href="http://swiftcafe.io/2015/07/25/iterm/" target="_blank" rel="external">http://swiftcafe.io/2015/07/25/iterm/</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">快捷键</th>
+<th style="text-align:left">介绍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">输入的命令开头字符 + Command + ;</td>
+<td style="text-align:left">根据输入的前缀历史记录自动补全</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + ;</td>
+<td style="text-align:left">根据历史记录自动补全</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + [ 或 command + ]</td>
+<td style="text-align:left">切换屏幕</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + enter</td>
+<td style="text-align:left">进入全屏模式，再按一次返回</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 鼠标单击</td>
+<td style="text-align:left">可以打开文件，文件夹和链接（iTerm2 是可以对显示的内容进行点击的哦）</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + n</td>
+<td style="text-align:left">新建新的 Window 窗口</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + t</td>
+<td style="text-align:left">新建标签页</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + w</td>
+<td style="text-align:left">关闭当前标签或是窗口</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + d</td>
+<td style="text-align:left">竖直分屏</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + r</td>
+<td style="text-align:left">清屏</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + /</td>
+<td style="text-align:left">按完之后，整个屏幕变成白茫茫的，而光标位置是一个小圆圈清除显示出来</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 方向键</td>
+<td style="text-align:left">切换标签页</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 数字</td>
+<td style="text-align:left">切换到指定数字标签页</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + f</td>
+<td style="text-align:left">查找，所查找的内容会被自动复制 ,输入查找的部分字符，找到匹配的值按 tab，即可复制，带有补全功能</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + option + e</td>
+<td style="text-align:left">全屏并排展示所有已经打开的标签页，带有可以搜索。</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Option + b</td>
+<td style="text-align:left">历史回放，i类似视频录像的东西，有记录你最近时间内的操作。有一个类似播放器的进度条可以拖动查看你做了什么。存放内容设置（Preferences -&gt; Genernal -&gt; Instant Replay）。</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Option + 数字</td>
+<td style="text-align:left">切换 Window 窗口</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + shift + d</td>
+<td style="text-align:left">水平分屏</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + shift + h</td>
+<td style="text-align:left">查看剪贴板历史，在光标位置下方会出现一列你输入过的历史记录</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Shift + m</td>
+<td style="text-align:left">可以保存当前位置，之后可以按Command + Shift + j跳回这个位置。</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + shift + alt + w</td>
+<td style="text-align:left">关闭所有窗口</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + u</td>
+<td style="text-align:left">清空当前行，无论光标在什么位置</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + a</td>
+<td style="text-align:left">移动到行首</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + e</td>
+<td style="text-align:left">移动到行尾</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + f</td>
+<td style="text-align:left">向前移动，相当于方向键右</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + b</td>
+<td style="text-align:left">向后移动，相当于方向键左</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + p</td>
+<td style="text-align:left">上一条命令，相当于方向键上</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + n</td>
+<td style="text-align:left">下一条命令，相当于方向键下</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + r</td>
+<td style="text-align:left">搜索历史命令</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + y</td>
+<td style="text-align:left">召回最近用命令删除的文字</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + h</td>
+<td style="text-align:left">删除光标之前的字符</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + d</td>
+<td style="text-align:left">删除光标所在位置的字符</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + w</td>
+<td style="text-align:left">删除光标之前的单词</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + k</td>
+<td style="text-align:left">删除从光标到行尾的内容</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + c</td>
+<td style="text-align:left">结束当前状态，另起一行</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + t</td>
+<td style="text-align:left">交换光标和之前的字符</td>
+</tr>
+</tbody>
+</table>
+<h3 id="安装-Zsh-oh-my-Zsh"><a href="#安装-Zsh-oh-my-Zsh" class="headerlink" title="安装 Zsh + oh-my-Zsh"></a>安装 Zsh + oh-my-Zsh</h3><ul>
+<li>Zsh 官网：<a href="https://www.zsh.org/" target="_blank" rel="external">https://www.zsh.org/</a></li>
+<li>oh-my-Zsh 官网：<a href="http://ohmyz.sh/" target="_blank" rel="external">http://ohmyz.sh/</a></li>
+<li>先说下：Zsh 和 oh-my-Zsh 的关系<ul>
+<li>Zsh 是 Shell 中的一种，什么 Shell 你可以再搜索下，简单粗暴讲就是一个：命令解释器，你输入什么命令，它就执行什么，这个东西再 Unix 世界还有其他几个。</li>
+<li>由于 Zsh 配置门槛有点高，或者说需要专门花时间去了解 Zsh 才能配置好一个好用的 Zsh，也因为这样，用户也就相对少了。</li>
+<li>直到有一天 oh-my-Zsh 的作者诞生，他想要整理出一个配置框架出来，让大家直接使用他的这个公认最好的 Zsh 配置，省去繁琐的配置过程。所以，oh-my-Zsh 就诞生了，它只是会了让你减少 Zsh 的配置，然后又可以好好享受 Zsh 这个 Shell。</li>
+</ul>
+</li>
+<li>Mac 和一般 Linux 默认的 shell 是 bash，一般人都觉得不好用，我作为一般人，也喜欢 Zsh，所以这里就用 Zsh。</li>
+<li>为了简化配置 Zsh 过程，我们这里选择 oh-my-Zsh 这个配置库，这是目前大家公认好用的配置。</li>
+<li>打开终端，先安装 git（已经安装的跳过该步骤），输入命令：<code>brew install git</code></li>
+<li>打开终端，安装 wget 工具，输入命令：<code>brew install wget</code></li>
+<li>打开终端，安装 Zsh：<code>brew install Zsh</code></li>
+<li>打开终端，安装 oh-my-Zsh：<code>sh -c &quot;$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-Zsh/master/tools/install.sh -O -)&quot;</code><ul>
+<li>下载完后，会提示你输入当前登录系统的用户密码，输入完成之后就会从 bash 切换到 Zsh，如果你没有输入密码直接跳过了，可以运行该命令进行手动切换：<code>chsh -s /bin/Zsh 你当前系统用户名</code></li>
+<li>切换完成之后，关掉终端，重新打开终端即可</li>
+</ul>
+</li>
+<li>如果你需要修改 oh-my-Zsh 的主题，和安装 Zsh 插件，具体可以看我过去整理的这篇文章：<a href="https://github.com/judasn/Linux-Tutorial/blob/master/Zsh.md" target="_blank" rel="external">Zsh 入门</a></li>
+</ul>
+<h3 id="Zsh-软件特色"><a href="#Zsh-软件特色" class="headerlink" title="Zsh 软件特色"></a>Zsh 软件特色</h3><ul>
+<li>不区分大小写智能提示。我是不喜欢大小写区分的那种人，所以用了 zsh 之后，经常按 Tab 进行提示。</li>
+<li>此外按下 tab 键显示出所有待选项后，再按一次 tab 键，即进入选择模式，进入选择模式后，按 tab 切向下一个选项，按 shift + tab 键切向上一个选项，ctrl+f/b/n/p 可以向前后左右切换。</li>
+<li>kill + 空格键 + Tab键，列出运行的进程，要啥哪个进程不需要再知道 PID 了，当然了 zsh，提供了让你知道 PID 的方法：<ul>
+<li>比如输入：kill vim，再按下 tab，会变成：kill 5643</li>
+</ul>
+</li>
+<li><code>ls **/*</code>，分层级地列出当前目录下所有文件及目录，并递归目录</li>
+<li><code>ls *.png</code> 查找当前目录下所有 png 文件</li>
+<li><code>ls **/*.png</code> 递归查找</li>
+<li>zsh 的目录跳转很智能，你无需输入 cd 就可直接输入路径即可。比如：<code>..</code> 表示后退一级目录，<code>../../</code> 表示后退两级，依次类推。</li>
+<li>在命令窗口中输入：<code>d</code>，将列出当前 session 访问过的所有目录，再按提示的数字即可进入相应目录。</li>
+<li>给 man 命令增加结果高亮显示：<ul>
+<li>编辑配置文件：<code>vim ~/.zshrc</code>，增加下面内容：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># man context highlight</span></div><div class="line"><span class="built_in">export</span> LESS_TERMCAP_mb=$<span class="string">'\E[01;31m'</span>       <span class="comment"># begin blinking</span></div><div class="line"><span class="built_in">export</span> LESS_TERMCAP_md=$<span class="string">'\E[01;38;5;74m'</span>  <span class="comment"># begin bold</span></div><div class="line"><span class="built_in">export</span> LESS_TERMCAP_me=$<span class="string">'\E[0m'</span>           <span class="comment"># end mode</span></div><div class="line"><span class="built_in">export</span> LESS_TERMCAP_se=$<span class="string">'\E[0m'</span>           <span class="comment"># end standout-mode</span></div><div class="line"><span class="built_in">export</span> LESS_TERMCAP_so=$<span class="string">'\E[38;5;246m'</span>    <span class="comment"># begin standout-mode - info box</span></div><div class="line"><span class="built_in">export</span> LESS_TERMCAP_ue=$<span class="string">'\E[0m'</span>           <span class="comment"># end underline</span></div><div class="line"><span class="built_in">export</span> LESS_TERMCAP_us=$<span class="string">'\E[04;38;5;146m'</span> <span class="comment"># begin underline</span></div></pre></td></tr></table></figure>
+<ul>
+<li>刷新配置文件：<code>source ~/.zshrc</code>，重新查看 man 的命令就可以有高亮了。</li>
+</ul>
+<h3 id="关于搭配上-tmux"><a href="#关于搭配上-tmux" class="headerlink" title="关于搭配上 tmux"></a>关于搭配上 tmux</h3><ul>
+<li>这个我觉得不是人人都需要的东西，如果经常用终端，或是运维人员可以考虑学这个东西，我的资料也是网上找的，你们可以自己找一下。</li>
+</ul>
+<h2 id="资料整理"><a href="#资料整理" class="headerlink" title="资料整理"></a>资料整理</h2><ul>
+<li>来自 Google 过程中的资料（真心感谢这些作者）：<ul>
+<li><a href="http://www.jianshu.com/p/3291de46f3ff" target="_blank" rel="external">Mac 终端命令大全</a></li>
+<li><a href="http://wiki.jikexueyuan.com/project/mac-dev-setup/iterm.html" target="_blank" rel="external">http://wiki.jikexueyuan.com/project/mac-dev-setup/iterm.html</a></li>
+<li><a href="http://wulfric.me/2015/08/iterm2/" target="_blank" rel="external">http://wulfric.me/2015/08/iterm2/</a></li>
+<li><a href="http://yanghui.name/blog/2015/07/19/make-all-command-through-proxy/" target="_blank" rel="external">http://yanghui.name/blog/2015/07/19/make-all-command-through-proxy/</a></li>
+<li><a href="https://segmentfault.com/a/1190000003001555" target="_blank" rel="external">https://segmentfault.com/a/1190000003001555</a></li>
+<li><a href="http://www.wklken.me/posts/2015/08/06/linux-tmux.html" target="_blank" rel="external">http://www.wklken.me/posts/2015/08/06/linux-tmux.html</a></li>
+<li><a href="http://www.dreamxu.com/mac-terminal/" target="_blank" rel="external">http://www.dreamxu.com/mac-terminal/</a></li>
+<li><a href="http://zhaozhiming.github.io/blog/2015/11/22/save-and-restore-your-tmux/" target="_blank" rel="external">http://zhaozhiming.github.io/blog/2015/11/22/save-and-restore-your-tmux/</a></li>
+<li><a href="http://cenalulu.github.io/linux/tmux/" target="_blank" rel="external">http://cenalulu.github.io/linux/tmux/</a></li>
+<li><a href="http://blog.csdn.net/gatieme/article/details/49301037" target="_blank" rel="external">http://blog.csdn.net/gatieme/article/details/49301037</a></li>
+<li><a href="http://blog.jobbole.com/87278/" target="_blank" rel="external">http://blog.jobbole.com/87278/</a></li>
+<li><a href="http://wulfric.me/2015/08/zsh/" target="_blank" rel="external">http://wulfric.me/2015/08/zsh/</a></li>
+<li><a href="http://hujiandong.com/2016/09/11/iterm2/" target="_blank" rel="external">http://hujiandong.com/2016/09/11/iterm2/</a></li>
+<li><a href="http://www.jianshu.com/p/68ef9d2e1653" target="_blank" rel="external">http://www.jianshu.com/p/68ef9d2e1653</a></li>
+<li><a href="http://swiftcafe.io/2015/07/25/iterm/" target="_blank" rel="external">http://swiftcafe.io/2015/07/25/iterm/</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><ul>
+<li>如果你需要它就你就好好学习，如果你的职业现在完全用不到，那就把这篇文章加收藏，有需要再打开，不希望你花时间多做一些没有太大意义的事情。</li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      大家都说 iTerm2 是 Mac 下最好的终端，试试也无妨
+    
+    </summary>
+    
+      <category term="Mac" scheme="http://www.jiaoyigui.cn/categories/Mac/"/>
+    
+    
+      <category term="Mac" scheme="http://www.jiaoyigui.cn/tags/Mac/"/>
+    
+      <category term="终端" scheme="http://www.jiaoyigui.cn/tags/%E7%BB%88%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>包管理工具 - Java程序员的Mac OS</title>
+    <link href="http://www.jiaoyigui.cn//macos/Mac-Homebrew/"/>
+    <id>http://www.jiaoyigui.cn//macos/Mac-Homebrew/</id>
+    <published>2016-10-27T14:23:10.000Z</published>
+    <updated>2017-03-29T07:27:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<h2 id="本文初衷"><a href="#本文初衷" class="headerlink" title="本文初衷"></a>本文初衷</h2><ul>
+<li>整理自己脑袋中、收藏中的那些资料，来一次清空，让自己重新开始。</li>
+<li>帮助 Mac 后来者，减少他/她入门成本</li>
+</ul>
+<h2 id="先总结"><a href="#先总结" class="headerlink" title="先总结"></a>先总结</h2><ul>
+<li>有 Homebrew 配置，安装/维护一些开发包/组件会方便很多，提供开发者效率，仅此而已。</li>
+<li>如果不是开发者，一般人就不用折腾这个，浪费时间</li>
+</ul>
+<h2 id="Homebrew-知识"><a href="#Homebrew-知识" class="headerlink" title="Homebrew 知识"></a>Homebrew 知识</h2><h3 id="Homebrew-是什么"><a href="#Homebrew-是什么" class="headerlink" title="Homebrew 是什么"></a>Homebrew 是什么</h3><ul>
+<li>术语定义<ul>
+<li>Homebrew 官网：<a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="external">http://brew.sh/index_zh-cn.html</a></li>
+<li>维基百科定义：<a href="https://weiji.ga/zh-hans/Homebrew" target="_blank" rel="external">https://weiji.ga/zh-hans/Homebrew</a></li>
+<li>我的理解：类似 Ubuntu 的 apt-get，CentOS 的 yum。</li>
+</ul>
+</li>
+<li>同类常见技术<ul>
+<li><code>Fink</code></li>
+<li><code>MacPorts</code></li>
+</ul>
+</li>
+<li>同类技术比较：<ul>
+<li><a href="http://www.zhihu.com/question/19862108" target="_blank" rel="external">Homebrew 和 Fink、MacPort 相比有什么优势？</a></li>
+</ul>
+</li>
+<li>学习前提/依赖<ul>
+<li>一点英文</li>
+<li>一点 Unix/Linux 系统的思想</li>
+<li>一点 shell 概念</li>
+</ul>
+</li>
+</ul>
+<h3 id="为什么会出现"><a href="#为什么会出现" class="headerlink" title="为什么会出现"></a>为什么会出现</h3><ul>
+<li>有些操作，命令行或者说脚本的方式效率是远高于 GUI 界面操作的，这个概念需要用过 Unix/Linux 做过开发的人会懂，特别是搞运维的。</li>
+<li>如果你不理解，可以找一些运维的视频教程来看看，会有很多事情的处理都是搞脚本的做的。所以在维护一些开发包/组件的时候，懂一些包管理工具的话会帮你提高工作效率，仅此而已。</li>
+</ul>
+<h3 id="哪些人不喜欢它"><a href="#哪些人不喜欢它" class="headerlink" title="哪些人不喜欢它"></a>哪些人不喜欢它</h3><ul>
+<li>不需要用到终端的用户</li>
+</ul>
+<h3 id="为什么学习它"><a href="#为什么学习它" class="headerlink" title="为什么学习它"></a>为什么学习它</h3><ul>
+<li>方便安装开发包/组件，便于管理这些东西</li>
+</ul>
+<h3 id="我要怎么做"><a href="#我要怎么做" class="headerlink" title="我要怎么做"></a>我要怎么做</h3><ul>
+<li>安装<ul>
+<li>先安装 Xcode command line tools：<ul>
+<li>打开终端，输入：<code>xcode-select --install</code>，如果提示已经安装过了那就不用管了。</li>
+</ul>
+</li>
+<li>打开终端，复制该命令：<code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code><ul>
+<li>根据提示，按回车键</li>
+<li>根据提示，输入当前用户的密码</li>
+<li>终端中提示正在下载和安装 Homebrew，这个时间根据你网速的快慢来决定时间，反正我是很慢，还出现了下载速度 0kb 的状况，然后重新运行了一次就成功。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>测试<ul>
+<li>打开终端，复制该命令：<code>brew doctor</code><ul>
+<li>如果输出：<code>Your system is ready to brew.</code>，则表示安装成功。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>卸载<ul>
+<li>打开终端，复制该命令：<code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)&quot;</code></li>
+<li>删除目录：<code>sudo rm -rf /usr/local/Homebrew</code></li>
+</ul>
+</li>
+<li>Homebrew 基本使用<ul>
+<li>安装指定软件包：<code>brew install 软件包名称</code>，安装过程的讲解可以看这篇文章：<a href="https://www.zybuluo.com/phper/note/87055" target="_blank" rel="external">https://www.zybuluo.com/phper/note/87055</a></li>
+<li>卸载指定软件包：<code>brew uninstall 软件包名称</code></li>
+<li>更新指定软件包：<code>brew upgrade 软件包名称</code></li>
+<li>搜索是否存在对应的软件包：<code>brew search 软件包名称</code></li>
+<li>查看对应软件包的信息：<code>brew info 软件包名称</code></li>
+<li>更新 Homebrew 在服务器端上的包目录：<code>brew update</code></li>
+<li>清理旧版本的包缓存时：<code>brew cleanup</code></li>
+<li>查看你安装过的包列表：<code>brew list</code></li>
+<li>更新 Homebrew 在服务器端上的包目录：<code>brew update</code></li>
+<li>查看那些已安装的程序需要更新：<code>brew outdated</code></li>
+</ul>
+</li>
+<li>使用国内源<ul>
+<li>默认的源实在速度有够慢的</li>
+<li>USTC 的源：<a href="https://lug.ustc.edu.cn/wiki/mirrors/help/brew.git" target="_blank" rel="external">https://lug.ustc.edu.cn/wiki/mirrors/help/brew.git</a><ul>
+<li>方法：</li>
+<li><code>cd &quot;$(brew --repo)&quot;</code></li>
+<li><code>git remote set-url origin git://mirrors.ustc.edu.cn/brew.git</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Proxychains4-为终端做代理"><a href="#Proxychains4-为终端做代理" class="headerlink" title="Proxychains4 为终端做代理"></a>Proxychains4 为终端做代理</h3><ul>
+<li>保证你本地有一个 socks5 到代理工具，不然下面的方法你无法使用。我这里的工具是：Shadowsocks<ul>
+<li>如果你不懂 Shadowsocks 相关，可以看：<a href="http://code.youmeek.com/2016/08/19/2016/08/VPS/" target="_blank" rel="external">http://code.youmeek.com/2016/08/19/2016/08/VPS/</a></li>
+</ul>
+</li>
+<li>安装 Proxychains4，输入命令：<code>brew install proxychains-ng</code></li>
+<li>修改配置文件：<code>vim /usr/local/etc/proxychains.conf</code><ul>
+<li>在配置文件中找到：<code>[ProxyList]</code>（也就是第 111 行的地方），在其下面一行新增一条：<code>socks5  127.0.0.1 1080 # my vps</code></li>
+</ul>
+</li>
+<li>测试：<code>proxychains4 wget www.google.com</code>，如果你能正常下载到 Google 页面，则表示成功了。以后只要在命令前面加个：proxychains4，即可。</li>
+<li>修改终端配置，让命令更加简洁：<ul>
+<li>如果你是 zsh 终端，配置修改：<code>vim ~/.zshrc</code>，添加一行：<code>alias pc=&#39;proxychains4&#39;</code></li>
+<li>如果你是 bash 终端，配置修改：<code>vim ~/.bash_profile</code>，添加一行：<code>alias pc=&#39;proxychains4&#39;</code></li>
+<li>修改之后，以后要用 proxychains4 执行穿墙命令的话，那就可以这样写：<code>pc wget google.com</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="资料整理"><a href="#资料整理" class="headerlink" title="资料整理"></a>资料整理</h2><ul>
+<li>来自 Google 过程中的资料（真心感谢这些作者）：<ul>
+<li><a href="https://aaaaaashu.gitbooks.io/mac-dev-setup/content/Homebrew/index.html" target="_blank" rel="external">https://aaaaaashu.gitbooks.io/mac-dev-setup/content/Homebrew/index.html</a></li>
+<li><a href="http://mac-osx-for-newbie-book.kejyun.com/software/SoftwareManageHomebrew.html" target="_blank" rel="external">http://mac-osx-for-newbie-book.kejyun.com/software/SoftwareManageHomebrew.html</a></li>
+<li><a href="http://www.cnblogs.com/TankXiao/p/3247113.html" target="_blank" rel="external">http://www.cnblogs.com/TankXiao/p/3247113.html</a></li>
+<li><a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="external">http://brew.sh/index_zh-cn.html</a></li>
+<li><a href="https://www.zybuluo.com/phper/note/87055" target="_blank" rel="external">https://www.zybuluo.com/phper/note/87055</a></li>
+<li><a href="http://www.udpwork.com/item/11775.html" target="_blank" rel="external">http://www.udpwork.com/item/11775.html</a></li>
+<li><a href="http://www.zhihu.com/question/22624898" target="_blank" rel="external">http://www.zhihu.com/question/22624898</a></li>
+<li><a href="http://wiki.jikexueyuan.com/project/mac-dev-setup/homebrew.html" target="_blank" rel="external">http://wiki.jikexueyuan.com/project/mac-dev-setup/homebrew.html</a></li>
+<li><a href="http://blog.devtang.com/2014/02/26/the-introduction-of-homebrew-and-brewcask/" target="_blank" rel="external">http://blog.devtang.com/2014/02/26/the-introduction-of-homebrew-and-brewcask/</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><ul>
+<li>如果你需要它就你就好好学习，如果你的职业现在完全用不到，那就把这篇文章加收藏，有需要再打开，不希望你花时间多做一些没有太大意义的事情。</li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      Homebrew 是 Mac 系统下，目前最主流的包管理工具
+    
+    </summary>
+    
+      <category term="Mac" scheme="http://www.jiaoyigui.cn/categories/Mac/"/>
+    
+    
+      <category term="Mac" scheme="http://www.jiaoyigui.cn/tags/Mac/"/>
+    
+      <category term="Homebrew" scheme="http://www.jiaoyigui.cn/tags/Homebrew/"/>
+    
+      <category term="终端" scheme="http://www.jiaoyigui.cn/tags/%E7%BB%88%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用快捷键 - Java程序员的Mac OS</title>
+    <link href="http://www.jiaoyigui.cn//macos/Mac-keymap/"/>
+    <id>http://www.jiaoyigui.cn//macos/Mac-keymap/</id>
+    <published>2016-10-21T14:56:53.000Z</published>
+    <updated>2017-03-29T07:27:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<h2 id="本文初衷"><a href="#本文初衷" class="headerlink" title="本文初衷"></a>本文初衷</h2><ul>
+<li>整理自己脑袋中、收藏中的那些资料，来一次清空，让自己重新开始。</li>
+<li>帮助 Mac 后来者，减少他/她入门成本</li>
+</ul>
+<h2 id="先总结"><a href="#先总结" class="headerlink" title="先总结"></a>先总结</h2><ul>
+<li>不管哪个系统，快捷键都很多，Mac 也不少。</li>
+<li>对于 Windows 转过来的人，下面的符号是最需要搞懂的，说句良心话，我讨厌这个符号，因为每次看到这些符号我的脑袋也是把他们转换成对应的英文单词，还为什么有些人不直接写单词就好了?</li>
+</ul>
+<h2 id="Mac-特殊按键讲解"><a href="#Mac-特殊按键讲解" class="headerlink" title="Mac 特殊按键讲解"></a>Mac 特殊按键讲解</h2><ul>
+<li>Mac 系统的功能按键跟 Windows 还是有点差别，需要做一下特殊记忆。<ul>
+<li><code>⌘</code> == <code>Command</code></li>
+<li><code>⇧</code> == <code>Shift</code></li>
+<li><code>⇪</code> == <code>Caps Lock</code></li>
+<li><code>⌥</code> == <code>Option</code></li>
+<li><code>⌃</code> == <code>Control</code></li>
+<li><code>↩</code> == <code>Return/Enter</code></li>
+<li><code>⌫</code> == <code>Delete</code></li>
+<li><code>⌦</code> == <code>向前删除键（Fn+Delete）</code></li>
+<li><code>↑</code> == <code>上箭头</code></li>
+<li><code>↓</code> == <code>下箭头</code></li>
+<li><code>←</code> == <code>左箭头</code></li>
+<li><code>→</code> == <code>右箭头</code></li>
+<li><code>⇞</code> == <code>Page Up（Fn+↑）</code></li>
+<li><code>⇟</code> == <code>Page Down（Fn+↓）</code></li>
+<li><code>Home</code> == <code>Fn + ←</code></li>
+<li><code>End</code> == <code>Fn + →</code></li>
+<li><code>⇥</code> == <code>右制表符（Tab键）</code></li>
+<li><code>⇤</code> == <code>左制表符（Shift+Tab）</code></li>
+<li><code>⎋</code> == <code>Escape (Esc)</code></li>
+<li><code>⏏</code> == <code>电源开关键</code></li>
+</ul>
+</li>
+<li>不同描述法词汇<ul>
+<li>app 指的是一个应用程序</li>
+<li>窗口指的是一个 app 里面可以多开的窗口。一个 app 是可以打开多个窗口的。</li>
+</ul>
+</li>
+</ul>
+<h2 id="必备快捷键"><a href="#必备快捷键" class="headerlink" title="必备快捷键"></a>必备快捷键</h2><h3 id="普通-app-系统-共有快捷键"><a href="#普通-app-系统-共有快捷键" class="headerlink" title="普通 app / 系统 共有快捷键"></a>普通 app / 系统 共有快捷键</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">快捷键</th>
+<th style="text-align:left">介绍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">电源按钮</td>
+<td style="text-align:left">轻点可打开 Mac 或将 Mac 从睡眠状态唤醒。 当 Mac 处于唤醒状态时，按住此按钮 1.5 秒钟会显示一个对话框，询问您是要重新启动、睡眠还是关机。如果您不想等待 1.5 秒钟，请按下 Control + 电源按钮。如果按住此按钮 5 秒钟会强制 Mac 关机。</td>
+</tr>
+<tr>
+<td style="text-align:left">Delete</td>
+<td style="text-align:left">文本编辑中：向前删除</td>
+</tr>
+<tr>
+<td style="text-align:left">Fn + Delete</td>
+<td style="text-align:left">文本编辑中：向后删除</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + 空格</td>
+<td style="text-align:left">切换输入法</td>
+</tr>
+<tr>
+<td style="text-align:left">Control + Shift + 电源按钮</td>
+<td style="text-align:left">将显示器置于睡眠状态</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + H</td>
+<td style="text-align:left">隐藏最前面的 app 的窗口</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + M</td>
+<td style="text-align:left">将最前面的窗口最小化至 Dock</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + S</td>
+<td style="text-align:left">保存</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + W</td>
+<td style="text-align:left">关闭最前面的窗口。</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Q</td>
+<td style="text-align:left">退出当前使用的 app</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + A</td>
+<td style="text-align:left">选择全部</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + F</td>
+<td style="text-align:left">打开“查找”窗口</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + G</td>
+<td style="text-align:left">再次查找：查找之前所找到项目出现的下一个位置。要查找出现的上一个位置，请按 Command + Shift + G</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + X</td>
+<td style="text-align:left">剪切</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + C</td>
+<td style="text-align:left">复制</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + V</td>
+<td style="text-align:left">粘贴</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Z</td>
+<td style="text-align:left">撤销</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Tab</td>
+<td style="text-align:left">切换 app</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Delete</td>
+<td style="text-align:left">删除文件</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 空格键</td>
+<td style="text-align:left">Spotlight：显示或隐藏 Spotlight 搜索栏。要从 Finder 窗口执行 Spotlight 搜索，请按 Command–Option–空格键</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 上方向键</td>
+<td style="text-align:left">跳转到页头</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 下方向键</td>
+<td style="text-align:left">跳转到页尾</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 左方向键</td>
+<td style="text-align:left">跳转当前行头</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 右方向键</td>
+<td style="text-align:left">跳转当前行尾</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 鼠标单击</td>
+<td style="text-align:left">间隔多选，类 Win 下的：Ctrl + 鼠标单击</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 逗号</td>
+<td style="text-align:left">偏好设置：打开最前面的 app 的偏好设置</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Shift + 3</td>
+<td style="text-align:left">截图整个桌面图片保存到桌面，默认是 PNG 格式</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Shift + 4</td>
+<td style="text-align:left">截图区域图片保存到桌面，默认是 PNG 格式</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Shift + Y</td>
+<td style="text-align:left">对选中的文字生成便签</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Shift + Q</td>
+<td style="text-align:left">注销您的 macOS 用户帐户。系统将提示您确认</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Shift + 波浪号 (~)</td>
+<td style="text-align:left">切换窗口：切换到最前端应用中下一个最近使用的窗口</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Shift + 点号</td>
+<td style="text-align:left">显示隐藏文件夹/文件，再按一次则隐藏</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Control + 空格键</td>
+<td style="text-align:left">显示“字符显示程序”弹出窗口，可以插入表情</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Control + 电源按钮</td>
+<td style="text-align:left">强制 Mac 重新启动</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Option + H</td>
+<td style="text-align:left">置顶当前焦点所在的这个窗口，隐藏后面的其他所有窗口。这个很有用的，方便使用桌面的内容</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Option + W</td>
+<td style="text-align:left">关闭当前 app 的所有窗口，请按 Command-Option-W</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Option + M</td>
+<td style="text-align:left">最小化最前面的 app 的所有窗口</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Option + Esc</td>
+<td style="text-align:left">弹出强制退出管理界面。或者，按住 Command-Shift-Option-Esc 3 秒钟来仅强制最前面的 app 退出</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Option + Shift + Q</td>
+<td style="text-align:left">立即注销您的 macOS 用户帐户，且系统不提示您确认。</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Option + Control + 电源按钮</td>
+<td style="text-align:left">退出所有 app，然后关闭 Mac。如果任何打开的文稿有未存储的更改，系统将询问您是否要存储这些更改</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Finder-文件管理器快捷键"><a href="#Finder-文件管理器快捷键" class="headerlink" title="Finder 文件管理器快捷键"></a>Finder 文件管理器快捷键</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">快捷键</th>
+<th style="text-align:left">介绍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Command + 1</td>
+<td style="text-align:left">以图标方式显示 Finder 窗口中的项目</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 2</td>
+<td style="text-align:left">以列表方式显示 Finder 窗口中的项目</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 3</td>
+<td style="text-align:left">以分栏方式显示 Finder 窗口中的项目</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 4</td>
+<td style="text-align:left">以 Cover Flow 方式显示 Finder 窗口中的项目</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + D</td>
+<td style="text-align:left">复制所选文件</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + E</td>
+<td style="text-align:left">推出所选磁盘或宗卷</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + F</td>
+<td style="text-align:left">在 Finder 窗口中开始 Spotlight 搜索</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + I</td>
+<td style="text-align:left">显示所选文件的“显示简介”窗口</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + N</td>
+<td style="text-align:left">新建文件夹</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + N</td>
+<td style="text-align:left">打开一个新的 Finder 窗口</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + J</td>
+<td style="text-align:left">调出“显示”选项</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Delete</td>
+<td style="text-align:left">将所选项移到废纸篓</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 上箭头</td>
+<td style="text-align:left">打开包含当前文件夹的文件夹</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 下箭头</td>
+<td style="text-align:left">打开所选项</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 左中括号 [</td>
+<td style="text-align:left">前往上一文件夹</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 右中括号 ]</td>
+<td style="text-align:left">前往下一文件夹</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 调高亮度键</td>
+<td style="text-align:left">开启或关闭目标显示器模式</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 调低亮度键</td>
+<td style="text-align:left">当 Mac 连接到多个显示器时打开或关闭显示器镜像功能</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 鼠标单击</td>
+<td style="text-align:left">在单独标签或窗口中打开文件夹</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + 斜线 (/)</td>
+<td style="text-align:left">隐藏或显示 Finder 窗口中的状态栏</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Shift + C</td>
+<td style="text-align:left">打开“电脑”窗口</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Shift + D</td>
+<td style="text-align:left">打开“桌面”文件夹</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Shift + F</td>
+<td style="text-align:left">打开“我的所有文件”窗口</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Shift + G</td>
+<td style="text-align:left">打开“前往文件夹”窗口</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Shift + H</td>
+<td style="text-align:left">打开当前 macOS 用户帐户的个人文件夹</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Shift + I</td>
+<td style="text-align:left">打开 iCloud Drive</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Shift + L</td>
+<td style="text-align:left">打开“下载”文件夹</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Shift + O</td>
+<td style="text-align:left">打开“文稿”文件夹</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Shift + U</td>
+<td style="text-align:left">打开“实用工具”文件夹。</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Shift + N</td>
+<td style="text-align:left">新建文件夹</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Shift + T</td>
+<td style="text-align:left">显示或隐藏 Finder 标签</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Shift + Delete</td>
+<td style="text-align:left">清空废纸篓</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Shift + Control + T</td>
+<td style="text-align:left">将所选的 Finder 项目添加到 Dock（OS X Mavericks 或更高版本）</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Option + D</td>
+<td style="text-align:left">显示或隐藏 Dock。即使您未打开 Finder，此快捷键通常也有效</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Option + P</td>
+<td style="text-align:left">隐藏或显示 Finder 窗口中的路径栏</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Option + S</td>
+<td style="text-align:left">隐藏或显示 Finder 窗口中的边栏</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Option + N</td>
+<td style="text-align:left">新建智能文件夹</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Option + V</td>
+<td style="text-align:left">移动：将剪贴板中的文件从其原始位置移动到当前位置</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Control + T</td>
+<td style="text-align:left">将所选项添加到边栏（OS X Mavericks 或更高版本）</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + Control + 上箭头</td>
+<td style="text-align:left">在新窗口中打开包含当前文件夹的文件夹</td>
+</tr>
+<tr>
+<td style="text-align:left">鼠标选中文件拖动，并按住 Option 键</td>
+<td style="text-align:left">拷贝当前文件到拖动后的文件夹</td>
+</tr>
+</tbody>
+</table>
+<h3 id="在启动期间按住的快捷键"><a href="#在启动期间按住的快捷键" class="headerlink" title="在启动期间按住的快捷键"></a>在启动期间按住的快捷键</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">快捷键</th>
+<th style="text-align:left">介绍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">C</td>
+<td style="text-align:left">从可引导的 CD、DVD 或 USB 闪存驱动器启动</td>
+</tr>
+<tr>
+<td style="text-align:left">Shift</td>
+<td style="text-align:left">以<a href="https://support.apple.com/zh-cn/HT201262" target="_blank" rel="external">安全模式</a>启动</td>
+</tr>
+<tr>
+<td style="text-align:left">Option</td>
+<td style="text-align:left">启动进入<a href="https://support.apple.com/kb/HT204417?viewlocale=zh_CN" target="_blank" rel="external">启动管理器</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Command + R</td>
+<td style="text-align:left">从 OS X 恢复功能启动</td>
+</tr>
+<tr>
+<td style="text-align:left">Command + S</td>
+<td style="text-align:left">以<a href="http://www.jb51.net/os/RedHat/1215.html" target="_blank" rel="external">单用户模式</a>启动</td>
+</tr>
+</tbody>
+</table>
+<h2 id="资料整理"><a href="#资料整理" class="headerlink" title="资料整理"></a>资料整理</h2><ul>
+<li>来自 Google 过程中的资料（真心感谢这些作者）：<ul>
+<li><a href="https://support.apple.com/zh-cn/HT201236" target="_blank" rel="external">https://support.apple.com/zh-cn/HT201236</a></li>
+<li><a href="http://www.jianshu.com/p/700a002e2e47" target="_blank" rel="external">http://www.jianshu.com/p/700a002e2e47</a></li>
+<li><a href="https://support.apple.com/zh-cn/HT201255" target="_blank" rel="external">https://support.apple.com/zh-cn/HT201255</a></li>
+<li><a href="https://support.apple.com/kb/PH21534?locale=zh_CN&amp;viewlocale=zh_CN" target="_blank" rel="external">https://support.apple.com/kb/PH21534?locale=zh_CN&amp;viewlocale=zh_CN</a></li>
+<li><a href="https://support.apple.com/zh-cn/HT201586" target="_blank" rel="external">https://support.apple.com/zh-cn/HT201586</a></li>
+<li><a href="https://support.apple.com/zh-cn/HT204436" target="_blank" rel="external">https://support.apple.com/zh-cn/HT204436</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><ul>
+<li>我懂背快捷键是个麻烦事，但是你不背，你怎么知道有这些东西？</li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      试着去背这些快捷键吧，可以加快很多事情
+    
+    </summary>
+    
+      <category term="Mac" scheme="http://www.jiaoyigui.cn/categories/Mac/"/>
+    
+    
+      <category term="Mac" scheme="http://www.jiaoyigui.cn/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>系统使用 - Java程序员眼中的Mac OS</title>
+    <link href="http://www.jiaoyigui.cn//macos/Mac-settings/"/>
+    <id>http://www.jiaoyigui.cn//macos/Mac-settings/</id>
+    <published>2016-10-20T15:07:02.000Z</published>
+    <updated>2017-03-29T07:29:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<h2 id="本文初衷"><a href="#本文初衷" class="headerlink" title="本文初衷"></a>本文初衷</h2><ul>
+<li>整理自己脑袋中、收藏中的那些资料，来一次清空，让自己重新开始。</li>
+<li>帮助 Mac 后来者，减少他/她入门成本</li>
+</ul>
+<h2 id="先总结"><a href="#先总结" class="headerlink" title="先总结"></a>先总结</h2><ul>
+<li>Mac 系统你值得拥有。</li>
+<li>本文所有的链接都是指向我写在简书上的文章，这里是做章节目录，方便你查阅。</li>
+</ul>
+<h2 id="教程环境"><a href="#教程环境" class="headerlink" title="教程环境"></a>教程环境</h2><ul>
+<li>硬件：2015 款 MacBook Pro</li>
+<li>系统：macOS Sierra 10.12.1</li>
+<li>语言：简体中文</li>
+</ul>
+<h2 id="Mac-必懂概念"><a href="#Mac-必懂概念" class="headerlink" title="Mac 必懂概念"></a>Mac 必懂概念</h2><ul>
+<li><a href="http://www.jianshu.com/p/6315d39dc740" target="_blank" rel="external">Mac 没有 <code>我的电脑</code>，有 <code>Finder</code></a></li>
+<li><a href="http://www.jianshu.com/p/6cd268727a74" target="_blank" rel="external">Mac 没有 <code>控制面板</code>，有 <code>系统偏好设置</code></a></li>
+<li><a href="http://www.jianshu.com/p/87c5b79ba49d" target="_blank" rel="external">Mac 没有 <code>回收站</code>，有 <code>废纸篓</code></a></li>
+<li><a href="http://www.jianshu.com/p/58a8c48015f2" target="_blank" rel="external">Mac 的常用压缩格式 dmg 文件，类似 Windows 的 ISO 文件格式</a></li>
+<li><a href="http://www.jianshu.com/p/caa98b53cdcd" target="_blank" rel="external">认识 Mission Control 的概念</a></li>
+<li><a href="http://www.jianshu.com/p/d46a60775074" target="_blank" rel="external">认识 Launchpad 的概念</a></li>
+<li><a href="http://www.jianshu.com/p/7e775c2a0bbc" target="_blank" rel="external">认识 Mac 的工具栏位置</a></li>
+<li><a href="http://www.jianshu.com/p/a17c05568dbb" target="_blank" rel="external">认识 Mac 的 Spotlight 全能搜索工具</a></li>
+</ul>
+<h2 id="系统功能点"><a href="#系统功能点" class="headerlink" title="系统功能点"></a>系统功能点</h2><ul>
+<li><a href="http://www.jianshu.com/p/cac5084fdebd" target="_blank" rel="external">如何连接有线网络/WiFi网络</a></li>
+<li><a href="http://www.jianshu.com/p/149b984e3c43" target="_blank" rel="external">查看本地 IP 地址</a></li>
+<li><a href="http://www.jianshu.com/p/005bfba5c080" target="_blank" rel="external">改变鼠标/触摸板滚轮滑动方向</a></li>
+<li><a href="http://www.jianshu.com/p/7a4fb9b084dc" target="_blank" rel="external">触摸板的使用</a></li>
+<li><a href="http://www.jianshu.com/p/ceb873c3759d" target="_blank" rel="external">修改F区键盘键为常规F1~F12键效果</a></li>
+<li><a href="http://www.jianshu.com/p/ae920595c641" target="_blank" rel="external">调整鼠标大小</a></li>
+<li><a href="http://www.jianshu.com/p/abcb0e5c1f5b" target="_blank" rel="external">调整音量</a></li>
+<li><a href="http://www.jianshu.com/p/f0126e7db78a" target="_blank" rel="external">调整屏幕亮度</a></li>
+<li><a href="http://www.jianshu.com/p/32c8922dd7e4" target="_blank" rel="external">修改无操作多少分钟后自动关闭屏幕</a></li>
+<li><a href="http://www.jianshu.com/p/bb822b5e3996" target="_blank" rel="external">修改壁纸</a></li>
+<li><a href="http://www.jianshu.com/p/748075fbab60" target="_blank" rel="external">如何修改分辨率</a></li>
+<li><a href="http://www.jianshu.com/p/0b9a6245192a" target="_blank" rel="external">设置桌面四边角触摸事件</a></li>
+<li><a href="http://www.jianshu.com/p/ab1cf88b1ac5" target="_blank" rel="external">设置外置鼠标多键控制</a></li>
+<li><a href="http://www.jianshu.com/p/ed6cdc9e3fab" target="_blank" rel="external">如何查看/显示隐藏文件/文件夹</a></li>
+<li><a href="http://www.jianshu.com/p/cb9b7a2aa4f2" target="_blank" rel="external">新建记事本</a></li>
+<li><a href="http://www.jianshu.com/p/93099ea5b9ce" target="_blank" rel="external">如何删除文件</a></li>
+<li><a href="http://www.jianshu.com/p/2ee720585cb9" target="_blank" rel="external">如何给文件/文件夹重命名</a></li>
+<li><a href="http://www.jianshu.com/p/d0842fb78bd3" target="_blank" rel="external">如何复制/剪切/粘贴文件</a></li>
+<li><a href="http://www.jianshu.com/p/488eccedd2b3" target="_blank" rel="external">修改安全性，允许任何来源的软件都可以安装</a></li>
+<li><a href="http://www.jianshu.com/p/945e98a8cf8b" target="_blank" rel="external">如何退出/推出U盘</a></li>
+<li><a href="http://www.jianshu.com/p/6babf13b3903" target="_blank" rel="external">如何锁屏</a></li>
+<li><a href="http://www.jianshu.com/p/091dfefc5143" target="_blank" rel="external">如何更新系统/官方应用</a></li>
+<li><a href="http://www.jianshu.com/p/3e6f685f4d75" target="_blank" rel="external">Mac 和 Windows 之间如何共享文件</a></li>
+<li><a href="http://www.jianshu.com/p/ee2cfacc4457" target="_blank" rel="external">强制结束应用</a></li>
+<li><a href="http://www.jianshu.com/p/3952e09b1e3b" target="_blank" rel="external">活动监视器，查看正在运行的软件情况</a></li>
+<li><a href="http://www.jianshu.com/p/25e645705927" target="_blank" rel="external">多桌面使用/切换</a></li>
+<li><a href="http://www.jianshu.com/p/ee41283a74fe" target="_blank" rel="external">使用自带的定时关机</a></li>
+<li><a href="http://www.jianshu.com/p/a352e9dce5e8" target="_blank" rel="external">系统备份和还原</a></li>
+<li><a href="http://www.jianshu.com/p/434cbf72fc23" target="_blank" rel="external">设置某个文件默认打开方式</a></li>
+<li><a href="http://www.jianshu.com/p/5386108211b0" target="_blank" rel="external">设置某个文件类型默认打开方式</a></li>
+<li><a href="http://www.jianshu.com/p/dd7e8fbdfd78" target="_blank" rel="external">Mac 软件下载站推荐</a></li>
+<li><a href="http://www.jianshu.com/p/e73f5e3b3d33" target="_blank" rel="external">压缩/解压文件</a></li>
+<li><a href="http://www.jianshu.com/p/ed73311f2d8a" target="_blank" rel="external">如何安装/卸载软件</a></li>
+<li><a href="http://www.jianshu.com/p/d4d9a3d80d94" target="_blank" rel="external">把软件图标放送到Dock栏上</a></li>
+<li><a href="http://www.jianshu.com/p/3deb33108d36" target="_blank" rel="external">中文输入法的使用</a></li>
+<li><a href="http://www.jianshu.com/p/40c42661cb36" target="_blank" rel="external">如何高效地进行窗口管理</a></li>
+<li><a href="http://www.jianshu.com/p/b098c40e5448" target="_blank" rel="external">如何截图</a></li>
+<li><a href="http://www.jianshu.com/p/569e80be37a9" target="_blank" rel="external">调整 Launchpad 应用图标大小/软件图标合并</a></li>
+<li><a href="http://www.jianshu.com/p/592ed6b2bb74" target="_blank" rel="external">设置开机自启动运行某些软件</a></li>
+<li><a href="http://www.jianshu.com/p/fb57a5f8cd70" target="_blank" rel="external">多开 QQ</a></li>
+<li><a href="http://www.jianshu.com/p/84ad2d1f111e" target="_blank" rel="external">如何录制视频</a></li>
+<li><a href="http://www.jianshu.com/p/4063b825670d" target="_blank" rel="external">如何安装字体</a></li>
+<li><a href="http://www.jianshu.com/p/b31e938bbeb7" target="_blank" rel="external">如何关闭自动检查更新</a></li>
+<li><a href="http://www.jianshu.com/p/5c36f49e45d2" target="_blank" rel="external">硬盘维护/格式化硬盘</a></li>
+<li><a href="http://www.jianshu.com/p/e461b630108c" target="_blank" rel="external">外接显示器设置</a></li>
+<li><a href="http://www.jianshu.com/p/eac6d1d38755" target="_blank" rel="external">启用/禁用root-修改root密码</a></li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      是软件撑起一个系统的易用性，所以用好软件就是用好系统。
+    
+    </summary>
+    
+      <category term="Mac" scheme="http://www.jiaoyigui.cn/categories/Mac/"/>
+    
+    
+      <category term="Mac" scheme="http://www.jiaoyigui.cn/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VPS + Shadowsocks 可以是什么，做什么</title>
+    <link href="http://www.jiaoyigui.cn//server/VPS/"/>
+    <id>http://www.jiaoyigui.cn//server/VPS/</id>
+    <published>2016-08-19T12:10:16.000Z</published>
+    <updated>2017-03-29T08:05:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<h2 id="本文初衷"><a href="#本文初衷" class="headerlink" title="本文初衷"></a>本文初衷</h2><ul>
+<li>理解 VPS，理解服务器部署相关，最重要的是理解穿越这件事</li>
+<li>帮助更多的开发者或是求知者，勇于求知，丰富自己的精神世界</li>
+</ul>
+<h2 id="VPS-介绍"><a href="#VPS-介绍" class="headerlink" title="VPS 介绍"></a>VPS 介绍</h2><h3 id="它是什么"><a href="#它是什么" class="headerlink" title="它是什么"></a>它是什么</h3><ul>
+<li>术语定义<ul>
+<li>维基百科定义：<a href="https://en.wikipedia.org/wiki/Virtual_private_server" target="_blank" rel="external">https://en.wikipedia.org/wiki/Virtual_private_server</a></li>
+<li>百度百科定义：<a href="http://baike.baidu.com/item/VPS" target="_blank" rel="external">http://baike.baidu.com/item/VPS</a><ul>
+<li>简单地讲就是：服务器中的隔板房</li>
+<li>本质：利用虚拟化技术，把一台实体服务器利用软件分割成多台虚拟化的服务器。</li>
+<li>你可以简单粗暴地理解为：阿里云、腾讯云提供的那些服务器服务，本质都没啥区别，就是提供资源。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>同类技术：<ul>
+<li>你可以用中文搜索：<code>云主机 虚拟主机 VPS</code></li>
+<li>你可以用英文搜索：<code>Dedicated hosting VPS Virtual cloud Shared hosting</code></li>
+<li>今天有看到这样一个标题顺便拿来做说明：linuxVPS基本命令，这个标题是不合理的。Linux 命令和 VPS 没啥关系，以后不要再犯这种错误了。</li>
+</ul>
+</li>
+<li>学习前提/依赖<ul>
+<li>英文单词好点</li>
+<li>会点 Linux 命令，关于 Linux 知识我有整理过：<a href="https://github.com/judasn/Linux-Tutorial" target="_blank" rel="external">https://github.com/judasn/Linux-Tutorial</a></li>
+<li>懂一点代理相关的思维，不懂也没关系</li>
+<li>知道外面世界和内部世界的差别，不知道也没关系</li>
+</ul>
+</li>
+</ul>
+<h3 id="为什么学习它"><a href="#为什么学习它" class="headerlink" title="为什么学习它"></a>为什么学习它</h3><ul>
+<li>需要：Google</li>
+<li>搭建博客</li>
+<li>放爬虫程序</li>
+</ul>
+<h2 id="VPS-使用过程"><a href="#VPS-使用过程" class="headerlink" title="VPS 使用过程"></a>VPS 使用过程</h2><h3 id="选择一个-VPS-提供商"><a href="#选择一个-VPS-提供商" class="headerlink" title="选择一个 VPS 提供商"></a>选择一个 VPS 提供商</h3><ul>
+<li>目前在国内，使用的主流外国 VPS 厂商有这些：<ul>
+<li><a href="http://www.linode.com/" target="_blank" rel="external">Linode</a>，算是业界 Top，就是贵</li>
+<li><a href="http://www.vultr.com/?ref=6959017" target="_blank" rel="external">Vultr</a>，我现在用的，也是下文演示的 VPS<ul>
+<li><a href="http://www.vultr.com/?ref=6959018-3B" target="_blank" rel="external">我的 Vultr 夏季特别推荐码</a></li>
+<li>使用这个注册我可以得到 30 美金，你可以得到 20 美金，这些钱提取不出来的，只能在里面消费。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Vultr-注册账号"><a href="#Vultr-注册账号" class="headerlink" title="Vultr 注册账号"></a>Vultr 注册账号</h3><ul>
+<li><a href="http://www.vultr.com/?ref=7137334" target="_blank" rel="external">Vultr</a><ul>
+<li><a href="http://www.vultr.com/?ref=7137334" target="_blank" rel="external">我的 Vultr 夏季特别推荐码</a></li>
+<li>点击链接上面，注册的按钮就在官网页面右上角，你自己去注册吧</li>
+</ul>
+</li>
+<li>注册要点说明：</li>
+<li><blockquote>
+<p>vultr 是禁止用户重复注册账号的，即如果你的支付信息有2个账号在使用，那么你的账户会被后台关闭的。简单的说就是一个账户的支付信息比如paypal 账号是对应唯一的一个的，如果你再次使用这个paypal支付另外一个新注册的账号的话，那么账户就会被关闭。所以，重复的注册账号是不可取的，试用到期效果好续费即可。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>来源：<a href="https://www.bandwagong.com/vultrvps/" target="_blank" rel="external">https://www.bandwagong.com/vultrvps/</a></p>
+</blockquote>
+</li>
+<li>Vultr 的一些特性介绍：<ul>
+<li>Vultr 官网优点介绍集合：<a href="https://www.vultr.com/features/" target="_blank" rel="external">https://www.vultr.com/features/</a></li>
+<li>各个节点的下载速度测试：<a href="https://www.vultr.com/faq/#downloadspeedtests" target="_blank" rel="external">https://www.vultr.com/faq/#downloadspeedtests</a></li>
+<li>各个节点当前的状态情况：<a href="https://www.vultr.com/status/" target="_blank" rel="external">https://www.vultr.com/status/</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="Vultr-收费模式"><a href="#Vultr-收费模式" class="headerlink" title="Vultr 收费模式"></a>Vultr 收费模式</h3><ul>
+<li>按月计算，比如官网套餐中： 5 美元一个月的机器配置，本质就是把 5 美元平摊到每个月里每个小时需要花多少金额。</li>
+<li>也因为这个按时模式，所以你可以在 Vultr 上随便创建世界上不同地区节点的服务器，自己不喜欢的，速度不好的，都可以随便销毁。每次开通一个服务器，最低消费是 0.01 美金，所以本质上开通是需要成本的。<ul>
+<li>推荐你刚刚开始的时候可以自己多创建几个服务器，然后对比测试下，看看你当前的网络下，使用哪个地区节点速度更好。国内三大运营商走的路线是不同的，所有还是有差异的。</li>
+</ul>
+</li>
+</ul>
+<h3 id="Vultr-账号充值"><a href="#Vultr-账号充值" class="headerlink" title="Vultr 账号充值"></a>Vultr 账号充值</h3><ul>
+<li>既然是服务器肯定是要钱的啦，不然别人没法活。</li>
+<li>建议用 Paypal 支付，别用信用卡，不然后面取消绑定信用卡是个麻烦事，充值方法操作具体看下图。<ul>
+<li>如果你没 Paypal 账号，那就注册一个，这个是不需要穿越的：<a href="https://www.paypal.com" target="_blank" rel="external">https://www.paypal.com</a></li>
+<li>在 Paypal 上绑定一个全币卡信用卡，我不知道银联的国内单币卡可不可以，我猜想是不可以的。建议开发者平时还要准备一个全币卡，方便生活</li>
+<li>Paypal 的购买流程跟常规银联的支付流程差不多，这里不多说</li>
+</ul>
+</li>
+</ul>
+<h3 id="Vultr-上创建空白系统-或-一键搭建某些应用"><a href="#Vultr-上创建空白系统-或-一键搭建某些应用" class="headerlink" title="Vultr 上创建空白系统 或 一键搭建某些应用"></a>Vultr 上创建空白系统 或 一键搭建某些应用</h3><ul>
+<li>Vultr 提供其他一些支持，比如提供专用的主机，存储类云（用的是机械硬盘，容量大）。支持单独开通 IPV6，开通自动备份，防 DDOS 攻击等等，当然了这些肯定是收费的。这些都跟新手没关系，如果你会了自己去勾选，这里不讲。</li>
+<li>访问创建系统页面：<a href="https://my.vultr.com/deploy/" target="_blank" rel="external">https://my.vultr.com/deploy/</a></li>
+<li>创建空白系统：<ul>
+<li>第一步选择服务器所在地区，效果如下图：<ul>
+<li>目前，国内建议选洛杉矶（Los Angeles, California），其他我都试过了，包括日本，响应都不是最优的，包括鐡在上海的方案，基本也是倾向于洛杉矶的。</li>
+<li>亚特兰大（Atlanta, Georgia）目前没有了，但是我测试了它公开的服务下载速度，发现是最快的，所以如果后面有亚特兰大的也建议开一个服务器，对比下，如果不错就换过来。</li>
+<li>平时你还可以关注下：西雅图（Seattle, Washington），硅谷（Silicon Valley, California）</li>
+</ul>
+</li>
+<li>第二步选择服务器系统，效果如下图：<ul>
+<li>如果你会 Linux，你喜欢选 CentOS 或是 Ubuntu、Debian 我都是无所谓的，本质没啥区别，但是如果你不会，那就乖乖地跟着箭头来。</li>
+</ul>
+</li>
+<li>第三步选择服务器硬件情况，效果如下图：<ul>
+<li>如果你土豪，你选啥我都觉得没事，但是如果你跟我一样，主要是为了 Shadowsocks，那就选择图片上的红圈内容，最便宜，而最合适。</li>
+<li>默认 Vultr 是选择第二个，10 美金一个月的套餐，所以你要注意点。</li>
+</ul>
+</li>
+<li>第四步开始自动部署系统，效果如下图：<ul>
+<li>页面下面剩下的选项跟你没关系，懂的人自己去考虑。新手只要点击：Deploy Now。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>创建 Vultr 帮我们直接安装好的某个应用系统：<ul>
+<li>第一步同创建空白系统，这里不重复</li>
+<li>第二步选择服务器应用，效果如下图：<ul>
+<li>如果你懂这些应用各代表什么意思，那就选。我用过 OpenVPN</li>
+<li>效果是，部署完后在服务器详情页面下面会给我们一个 OpenVPN 服务地址、账号、密码，访问地址可以下载到一个专用的本地客户端，下载下来安装完成后，打开这个软件，输入账号密码即可连接。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="在-Vultr-上销毁一个系统"><a href="#在-Vultr-上销毁一个系统" class="headerlink" title="在 Vultr 上销毁一个系统"></a>在 Vultr 上销毁一个系统</h3><ul>
+<li>访问我们的服务器列表页面：<a href="https://my.vultr.com/" target="_blank" rel="external">https://my.vultr.com/</a><ul>
+<li>主要操作按钮如下：<ul>
+<li><code>Server Details</code>，查看该服务器相关详情，比如 SSH 的账号密码等</li>
+<li><code>Server Stop</code>，停止当前服务器，让服务器无法提供服务，费用可是照扣</li>
+<li><code>Server Restart</code>，重启服务器</li>
+<li><code>Server Destroy</code>，点击这个按钮即可销毁服务器，并且里面的数据全部跟着销毁，费用不会再扣</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="本地-SSH-连接到-VPS-系统"><a href="#本地-SSH-连接到-VPS-系统" class="headerlink" title="本地 SSH 连接到 VPS 系统"></a>本地 SSH 连接到 VPS 系统</h3><ul>
+<li>从这里开始就需要会一点 Linux 知识</li>
+<li>点击上一步教学中提到的：<code>Server Details</code>，查看你自己的服务器 SSH 账号、密码，效果如下图：<ul>
+<li>把红框中的，IP 地址，用户名，密码，都记录下来，等下要用。端口是默认的 22。</li>
+</ul>
+</li>
+<li>下载 Xshell 进行 SSH 连接<ul>
+<li>把上面记下的：IP 地址，用户名，密码在 Xshell 里进行配置</li>
+</ul>
+</li>
+</ul>
+<h3 id="测试-VPS-性能"><a href="#测试-VPS-性能" class="headerlink" title="测试 VPS 性能"></a>测试 VPS 性能</h3><ul>
+<li>下面内容建立在你已经 SSH 连上服务器的基础上</li>
+<li>测试 VPS 纯硬件性能<ul>
+<li>使用 UnixBench 测试机子性能：<ul>
+<li><code>cd /opt</code></li>
+<li><code>wget --no-check-certificate https://github.com/teddysun/across/raw/master/unixbench.sh</code></li>
+<li><code>chmod +x unixbench.sh</code></li>
+<li><code>./unixbench.sh</code>，剩下就等结果，其他不用管了，执行的时间我这边大概是 30 min，所以还是有点长的。</li>
+<li>我最后的结果是：<code>System Benchmarks Index Score==1286.7</code>，简单粗暴地讲，如果是 1 个 CPU 的机子，如果你的结果值低于 500，那就是比较垃圾的 VPS 了，优秀的应该在 1000 左右，八九百算是普通（别人说的）。</li>
+<li>2016-12-11，我也购买了：DigitalOcean 旧金山每月 5 美金的机子，测试得到的分数：<code>973.8</code>。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>测试我们当前位置到 VPS 所在地址之间的网络请求响应能力<ul>
+<li>线上 TraceRoute 工具：<ul>
+<li><a href="http://tool.chinaz.com/Tracert/" target="_blank" rel="external">http://tool.chinaz.com/Tracert/</a></li>
+<li><a href="http://www.webkaka.com/tracert.aspx" target="_blank" rel="external">http://www.webkaka.com/tracert.aspx</a></li>
+<li><a href="http://www.17ce.com/" target="_blank" rel="external">http://www.17ce.com/</a></li>
+</ul>
+</li>
+<li>本地客户端工具：WinMTR<ul>
+<li>下载地址：<a href="http://winmtr.net/download-winmtr/" target="_blank" rel="external">http://winmtr.net/download-winmtr/</a></li>
+<li>扫描结果类似这样（实际地址我改动了）：</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">|------------------------------------------------------------------------------------------|</div><div class="line">|                                      W<span class="keyword">in</span>MTR statistics                                   |</div><div class="line">|                       Host              -   %  | Sent | Recv | Best | Avrg | Wrst | Last |</div><div class="line">|------------------------------------------------|------|------|------|------|------|------|</div><div class="line">|                            61.144.0.226 -    2 |   86 |   85 |    1 |    9 |  105 |   11 |</div><div class="line">|                            183.56.31.85 -    0 |   90 |   90 |    1 |    9 |   74 |    5 |</div><div class="line">|                              61.144.3.6 -    2 |   86 |   85 |    3 |    8 |   20 |    5 |</div><div class="line">|                           202.97.33.194 -   17 |   54 |   45 |    0 |    7 |   24 |   10 |</div><div class="line">|                            202.97.60.42 -   19 |   49 |   40 |    0 |    6 |   19 |    5 |</div><div class="line">|                           202.97.58.134 -    4 |   78 |   75 |  175 |  180 |  193 |  179 |</div><div class="line">|                            202.97.50.26 -    2 |   86 |   85 |  166 |  174 |  203 |  166 |</div><div class="line">|                           218.30.54.182 -    6 |   74 |   70 |  263 |  267 |  278 |  267 |</div><div class="line">|                          50.248.117.226 -    2 |   86 |   85 |  160 |  168 |  179 |  169 |</div><div class="line">|                   las-b4-link.telia.net -   12 |   62 |   55 |  272 |  277 |  382 |  277 |</div><div class="line">|                   25.132.70.2.vultr.com -    0 |   90 |   90 |  173 |  179 |  201 |  181 |</div></pre></td></tr></table></figure>
+<h3 id="在-CentOS-上搭建-Shadowsocks-服务器端"><a href="#在-CentOS-上搭建-Shadowsocks-服务器端" class="headerlink" title="在 CentOS 上搭建 Shadowsocks 服务器端"></a>在 CentOS 上搭建 Shadowsocks 服务器端</h3><ul>
+<li>重要声明：即使你有 Shadowsocks，你也不一定能用。如果你的公司环境是有很强的内网拦截，或是各种屏蔽，你依旧还是可能使用不了的。如果是一般家用，基本不会出现问题。</li>
+<li>Shadowsocks 中文名称：影梭？也有称作：小飞机，本质是：Socks 5 代理，也是一个代理工具。</li>
+<li>这里安装 Shadowsocks 使用的是网络上的一键脚本，更多资料可以看：<ul>
+<li>shadowsocks-libev 一键安装脚本（CentOS）：<a href="https://teddysun.com/357.html" target="_blank" rel="external">https://teddysun.com/357.html</a></li>
+<li>Shadowsocks-Python 版一键安装脚本（CentOS，Debian，Ubuntu）：<a href="https://teddysun.com/342.html" target="_blank" rel="external">https://teddysun.com/342.html</a>  </li>
+<li>Shadowsocks-go 一键安装脚本（CentOS，Debian，Ubuntu）：<a href="https://teddysun.com/392.html" target="_blank" rel="external">https://teddysun.com/392.html</a>  </li>
+<li>ShadowsocksR 一键安装脚本（CentOS，Debian，Ubuntu）：<a href="https://shadowsocks.be/9.html" target="_blank" rel="external">https://shadowsocks.be/9.html</a></li>
+</ul>
+</li>
+<li>我推荐使用：shadowsocks-libev 一键安装脚本<ul>
+<li>部署方法（新手请保证是 root 权限）：<ul>
+<li><code>cd /opt ; wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev.sh</code></li>
+<li><code>chmod +x shadowsocks-libev.sh</code></li>
+<li><code>./shadowsocks-libev.sh 2&gt;&amp;1 | tee shadowsocks-libev.log</code></li>
+</ul>
+</li>
+<li>接下来会有几个交互提示，需要你按要求完成，比如输入你要设置的端口、账号、密码等，具体看提示。脚本安装完成后，会将 shadowsocks-libev 自动加入开机自启动。</li>
+<li>安装完成后效果是这样的：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">Congratulations, shadowsocks-libev install completed!</div><div class="line">Your Server IP:你自己的服务器IP</div><div class="line">Your Server Port:你自己设置的服务器端口</div><div class="line">Your Password:你自己设置的密码</div><div class="line">Your Local IP:127.0.0.1</div><div class="line">Your Local Port:1080</div><div class="line">Your Encryption Method:aes-256-cfb</div><div class="line"></div><div class="line">Welcome to visit:https://teddysun.com/357.html</div><div class="line">Enjoy it!</div></pre></td></tr></table></figure>
+<ul>
+<li>卸载 Shadowsocks：<ul>
+<li><code>cd /opt ; ./shadowsocks-libev.sh uninstall</code></li>
+</ul>
+</li>
+<li>其他命令：<ul>
+<li>启动：<code>/etc/init.d/shadowsocks start</code></li>
+<li>停止：<code>/etc/init.d/shadowsocks stop</code></li>
+<li>重启：<code>/etc/init.d/shadowsocks restart</code></li>
+<li>查看状态：<code>/etc/init.d/shadowsocks status</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="Shadowsocks-客户端的介绍"><a href="#Shadowsocks-客户端的介绍" class="headerlink" title="Shadowsocks 客户端的介绍"></a>Shadowsocks 客户端的介绍</h3><ul>
+<li>因为是开源的，所有有很多，这里也感谢 Shadowsocks 的开源者：<a href="https://github.com/clowwindy" target="_blank" rel="external">clowwindy</a></li>
+<li>Windows 客户端：<a href="https://github.com/shadowsocks/shadowsocks-windows/releases" target="_blank" rel="external">https://github.com/shadowsocks/shadowsocks-windows/releases</a><ul>
+<li>百度云（密码：rlh1）：<a href="http://pan.baidu.com/s/1jHXGG1w" target="_blank" rel="external">http://pan.baidu.com/s/1jHXGG1w</a></li>
+<li>360 云盘（密码：30d3）：<a href="https://yunpan.cn/cMZLSPzTeUWJp" target="_blank" rel="external">https://yunpan.cn/cMZLSPzTeUWJp</a></li>
+</ul>
+</li>
+<li>Linux 客户端：<a href="https://github.com/shadowsocks/shadowsocks-gui" target="_blank" rel="external">https://github.com/shadowsocks/shadowsocks-gui</a></li>
+<li>OS X 客户端：<a href="https://github.com/shadowsocks/shadowsocks-iOS/wiki/Shadowsocks-for-OSX-Help" target="_blank" rel="external">https://github.com/shadowsocks/shadowsocks-iOS/wiki/Shadowsocks-for-OSX-Help</a></li>
+<li>iOS 客户端（在 App Store 中搜索下面名字）：<ul>
+<li>这类软件都很友好，配置都是很简单的，跟 PC 客户端类型，填上 SS 的相应信息即可。</li>
+<li>Shadowrocket，收费，我正在用的</li>
+</ul>
+</li>
+<li>Android 客户端：<a href="https://github.com/shadowsocks/shadowsocks-android/releases" target="_blank" rel="external">https://github.com/shadowsocks/shadowsocks-android/releases</a></li>
+<li>别人整理的客户端列表：<a href="https://shadowsocks.com/client.html" target="_blank" rel="external">https://shadowsocks.com/client.html</a></li>
+<li>以 Windows 的 Shadowsocks 客户端为例进行说明：<ul>
+<li>Windows 的 Shadowsocks 是一个绿色版软件</li>
+<li>重要思维提醒：<ul>
+<li>（<strong>重点</strong>）Shadowsocks 是一个代理工具，一启动该软件，即使你没有勾选：<code>启用系统代理</code>，也是同样可以用的，只是你需要利用浏览器扩展进行代理设置，本文下一个锚点会讲这个知识点</li>
+</ul>
+</li>
+<li>如果你想简单方便，不利用浏览器的扩展进行高级设置的话，那你也可以直接使用 Shadowsocks 自带功能，勾选：<code>启用系统代理</code>，然后在 <code>系统代理模式</code> 这个选项上选择对应模式<ul>
+<li>对于系统代理模式有两个选项模式：</li>
+<li><code>PAC 模式</code>，我称作：自动模式。它有一个 PAC 文件，里面有一些网址的匹配规则，这些网址是历代国人整理出来的，帮你辨别一些有用网站需要使用它就自动代理。这里有一个衍生知识：<a href="https://github.com/gfwlist/gfwlist" target="_blank" rel="external">GFWList</a><ul>
+<li>也因为有这样的一个 PAC 文件，所以你也可以自己添加规则，如果你会的话。当然了，如果你经常做这种事，那我建议你使用下面要讲的，配合浏览器扩展使用。</li>
+<li>最新的 GFWList 地址：<a href="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt" target="_blank" rel="external">https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</a></li>
+</ul>
+</li>
+<li><code>全局模式</code>，系统中所有支持 Socks 5 的软件都可以利用它代理，所以这里的要点是要用它代理必须是支持 Socks 5<ul>
+<li>也因为 Shadowsocks 这个特点，所以如果你要真正的全局代理，建议还是用 VPN 工具，比如 OpenVPN</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="浏览器扩展的使用"><a href="#浏览器扩展的使用" class="headerlink" title="浏览器扩展的使用"></a>浏览器扩展的使用</h3><ul>
+<li>Firefox 扩展 FoxyProxy Standard：<a href="https://addons.mozilla.org/zh-CN/firefox/addon/foxyproxy-standard/" target="_blank" rel="external">https://addons.mozilla.org/zh-CN/firefox/addon/foxyproxy-standard/</a><ul>
+<li>配置要点整理：<ul>
+<li>新建代理服务器</li>
+<li>填写 Shadowsocks 默认的本地代理信息：主机或 IP 地址：127.0.0.1，端口：1080</li>
+<li>选择 Socks 代理、Socks V5</li>
+<li>工作模式选择：使用基于其预定模板的代理服务器</li>
+<li>模式订阅增加 GFWList 地址：<a href="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt" target="_blank" rel="external">https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</a></li>
+<li>快速添加功能的开启，这个是为了方便我们添加一些不在 GFWList 的站点进行代理的便捷操作。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Chrome 扩展 Proxy SwitchyOmega：<a href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?hl=zh-CN" target="_blank" rel="external">https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?hl=zh-CN</a><ul>
+<li>配置要点整理：<ul>
+<li>编辑 proxy 设置，填写 Shadowsocks 默认的本地代理信息：主机或 IP 地址：127.0.0.1，端口：1080，选择 Socks 代理、Socks V5</li>
+<li>编辑 auto switch 设置</li>
+<li>模式订阅增加 GFWList 地址：<a href="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt" target="_blank" rel="external">https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</a></li>
+<li>规则列表规则选择：proxy</li>
+<li>浏览器工作模式选择：auto switch</li>
+<li>其他人文章参考：<a href="http://www.ihacksoft.com/chrome-switchyomega.html" target="_blank" rel="external">http://www.ihacksoft.com/chrome-switchyomega.html</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Shadowsocks-的同类"><a href="#Shadowsocks-的同类" class="headerlink" title="Shadowsocks 的同类"></a>Shadowsocks 的同类</h2><ul>
+<li>SpechtLite：<a href="https://github.com/zhuhaow/SpechtLite/releases" target="_blank" rel="external">https://github.com/zhuhaow/SpechtLite/releases</a></li>
+<li>ShadowsocksX：<a href="https://github.com/RobertYan/ShadowsocksX/releases" target="_blank" rel="external">https://github.com/RobertYan/ShadowsocksX/releases</a></li>
+<li>ShadowsocksX-R：<a href="https://github.com/yichengchen/ShadowsocksX-R/releases" target="_blank" rel="external">https://github.com/yichengchen/ShadowsocksX-R/releases</a></li>
+</ul>
+<h2 id="资料整理"><a href="#资料整理" class="headerlink" title="资料整理"></a>资料整理</h2><ul>
+<li>来自 Google 过程中的资料（真心感谢这些作者）：<ul>
+<li><a href="http://www.laozuo.org/tag/vultr-vps" target="_blank" rel="external">http://www.laozuo.org/tag/vultr-vps</a></li>
+<li><a href="https://www.bandwagong.com/vultrvps/" target="_blank" rel="external">https://www.bandwagong.com/vultrvps/</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><ul>
+<li>不管你是不是开发者，不管你身在何处。请，多求知、求真。</li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      对于开发者而言，穿越这件事可能要做一辈子
+    
+    </summary>
+    
+      <category term="开发工具" scheme="http://www.jiaoyigui.cn/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="开发工具" scheme="http://www.jiaoyigui.cn/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="VPS" scheme="http://www.jiaoyigui.cn/tags/VPS/"/>
+    
+      <category term="Shadowsocks" scheme="http://www.jiaoyigui.cn/tags/Shadowsocks/"/>
+    
+      <category term="Vultr" scheme="http://www.jiaoyigui.cn/tags/Vultr/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IntelliJ IDEA DEBUG调试</title>
+    <link href="http://www.jiaoyigui.cn//intellij-idea/IntelliJ-IDEA-Debug/"/>
+    <id>http://www.jiaoyigui.cn//intellij-idea/IntelliJ-IDEA-Debug/</id>
+    <published>2016-03-29T07:30:03.000Z</published>
+    <updated>2017-03-29T08:06:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<h2 id="Debug-设置"><a href="#Debug-设置" class="headerlink" title="Debug 设置"></a>Debug 设置</h2><p><img src="/images/xxiii-a-debug-settings-1.jpg" alt="Debug 设置"></p>
+<blockquote>
+<ul>
+<li>如上图标注 1 所示，表示设置 Debug 连接方式，默认是 <code>Socket</code>。<code>Shared memory</code> 是 Windows 特有的一个属性，一般在 Windows 系统下建议使用此设置，相对于 <code>Socket</code> 会快点。</li>
+</ul>
+</blockquote>
+<h2 id="Debug-常用快捷键"><a href="#Debug-常用快捷键" class="headerlink" title="Debug 常用快捷键"></a>Debug 常用快捷键</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">快捷键</th>
+<th style="text-align:left">介绍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">F7</td>
+<td style="text-align:left">在 Debug 模式下，进入下一步，如果当前行断点是一个方法，则进入当前方法体内，如果该方法体还有方法，则不会进入该内嵌的方法中 <code>必备</code></td>
+</tr>
+<tr>
+<td style="text-align:left">F8</td>
+<td style="text-align:left">在 Debug 模式下，进入下一步，如果当前行断点是一个方法，则不进入当前方法体内 <code>必备</code></td>
+</tr>
+<tr>
+<td style="text-align:left">F9</td>
+<td style="text-align:left">在 Debug 模式下，恢复程序运行，但是如果该断点下面代码还有断点则停在下一个断点上 <code>必备</code></td>
+</tr>
+<tr>
+<td style="text-align:left">Alt + F8</td>
+<td style="text-align:left">在 Debug 的状态下，选中对象，弹出可输入计算表达式调试框，查看该输入内容的调试结果 <code>必备</code></td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl + F8</td>
+<td style="text-align:left">在 Debug 模式下，设置光标当前行为断点，如果当前已经是断点则去掉断点</td>
+</tr>
+<tr>
+<td style="text-align:left">Shift + F7</td>
+<td style="text-align:left">在 Debug 模式下，智能步入。断点所在行上有多个方法调用，会弹出进入哪个方法</td>
+</tr>
+<tr>
+<td style="text-align:left">Shift + F8</td>
+<td style="text-align:left">在 Debug 模式下，跳出，表现出来的效果跟 <code>F9</code> 一样</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl + Shift + F8</td>
+<td style="text-align:left">在 Debug 模式下，指定断点进入条件</td>
+</tr>
+<tr>
+<td style="text-align:left">Alt + Shift + F7</td>
+<td style="text-align:left">在 Debug 模式下，进入下一步，如果当前行断点是一个方法，则进入当前方法体内，如果方法体还有方法，则会进入该内嵌的方法中，依此循环进入</td>
+</tr>
+</tbody>
+</table>
+<p>有时候我们可以这样粗鲁地认为 Debug 的使用就是等同于这几个快捷键的使用，所以上面的 <code>必备</code> 快捷键是我们必须牢记的，这些也是开发很常用的。</p>
+<h2 id="Debug-特殊技能使用"><a href="#Debug-特殊技能使用" class="headerlink" title="Debug 特殊技能使用"></a>Debug 特殊技能使用</h2><p><img src="/images/xxiii-b-debug-use-1.gif" alt="Debug 特殊技能使用"></p>
+<blockquote>
+<ul>
+<li>如上图 Gif 所示，查看所选对象的方法常用有三种方式：</li>
+</ul>
+<blockquote>
+<ul>
+<li>选中对象后，使用快捷键 <code>Alt + F8</code>。</li>
+<li>选中对象后，拖动对象到 <code>Watches</code>。</li>
+<li>选中对象后，鼠标悬停在对象上 2 秒左右。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><img src="/images/xxiii-b-debug-use-2.gif" alt="Debug 特殊技能使用"></p>
+<blockquote>
+<ul>
+<li>如上图 Gif 所示，在弹出表达式输入框中 IntelliJ IDEA 也是能帮我们智能提示。</li>
+</ul>
+</blockquote>
+<p><img src="/images/xxiii-b-debug-use-3.gif" alt="Debug 特殊技能使用"></p>
+<blockquote>
+<ul>
+<li>如上图 Gif 所示，当我们需要过掉后面的所有断点的时候，我们不需要去掉这些断点，只需要点击左下角那个小圆点，点击小圆点之后，所有断点变成灰色，然后我们再在按快捷键 <code>F9</code> 即可过掉当前和后面所有的断点。</li>
+</ul>
+</blockquote>
+<p><img src="/images/xxiii-b-debug-use-4.gif" alt="Debug 特殊技能使用"></p>
+<blockquote>
+<ul>
+<li>我们可以给断点设置进入的条件。如上图 Gif 所示，因为变量 temp3 不等于 200 所以该断点没有被进入直接跳过。</li>
+</ul>
+</blockquote>
+<p><img src="/images/xxiii-b-debug-use-5.gif" alt="Debug 特殊技能使用"></p>
+<blockquote>
+<ul>
+<li>有时候当我们步入方法体之后，还想回退到方法体外。如 Gif 演示，断点进入 <code>addNum</code> 方法后，点击 <code>Drop Frame</code> 按钮之后，断点重新回到方法体之外。</li>
+</ul>
+</blockquote>]]></content>
+    
+    <summary type="html">
+    
+      IntelliJ IDEA DEBUG调试
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.jiaoyigui.cn/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="IntelliJ IDEA" scheme="http://www.jiaoyigui.cn/categories/%E6%8A%80%E6%9C%AF/IntelliJ-IDEA/"/>
+    
+      <category term="开发工具" scheme="http://www.jiaoyigui.cn/categories/%E6%8A%80%E6%9C%AF/IntelliJ-IDEA/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="IntelliJ IDEA" scheme="http://www.jiaoyigui.cn/tags/IntelliJ-IDEA/"/>
+    
+      <category term="DEBUG调试" scheme="http://www.jiaoyigui.cn/tags/DEBUG%E8%B0%83%E8%AF%95/"/>
+    
+      <category term="开发工具" scheme="http://www.jiaoyigui.cn/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IntelliJ IDEA For Mac 快捷键</title>
+    <link href="http://www.jiaoyigui.cn//intellij-idea/IntelliJ-IDEA-For-Mac-Keys/"/>
+    <id>http://www.jiaoyigui.cn//intellij-idea/IntelliJ-IDEA-For-Mac-Keys/</id>
+    <published>2016-03-29T04:30:03.000Z</published>
+    <updated>2017-03-29T06:58:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Mac键盘符号和修饰键说明"><a href="#Mac键盘符号和修饰键说明" class="headerlink" title="Mac键盘符号和修饰键说明"></a>Mac键盘符号和修饰键说明</h2><ul>
 <li><code>⌘</code> Command</li>
 <li><code>⇧</code> Shift</li>
 <li><code>⌥</code> Option</li>
@@ -42,7 +1720,7 @@
 <li><code>⇤</code> 左制表符（Shift+Tab）</li>
 <li><code>⎋</code> Escape (Esc)</li>
 </ul>
-<h4 id="一、Editing（编辑）"><a href="#一、Editing（编辑）" class="headerlink" title="一、Editing（编辑）"></a>一、Editing（编辑）</h4><ul>
+<h2 id="Mac-Pro-IntelliJ-IDEA-快捷键"><a href="#Mac-Pro-IntelliJ-IDEA-快捷键" class="headerlink" title="Mac Pro IntelliJ IDEA 快捷键"></a>Mac Pro IntelliJ IDEA 快捷键</h2><h3 id="Editing（编辑）"><a href="#Editing（编辑）" class="headerlink" title="Editing（编辑）"></a>Editing（编辑）</h3><ul>
 <li><code>Control + Space</code> 基本的代码补全（补全任何类、方法、变量）</li>
 <li><code>Control + Shift + Space</code> 智能代码补全（过滤器方法列表和变量的预期类型）</li>
 <li><code>Command + Shift + Enter</code> 自动结束代码，行末自动添加分号</li>
@@ -83,7 +1761,7 @@
 <li><code>Command + Shift + 减号</code> 折叠所有代码块</li>
 <li><code>Command + W</code> 关闭活动的编辑器选项卡</li>
 </ul>
-<h4 id="二、Search-Replace（查询-替换）"><a href="#二、Search-Replace（查询-替换）" class="headerlink" title="二、Search/Replace（查询/替换）"></a>二、Search/Replace（查询/替换）</h4><ul>
+<h3 id="Search-Replace（查询-替换）"><a href="#Search-Replace（查询-替换）" class="headerlink" title="Search/Replace（查询/替换）"></a>Search/Replace（查询/替换）</h3><ul>
 <li><code>Double Shift</code> 查询任何东西</li>
 <li><code>Command + F</code> 文件内查找</li>
 <li><code>Command + G</code> 查找模式下，向下查找</li>
@@ -94,12 +1772,12 @@
 <li><code>Command + Shift + S</code> 查询结构（Ultimate Edition 版专用，需要在Keymap中设置）</li>
 <li><code>Command + Shift + M</code> 替换结构（Ultimate Edition 版专用，需要在Keymap中设置）</li>
 </ul>
-<h4 id="三、Usage-Search（使用查询）"><a href="#三、Usage-Search（使用查询）" class="headerlink" title="三、Usage Search（使用查询）"></a>三、Usage Search（使用查询）</h4><ul>
+<h3 id="Usage-Search（使用查询）"><a href="#Usage-Search（使用查询）" class="headerlink" title="Usage Search（使用查询）"></a>Usage Search（使用查询）</h3><ul>
 <li><code>Option + F7 / Command + F7</code> 在文件中查找用法 / 在类中查找用法</li>
 <li><code>Command + Shift + F7</code> 在文件中突出显示的用法</li>
 <li><code>Command + Option + F7</code> 显示用法</li>
 </ul>
-<h4 id="四、Compile-and-Run（编译和运行）"><a href="#四、Compile-and-Run（编译和运行）" class="headerlink" title="四、Compile and Run（编译和运行）"></a>四、Compile and Run（编译和运行）</h4><ul>
+<h3 id="Compile-and-Run（编译和运行）"><a href="#Compile-and-Run（编译和运行）" class="headerlink" title="Compile and Run（编译和运行）"></a>Compile and Run（编译和运行）</h3><ul>
 <li><code>Command + F9</code> 编译Project</li>
 <li><code>Command + Shift + F9</code> 编译选择的文件、包或模块</li>
 <li><code>Control + Option + R</code> 弹出 Run 的可选择菜单</li>
@@ -108,7 +1786,7 @@
 <li><code>Control + D</code> 调试</li>
 <li><code>Control + Shift + R, Control + Shift + D</code> 从编辑器运行上下文环境配置</li>
 </ul>
-<h4 id="五、Debugging（调试）"><a href="#五、Debugging（调试）" class="headerlink" title="五、Debugging（调试）"></a>五、Debugging（调试）</h4><ul>
+<h3 id="Debugging（调试）"><a href="#Debugging（调试）" class="headerlink" title="Debugging（调试）"></a>Debugging（调试）</h3><ul>
 <li><code>F8</code> 进入下一步，如果当前行断点是一个方法，则不进入当前方法体内</li>
 <li><code>F7</code> 进入下一步，如果当前行断点是一个方法，则进入当前方法体内，如果该方法体还有方法，则不会进入该内嵌的方法中</li>
 <li><code>Shift + F7</code> 智能步入，断点所在行上有多个方法调用，会弹出进入哪个方法</li>
@@ -119,7 +1797,7 @@
 <li><code>Command + F8</code> 切换断点（若光标当前行有断点则取消断点，没有则加上断点）</li>
 <li><code>Command + Shift + F8</code> 查看断点信息</li>
 </ul>
-<h4 id="六、Navigation（导航）"><a href="#六、Navigation（导航）" class="headerlink" title="六、Navigation（导航）"></a>六、Navigation（导航）</h4><ul>
+<h3 id="Navigation（导航）"><a href="#Navigation（导航）" class="headerlink" title="Navigation（导航）"></a>Navigation（导航）</h3><ul>
 <li><code>Command + O</code> 查找类文件</li>
 <li><code>Command + Shift + O</code> 查找所有类型文件、打开文件、打开目录，打开目录需要在输入的内容前面或后面加一个反斜杠<code>/</code></li>
 <li><code>Command + Option + O</code> 前往指定的变量 / 方法</li>
@@ -153,7 +1831,7 @@
 <li><code>Control + 0...Control + 9</code> 定位到对应数值的书签位置</li>
 <li><code>Command + F3</code> 显示所有书签</li>
 </ul>
-<h4 id="七、Refactoring（重构）"><a href="#七、Refactoring（重构）" class="headerlink" title="七、Refactoring（重构）"></a>七、Refactoring（重构）</h4><ul>
+<h3 id="Refactoring（重构）"><a href="#Refactoring（重构）" class="headerlink" title="Refactoring（重构）"></a>Refactoring（重构）</h3><ul>
 <li><code>F5</code> 复制文件到指定目录</li>
 <li><code>F6</code> 移动文件到指定目录</li>
 <li><code>Command + Delete</code> 在文件上为安全删除文件，弹出确认框</li>
@@ -166,17 +1844,17 @@
 <li><code>Command + Option + C</code> 提取常量</li>
 <li><code>Command + Option + P</code> 提取参数</li>
 </ul>
-<h4 id="八、VCS-Local-History（版本控制-本地历史记录）"><a href="#八、VCS-Local-History（版本控制-本地历史记录）" class="headerlink" title="八、VCS/Local History（版本控制/本地历史记录）"></a>八、VCS/Local History（版本控制/本地历史记录）</h4><ul>
+<h2 id="VCS-Local-History（版本控制-本地历史记录）"><a href="#VCS-Local-History（版本控制-本地历史记录）" class="headerlink" title="VCS/Local History（版本控制/本地历史记录）"></a>VCS/Local History（版本控制/本地历史记录）</h2><ul>
 <li><code>Command + K</code> 提交代码到版本控制器</li>
 <li><code>Command + T</code> 从版本控制器更新代码</li>
 <li><code>Option + Shift + C</code> 查看最近的变更记录</li>
 <li><code>Control + C</code> 快速弹出版本控制器操作面板</li>
 </ul>
-<h4 id="九、Live-Templates（动态代码模板）"><a href="#九、Live-Templates（动态代码模板）" class="headerlink" title="九、Live Templates（动态代码模板）"></a>九、Live Templates（动态代码模板）</h4><ul>
+<h3 id="Live-Templates（动态代码模板）"><a href="#Live-Templates（动态代码模板）" class="headerlink" title="Live Templates（动态代码模板）"></a>Live Templates（动态代码模板）</h3><ul>
 <li><code>Command + Option + J</code> 弹出模板选择窗口，将选定的代码使用动态模板包住</li>
 <li><code>Command + J</code> 插入自定义动态代码模板</li>
 </ul>
-<h4 id="十、General（通用）"><a href="#十、General（通用）" class="headerlink" title="十、General（通用）"></a>十、General（通用）</h4><ul>
+<h3 id="General（通用）"><a href="#General（通用）" class="headerlink" title="General（通用）"></a>General（通用）</h3><ul>
 <li><code>Command + 1...Command + 9</code> 打开相应编号的工具窗口</li>
 <li><code>Command + S</code> 保存所有</li>
 <li><code>Command + Option + Y</code> 同步、刷新</li>
@@ -190,24 +1868,22 @@
 <li><code>Shift + Command + A</code> 查找动作（可设置相关选项）</li>
 <li><code>Control + Shift + Tab</code> 编辑窗口标签和工具窗口之间切换（如果在切换的过程加按上delete，则是关闭对应选中的窗口）</li>
 </ul>
-<h4 id="十一、Other（一些官方文档上没有体现的快捷键）"><a href="#十一、Other（一些官方文档上没有体现的快捷键）" class="headerlink" title="十一、Other（一些官方文档上没有体现的快捷键）"></a>十一、Other（一些官方文档上没有体现的快捷键）</h4><ul>
+<h3 id="Other（一些官方文档上没有体现的快捷键）"><a href="#Other（一些官方文档上没有体现的快捷键）" class="headerlink" title="Other（一些官方文档上没有体现的快捷键）"></a>Other（一些官方文档上没有体现的快捷键）</h3><ul>
 <li><code>Command + Shift +8</code> 竖编辑模式</li>
-</ul>
-]]></content>
+</ul>]]></content>
     
     <summary type="html">
     
-      &lt;h4 id=&quot;Mac键盘符号和修饰键说明&quot;&gt;&lt;a href=&quot;#Mac键盘符号和修饰键说明&quot; class=&quot;headerlink&quot; title=&quot;Mac键盘符号和修饰键说明&quot;&gt;&lt;/a&gt;Mac键盘符号和修饰键说明&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;⌘&lt;/code&gt; Comma
+      IntelliJ IDEA Mac键盘符号和修饰键说明
     
     </summary>
     
       <category term="技术" scheme="http://www.jiaoyigui.cn/categories/%E6%8A%80%E6%9C%AF/"/>
     
+      <category term="IntelliJ IDEA" scheme="http://www.jiaoyigui.cn/categories/%E6%8A%80%E6%9C%AF/IntelliJ-IDEA/"/>
+    
     
       <category term="IntelliJ IDEA" scheme="http://www.jiaoyigui.cn/tags/IntelliJ-IDEA/"/>
-    
-      <category term="工具" scheme="http://www.jiaoyigui.cn/tags/%E5%B7%A5%E5%85%B7/"/>
     
       <category term="快捷键" scheme="http://www.jiaoyigui.cn/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     
@@ -215,19 +1891,19 @@
   
   <entry>
     <title>IntelliJ IDEA 主题、字体、编辑区主题、文件编码修改、乱码问题</title>
-    <link href="http://www.jiaoyigui.cn/2017/03/29/IntelliJ-IDEA-%E4%B8%BB%E9%A2%98%E3%80%81%E5%AD%97%E4%BD%93%E3%80%81%E7%BC%96%E8%BE%91%E5%8C%BA%E4%B8%BB%E9%A2%98%E3%80%81%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81%E4%BF%AE%E6%94%B9%E3%80%81%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/"/>
-    <id>http://www.jiaoyigui.cn/2017/03/29/IntelliJ-IDEA-主题、字体、编辑区主题、文件编码修改、乱码问题/</id>
-    <published>2017-03-29T04:27:26.000Z</published>
-    <updated>2017-03-29T04:47:48.000Z</updated>
+    <link href="http://www.jiaoyigui.cn//intellij-idea/IntelliJ-IDEA-Settings/"/>
+    <id>http://www.jiaoyigui.cn//intellij-idea/IntelliJ-IDEA-Settings/</id>
+    <published>2016-03-29T04:27:26.000Z</published>
+    <updated>2017-03-29T07:03:15.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="主题修改"><a href="#主题修改" class="headerlink" title="主题修改"></a>主题修改</h2><p><img src="images/x-a-theme-setting-1.jpg" alt="主题修改"></p>
+    <content type="html"><![CDATA[<h2 id="主题修改"><a href="#主题修改" class="headerlink" title="主题修改"></a>主题修改</h2><p><img src="/images/x-a-theme-setting-1.jpg" alt="主题修改"></p>
 <blockquote>
 <ul>
 <li>上图标注 1 所示为 IntelliJ IDEA 修改主题的地方，在 Windows 系统上 IntelliJ IDEA 默认提供的主题有四套：<code>Darcula</code>、<code>IntelliJ</code>、<code>Windows</code>、<code>Alloy. IDEA Theme</code>。除了 <code>Darcula</code> 是黑色主题，其他三套都是以白色为背景的。</li>
 <li>其他操作系统上不一定会也有四套主题的，主题的选择上大家根据自己喜好即可。改变主题需要重启 IntelliJ IDEA 方可看到效果。</li>
 </ul>
 </blockquote>
-<h2 id="字体修改"><a href="#字体修改" class="headerlink" title="字体修改"></a>字体修改</h2><h3 id="主题字体修改"><a href="#主题字体修改" class="headerlink" title="主题字体修改"></a>主题字体修改</h3><p><img src="images/x-b-font-setting-1.jpg" alt="主题字体修改"></p>
+<h2 id="字体修改"><a href="#字体修改" class="headerlink" title="字体修改"></a>字体修改</h2><h3 id="主题字体修改"><a href="#主题字体修改" class="headerlink" title="主题字体修改"></a>主题字体修改</h3><p><img src="/images/x-b-font-setting-1.jpg" alt="主题字体修改"></p>
 <blockquote>
 <ul>
 <li>如上图标注 1 所示，IntelliJ IDEA 主题字体的修改要先勾选 <code>Override default fonts by</code> 。默认 IntelliJ IDEA 是不推荐修改的，但是由于字体是有分包含中文和不包含中文之分的，一般使用英文的国家是不需要额外担心乱码问题的，而我们需要。</li>
@@ -237,7 +1913,7 @@
 <li>还需要特别注意的时候，如果你是开着 IntelliJ IDEA 的时候，新装了一个字体的话，那必须重启IntelliJ IDEA 之后才能在下拉列表找到新装的字体。</li>
 </ul>
 </blockquote>
-<h3 id="代码编辑字体修改"><a href="#代码编辑字体修改" class="headerlink" title="代码编辑字体修改"></a>代码编辑字体修改</h3><p><img src="images/x-b-font-setting-2.jpg" alt="代码编辑字体修改"></p>
+<h3 id="代码编辑字体修改"><a href="#代码编辑字体修改" class="headerlink" title="代码编辑字体修改"></a>代码编辑字体修改</h3><p><img src="/images/x-b-font-setting-2.jpg" alt="代码编辑字体修改"></p>
 <blockquote>
 <ul>
 <li>如上图标注 1 所示，默认 IntelliJ IDEA 是不能直接在默认的代码模板上修改字体的，需要先 <code>Save As</code> 一份出来，然后才可以修改。这种设计在 IntelliJ IDEA 其他很多设置也是如此的，所以如果你还看到类似有 <code>Copy</code>、<code>Save As</code> 这类选项的按钮就要想到是此设计思想。</li>
@@ -247,14 +1923,14 @@
 <li>如果你的第一字体不包含中文的话，第二字体包含中文，那在有些地方也还是会出现 <code>口口口口口</code> 这类问题，比如 <code>Ctrl + Shift + N</code> 进行查找文件的时候，如果你输入中文也会变成 <code>口口口口口</code> ，我个人文件名为中文的不多，所以就容忍了这种情况。如果你不愿意容忍这种情况，那还是回到最开始的要求：第一字体包含中文。</li>
 </ul>
 </blockquote>
-<h3 id="控制台输出字体修改"><a href="#控制台输出字体修改" class="headerlink" title="控制台输出字体修改"></a>控制台输出字体修改</h3><p><img src="images/x-b-font-setting-3.jpg" alt="控制台输出字体修改"></p>
+<h3 id="控制台输出字体修改"><a href="#控制台输出字体修改" class="headerlink" title="控制台输出字体修改"></a>控制台输出字体修改</h3><p><img src="/images/x-b-font-setting-3.jpg" alt="控制台输出字体修改"></p>
 <blockquote>
 <ul>
 <li>如上图为控制台输出内容字体修改，有很多 IntelliJ IDEA 新人在做输出的时候出现乱码原因就是因为没有在这里进行设置。</li>
 <li><em>控制台输出字体</em> 修改的原理跟 <em>代码编辑字体修改</em> 是一样的，所以这里不进行讲解。</li>
 </ul>
 </blockquote>
-<h2 id="编辑区主题修改"><a href="#编辑区主题修改" class="headerlink" title="编辑区主题修改"></a>编辑区主题修改</h2><h3 id="编辑区主题介绍"><a href="#编辑区主题介绍" class="headerlink" title="编辑区主题介绍"></a>编辑区主题介绍</h3><p><img src="images/x-c-code-theme-setting-1.jpg" alt="编辑区主题介绍"></p>
+<h2 id="编辑区主题修改"><a href="#编辑区主题修改" class="headerlink" title="编辑区主题修改"></a>编辑区主题修改</h2><h3 id="编辑区主题介绍"><a href="#编辑区主题介绍" class="headerlink" title="编辑区主题介绍"></a>编辑区主题介绍</h3><p><img src="/images/x-c-code-theme-setting-1.jpg" alt="编辑区主题介绍"></p>
 <blockquote>
 <ul>
 <li>编辑区主题，也就是代码书写区的主题修改。基本上大家在 <code>General</code> 上都有对此进行小修小改，我下面也主要介绍下我个人在 <code>General</code> 上常修改的一些地方，其他特性的颜色修改我一般默认，但是修改方法原理一样。</li>
@@ -269,7 +1945,7 @@
 </ul>
 </blockquote>
 </blockquote>
-<h3 id="编辑区主题细节修改"><a href="#编辑区主题细节修改" class="headerlink" title="编辑区主题细节修改"></a>编辑区主题细节修改</h3><p><img src="images/x-c-code-theme-setting-2.jpg" alt="编辑区主题细节修改"></p>
+<h3 id="编辑区主题细节修改"><a href="#编辑区主题细节修改" class="headerlink" title="编辑区主题细节修改"></a>编辑区主题细节修改</h3><p><img src="/images/x-c-code-theme-setting-2.jpg" alt="编辑区主题细节修改"></p>
 <blockquote>
 <ul>
 <li>上图标注 1 为可修改的通用细节内容</li>
@@ -287,7 +1963,7 @@
 </ul>
 </blockquote>
 </blockquote>
-<h2 id="文件编码修改"><a href="#文件编码修改" class="headerlink" title="文件编码修改"></a>文件编码修改</h2><p><img src="images/x-d-encoding-setting-1.jpg" alt="文件编码修改"></p>
+<h2 id="文件编码修改"><a href="#文件编码修改" class="headerlink" title="文件编码修改"></a>文件编码修改</h2><p><img src="/images/x-d-encoding-setting-1.jpg" alt="文件编码修改"></p>
 <blockquote>
 <ul>
 <li>上图标注 1 所示，IDE 的编码默认是 <code>UTF-8</code>，<code>Project Encoding</code> 虽然默认是 <code>GBK</code>，但是一般我都建议修改为 <code>UTF-8</code>。</li>
@@ -296,7 +1972,7 @@
 <li>上图标注 4 所示，IntelliJ IDEA 除了支持对整个 Project 设置编码之外，还支持对目录、文件进行编码设置。如果你要对目录进行编码设置的话，可能会出现需要 <code>Convert</code> 编码的弹出操作选择，<strong>强烈建议</strong> 在转换之前做好文件备份，不然可能出现转换过程变成乱码，无法还原。</li>
 </ul>
 </blockquote>
-<p><img src="images/x-d-encoding-setting-2.gif" alt="文件编码修改"></p>
+<p><img src="/images/x-d-encoding-setting-2.gif" alt="文件编码修改"></p>
 <blockquote>
 <ul>
 <li>如上图演示，对单独文件的编码修改还可以点击右下角的编码设置区。如果代码内容中包含中文，则会弹出演示中的操作选择。</li>
@@ -322,116 +1998,113 @@
 </ul>
 </blockquote>
 </blockquote>
-<h2 id="Tomcat-控制台输出乱码"><a href="#Tomcat-控制台输出乱码" class="headerlink" title="Tomcat 控制台输出乱码"></a>Tomcat 控制台输出乱码</h2><p><img src="images/x-e-encoding-setting-1.jpg" alt="Tomcat 控制台输出乱码"></p>
+<h2 id="Tomcat-控制台输出乱码"><a href="#Tomcat-控制台输出乱码" class="headerlink" title="Tomcat 控制台输出乱码"></a>Tomcat 控制台输出乱码</h2><p><img src="/images/x-e-encoding-setting-1.jpg" alt="Tomcat 控制台输出乱码"></p>
 <ul>
 <li>如果你的 Tomcat 控制台输出乱码，并且你已经保证了本文上面的控制台字体设置你设置的字体包含中文，那你还可以尝试下在 Tomcat 的 VM 参数上加上：<code>-Dfile.encoding=UTF-8</code></li>
 <li>如果你是 Mac 系统，很有可能是需要的。</li>
-</ul>
-]]></content>
+</ul>]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;主题修改&quot;&gt;&lt;a href=&quot;#主题修改&quot; class=&quot;headerlink&quot; title=&quot;主题修改&quot;&gt;&lt;/a&gt;主题修改&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;images/x-a-theme-setting-1.jpg&quot; alt=&quot;主题修改&quot;&gt;&lt;/p&gt;
-&lt;blo
+      IntelliJ IDEA 主题、字体、编辑区主题、文件编码修改、乱码问题
     
     </summary>
     
       <category term="技术" scheme="http://www.jiaoyigui.cn/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="IntelliJ IDEA" scheme="http://www.jiaoyigui.cn/categories/%E6%8A%80%E6%9C%AF/IntelliJ-IDEA/"/>
     
     
       <category term="IntelliJ IDEA" scheme="http://www.jiaoyigui.cn/tags/IntelliJ-IDEA/"/>
     
-      <category term="工具" scheme="http://www.jiaoyigui.cn/tags/%E5%B7%A5%E5%85%B7/"/>
-    
   </entry>
   
   <entry>
-    <title>Android相关开源项目收藏</title>
-    <link href="http://www.jiaoyigui.cn/2017/03/24/Android%E7%9B%B8%E5%85%B3%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%94%B6%E8%97%8F/"/>
-    <id>http://www.jiaoyigui.cn/2017/03/24/Android相关开源项目收藏/</id>
-    <published>2017-03-24T03:14:12.000Z</published>
-    <updated>2017-03-24T03:26:04.000Z</updated>
+    <title>搭建 Hexo 博客--增强篇</title>
+    <link href="http://www.jiaoyigui.cn//hexo/Hexo-Install/"/>
+    <id>http://www.jiaoyigui.cn//hexo/Hexo-Install/</id>
+    <published>2016-02-29T15:43:30.000Z</published>
+    <updated>2017-03-29T06:49:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<h2 id="主题优化"><a href="#主题优化" class="headerlink" title="主题优化"></a>主题优化</h2><h3 id="主题配置介绍"><a href="#主题配置介绍" class="headerlink" title="主题配置介绍"></a>主题配置介绍</h3><p>我这里只讲自己在使用的 yelle 主题，你可以参考下，可能还有一些改动我后续会自己在慢慢改，但是大体基本也就这样了。</p>
+<p>从中我们也可以看出，对于主题来讲，大部分可以配置的地方其实都是在这里的，所以对于主题的使用者来讲，懂这里很重要。</p>
+<ul>
+<li>基本上主题的配置文件都是有内容改，但是下面这几点我觉得特别重要：</li>
+<li><code>duoshuo</code>，如果你是打算采用多说评论系统的话，你需要设置这里，但是我个人对多说没好印象</li>
+<li><code>youyan</code>，有言也是国内实用比较多的评论系统之一，个人感觉相对比较稳定</li>
+<li><code>open_in_new</code>，我个人觉得这个东西就应该是 true，不是用新标签的都是坏人</li>
+<li><code>baidu_tongji</code>，我个人使用的是百度统计，具体百度统计的使用可以查看百度统计官网：<a href="http://tongji.baidu.com" target="_blank" rel="external">http://tongji.baidu.com</a></li>
+</ul>
+<h3 id="我的-yelle-主题配置"><a href="#我的-yelle-主题配置" class="headerlink" title="我的 yelle 主题配置"></a>我的 yelle 主题配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># Theme Version | 当前版本</span></div><div class="line">Yelee: <span class="string">"3.5"</span></div><div class="line"></div><div class="line"><span class="comment"># &gt;&gt;&gt; Basic Setup | 基础设置 &lt;&lt;&lt;</span></div><div class="line"></div><div class="line"><span class="comment"># Header | 主菜单</span></div><div class="line"><span class="comment">## About Page: `hexo new page about`</span></div><div class="line"><span class="comment">## Tags Cloud Page: `hexo new page tags`</span></div><div class="line">menu:</div><div class="line">  主页: /</div><div class="line">  所有文章: /archives/</div><div class="line">  标签云: /tags/</div><div class="line">  关于我: /about/</div><div class="line"></div><div class="line"><span class="comment"># Link to your avatar | 填写头像地址</span></div><div class="line">avatar: /img/avatar.png</div><div class="line"></div><div class="line"><span class="comment"># Small icon of Your site | 站点小图标地址</span></div><div class="line">favicon: /favicon.png</div><div class="line"></div><div class="line"><span class="comment"># Internationalization | 主题语言</span></div><div class="line"><span class="comment">## Change Language in SITE's _config.yml | 在站点配置中切换语言</span></div><div class="line"><span class="comment">## https://hexo.io/docs/internationalization.html</span></div><div class="line"><span class="comment">## Available Languages: en, zh-Hans, zh-Hant-TW, zh-Hant-HK</span></div><div class="line"></div><div class="line"><span class="comment"># Subdirectory | 子目录</span></div><div class="line"><span class="comment">## If your site' url is 'http://yoursite.com/blog', set root_url as '/blog/'</span></div><div class="line"><span class="comment">## 网站若存放在子目录，请按上面格式填写</span></div><div class="line"><span class="comment">## https://hexo.io/docs/configuration.html#URL</span></div><div class="line">root_url:</div><div class="line"></div><div class="line"><span class="comment"># Year of Site Creation | 网站成立年份</span></div><div class="line">since: 2017</div><div class="line"></div><div class="line"><span class="comment"># Social info. Bar | 社交信息展示</span></div><div class="line"><span class="comment">## Keep "mailto:" in Email | 设置 Email 时保留 "mailto:"</span></div><div class="line"><span class="comment">## Encrypt email 加密邮件地址 http://ctrlq.org/encode/</span></div><div class="line"><span class="comment">## RSS requires a plugin to take effect | 使用 RSS 需先安装对应插件</span></div><div class="line"><span class="comment">## https://github.com/hexojs/hexo-generator-feed</span></div><div class="line"></div><div class="line">subnav:</div><div class="line">  Email: <span class="string">"mailto:jyg0124@126.com"</span></div><div class="line">  <span class="comment">#新浪微博: "sina weibo"</span></div><div class="line">  GitHub: <span class="string">"http://github.com/jiaoyigui"</span></div><div class="line">  <span class="comment">#V2EX: "#"</span></div><div class="line">  RSS: <span class="string">"/atom.xml"</span></div><div class="line">  <span class="comment">#知乎: "zhihu"</span></div><div class="line">  <span class="comment">#豆瓣: "douban"</span></div><div class="line">  <span class="comment">#简书: "jianshu"</span></div><div class="line">  <span class="comment">#SegmentFault: ""</span></div><div class="line">  <span class="comment">#博客园: "cnblogs"</span></div><div class="line">  <span class="comment">#CSDN: ""</span></div><div class="line">  <span class="comment">#Coding: ""</span></div><div class="line">  <span class="comment">#网易云音乐: "netease"</span></div><div class="line">  <span class="comment">#虾米音乐: "xiami"</span></div><div class="line">  <span class="comment">#bilibili: ""</span></div><div class="line">  <span class="comment">#AcFun: ""</span></div><div class="line">  <span class="comment">#niconico: ""</span></div><div class="line">  <span class="comment">#Quora: ""</span></div><div class="line">  <span class="comment">#Facebook: "#"</span></div><div class="line">  <span class="comment">#Google: "#"</span></div><div class="line">  <span class="comment">#Twitter: "#"</span></div><div class="line">  <span class="comment">#LinkedIn: "#"</span></div><div class="line">  <span class="comment"># QQ: "4109968"</span></div><div class="line">  <span class="comment">#微信: "Wechat"</span></div><div class="line">  <span class="comment">#PayPal: "#"</span></div><div class="line">  <span class="comment">#StackOverflow: "#"</span></div><div class="line">  <span class="comment">#CodePen: ""</span></div><div class="line">  <span class="comment">#Plunker: ""</span></div><div class="line">  <span class="comment">#Instagram: "#"</span></div><div class="line">  <span class="comment">#LOFTER: ""</span></div><div class="line">  <span class="comment">#Flickr: "#"</span></div><div class="line">  <span class="comment">#reddit: ""</span></div><div class="line">  <span class="comment">#Medium: ""</span></div><div class="line">  <span class="comment">#TiddlyWiki: ""</span></div><div class="line">  <span class="comment">#Tumblr: ""</span></div><div class="line">  <span class="comment">#_500px: ""</span></div><div class="line"></div><div class="line"><span class="comment"># &gt;&gt;&gt; Conments 评论系统 &lt;&lt;&lt;</span></div><div class="line"><span class="comment"># Chose ONE as your comment system and keep others disable.</span></div><div class="line"><span class="comment"># 选一个作为网站评论系统，其他保持禁用。</span></div><div class="line"></div><div class="line">preload_comment: <span class="literal">true</span></div><div class="line"><span class="comment">## false: 当点击评论条等区域时再加载评论模块</span></div><div class="line"><span class="comment">## false: load comment's section until u click/hover on the bar/icon</span></div><div class="line"></div><div class="line">show_count: <span class="literal">false</span></div><div class="line"><span class="comment">## 是否在主页文章标题旁显示评论数（多说、Disqus）</span></div><div class="line"><span class="comment">## Add comment count after article title</span></div><div class="line"></div><div class="line">disqus:</div><div class="line">  <span class="comment">#on: true</span></div><div class="line">  shortname:</div><div class="line">  <span class="comment"># https://help.disqus.com/customer/en/portal/articles/466208-what-s-a-shortname-</span></div><div class="line">  <span class="comment"># It is unnecessary to enable disqus here if</span></div><div class="line">  <span class="comment"># you have set "disqus_shortname" in your site's "_config.yml"</span></div><div class="line"></div><div class="line">duoshuo:</div><div class="line">  <span class="comment">#on: true</span></div><div class="line">  domain:</div><div class="line">  <span class="comment"># 是否开启多说评论，http://duoshuo.com/create-site/</span></div><div class="line">  <span class="comment"># 使用上面网址登陆你的多说，然后创建站点，在 domain 中填入你设定的域名前半部分</span></div><div class="line">  <span class="comment"># http://&lt;要填的部分&gt;.duoshuo.com (domain只填上&lt;&gt;里的内容，不要填整个网址)</span></div><div class="line"></div><div class="line">youyan:</div><div class="line">  <span class="comment">#on: true</span></div><div class="line">  id:</div><div class="line">  <span class="comment"># 是否开启友言评论，http://www.uyan.cc/index.php</span></div><div class="line">  <span class="comment"># id 中填写你的友言用户数字ID，注册后进入后台管理即可查看</span></div><div class="line">  <span class="comment"># 友言服务在 Web 环境下运行，普通本地环境无法查看，请部署后在线上测试。</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># &gt;&gt;&gt; Style Customisation 样式自定义 &lt;&lt;&lt;</span></div><div class="line"></div><div class="line"><span class="comment"># Background | 背景</span></div><div class="line"><span class="comment">## "5": show images form bg-1.jpg to bg-5.jpg in `/yelee/source/background/`</span></div><div class="line"><span class="comment">## "5": 显示`/yelee/source/background/`文件夹中 bg-1.jpg 到 bg-5.jpg 这5张图片</span></div><div class="line"><span class="comment">## "0": white-gray background | 淳朴灰白背景</span></div><div class="line">background_image: 0</div><div class="line"></div><div class="line"><span class="comment"># Base Font Size | 字号调节</span></div><div class="line">base_font_size: 16  <span class="comment">#px, 16 - 24</span></div><div class="line"></div><div class="line"><span class="comment">## General Color Scheme | 主题配色方案</span></div><div class="line"><span class="comment">## 可用值 Value: yilia</span></div><div class="line">color_scheme: yilia</div><div class="line"></div><div class="line">highlight_style:</div><div class="line">  on: <span class="literal">true</span></div><div class="line">  inline_code: 3  <span class="comment"># Value: 0 - 9 可选</span></div><div class="line">  code_block: 2  <span class="comment"># Value: 0 - 4</span></div><div class="line">  <span class="comment"># Set inline_code to style highlight text</span></div><div class="line">  <span class="comment"># Chose a highlight theme for code block</span></div><div class="line">  <span class="comment"># 通过 inline_code 切换内置文本高亮样式</span></div><div class="line">  <span class="comment"># 通过 code_block 切换内置代码高亮配色主题</span></div><div class="line"></div><div class="line">blockquote_style:</div><div class="line">  on: <span class="literal">true</span></div><div class="line">  blockquote: 0  <span class="comment"># Value: 0 - 7 可选</span></div><div class="line">  <span class="comment"># 自定义文章「引用部分」的样式</span></div><div class="line"></div><div class="line"><span class="comment"># Headings Style | 标题风格</span></div><div class="line"><span class="comment">## 0-Yelee, 1-Yilia, 2-GitHub</span></div><div class="line">heading_style: 0 <span class="comment"># Value: 0 - 2</span></div><div class="line"></div><div class="line"><span class="comment">## List style type (ul) | 无序列表项标记样式</span></div><div class="line">list_style: 0  <span class="comment"># value: 0 - 12 可选</span></div><div class="line"></div><div class="line"><span class="comment"># 左边栏宽度 px</span></div><div class="line">left_col_width: 330</div><div class="line"></div><div class="line"><span class="comment"># Copyright info. of post | 文末版权信息</span></div><div class="line">copyright: <span class="literal">true</span></div><div class="line"></div><div class="line"><span class="comment"># Table of contents | 文章目录</span></div><div class="line">toc:</div><div class="line">  on: <span class="literal">true</span></div><div class="line">  list_number: <span class="literal">true</span> <span class="comment"># 目录序号</span></div><div class="line">  max_depth: 3  <span class="comment"># 1 - 6 (h1-h6) 目录最大级数</span></div><div class="line">  nowrap: <span class="literal">false</span> <span class="comment"># Keep title on same line | 目录标题不换行</span></div><div class="line"></div><div class="line"><span class="comment"># 是否开启主页及加载头像时的动画效果</span></div><div class="line"><span class="comment"># Animation in Homepage and Loading avatar</span></div><div class="line">animate: <span class="literal">true</span></div><div class="line"></div><div class="line"><span class="comment"># Load jQuery UI to style tooltips</span></div><div class="line"><span class="comment"># 工具提示框样式美化</span></div><div class="line">jquery_ui: <span class="literal">false</span></div><div class="line"></div><div class="line"><span class="comment"># Max width of right cloumn | 限制右侧内容的宽带</span></div><div class="line">limit_article_width:</div><div class="line">  on: <span class="literal">false</span></div><div class="line">  max_width: 60 <span class="comment"># em</span></div><div class="line"></div><div class="line"><span class="comment"># &gt;&gt;&gt; Small features | 小功能设置 &lt;&lt;&lt;</span></div><div class="line"></div><div class="line"><span class="comment"># 是否开启边栏多标签切换</span></div><div class="line"><span class="comment"># Birdhouse button in left column</span></div><div class="line">tagcloud: <span class="literal">true</span></div><div class="line"></div><div class="line"><span class="comment"># Blogroll, Link exchange | 友情链接</span></div><div class="line"><span class="comment"># friends:</span></div><div class="line"><span class="comment">#   Hexo: https://hexo.io</span></div><div class="line"><span class="comment">#   GitHub: https://pages.github.com/</span></div><div class="line"><span class="comment">#   MOxFIVE: http://moxfive.xyz/</span></div><div class="line">friends: <span class="literal">false</span></div><div class="line"></div><div class="line"><span class="comment">#是否开启“关于我”。</span></div><div class="line">aboutme: 关于我</div><div class="line"><span class="comment">#aboutme: false</span></div><div class="line"></div><div class="line"><span class="comment"># Open link in a new tab | 是否在新窗口打开链接</span></div><div class="line"><span class="comment">## `global` 0: Set separately, 1: Open all in new 2: Open all in current</span></div><div class="line"><span class="comment">## `global` 0: 分开设置, 1: 全部在新标签打开, 2: 全部在"当前"标签打开</span></div><div class="line">open_in_new:</div><div class="line">  global: 0 <span class="comment"># 0-2</span></div><div class="line">  title: <span class="literal">false</span> <span class="comment"># article title in homepage 主页文章标题</span></div><div class="line">  post: <span class="literal">false</span> <span class="comment"># link within post/page 正文中的链接</span></div><div class="line">  tags: <span class="literal">false</span> <span class="comment"># 标签</span></div><div class="line">  categories: <span class="literal">false</span> <span class="comment"># 分类</span></div><div class="line">  article_nav: <span class="literal">false</span> <span class="comment"># 导航</span></div><div class="line">  archives: <span class="literal">true</span> <span class="comment"># 归档</span></div><div class="line">  mini_archives: <span class="literal">true</span> <span class="comment"># 迷你归档</span></div><div class="line">  menu: <span class="literal">false</span> <span class="comment"># 边栏菜单</span></div><div class="line">  friends: <span class="literal">true</span>  <span class="comment"># 友情链接</span></div><div class="line">  socail: <span class="literal">true</span> <span class="comment"># 社交图标</span></div><div class="line"></div><div class="line"><span class="comment"># Customize feed link 自定义订阅地址</span></div><div class="line">rss: /atom.xml</div><div class="line"></div><div class="line"><span class="comment"># Update Reminder for IE6/7/8</span></div><div class="line"><span class="comment"># 针对 IE6/7/8 的升级浏览器提示</span></div><div class="line">ie_updater:</div><div class="line">  on: <span class="literal">true</span></div><div class="line">  link: //outdatedbrowser.com/</div><div class="line">  <span class="comment">## http://browsehappy.com/</span></div><div class="line">  <span class="comment">## http://outdatedbrowser.com/</span></div><div class="line"></div><div class="line"><span class="comment"># Tab Title Change | 标签页标题切换</span></div><div class="line">tab_title_change:</div><div class="line">  on: <span class="literal">false</span></div><div class="line">  left_tab_title: <span class="string">'(つェ⊂) 我藏好了哦~ '</span></div><div class="line">  return_tab_title: <span class="string">'(*´∇｀*) 被你发现啦~ '</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># &gt;&gt;&gt; Vendors | 第三方工具 &amp; 服务 &lt;&lt;&lt;</span></div><div class="line"></div><div class="line"><span class="comment"># Local Site Search | 本地站内搜索</span></div><div class="line"><span class="comment">## Insatall below plugin to take effect | 使用搜索需先安装对应插件</span></div><div class="line"><span class="comment">## https://github.com/PaicHyperionDev/hexo-generator-search</span></div><div class="line">search:</div><div class="line">  <span class="comment">#on: true</span></div><div class="line">  onload: <span class="literal">false</span></div><div class="line">  <span class="comment">## true: get search.xml file when the page has loaded</span></div><div class="line">  <span class="comment">## false: get the file when search box gets focus</span></div><div class="line"></div><div class="line"><span class="comment"># images viewer | 图片浏览器</span></div><div class="line"><span class="comment">## http://www.fancyapps.com/fancybox/</span></div><div class="line">fancybox: <span class="literal">true</span></div><div class="line"></div><div class="line"><span class="comment"># Display Math(LaTeX, MathML...) | 数学公式支持</span></div><div class="line"><span class="comment">## https://www.mathjax.org/</span></div><div class="line">mathjax: <span class="literal">true</span></div><div class="line"></div><div class="line"><span class="comment"># Socail Share | 是否开启分享</span></div><div class="line">share:</div><div class="line">  on: <span class="literal">true</span></div><div class="line">  baidu: <span class="literal">true</span></div><div class="line">  addthis: <span class="literal">false</span></div><div class="line">  addthis_pubid: <span class="string">"ra-56ff76c972fc0cf9"</span></div><div class="line">  <span class="comment">## Go to www.addthis.com/dashboard to get your pubid (in src of Code)</span></div><div class="line">  <span class="comment">## and customize AddThis share buttons</span></div><div class="line"></div><div class="line"><span class="comment"># 百度、谷歌站长验证。填写 HTML 标签 content</span></div><div class="line"><span class="comment"># Site Verification for Google and Baidu. HTML label content.</span></div><div class="line">baidu_site:</div><div class="line">google_site:</div><div class="line"></div><div class="line"><span class="comment"># Fill in Google Analytics tracking ID, #e.g. UA-XXXXX-X</span></div><div class="line">google_analytics:</div><div class="line"></div><div class="line"><span class="comment"># 百度统计 http://sitecenter.baidu.com/sc-web/</span></div><div class="line"><span class="comment"># 查看代码，填入 //hm.baidu.com/hm.js? 之后的内容</span></div><div class="line">baidu_tongji: 8349881c9f92999de4652aac9681a840</div><div class="line"></div><div class="line"><span class="comment"># 不蒜子网站计数设置</span></div><div class="line"><span class="comment"># http://ibruce.info/2015/04/04/busuanzi/</span></div><div class="line">visit_counter:</div><div class="line">  on: <span class="literal">true</span></div><div class="line">  site_visit: 本站到访数</div><div class="line">  page_visit: 本页阅读量</div><div class="line"></div><div class="line"><span class="comment"># GitHub Repo Widget</span></div><div class="line"><span class="comment"># https://github.com/hustcc/GitHub-Repo-Widget.js</span></div><div class="line">github_widget: <span class="literal">false</span></div><div class="line"></div><div class="line"><span class="comment"># Progress Bar | 页面加载进度条</span></div><div class="line"><span class="comment"># Demo: http://github.hubspot.com/pace/docs/welcome/</span></div><div class="line"><span class="comment"># type: barber-shop|big-counter|bounce|center-atom|center-circle|</span></div><div class="line"><span class="comment">#       center-radar|center-simple|corner-indicator|flash|flat-top|</span></div><div class="line"><span class="comment">#       loading-bar|mac-osx|minimal</span></div><div class="line"><span class="comment"># color: black|blue|green|orange|pink|purple|red|silver|white|yellow|</span></div><div class="line">progressBar:</div><div class="line">  on: <span class="literal">true</span></div><div class="line">  <span class="built_in">type</span>: <span class="string">"minimal"</span>  <span class="comment"># Keep Quotes | 保留引号避免出错</span></div><div class="line">  color: blue</div><div class="line"></div><div class="line">CDN:</div><div class="line">  jquery: //cdn.bootcss.com/jquery/2.2.4/jquery.min.js</div><div class="line">  require: //cdn.bootcss.com/require.js/2.2.0/require.min.js</div><div class="line">  fontawesome: //cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css</div><div class="line">  fancybox_js: //cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js</div><div class="line">  fancybox_css: //cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css</div><div class="line">  animate_css: //cdn.bootcss.com/animate.css/3.5.1/animate.min.css</div><div class="line">  jquery_ui_js: //cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js</div><div class="line">  jquery_ui_css: //cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css</div><div class="line">  pace_js: //cdn.bootcss.com/pace/1.0.2/pace.min.js</div><div class="line">  clipboard: //cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js</div><div class="line">  mathjax: //cdn.bootcss.com/mathjax/2.6.1/MathJax.js</div><div class="line">  scrollreveal: //cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js</div></pre></td></tr></table></figure>
+<h2 id="常用页面添加"><a href="#常用页面添加" class="headerlink" title="常用页面添加"></a>常用页面添加</h2><h3 id="404、关于我、标签页"><a href="#404、关于我、标签页" class="headerlink" title="404、关于我、标签页"></a>404、关于我、标签页</h3><ul>
+<li>还是以上一篇文章我们讲解的项目根目录上：E:\git_work_space\hexo，在该目录启动 Git Bash：</li>
+<li>新增一个 404 页面：<code>hexo new page 404</code></li>
+<li>新增一个 about 页面：<code>hexo new page about</code></li>
+<li>新增一个 tag 标签云页面：<code>hexo new page tags</code></li>
+<li>新增一个 robot.txt 文件，把该文件放在：E:\git_work_space\hexo\source 目录下，如果你没有该文件可以到我的项目上找：<a href="https://github.com/judasn/judasn.github.io" target="_blank" rel="external">https://github.com/judasn/judasn.github.io</a></li>
+<li>robot 文件内容：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">User-Agent: *</div><div class="line">Allow: /</div><div class="line">Disallow: /background</div><div class="line">Disallow: /css</div><div class="line">Disallow: /fancybox</div><div class="line">Disallow: /font-awesome</div><div class="line">Disallow: /img</div><div class="line">Disallow: /js</div><div class="line">Sitemap: http://code.youmeek.com/sitemap.xml</div><div class="line">Sitemap: http://code.youmeek.com/baidusitemap.xml</div></pre></td></tr></table></figure>
+<h3 id="置顶文章方法"><a href="#置顶文章方法" class="headerlink" title="置顶文章方法"></a>置顶文章方法</h3><ul>
+<li>参考：<a href="http://www.netcan666.com/2015/11/22/%E8%A7%A3%E5%86%B3Hexo%E7%BD%AE%E9%A1%B6%E9%97%AE%E9%A2%98/" target="_blank" rel="external">解决Hexo置顶问题</a></li>
+<li>编辑这个文件：<code>node_modules/hexo-generator-index/lib/generator.js</code></li>
+<li>覆盖原文件内容，采用下面内容：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="string">'use strict'</span>;</div><div class="line"></div><div class="line">var pagination = require(<span class="string">'hexo-pagination'</span>);</div><div class="line"></div><div class="line">module.exports = <span class="keyword">function</span>(locals)&#123;</div><div class="line">  var config = this.config;</div><div class="line">  var posts = locals.posts;</div><div class="line"></div><div class="line">    posts.data = posts.data.sort(<span class="keyword">function</span>(a, b) &#123;</div><div class="line">        <span class="keyword">if</span>(a.top &amp;&amp; b.top) &#123; // 两篇文章top都有定义</div><div class="line">            <span class="keyword">if</span>(a.top == b.top) <span class="built_in">return</span> b.date - a.date; // 若top值一样则按照文章日期降序排</div><div class="line">            <span class="keyword">else</span> <span class="built_in">return</span> b.top - a.top; // 否则按照top值降序排</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(a.top &amp;&amp; !b.top) &#123; // 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</div><div class="line">            <span class="built_in">return</span> -1;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(!a.top &amp;&amp; b.top) &#123;</div><div class="line">            <span class="built_in">return</span> 1;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> <span class="built_in">return</span> b.date - a.date; // 都没定义按照文章日期降序排</div><div class="line"></div><div class="line">    &#125;);</div><div class="line"></div><div class="line">  var paginationDir = config.pagination_dir || <span class="string">'page'</span>;</div><div class="line"></div><div class="line">  <span class="built_in">return</span> pagination(<span class="string">''</span>, posts, &#123;</div><div class="line">    perPage: config.index_generator.per_page,</div><div class="line">    layout: [<span class="string">'index'</span>, <span class="string">'archive'</span>],</div><div class="line">    format: paginationDir + <span class="string">'/%d/'</span>,</div><div class="line">    data: &#123;</div><div class="line">      __index: <span class="literal">true</span></div><div class="line">    &#125;</div><div class="line">  &#125;);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li>然后在文章头部的：Front-matter 位置加上一个：<code>top: 1000</code> 的内容。数值越大，越靠前</li>
+</ul>
+<h2 id="添加一些不希望被渲染的文件到-hexo"><a href="#添加一些不希望被渲染的文件到-hexo" class="headerlink" title="添加一些不希望被渲染的文件到 hexo"></a>添加一些不希望被渲染的文件到 hexo</h2><ul>
+<li><p>因为我们使用的是 Github 项目做空间，所以一般项目我们都要放一个 README.md 文件，而我们希望这个文件不被 hexo 渲染成 HTML 文件，我们需要这样做：</p>
+<ul>
+<li>把 README.md 放在这个目录下：<code>hexo\source\README.md</code></li>
+<li>编辑这个配置文件：<code>hexo\_config.yml</code>，找到这个关键字：<code>skip_render</code>，然后这样写：<figure class="highlight"><table><tr><td class="code"><pre><div class="line">skip_render:</div><div class="line">     - README.md</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>有时候我们需要排除一整个目录，道理跟上面一样，比如你现在访问：<a href="http://www.jiaoyigui.cn/i">http://www.jiaoyigui.cn/i</a>，你发现会跑到我的一个备份导航中，而我是通过这样配置来实现的：</p>
+<ul>
+<li>这里的 <code>i</code> 是我的目录名称，因为我的真正导航地址是：<a href="http://i.jiaoyigui.cn" target="_blank" rel="external">http://i.jiaoyigui.cn</a>，所以取这样的目录名字方便记忆。</li>
+<li>而 <code>i/**</code> 这里的后缀的两个星号表示这个目录下包括子目录，其所有文件都被忽略渲染。</li>
+<li>对于一些 HTML 和 CSS、JS 这类也要注意，hexo 有一套自己的渲染方式，比如可能会对你的 JS 做一些特殊处理，所以可能会让你的 JS 失效，所以最好按我这种方式来排除掉。<figure class="highlight"><table><tr><td class="code"><pre><div class="line">skip_render:</div><div class="line">  - README.md</div><div class="line">  - i/**</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="插件推荐"><a href="#插件推荐" class="headerlink" title="插件推荐"></a>插件推荐</h2><h3 id="插件的基本使用命令"><a href="#插件的基本使用命令" class="headerlink" title="插件的基本使用命令"></a>插件的基本使用命令</h3><ul>
+<li>插件官网：<a href="https://hexo.io/plugins/" target="_blank" rel="external">https://hexo.io/plugins/</a></li>
+<li>安装插件：<code>npm install 插件名 --save</code></li>
+<li>卸载插件：<code>npm uninstall 插件名</code></li>
+<li>更新插件和博客框架（需要在 E:\git_work_space\hexo 目录下）：<code>npm update</code><ul>
+<li>它实质上是通过项目根目录下 package.json 文件更新各大组件</li>
+</ul>
+</li>
+</ul>
+<h3 id="必备插件"><a href="#必备插件" class="headerlink" title="必备插件"></a>必备插件</h3><ul>
+<li>支持RSS：<code>npm install hexo-generator-feed --save</code></li>
+<li>生成站点地图：<code>npm install hexo-generator-sitemap --save</code></li>
+<li>生成百度站点地图：<code>npm install hexo-generator-baidu-sitemap --save</code></li>
+<li>HTML 压缩：<code>npm install hexo-html-minifier --save</code></li>
+<li>JavaScript 压缩：<code>npm install hexo-uglify --save</code></li>
+<li>CSS 压缩插件：<code>npm install hexo-clean-css --save</code></li>
+<li>SEO优化：<code>npm install hexo-generator-seo-friendly-sitemap --save</code></li>
+<li>搜索支持，需要主题有对应的设置：<code>npm install hexo-generator-search --save</code></li>
+</ul>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><ul>
+<li>因为我们只是要安心写东西而已，不需要太多折腾。</li>
+</ul>]]></content>
     
     <summary type="html">
     
-    </summary>
-    
-      <category term="技术" scheme="http://www.jiaoyigui.cn/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Android" scheme="http://www.jiaoyigui.cn/tags/Android/"/>
-    
-      <category term="github" scheme="http://www.jiaoyigui.cn/tags/github/"/>
-    
-      <category term="开源项目" scheme="http://www.jiaoyigui.cn/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Thinkphp5快速入门</title>
-    <link href="http://www.jiaoyigui.cn/2017/03/24/Thinkphp5%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/"/>
-    <id>http://www.jiaoyigui.cn/2017/03/24/Thinkphp5快速入门/</id>
-    <published>2017-03-24T02:29:52.000Z</published>
-    <updated>2017-03-29T04:26:08.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="ThinkPHP5的环境要求如下"><a href="#ThinkPHP5的环境要求如下" class="headerlink" title="ThinkPHP5的环境要求如下"></a>ThinkPHP5的环境要求如下</h1><pre><code>PHP &gt;= 5.4.0
-PDO PHP Extension
-MBstring PHP Extension
-CURL PHP Extension
-</code></pre><h1 id="ThinkPHP5安装"><a href="#ThinkPHP5安装" class="headerlink" title="ThinkPHP5安装"></a>ThinkPHP5安装</h1><h2 id="MacOs安装Composer"><a href="#MacOs安装Composer" class="headerlink" title="MacOs安装Composer"></a>MacOs安装Composer</h2><figure class="highlight groovy"><table><tr><td class="code"><pre><div class="line">curl -sS <span class="string">https:</span><span class="comment">//getcomposer.org/installer | php</span></div><div class="line">mv composer.phar <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>composer</div></pre></td></tr></table></figure>
-<h2 id="使用Composer初始化tp5"><a href="#使用Composer初始化tp5" class="headerlink" title="使用Composer初始化tp5"></a>使用Composer初始化tp5</h2><figure class="highlight dsconfig"><table><tr><td class="code"><pre><div class="line"><span class="string">composer </span><span class="built_in">create-project</span> <span class="string">topthink/</span><span class="string">think </span><span class="string">blog </span> <span class="built_in">--prefer-dist</span></div></pre></td></tr></table></figure>
-<h1 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h1><figure class="highlight stylus"><table><tr><td class="code"><pre><div class="line">project  应用部署目录</div><div class="line">├─application           应用目录（可设置）</div><div class="line">│  ├─common             公共模块目录（可更改）</div><div class="line">│  ├─index              模块目录(可更改)</div><div class="line">│  │  ├─config<span class="selector-class">.php</span>      模块配置文件</div><div class="line">│  │  ├─common<span class="selector-class">.php</span>      模块函数文件</div><div class="line">│  │  ├─controller      控制器目录</div><div class="line">│  │  ├─model           模型目录</div><div class="line">│  │  ├─view            视图目录</div><div class="line">│  │  └─ ...            更多类库目录</div><div class="line">│  ├─command<span class="selector-class">.php</span>        命令行工具配置文件</div><div class="line">│  ├─common<span class="selector-class">.php</span>         应用公共（函数）文件</div><div class="line">│  ├─config<span class="selector-class">.php</span>         应用（公共）配置文件</div><div class="line">│  ├─database<span class="selector-class">.php</span>       数据库配置文件</div><div class="line">│  ├─tags<span class="selector-class">.php</span>           应用行为扩展定义文件</div><div class="line">│  └─route<span class="selector-class">.php</span>          路由配置文件</div><div class="line">├─extend                扩展类库目录（可定义）</div><div class="line">├─public                WEB 部署目录（对外访问目录）</div><div class="line">│  ├─static             静态资源存放目录(css,js,image)</div><div class="line">│  ├─index<span class="selector-class">.php</span>          应用入口文件</div><div class="line">│  ├─router<span class="selector-class">.php</span>         快速测试文件</div><div class="line">│  └─<span class="selector-class">.htaccess</span>          用于 apache 的重写</div><div class="line">├─runtime               应用的运行时目录（可写，可设置）</div><div class="line">├─vendor                第三方类库目录（Composer）</div><div class="line">├─thinkphp              框架系统目录</div><div class="line">│  ├─lang               语言包目录</div><div class="line">│  ├─library            框架核心类库目录</div><div class="line">│  │  ├─think           Think 类库包目录</div><div class="line">│  │  └─traits          系统 Traits 目录</div><div class="line">│  ├─tpl                系统模板目录</div><div class="line">│  ├─<span class="selector-class">.htaccess</span>          用于 apache 的重写</div><div class="line">│  ├─<span class="selector-class">.travis</span><span class="selector-class">.yml</span>        CI 定义文件</div><div class="line">│  ├─base<span class="selector-class">.php</span>           基础定义文件</div><div class="line">│  ├─composer<span class="selector-class">.json</span>      composer 定义文件</div><div class="line">│  ├─console<span class="selector-class">.php</span>        控制台入口文件</div><div class="line">│  ├─convention<span class="selector-class">.php</span>     惯例配置文件</div><div class="line">│  ├─helper<span class="selector-class">.php</span>         助手函数文件（可选）</div><div class="line">│  ├─LICENSE<span class="selector-class">.txt</span>        授权说明文件</div><div class="line">│  ├─phpunit<span class="selector-class">.xml</span>        单元测试配置文件</div><div class="line">│  ├─README<span class="selector-class">.md</span>          README 文件</div><div class="line">│  └─start<span class="selector-class">.php</span>          框架引导文件</div><div class="line">├─build<span class="selector-class">.php</span>             自动生成定义文件（参考）</div><div class="line">├─composer<span class="selector-class">.json</span>         composer 定义文件</div><div class="line">├─LICENSE<span class="selector-class">.txt</span>           授权说明文件</div><div class="line">├─README<span class="selector-class">.md</span>             README 文件</div><div class="line">├─think                 命令行入口文件</div></pre></td></tr></table></figure>
-<h1 id="模板渲染"><a href="#模板渲染" class="headerlink" title="模板渲染"></a>模板渲染</h1><p>首先是Controller：<br>位于application/index/controller/Index.php有一个默认的Index类：<br>本来它return的是开始页面，现在改为hello world。</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line"><span class="keyword">namespace</span>   <span class="title">app</span>\<span class="title">index</span>\<span class="title">controller</span>;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Index</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">index</span><span class="params">()</span></span></div><div class="line">        &#123;</div><div class="line">            <span class="keyword">return</span>  <span class="string">'Hello,World!'</span>;</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>然后我们再继承Controller类：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line"><span class="keyword">namespace</span> <span class="title">app</span>\<span class="title">index</span>\<span class="title">controller</span>;</div><div class="line"><span class="keyword">use</span> <span class="title">think</span>\<span class="title">Controller</span>;<span class="comment">//引入Controller类</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Index</span> <span class="keyword">extends</span> <span class="title">Controller</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">index</span><span class="params">($name=<span class="string">'world'</span>)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;assign(<span class="string">'name'</span>,$name);</div><div class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;fetch();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>我们向页面传递一个带有默认值的参数name。</p>
-<p>然后是View：<br>thinkphph采用模板渲染，模板存在View文件夹下，默认是没有View文件夹的，我们自己创建：<br>在application/index 目录下面创建一个 view 目录,在view目录下再建一个index目录，然后添加模板文件hello.html,整个路径： view/index/index.html</p>
-<figure class="highlight dts"><table><tr><td class="code"><pre><div class="line"><span class="params">&lt;html&gt;</span></div><div class="line"><span class="params">&lt;head&gt;</span></div><div class="line"><span class="params">&lt;title&gt;</span><span class="class">hello </span>&#123;$name&#125;<span class="params">&lt;/title&gt;</span></div><div class="line"><span class="params">&lt;/head&gt;</span></div><div class="line"><span class="params">&lt;body&gt;</span></div><div class="line">    <span class="class">hello </span>&#123;$name&#125;!</div><div class="line"><span class="params">&lt;/body&gt;</span></div><div class="line"><span class="params">&lt;/html&gt;</span></div></pre></td></tr></table></figure>
-<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><p>这里采用MySQL数据库，在blog表下建一个数据库：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">exists</span> think_data(</div><div class="line">    <span class="keyword">id</span> <span class="built_in">int</span>(<span class="number">8</span>) <span class="keyword">not</span> <span class="literal">null</span> auto_increment primary <span class="keyword">key</span>,</div><div class="line">    <span class="keyword">data</span> <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">not</span> <span class="literal">null</span></div><div class="line">)<span class="keyword">engine</span>=MyISAM <span class="keyword">default</span> <span class="keyword">charset</span>=utf8;</div></pre></td></tr></table></figure>
-<p>再插入几条数据就行；<br>然后在 application/database.php下进行配置：</p>
-<figure class="highlight dart"><table><tr><td class="code"><pre><div class="line"><span class="keyword">return</span> [</div><div class="line">    <span class="comment">// 数据库类型</span></div><div class="line">    <span class="string">'type'</span>           =&gt; <span class="string">'mysql'</span>,</div><div class="line">    <span class="comment">// 服务器地址</span></div><div class="line">    <span class="string">'hostname'</span>       =&gt; <span class="string">'127.0.0.1'</span>,</div><div class="line">    <span class="comment">// 数据库名</span></div><div class="line">    <span class="string">'database'</span>       =&gt; <span class="string">'blog'</span>,</div><div class="line">    <span class="comment">// 用户名</span></div><div class="line">    <span class="string">'username'</span>       =&gt; <span class="string">'root'</span>,</div><div class="line">    <span class="comment">// 密码</span></div><div class="line">    <span class="string">'password'</span>       =&gt; <span class="string">'123456'</span>,</div><div class="line">    <span class="comment">// 端口</span></div><div class="line">    <span class="string">'hostport'</span>       =&gt; <span class="string">''</span>,</div><div class="line">    <span class="comment">// 连接dsn</span></div><div class="line">    <span class="string">'dsn'</span>            =&gt; <span class="string">''</span>,</div><div class="line">    <span class="comment">// 数据库连接参数</span></div><div class="line">    <span class="string">'params'</span>         =&gt; [],</div><div class="line">    <span class="comment">// 数据库编码默认采用utf8</span></div><div class="line">    <span class="string">'charset'</span>        =&gt; <span class="string">'utf8'</span>,</div><div class="line">    <span class="comment">// 数据库表前缀</span></div><div class="line">    <span class="string">'prefix'</span>         =&gt; <span class="string">'think_'</span>,</div><div class="line">    <span class="comment">// 数据库调试模式</span></div><div class="line">    <span class="string">'debug'</span>          =&gt; <span class="keyword">true</span>,</div></pre></td></tr></table></figure>
-<p>修改controller下的Index类：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line"><span class="keyword">namespace</span> <span class="title">app</span>\<span class="title">index</span>\<span class="title">controller</span>;</div><div class="line"><span class="keyword">use</span> <span class="title">think</span>\<span class="title">Controller</span>;</div><div class="line"><span class="keyword">use</span> <span class="title">think</span>\<span class="title">Db</span>;<span class="comment">//引入数据库</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Index</span> <span class="keyword">extends</span> <span class="title">Controller</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">index</span><span class="params">($name=<span class="string">'world'</span>)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;assign(<span class="string">'name'</span>,$name);</div><div class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;fetch();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">dbtest</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        $data = Db::name(<span class="string">'data'</span>)-&gt;find();</div><div class="line">        <span class="keyword">$this</span>-&gt;assign(<span class="string">'result'</span>,$data);</div><div class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;fetch();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>再在view下的index目录下建一个dbtest.html渲染：</p>
-<figure class="highlight dust"><table><tr><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="template-variable">&#123;$result.id---$result.data&#125;</span><span class="xml"></span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;ThinkPHP5的环境要求如下&quot;&gt;&lt;a href=&quot;#ThinkPHP5的环境要求如下&quot; class=&quot;headerlink&quot; title=&quot;ThinkPHP5的环境要求如下&quot;&gt;&lt;/a&gt;ThinkPHP5的环境要求如下&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;PHP &amp;g
+      本文将讲解 Hexo 博客的常用插件、站点 SEO 等内容！
     
     </summary>
     
-      <category term="技术" scheme="http://www.jiaoyigui.cn/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="Hexo" scheme="http://www.jiaoyigui.cn/categories/Hexo/"/>
     
     
-      <category term="thinkphp5" scheme="http://www.jiaoyigui.cn/tags/thinkphp5/"/>
-    
-      <category term="php" scheme="http://www.jiaoyigui.cn/tags/php/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android反编译</title>
-    <link href="http://www.jiaoyigui.cn/2017/03/23/Android%E5%8F%8D%E7%BC%96%E8%AF%91/"/>
-    <id>http://www.jiaoyigui.cn/2017/03/23/Android反编译/</id>
-    <published>2017-03-23T10:22:22.000Z</published>
-    <updated>2017-03-24T02:30:56.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="技术" scheme="http://www.jiaoyigui.cn/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Android" scheme="http://www.jiaoyigui.cn/tags/Android/"/>
-    
-      <category term="反编译" scheme="http://www.jiaoyigui.cn/tags/%E5%8F%8D%E7%BC%96%E8%AF%91/"/>
-    
-      <category term="破解" scheme="http://www.jiaoyigui.cn/tags/%E7%A0%B4%E8%A7%A3/"/>
+      <category term="Hexo" scheme="http://www.jiaoyigui.cn/tags/Hexo/"/>
     
   </entry>
   

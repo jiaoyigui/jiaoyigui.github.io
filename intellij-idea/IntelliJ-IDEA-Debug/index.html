@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Zero">
+
+
+
+<meta name="description" content="IntelliJ IDEA DEBUG调试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IntelliJ IDEA DEBUG调试">
+<meta property="og:url" content="http://www.jiaoyigui.cn/intellij-idea/IntelliJ-IDEA-Debug/index.html">
+<meta property="og:site_name" content="夜的灯">
+<meta property="og:description" content="IntelliJ IDEA DEBUG调试">
+<meta property="og:image" content="http://www.jiaoyigui.cn/images/xxiii-a-debug-settings-1.jpg">
+<meta property="og:image" content="http://www.jiaoyigui.cn/images/xxiii-b-debug-use-1.gif">
+<meta property="og:image" content="http://www.jiaoyigui.cn/images/xxiii-b-debug-use-2.gif">
+<meta property="og:image" content="http://www.jiaoyigui.cn/images/xxiii-b-debug-use-3.gif">
+<meta property="og:image" content="http://www.jiaoyigui.cn/images/xxiii-b-debug-use-4.gif">
+<meta property="og:image" content="http://www.jiaoyigui.cn/images/xxiii-b-debug-use-5.gif">
+<meta property="og:updated_time" content="2017-03-29T08:06:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IntelliJ IDEA DEBUG调试">
+<meta name="twitter:description" content="IntelliJ IDEA DEBUG调试">
+<meta name="twitter:image" content="http://www.jiaoyigui.cn/images/xxiii-a-debug-settings-1.jpg">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="夜的灯" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>IntelliJ IDEA DEBUG调试 | 夜的灯</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8349881c9f92999de4652aac9681a840";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Zero</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">探索新知识，突破自身技术壁垒</p>
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:jyg0124@126.com" title="Email"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DEBUG调试/">DEBUG调试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Homebrew/">Homebrew</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ-IDEA/">IntelliJ IDEA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shadowsocks/">Shadowsocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VPS/">VPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vultr/">Vultr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinkphp5/">thinkphp5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反编译/">反编译</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发工具/">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源项目/">开源项目</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/快捷键/">快捷键</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/破解/">破解</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/终端/">终端</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">关于我</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Zero</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Zero</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">探索新知识，突破自身技术壁垒</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:jyg0124@126.com" title="Email"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-intellij-idea/IntelliJ-IDEA-Debug" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/intellij-idea/IntelliJ-IDEA-Debug/" class="article-date">
+      <time datetime="2016-03-29T07:30:03.000Z" itemprop="datePublished">2016-03-29</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        <h1 class="article-title" itemprop="name">
+      IntelliJ IDEA DEBUG调试
+    </h1>
+      </header>
+      
+      <div class="article-info article-info-post">
+        <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/技术/">技术</a><a class="article-category-link" href="/categories/技术/IntelliJ-IDEA/">IntelliJ IDEA</a><a class="article-category-link" href="/categories/技术/IntelliJ-IDEA/开发工具/">开发工具</a>
+    </div>
+        <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DEBUG调试/">DEBUG调试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IntelliJ-IDEA/">IntelliJ IDEA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发工具/">开发工具</a></li></ul>
+    </div>
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<h2 id="Debug-设置"><a href="#Debug-设置" class="headerlink" title="Debug 设置"></a>Debug 设置</h2><p><img src="/images/xxiii-a-debug-settings-1.jpg" alt="Debug 设置"></p>
+<blockquote>
+<ul>
+<li>如上图标注 1 所示，表示设置 Debug 连接方式，默认是 <code>Socket</code>。<code>Shared memory</code> 是 Windows 特有的一个属性，一般在 Windows 系统下建议使用此设置，相对于 <code>Socket</code> 会快点。</li>
+</ul>
+</blockquote>
+<h2 id="Debug-常用快捷键"><a href="#Debug-常用快捷键" class="headerlink" title="Debug 常用快捷键"></a>Debug 常用快捷键</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">快捷键</th>
+<th style="text-align:left">介绍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">F7</td>
+<td style="text-align:left">在 Debug 模式下，进入下一步，如果当前行断点是一个方法，则进入当前方法体内，如果该方法体还有方法，则不会进入该内嵌的方法中 <code>必备</code></td>
+</tr>
+<tr>
+<td style="text-align:left">F8</td>
+<td style="text-align:left">在 Debug 模式下，进入下一步，如果当前行断点是一个方法，则不进入当前方法体内 <code>必备</code></td>
+</tr>
+<tr>
+<td style="text-align:left">F9</td>
+<td style="text-align:left">在 Debug 模式下，恢复程序运行，但是如果该断点下面代码还有断点则停在下一个断点上 <code>必备</code></td>
+</tr>
+<tr>
+<td style="text-align:left">Alt + F8</td>
+<td style="text-align:left">在 Debug 的状态下，选中对象，弹出可输入计算表达式调试框，查看该输入内容的调试结果 <code>必备</code></td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl + F8</td>
+<td style="text-align:left">在 Debug 模式下，设置光标当前行为断点，如果当前已经是断点则去掉断点</td>
+</tr>
+<tr>
+<td style="text-align:left">Shift + F7</td>
+<td style="text-align:left">在 Debug 模式下，智能步入。断点所在行上有多个方法调用，会弹出进入哪个方法</td>
+</tr>
+<tr>
+<td style="text-align:left">Shift + F8</td>
+<td style="text-align:left">在 Debug 模式下，跳出，表现出来的效果跟 <code>F9</code> 一样</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl + Shift + F8</td>
+<td style="text-align:left">在 Debug 模式下，指定断点进入条件</td>
+</tr>
+<tr>
+<td style="text-align:left">Alt + Shift + F7</td>
+<td style="text-align:left">在 Debug 模式下，进入下一步，如果当前行断点是一个方法，则进入当前方法体内，如果方法体还有方法，则会进入该内嵌的方法中，依此循环进入</td>
+</tr>
+</tbody>
+</table>
+<p>有时候我们可以这样粗鲁地认为 Debug 的使用就是等同于这几个快捷键的使用，所以上面的 <code>必备</code> 快捷键是我们必须牢记的，这些也是开发很常用的。</p>
+<h2 id="Debug-特殊技能使用"><a href="#Debug-特殊技能使用" class="headerlink" title="Debug 特殊技能使用"></a>Debug 特殊技能使用</h2><p><img src="/images/xxiii-b-debug-use-1.gif" alt="Debug 特殊技能使用"></p>
+<blockquote>
+<ul>
+<li>如上图 Gif 所示，查看所选对象的方法常用有三种方式：</li>
+</ul>
+<blockquote>
+<ul>
+<li>选中对象后，使用快捷键 <code>Alt + F8</code>。</li>
+<li>选中对象后，拖动对象到 <code>Watches</code>。</li>
+<li>选中对象后，鼠标悬停在对象上 2 秒左右。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><img src="/images/xxiii-b-debug-use-2.gif" alt="Debug 特殊技能使用"></p>
+<blockquote>
+<ul>
+<li>如上图 Gif 所示，在弹出表达式输入框中 IntelliJ IDEA 也是能帮我们智能提示。</li>
+</ul>
+</blockquote>
+<p><img src="/images/xxiii-b-debug-use-3.gif" alt="Debug 特殊技能使用"></p>
+<blockquote>
+<ul>
+<li>如上图 Gif 所示，当我们需要过掉后面的所有断点的时候，我们不需要去掉这些断点，只需要点击左下角那个小圆点，点击小圆点之后，所有断点变成灰色，然后我们再在按快捷键 <code>F9</code> 即可过掉当前和后面所有的断点。</li>
+</ul>
+</blockquote>
+<p><img src="/images/xxiii-b-debug-use-4.gif" alt="Debug 特殊技能使用"></p>
+<blockquote>
+<ul>
+<li>我们可以给断点设置进入的条件。如上图 Gif 所示，因为变量 temp3 不等于 200 所以该断点没有被进入直接跳过。</li>
+</ul>
+</blockquote>
+<p><img src="/images/xxiii-b-debug-use-5.gif" alt="Debug 特殊技能使用"></p>
+<blockquote>
+<ul>
+<li>有时候当我们步入方法体之后，还想回退到方法体外。如 Gif 演示，断点进入 <code>addNum</code> 方法后，点击 <code>Drop Frame</code> 按钮之后，断点重新回到方法体之外。</li>
+</ul>
+</blockquote>
+      
+    </div>
+    
+  </div>
+  
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/intellij-idea/IntelliJ-IDEA-Debug/">IntelliJ IDEA DEBUG调试</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Zero</a></p>
+        <p><span>发布时间:</span>2016-03-29 15:30</p>
+        <!-- <p><span>最后更新:</span>2017-03-29, 16:06:50</p> -->
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/intellij-idea/IntelliJ-IDEA-Debug/" title="IntelliJ IDEA DEBUG调试">http://www.jiaoyigui.cn//intellij-idea/IntelliJ-IDEA-Debug/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.jiaoyigui.cn//intellij-idea/IntelliJ-IDEA-Debug/　　作者: Zero" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <!-- <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p> -->
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/server/VPS/">
+                    VPS + Shadowsocks 可以是什么，做什么
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/intellij-idea/IntelliJ-IDEA-For-Mac-Keys/">
+                    IntelliJ IDEA For Mac 快捷键
+                </a>
+            </div>
+        
+    </nav>
+  
+</article>
+<div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Debug-设置"><span class="toc-number">1.</span> <span class="toc-text">Debug 设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Debug-常用快捷键"><span class="toc-number">2.</span> <span class="toc-text">Debug 常用快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Debug-特殊技能使用"><span class="toc-number">3.</span> <span class="toc-text">Debug 特殊技能使用</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+    <div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"IntelliJ IDEA DEBUG调试　| 夜的灯　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+    
+
+
+<div class="scroll" id="post-nav-button">
+        
+            <a href="/server/VPS/" title="上一篇: VPS + Shadowsocks 可以是什么，做什么">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/intellij-idea/IntelliJ-IDEA-For-Mac-Keys/" title="下一篇: IntelliJ IDEA For Mac 快捷键">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/android/Android-OpenSource/">Android相关开源项目收藏</a></li><li class="post-list-item"><a class="post-list-link" href="/php/thinkphp5-install/">Thinkphp5快速入门</a></li><li class="post-list-item"><a class="post-list-link" href="/android/Android-Decompile/">Android反编译</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-Java/">开发环境 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-iTerm2/">终端方案iTerm2 + Zsh - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-Homebrew/">包管理工具 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-keymap/">常用快捷键 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-settings/">系统使用 - Java程序员眼中的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/server/VPS/">VPS + Shadowsocks 可以是什么，做什么</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-Debug/">IntelliJ IDEA DEBUG调试</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-For-Mac-Keys/">IntelliJ IDEA For Mac 快捷键</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-Settings/">IntelliJ IDEA 主题、字体、编辑区主题、文件编码修改、乱码问题</a></li><li class="post-list-item"><a class="post-list-link" href="/hexo/Hexo-Install/">搭建 Hexo 博客--增强篇</a></li></ul>
+
+
+    <script>
+        
+    </script></div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i>
+                2017 Zero
+            </div>
+            <div class="footer-right">
+                <!-- <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i> -->
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide()" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+<script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
