@@ -4,6 +4,40 @@
 
     
   <url>
+    <loc>http://www.jiaoyigui.cn//opensource/Index/</loc>
+    <lastmod>2017-03-29T10:24:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>开源项目总纲</title>
+        <pubTime>2017-03-29T00:14:12.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>开源项目</tag>
+         
+        <tag>Java</tag>
+         
+        <tag>Cocos2d-x</tag>
+         
+        <tag>Unity</tag>
+         
+        <tag>游戏</tag>
+         
+        <tag>PHP</tag>
+         
+        <tag>Golang</tag>
+         
+         
+           
+             
+              <breadCrumb title="开源项目" url="http://www.jiaoyigui.cn/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.jiaoyigui.cn//opensource/Android/</loc>
     <lastmod>2017-03-29T10:23:09.000Z</lastmod>
     <data>
@@ -27,40 +61,6 @@
           
              
               <breadCrumb title="Android" url="http://www.jiaoyigui.cn/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/Java/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.jiaoyigui.cn//opensource/Index/</loc>
-    <lastmod>2017-03-29T09:59:34.000Z</lastmod>
-    <data>
-        <display>
-        <title>索引 - 开源项目</title>
-        <pubTime>2017-03-29T00:14:12.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>开源项目</tag>
-         
-        <tag>Java</tag>
-         
-        <tag>Cocos2d-x</tag>
-         
-        <tag>Unity</tag>
-         
-        <tag>游戏</tag>
-         
-        <tag>PHP</tag>
-         
-        <tag>Golang</tag>
-         
-         
-           
-             
-              <breadCrumb title="开源项目" url="http://www.jiaoyigui.cn/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
           
         </display>
     </data>
