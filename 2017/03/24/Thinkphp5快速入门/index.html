@@ -1,0 +1,1013 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="thinkphp5,php," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="ThinkPHP5的环境要求如下PHP &amp;gt;= 5.4.0
+PDO PHP Extension
+MBstring PHP Extension
+CURL PHP Extension
+ThinkPHP5安装MacOs安装Composercurl -sS https://getcomposer.org/installer | phpmv composer.phar /usr/local/bin/co">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Thinkphp5快速入门">
+<meta property="og:url" content="http://www.jiaoyigui.cn/2017/03/24/Thinkphp5快速入门/index.html">
+<meta property="og:site_name" content="夜的灯">
+<meta property="og:description" content="ThinkPHP5的环境要求如下PHP &amp;gt;= 5.4.0
+PDO PHP Extension
+MBstring PHP Extension
+CURL PHP Extension
+ThinkPHP5安装MacOs安装Composercurl -sS https://getcomposer.org/installer | phpmv composer.phar /usr/local/bin/co">
+<meta property="og:updated_time" content="2017-03-29T04:26:08.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Thinkphp5快速入门">
+<meta name="twitter:description" content="ThinkPHP5的环境要求如下PHP &amp;gt;= 5.4.0
+PDO PHP Extension
+MBstring PHP Extension
+CURL PHP Extension
+ThinkPHP5安装MacOs安装Composercurl -sS https://getcomposer.org/installer | phpmv composer.phar /usr/local/bin/co">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '68LUR9L66U',
+      apiKey: 'c2111642422e886495eaa2b2458ae28e',
+      indexName: 'Blog',
+      hits: {"per_page":20},
+      labels: {"input_placeholder":"搜索文章","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.jiaoyigui.cn/2017/03/24/Thinkphp5快速入门/"/>
+
+
+
+
+
+  <title> Thinkphp5快速入门 | 夜的灯 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?8349881c9f92999de4652aac9681a840";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">夜的灯</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">探索新知识，突破自身技术壁垒</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.jiaoyigui.cn/2017/03/24/Thinkphp5快速入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="焦义贵">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜的灯">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                Thinkphp5快速入门
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-24T10:29:52+08:00">
+                2017-03-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/03/24/Thinkphp5快速入门/" class="leancloud_visitors" data-flag-title="Thinkphp5快速入门">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  852
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="ThinkPHP5的环境要求如下"><a href="#ThinkPHP5的环境要求如下" class="headerlink" title="ThinkPHP5的环境要求如下"></a>ThinkPHP5的环境要求如下</h1><pre><code>PHP &gt;= 5.4.0
+PDO PHP Extension
+MBstring PHP Extension
+CURL PHP Extension
+</code></pre><h1 id="ThinkPHP5安装"><a href="#ThinkPHP5安装" class="headerlink" title="ThinkPHP5安装"></a>ThinkPHP5安装</h1><h2 id="MacOs安装Composer"><a href="#MacOs安装Composer" class="headerlink" title="MacOs安装Composer"></a>MacOs安装Composer</h2><figure class="highlight groovy"><table><tr><td class="code"><pre><div class="line">curl -sS <span class="string">https:</span><span class="comment">//getcomposer.org/installer | php</span></div><div class="line">mv composer.phar <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>composer</div></pre></td></tr></table></figure>
+<h2 id="使用Composer初始化tp5"><a href="#使用Composer初始化tp5" class="headerlink" title="使用Composer初始化tp5"></a>使用Composer初始化tp5</h2><figure class="highlight dsconfig"><table><tr><td class="code"><pre><div class="line"><span class="string">composer </span><span class="built_in">create-project</span> <span class="string">topthink/</span><span class="string">think </span><span class="string">blog </span> <span class="built_in">--prefer-dist</span></div></pre></td></tr></table></figure>
+<h1 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h1><figure class="highlight stylus"><table><tr><td class="code"><pre><div class="line">project  应用部署目录</div><div class="line">├─application           应用目录（可设置）</div><div class="line">│  ├─common             公共模块目录（可更改）</div><div class="line">│  ├─index              模块目录(可更改)</div><div class="line">│  │  ├─config<span class="selector-class">.php</span>      模块配置文件</div><div class="line">│  │  ├─common<span class="selector-class">.php</span>      模块函数文件</div><div class="line">│  │  ├─controller      控制器目录</div><div class="line">│  │  ├─model           模型目录</div><div class="line">│  │  ├─view            视图目录</div><div class="line">│  │  └─ ...            更多类库目录</div><div class="line">│  ├─command<span class="selector-class">.php</span>        命令行工具配置文件</div><div class="line">│  ├─common<span class="selector-class">.php</span>         应用公共（函数）文件</div><div class="line">│  ├─config<span class="selector-class">.php</span>         应用（公共）配置文件</div><div class="line">│  ├─database<span class="selector-class">.php</span>       数据库配置文件</div><div class="line">│  ├─tags<span class="selector-class">.php</span>           应用行为扩展定义文件</div><div class="line">│  └─route<span class="selector-class">.php</span>          路由配置文件</div><div class="line">├─extend                扩展类库目录（可定义）</div><div class="line">├─public                WEB 部署目录（对外访问目录）</div><div class="line">│  ├─static             静态资源存放目录(css,js,image)</div><div class="line">│  ├─index<span class="selector-class">.php</span>          应用入口文件</div><div class="line">│  ├─router<span class="selector-class">.php</span>         快速测试文件</div><div class="line">│  └─<span class="selector-class">.htaccess</span>          用于 apache 的重写</div><div class="line">├─runtime               应用的运行时目录（可写，可设置）</div><div class="line">├─vendor                第三方类库目录（Composer）</div><div class="line">├─thinkphp              框架系统目录</div><div class="line">│  ├─lang               语言包目录</div><div class="line">│  ├─library            框架核心类库目录</div><div class="line">│  │  ├─think           Think 类库包目录</div><div class="line">│  │  └─traits          系统 Traits 目录</div><div class="line">│  ├─tpl                系统模板目录</div><div class="line">│  ├─<span class="selector-class">.htaccess</span>          用于 apache 的重写</div><div class="line">│  ├─<span class="selector-class">.travis</span><span class="selector-class">.yml</span>        CI 定义文件</div><div class="line">│  ├─base<span class="selector-class">.php</span>           基础定义文件</div><div class="line">│  ├─composer<span class="selector-class">.json</span>      composer 定义文件</div><div class="line">│  ├─console<span class="selector-class">.php</span>        控制台入口文件</div><div class="line">│  ├─convention<span class="selector-class">.php</span>     惯例配置文件</div><div class="line">│  ├─helper<span class="selector-class">.php</span>         助手函数文件（可选）</div><div class="line">│  ├─LICENSE<span class="selector-class">.txt</span>        授权说明文件</div><div class="line">│  ├─phpunit<span class="selector-class">.xml</span>        单元测试配置文件</div><div class="line">│  ├─README<span class="selector-class">.md</span>          README 文件</div><div class="line">│  └─start<span class="selector-class">.php</span>          框架引导文件</div><div class="line">├─build<span class="selector-class">.php</span>             自动生成定义文件（参考）</div><div class="line">├─composer<span class="selector-class">.json</span>         composer 定义文件</div><div class="line">├─LICENSE<span class="selector-class">.txt</span>           授权说明文件</div><div class="line">├─README<span class="selector-class">.md</span>             README 文件</div><div class="line">├─think                 命令行入口文件</div></pre></td></tr></table></figure>
+<h1 id="模板渲染"><a href="#模板渲染" class="headerlink" title="模板渲染"></a>模板渲染</h1><p>首先是Controller：<br>位于application/index/controller/Index.php有一个默认的Index类：<br>本来它return的是开始页面，现在改为hello world。</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line"><span class="keyword">namespace</span>   <span class="title">app</span>\<span class="title">index</span>\<span class="title">controller</span>;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Index</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">index</span><span class="params">()</span></span></div><div class="line">        &#123;</div><div class="line">            <span class="keyword">return</span>  <span class="string">'Hello,World!'</span>;</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>然后我们再继承Controller类：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line"><span class="keyword">namespace</span> <span class="title">app</span>\<span class="title">index</span>\<span class="title">controller</span>;</div><div class="line"><span class="keyword">use</span> <span class="title">think</span>\<span class="title">Controller</span>;<span class="comment">//引入Controller类</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Index</span> <span class="keyword">extends</span> <span class="title">Controller</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">index</span><span class="params">($name=<span class="string">'world'</span>)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;assign(<span class="string">'name'</span>,$name);</div><div class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;fetch();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>我们向页面传递一个带有默认值的参数name。</p>
+<p>然后是View：<br>thinkphph采用模板渲染，模板存在View文件夹下，默认是没有View文件夹的，我们自己创建：<br>在application/index 目录下面创建一个 view 目录,在view目录下再建一个index目录，然后添加模板文件hello.html,整个路径： view/index/index.html</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><div class="line"><span class="params">&lt;html&gt;</span></div><div class="line"><span class="params">&lt;head&gt;</span></div><div class="line"><span class="params">&lt;title&gt;</span><span class="class">hello </span>&#123;$name&#125;<span class="params">&lt;/title&gt;</span></div><div class="line"><span class="params">&lt;/head&gt;</span></div><div class="line"><span class="params">&lt;body&gt;</span></div><div class="line">    <span class="class">hello </span>&#123;$name&#125;!</div><div class="line"><span class="params">&lt;/body&gt;</span></div><div class="line"><span class="params">&lt;/html&gt;</span></div></pre></td></tr></table></figure>
+<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><p>这里采用MySQL数据库，在blog表下建一个数据库：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">exists</span> think_data(</div><div class="line">    <span class="keyword">id</span> <span class="built_in">int</span>(<span class="number">8</span>) <span class="keyword">not</span> <span class="literal">null</span> auto_increment primary <span class="keyword">key</span>,</div><div class="line">    <span class="keyword">data</span> <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">not</span> <span class="literal">null</span></div><div class="line">)<span class="keyword">engine</span>=MyISAM <span class="keyword">default</span> <span class="keyword">charset</span>=utf8;</div></pre></td></tr></table></figure>
+<p>再插入几条数据就行；<br>然后在 application/database.php下进行配置：</p>
+<figure class="highlight dart"><table><tr><td class="code"><pre><div class="line"><span class="keyword">return</span> [</div><div class="line">    <span class="comment">// 数据库类型</span></div><div class="line">    <span class="string">'type'</span>           =&gt; <span class="string">'mysql'</span>,</div><div class="line">    <span class="comment">// 服务器地址</span></div><div class="line">    <span class="string">'hostname'</span>       =&gt; <span class="string">'127.0.0.1'</span>,</div><div class="line">    <span class="comment">// 数据库名</span></div><div class="line">    <span class="string">'database'</span>       =&gt; <span class="string">'blog'</span>,</div><div class="line">    <span class="comment">// 用户名</span></div><div class="line">    <span class="string">'username'</span>       =&gt; <span class="string">'root'</span>,</div><div class="line">    <span class="comment">// 密码</span></div><div class="line">    <span class="string">'password'</span>       =&gt; <span class="string">'123456'</span>,</div><div class="line">    <span class="comment">// 端口</span></div><div class="line">    <span class="string">'hostport'</span>       =&gt; <span class="string">''</span>,</div><div class="line">    <span class="comment">// 连接dsn</span></div><div class="line">    <span class="string">'dsn'</span>            =&gt; <span class="string">''</span>,</div><div class="line">    <span class="comment">// 数据库连接参数</span></div><div class="line">    <span class="string">'params'</span>         =&gt; [],</div><div class="line">    <span class="comment">// 数据库编码默认采用utf8</span></div><div class="line">    <span class="string">'charset'</span>        =&gt; <span class="string">'utf8'</span>,</div><div class="line">    <span class="comment">// 数据库表前缀</span></div><div class="line">    <span class="string">'prefix'</span>         =&gt; <span class="string">'think_'</span>,</div><div class="line">    <span class="comment">// 数据库调试模式</span></div><div class="line">    <span class="string">'debug'</span>          =&gt; <span class="keyword">true</span>,</div></pre></td></tr></table></figure>
+<p>修改controller下的Index类：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line"><span class="keyword">namespace</span> <span class="title">app</span>\<span class="title">index</span>\<span class="title">controller</span>;</div><div class="line"><span class="keyword">use</span> <span class="title">think</span>\<span class="title">Controller</span>;</div><div class="line"><span class="keyword">use</span> <span class="title">think</span>\<span class="title">Db</span>;<span class="comment">//引入数据库</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Index</span> <span class="keyword">extends</span> <span class="title">Controller</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">index</span><span class="params">($name=<span class="string">'world'</span>)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;assign(<span class="string">'name'</span>,$name);</div><div class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;fetch();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">dbtest</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        $data = Db::name(<span class="string">'data'</span>)-&gt;find();</div><div class="line">        <span class="keyword">$this</span>-&gt;assign(<span class="string">'result'</span>,$data);</div><div class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;fetch();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>再在view下的index目录下建一个dbtest.html渲染：</p>
+<figure class="highlight dust"><table><tr><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="template-variable">&#123;$result.id---$result.data&#125;</span><span class="xml"></span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/thinkphp5/" rel="tag"># thinkphp5</a>
+          
+            <a href="/tags/php/" rel="tag"># php</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/23/Android反编译/" rel="next" title="Android反编译">
+                <i class="fa fa-chevron-left"></i> Android反编译
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/24/Android相关开源项目收藏/" rel="prev" title="Android相关开源项目收藏">
+                Android相关开源项目收藏 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="焦义贵" />
+          <p class="site-author-name" itemprop="name">焦义贵</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ThinkPHP5的环境要求如下"><span class="nav-number">1.</span> <span class="nav-text">ThinkPHP5的环境要求如下</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ThinkPHP5安装"><span class="nav-number">2.</span> <span class="nav-text">ThinkPHP5安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MacOs安装Composer"><span class="nav-number">2.1.</span> <span class="nav-text">MacOs安装Composer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Composer初始化tp5"><span class="nav-number">2.2.</span> <span class="nav-text">使用Composer初始化tp5</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目录结构"><span class="nav-number">3.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模板渲染"><span class="nav-number">4.</span> <span class="nav-text">模板渲染</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库"><span class="nav-number">5.</span> <span class="nav-text">数据库</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">焦义贵</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("1sh0O5mg1incyonan0Yjp1CD-gzGzoHsz", "qdvNfkCicKRx7iumN9g1FoLH");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+
+  
+
+</body>
+</html>

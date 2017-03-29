@@ -1,0 +1,1108 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="IntelliJ IDEA,工具," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="主题修改
+
+
+上图标注 1 所示为 IntelliJ IDEA 修改主题的地方，在 Windows 系统上 IntelliJ IDEA 默认提供的主题有四套：Darcula、IntelliJ、Windows、Alloy. IDEA Theme。除了 Darcula 是黑色主题，其他三套都是以白色为背景的。
+其他操作系统上不一定会也有四套主题的，主题的选择上大家根据自己喜好即可。改变主题需要重启 I">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IntelliJ IDEA 主题、字体、编辑区主题、文件编码修改、乱码问题">
+<meta property="og:url" content="http://www.jiaoyigui.cn/2017/03/29/IntelliJ-IDEA-主题、字体、编辑区主题、文件编码修改、乱码问题/index.html">
+<meta property="og:site_name" content="夜的灯">
+<meta property="og:description" content="主题修改
+
+
+上图标注 1 所示为 IntelliJ IDEA 修改主题的地方，在 Windows 系统上 IntelliJ IDEA 默认提供的主题有四套：Darcula、IntelliJ、Windows、Alloy. IDEA Theme。除了 Darcula 是黑色主题，其他三套都是以白色为背景的。
+其他操作系统上不一定会也有四套主题的，主题的选择上大家根据自己喜好即可。改变主题需要重启 I">
+<meta property="og:image" content="http://www.jiaoyigui.cn/images/x-a-theme-setting-1.jpg">
+<meta property="og:image" content="http://www.jiaoyigui.cn/images/x-b-font-setting-1.jpg">
+<meta property="og:image" content="http://www.jiaoyigui.cn/images/x-b-font-setting-2.jpg">
+<meta property="og:image" content="http://www.jiaoyigui.cn/images/x-b-font-setting-3.jpg">
+<meta property="og:image" content="http://www.jiaoyigui.cn/images/x-c-code-theme-setting-1.jpg">
+<meta property="og:image" content="http://www.jiaoyigui.cn/images/x-c-code-theme-setting-2.jpg">
+<meta property="og:image" content="http://www.jiaoyigui.cn/images/x-d-encoding-setting-1.jpg">
+<meta property="og:image" content="http://www.jiaoyigui.cn/images/x-d-encoding-setting-2.gif">
+<meta property="og:image" content="http://www.jiaoyigui.cn/images/x-e-encoding-setting-1.jpg">
+<meta property="og:updated_time" content="2017-03-29T04:47:48.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IntelliJ IDEA 主题、字体、编辑区主题、文件编码修改、乱码问题">
+<meta name="twitter:description" content="主题修改
+
+
+上图标注 1 所示为 IntelliJ IDEA 修改主题的地方，在 Windows 系统上 IntelliJ IDEA 默认提供的主题有四套：Darcula、IntelliJ、Windows、Alloy. IDEA Theme。除了 Darcula 是黑色主题，其他三套都是以白色为背景的。
+其他操作系统上不一定会也有四套主题的，主题的选择上大家根据自己喜好即可。改变主题需要重启 I">
+<meta name="twitter:image" content="http://www.jiaoyigui.cn/images/x-a-theme-setting-1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '68LUR9L66U',
+      apiKey: 'c2111642422e886495eaa2b2458ae28e',
+      indexName: 'Blog',
+      hits: {"per_page":20},
+      labels: {"input_placeholder":"搜索文章","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.jiaoyigui.cn/2017/03/29/IntelliJ-IDEA-主题、字体、编辑区主题、文件编码修改、乱码问题/"/>
+
+
+
+
+
+  <title> IntelliJ IDEA 主题、字体、编辑区主题、文件编码修改、乱码问题 | 夜的灯 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?8349881c9f92999de4652aac9681a840";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">夜的灯</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">探索新知识，突破自身技术壁垒</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.jiaoyigui.cn/2017/03/29/IntelliJ-IDEA-主题、字体、编辑区主题、文件编码修改、乱码问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="焦义贵">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夜的灯">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                IntelliJ IDEA 主题、字体、编辑区主题、文件编码修改、乱码问题
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-29T12:27:26+08:00">
+                2017-03-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/03/29/IntelliJ-IDEA-主题、字体、编辑区主题、文件编码修改、乱码问题/" class="leancloud_visitors" data-flag-title="IntelliJ IDEA 主题、字体、编辑区主题、文件编码修改、乱码问题">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  2,428
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  9
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="主题修改"><a href="#主题修改" class="headerlink" title="主题修改"></a>主题修改</h2><p><img src="images/x-a-theme-setting-1.jpg" alt="主题修改"></p>
+<blockquote>
+<ul>
+<li>上图标注 1 所示为 IntelliJ IDEA 修改主题的地方，在 Windows 系统上 IntelliJ IDEA 默认提供的主题有四套：<code>Darcula</code>、<code>IntelliJ</code>、<code>Windows</code>、<code>Alloy. IDEA Theme</code>。除了 <code>Darcula</code> 是黑色主题，其他三套都是以白色为背景的。</li>
+<li>其他操作系统上不一定会也有四套主题的，主题的选择上大家根据自己喜好即可。改变主题需要重启 IntelliJ IDEA 方可看到效果。</li>
+</ul>
+</blockquote>
+<h2 id="字体修改"><a href="#字体修改" class="headerlink" title="字体修改"></a>字体修改</h2><h3 id="主题字体修改"><a href="#主题字体修改" class="headerlink" title="主题字体修改"></a>主题字体修改</h3><p><img src="images/x-b-font-setting-1.jpg" alt="主题字体修改"></p>
+<blockquote>
+<ul>
+<li>如上图标注 1 所示，IntelliJ IDEA 主题字体的修改要先勾选 <code>Override default fonts by</code> 。默认 IntelliJ IDEA 是不推荐修改的，但是由于字体是有分包含中文和不包含中文之分的，一般使用英文的国家是不需要额外担心乱码问题的，而我们需要。</li>
+<li>字体的审美上每个人不一样，但是如上一段说的，这里的字体修改是需要知道一个前提的，那就是你选择的那个字体必须含有中文，比如微软雅黑和宋体这类是包含中文的，而 <code>Courier New</code> 和 <code>Monaco</code> 这类只是单纯的英文字体。</li>
+<li>如果你选择的字体不包含中文，那可能会在很多位置上出现类似 <code>口口口口口</code> 这样的乱码问题，比如文件名含有中文、字体是中文名字的都会变成 <code>口口口口口</code>。</li>
+<li>在修改 IntelliJ IDEA 的主题字体的时候，不建议把字体调成很大，因为很多人遇到这样一种情况：显示器分辨率低，主题字体又大，在 IntelliJ IDEA 的某些操作的工具菜单、右键菜单选项中部分选项超出了分辨率显示范围，没办法被选中。当然了，如果你一定要把字体改大，又不用大分辨率显示器，那可以通过 IntelliJ IDEA 的 <code>Menus and Toolbars</code> 删除部分你认为用不到的菜单，但是一般不建议这样做。</li>
+<li>还需要特别注意的时候，如果你是开着 IntelliJ IDEA 的时候，新装了一个字体的话，那必须重启IntelliJ IDEA 之后才能在下拉列表找到新装的字体。</li>
+</ul>
+</blockquote>
+<h3 id="代码编辑字体修改"><a href="#代码编辑字体修改" class="headerlink" title="代码编辑字体修改"></a>代码编辑字体修改</h3><p><img src="images/x-b-font-setting-2.jpg" alt="代码编辑字体修改"></p>
+<blockquote>
+<ul>
+<li>如上图标注 1 所示，默认 IntelliJ IDEA 是不能直接在默认的代码模板上修改字体的，需要先 <code>Save As</code> 一份出来，然后才可以修改。这种设计在 IntelliJ IDEA 其他很多设置也是如此的，所以如果你还看到类似有 <code>Copy</code>、<code>Save As</code> 这类选项的按钮就要想到是此设计思想。</li>
+<li>如上图标注 2 所示，勾选的 <code>Show only monospaced fonts</code> 表示筛选显示系统上的等宽字体。由于 Windows 系统上等宽字体并不多，勾选此选项出现的下拉字体可选择就很少。取消勾选之后，就可以显示系统上所有已安装的字体。</li>
+<li>如上图标注 3 所示，其中编码字体有第一字体（<code>Primary font</code>） 和 第二字体（<code>Secondary font</code>）之分。当有些字符在第一字体支持不了的时候，会去使用第二字体进行支持。</li>
+<li>我个人习惯上：英文字体使用 <code>Monaco</code>，由于此字体不支持中文，所以我把这个设置为第一字体，第二字体使用 <code>Yahei Consolas Hybrid</code> 进行支持，该字体含有中文。这两个字体都不是系统自带的，需要自行下载安装。</li>
+<li>如果你的第一字体不包含中文的话，第二字体包含中文，那在有些地方也还是会出现 <code>口口口口口</code> 这类问题，比如 <code>Ctrl + Shift + N</code> 进行查找文件的时候，如果你输入中文也会变成 <code>口口口口口</code> ，我个人文件名为中文的不多，所以就容忍了这种情况。如果你不愿意容忍这种情况，那还是回到最开始的要求：第一字体包含中文。</li>
+</ul>
+</blockquote>
+<h3 id="控制台输出字体修改"><a href="#控制台输出字体修改" class="headerlink" title="控制台输出字体修改"></a>控制台输出字体修改</h3><p><img src="images/x-b-font-setting-3.jpg" alt="控制台输出字体修改"></p>
+<blockquote>
+<ul>
+<li>如上图为控制台输出内容字体修改，有很多 IntelliJ IDEA 新人在做输出的时候出现乱码原因就是因为没有在这里进行设置。</li>
+<li><em>控制台输出字体</em> 修改的原理跟 <em>代码编辑字体修改</em> 是一样的，所以这里不进行讲解。</li>
+</ul>
+</blockquote>
+<h2 id="编辑区主题修改"><a href="#编辑区主题修改" class="headerlink" title="编辑区主题修改"></a>编辑区主题修改</h2><h3 id="编辑区主题介绍"><a href="#编辑区主题介绍" class="headerlink" title="编辑区主题介绍"></a>编辑区主题介绍</h3><p><img src="images/x-c-code-theme-setting-1.jpg" alt="编辑区主题介绍"></p>
+<blockquote>
+<ul>
+<li>编辑区主题，也就是代码书写区的主题修改。基本上大家在 <code>General</code> 上都有对此进行小修小改，我下面也主要介绍下我个人在 <code>General</code> 上常修改的一些地方，其他特性的颜色修改我一般默认，但是修改方法原理一样。</li>
+<li>如上图红圈下拉所示，展示的是我当前电脑可以选择的编辑区主题。</li>
+<li>对于编辑区的主题，也有人制作成模板在网络上提供下载。这里主要介绍两个站点：</li>
+</ul>
+<blockquote>
+<ul>
+<li><a href="http://www.ideacolorthemes.org/themes/" target="_blank" rel="external">http://www.ideacolorthemes.org/themes/</a>，主要提供 jar 文件下载。</li>
+<li><a href="http://www.phpstorm-themes.com/" target="_blank" rel="external">http://www.phpstorm-themes.com/</a>，主要提供 xml 和 icl 文件下载。</li>
+<li>对应文件如何安装请查看网站对应的 <code>Help</code> 页面，都有详细说明的。</li>
+</ul>
+</blockquote>
+</blockquote>
+<h3 id="编辑区主题细节修改"><a href="#编辑区主题细节修改" class="headerlink" title="编辑区主题细节修改"></a>编辑区主题细节修改</h3><p><img src="images/x-c-code-theme-setting-2.jpg" alt="编辑区主题细节修改"></p>
+<blockquote>
+<ul>
+<li>上图标注 1 为可修改的通用细节内容</li>
+<li>上图标注 2 为可修改属性，其中并不是每个细节都可以修改所有属性的。比如细节：<code>Default text</code> 是可以勾选 <code>Bold</code>，而 <code>Caret row</code> 则是无法勾选 <code>Bold</code>，因为只有文本才有加粗的属性需求。</li>
+<li>上图标注 3 为修改后的预览区，预览区是实时动态展示的。</li>
+<li>在 <code>General</code> 区，我常修改的有：</li>
+</ul>
+<blockquote>
+<ul>
+<li><code>Default text</code>，指的是默认代码文本，我一般会修改其 <code>Background</code> 属性。</li>
+<li><code>Caret row</code>，指的是光标所在行，我一般会修改其 <code>Background</code> 属性。</li>
+<li><code>Vertical indent guide</code>，指的是垂直缩进线，我一般会修改其 <code>Foreground</code> 属性。</li>
+<li><code>Identifier under caret</code>，指的是光标所在位置的相同标识符呈现什么效果，我一般会修改其 <code>Background</code> 属性。</li>
+<li><code>Text search result</code>，指的是在查找模式下，匹配字符的样式，我一般会修改其 <code>Background</code> 属性。</li>
+</ul>
+</blockquote>
+</blockquote>
+<h2 id="文件编码修改"><a href="#文件编码修改" class="headerlink" title="文件编码修改"></a>文件编码修改</h2><p><img src="images/x-d-encoding-setting-1.jpg" alt="文件编码修改"></p>
+<blockquote>
+<ul>
+<li>上图标注 1 所示，IDE 的编码默认是 <code>UTF-8</code>，<code>Project Encoding</code> 虽然默认是 <code>GBK</code>，但是一般我都建议修改为 <code>UTF-8</code>。</li>
+<li>上图标注 2 所示，IntelliJ IDEA 可以对 <code>Properties</code> 文件进行专门的编码设置，一般也建议改为 <code>UTF-8</code>，其中有一个重点就是属性 <code>Transparent native-to-ascii conversion</code>，</li>
+<li>上图标注 3 所示，对于 <code>Properties</code> 文件，重要属性 <code>Transparent native-to-ascii conversion</code> 主要用于转换 <code>ascii</code>，一般都要勾选，不然 <code>Properties</code> 文件中的注释显示的都不会是中文。</li>
+<li>上图标注 4 所示，IntelliJ IDEA 除了支持对整个 Project 设置编码之外，还支持对目录、文件进行编码设置。如果你要对目录进行编码设置的话，可能会出现需要 <code>Convert</code> 编码的弹出操作选择，<strong>强烈建议</strong> 在转换之前做好文件备份，不然可能出现转换过程变成乱码，无法还原。</li>
+</ul>
+</blockquote>
+<p><img src="images/x-d-encoding-setting-2.gif" alt="文件编码修改"></p>
+<blockquote>
+<ul>
+<li>如上图演示，对单独文件的编码修改还可以点击右下角的编码设置区。如果代码内容中包含中文，则会弹出演示中的操作选择。</li>
+</ul>
+<blockquote>
+<ul>
+<li><code>Reload</code> 表示使用新编码重新加载，新编码不会保存到文件中，重新打开此文件，旧编码是什么依旧还是什么。</li>
+<li><code>Convert</code> 表示使用新编码进行转换，新编码会保存到文件中，重新打开此文件，新编码是什么则是什么。</li>
+<li>含有中文的代码文件，<code>Convert</code> 之后可能会使中文变成乱码，所以在转换成请做好备份，不然可能出现转换过程变成乱码，无法还原。</li>
+</ul>
+</blockquote>
+</blockquote>
+<h2 id="由于编码问题引起的编译错误"><a href="#由于编码问题引起的编译错误" class="headerlink" title="由于编码问题引起的编译错误"></a>由于编码问题引起的编译错误</h2><blockquote>
+<ul>
+<li>编译报错：<code>找不到符号</code>、<code>未结束的字符串文字</code> 等的解决办法：</li>
+</ul>
+<blockquote>
+<ul>
+<li>由于 UTF-8 编码文件有分 <code>有BOM</code> 和 <code>无BOM</code> 之分，默认情况下 IntelliJ IDEA 使用的编译器是 <code>javac</code>，而此编译只能编译 <code>无BOM</code> 的文件，有很多 Eclipse 用户在使用 IntelliJ IDEA 开发 Eclipse 项目的时候常常会遇到此问题。主要是因为 Eclipse 的编译器是 <code>Eclipse</code>，此编译器支持 <code>有BOM</code> 的文件编译。顾，解决办法是对于此文件进行 BOM 去除。</li>
+<li>批量去除 BOM，你可以 Google：<code>批量去除 BOM</code>、<code>批量转换无 BOM</code> 等关键字，网络上已有提供各种方案。</li>
+<li>除了通过去除 BOM 还有设置 IntelliJ IDEA 的编译器为 <code>Eclipse</code>，但是一般不建议这样做。</li>
+<li>如果上述问题都无法解决，而且你也确认 IntelliJ IDEA 各个配置编码的地方都是 <code>UTF-8</code>，报错文件编码也是是  <code>UTF-8 无 BOM</code> 的话，那还有一种可能也会出现这种情况：项目配置文件有问题。项目编码的配置文件在：<code>/项目目录/.idea/encodings.xml</code>。如果你会修改此文件可以进行修改，如果不会，那就删除掉 <code>.idea</code> 整个目录，重启 IntelliJ IDEA 重新配置这个项目即可。</li>
+</ul>
+</blockquote>
+</blockquote>
+<h2 id="Tomcat-控制台输出乱码"><a href="#Tomcat-控制台输出乱码" class="headerlink" title="Tomcat 控制台输出乱码"></a>Tomcat 控制台输出乱码</h2><p><img src="images/x-e-encoding-setting-1.jpg" alt="Tomcat 控制台输出乱码"></p>
+<ul>
+<li>如果你的 Tomcat 控制台输出乱码，并且你已经保证了本文上面的控制台字体设置你设置的字体包含中文，那你还可以尝试下在 Tomcat 的 VM 参数上加上：<code>-Dfile.encoding=UTF-8</code></li>
+<li>如果你是 Mac 系统，很有可能是需要的。</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/IntelliJ-IDEA/" rel="tag"># IntelliJ IDEA</a>
+          
+            <a href="/tags/工具/" rel="tag"># 工具</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/24/Android相关开源项目收藏/" rel="next" title="Android相关开源项目收藏">
+                <i class="fa fa-chevron-left"></i> Android相关开源项目收藏
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/29/IntelliJ-IDEA-For-Mac-快捷键/" rel="prev" title="IntelliJ IDEA For Mac 快捷键">
+                IntelliJ IDEA For Mac 快捷键 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="焦义贵" />
+          <p class="site-author-name" itemprop="name">焦义贵</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#主题修改"><span class="nav-number">1.</span> <span class="nav-text">主题修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字体修改"><span class="nav-number">2.</span> <span class="nav-text">字体修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主题字体修改"><span class="nav-number">2.1.</span> <span class="nav-text">主题字体修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码编辑字体修改"><span class="nav-number">2.2.</span> <span class="nav-text">代码编辑字体修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控制台输出字体修改"><span class="nav-number">2.3.</span> <span class="nav-text">控制台输出字体修改</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编辑区主题修改"><span class="nav-number">3.</span> <span class="nav-text">编辑区主题修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑区主题介绍"><span class="nav-number">3.1.</span> <span class="nav-text">编辑区主题介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑区主题细节修改"><span class="nav-number">3.2.</span> <span class="nav-text">编辑区主题细节修改</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件编码修改"><span class="nav-number">4.</span> <span class="nav-text">文件编码修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#由于编码问题引起的编译错误"><span class="nav-number">5.</span> <span class="nav-text">由于编码问题引起的编译错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tomcat-控制台输出乱码"><span class="nav-number">6.</span> <span class="nav-text">Tomcat 控制台输出乱码</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">焦义贵</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("1sh0O5mg1incyonan0Yjp1CD-gzGzoHsz", "qdvNfkCicKRx7iumN9g1FoLH");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+
+  
+
+</body>
+</html>
