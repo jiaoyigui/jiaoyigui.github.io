@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.jiaoyigui.cn//android-librarys/Index/</loc>
+    
+    <lastmod>2017-03-30T02:08:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.jiaoyigui.cn//opensource/Index/</loc>
     
-    <lastmod>2017-03-29T10:24:46.000Z</lastmod>
+    <lastmod>2017-03-30T02:08:29.000Z</lastmod>
     
   </url>
   
@@ -12,13 +19,6 @@
     <loc>http://www.jiaoyigui.cn//opensource/Android/</loc>
     
     <lastmod>2017-03-29T10:23:09.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.jiaoyigui.cn//android-librarys/Index/</loc>
-    
-    <lastmod>2017-03-29T09:54:38.000Z</lastmod>
     
   </url>
   

@@ -729,7 +729,7 @@
     <link href="http://www.jiaoyigui.cn//opensource/Index/"/>
     <id>http://www.jiaoyigui.cn//opensource/Index/</id>
     <published>2017-03-29T00:14:12.000Z</published>
-    <updated>2017-03-29T10:24:46.000Z</updated>
+    <updated>2017-03-30T02:08:29.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="本文初衷"><a href="#本文初衷" class="headerlink" title="本文初衷"></a>本文初衷</h2><p>整理收集网上现有的开源项目, 可以提高大家开发速度<br>有推荐的可以，可以发邮件或留言</p>
 <h2 id="收集列表"><a href="#收集列表" class="headerlink" title="收集列表"></a>收集列表</h2><p><strong><em><a href="/opensource/Android/"><code>Android开源项目</code></a></em></strong></p>
@@ -761,6 +761,8 @@
       <category term="PHP" scheme="http://www.jiaoyigui.cn/tags/PHP/"/>
     
       <category term="Golang" scheme="http://www.jiaoyigui.cn/tags/Golang/"/>
+    
+      <category term="目录索引" scheme="http://www.jiaoyigui.cn/tags/%E7%9B%AE%E5%BD%95%E7%B4%A2%E5%BC%95/"/>
     
   </entry>
   
@@ -5773,7 +5775,7 @@ CURL PHP Extension
     <link href="http://www.jiaoyigui.cn//android-librarys/Index/"/>
     <id>http://www.jiaoyigui.cn//android-librarys/Index/</id>
     <published>2017-03-24T00:14:12.000Z</published>
-    <updated>2017-03-29T09:54:38.000Z</updated>
+    <updated>2017-03-30T02:08:41.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="本文初衷"><a href="#本文初衷" class="headerlink" title="本文初衷"></a>本文初衷</h2><p>整理收集网上现有的开源的Android组件库, 可以提高大家开发速度<br>有推荐的可以，可以发邮件或留言</p>
 <h2 id="收集列表"><a href="#收集列表" class="headerlink" title="收集列表"></a>收集列表</h2><p><strong><a href="/android-librarys/List/"><code>列表 List</code></a></strong><br><strong><a href="/android-librarys/Animation/"><code>动画 Animation</code></a></strong><br><strong><a href="/android-librarys/Image/"><code>图片 Image</code></a></strong><br><strong><a href="/android-librarys/Layout/"><code>布局 Layout</code></a></strong><br><strong><a href="/android-librarys/Framework/"><code>开发框架 Framework</code></a></strong><br><strong><a href="/android-librarys/Dialog/"><code>弹窗 Dialog</code></a></strong><br><strong><a href="/android-librarys/Network/"><code>网络请求 Network</code></a></strong><br><strong><a href="/android-librarys/Custom/"><code>自定义控件 Custom</code></a></strong><br><strong><a href="/android-librarys/Menu/"><code>菜单 Menu</code></a></strong><br><strong><a href="/android-librarys/Utils/"><code>辅助工具类 Utils</code></a></strong></p>
@@ -5795,6 +5797,8 @@ CURL PHP Extension
       <category term="Android" scheme="http://www.jiaoyigui.cn/tags/Android/"/>
     
       <category term="开源组件" scheme="http://www.jiaoyigui.cn/tags/%E5%BC%80%E6%BA%90%E7%BB%84%E4%BB%B6/"/>
+    
+      <category term="目录索引" scheme="http://www.jiaoyigui.cn/tags/%E7%9B%AE%E5%BD%95%E7%B4%A2%E5%BC%95/"/>
     
   </entry>
   
