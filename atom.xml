@@ -725,11 +725,11 @@
   </entry>
   
   <entry>
-    <title>目录索引 - 开源项目</title>
+    <title>开源项目</title>
     <link href="http://www.jiaoyigui.cn//opensource/Index/"/>
     <id>http://www.jiaoyigui.cn//opensource/Index/</id>
     <published>2017-03-29T00:14:12.000Z</published>
-    <updated>2017-03-30T02:11:05.000Z</updated>
+    <updated>2017-03-30T02:14:25.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="本文初衷"><a href="#本文初衷" class="headerlink" title="本文初衷"></a>本文初衷</h2><p>整理收集网上现有的开源项目, 可以提高大家开发速度<br>有推荐的可以，可以发邮件或留言</p>
 <h2 id="收集列表"><a href="#收集列表" class="headerlink" title="收集列表"></a>收集列表</h2><p><strong><em><a href="/opensource/Android/"><code>Android开源项目</code></a></em></strong></p>
@@ -5771,11 +5771,11 @@ CURL PHP Extension
   </entry>
   
   <entry>
-    <title>目录索引 - Android开源组件</title>
+    <title>Android开源组件</title>
     <link href="http://www.jiaoyigui.cn//android-librarys/Index/"/>
     <id>http://www.jiaoyigui.cn//android-librarys/Index/</id>
     <published>2017-03-24T00:14:12.000Z</published>
-    <updated>2017-03-30T02:10:57.000Z</updated>
+    <updated>2017-03-30T02:14:21.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="本文初衷"><a href="#本文初衷" class="headerlink" title="本文初衷"></a>本文初衷</h2><p>整理收集网上现有的开源的Android组件库, 可以提高大家开发速度<br>有推荐的可以，可以发邮件或留言</p>
 <h2 id="收集列表"><a href="#收集列表" class="headerlink" title="收集列表"></a>收集列表</h2><p><strong><a href="/android-librarys/List/"><code>列表 List</code></a></strong><br><strong><a href="/android-librarys/Animation/"><code>动画 Animation</code></a></strong><br><strong><a href="/android-librarys/Image/"><code>图片 Image</code></a></strong><br><strong><a href="/android-librarys/Layout/"><code>布局 Layout</code></a></strong><br><strong><a href="/android-librarys/Framework/"><code>开发框架 Framework</code></a></strong><br><strong><a href="/android-librarys/Dialog/"><code>弹窗 Dialog</code></a></strong><br><strong><a href="/android-librarys/Network/"><code>网络请求 Network</code></a></strong><br><strong><a href="/android-librarys/Custom/"><code>自定义控件 Custom</code></a></strong><br><strong><a href="/android-librarys/Menu/"><code>菜单 Menu</code></a></strong><br><strong><a href="/android-librarys/Utils/"><code>辅助工具类 Utils</code></a></strong></p>
