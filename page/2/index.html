@@ -255,6 +255,16 @@
       <a href="/server/VPS/" class="article-date">
       <time datetime="2016-08-19T12:10:16.000Z" itemprop="datePublished">2016-08-19</time>
 </a>
+
+ 
+    <a href="/server/VPS/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+        
+            <span class="disqus-comment-count" data-disqus-identifier="/server/VPS/"></span>
+        
+    </a>
     </div>
   
   <div class="article-inner">
@@ -303,6 +313,16 @@
       <a href="/intellij-idea/IntelliJ-IDEA-Debug/" class="article-date">
       <time datetime="2016-03-29T07:30:03.000Z" itemprop="datePublished">2016-03-29</time>
 </a>
+
+ 
+    <a href="/intellij-idea/IntelliJ-IDEA-Debug/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+        
+            <span class="disqus-comment-count" data-disqus-identifier="/intellij-idea/IntelliJ-IDEA-Debug/"></span>
+        
+    </a>
     </div>
   
   <div class="article-inner">
@@ -351,6 +371,16 @@
       <a href="/intellij-idea/IntelliJ-IDEA-For-Mac-Keys/" class="article-date">
       <time datetime="2016-03-29T04:30:03.000Z" itemprop="datePublished">2016-03-29</time>
 </a>
+
+ 
+    <a href="/intellij-idea/IntelliJ-IDEA-For-Mac-Keys/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+        
+            <span class="disqus-comment-count" data-disqus-identifier="/intellij-idea/IntelliJ-IDEA-For-Mac-Keys/"></span>
+        
+    </a>
     </div>
   
   <div class="article-inner">
@@ -399,6 +429,16 @@
       <a href="/intellij-idea/IntelliJ-IDEA-Settings/" class="article-date">
       <time datetime="2016-03-29T04:27:26.000Z" itemprop="datePublished">2016-03-29</time>
 </a>
+
+ 
+    <a href="/intellij-idea/IntelliJ-IDEA-Settings/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+        
+            <span class="disqus-comment-count" data-disqus-identifier="/intellij-idea/IntelliJ-IDEA-Settings/"></span>
+        
+    </a>
     </div>
   
   <div class="article-inner">
@@ -447,6 +487,16 @@
       <a href="/hexo/Hexo-Install/" class="article-date">
       <time datetime="2016-02-29T15:43:30.000Z" itemprop="datePublished">2016-02-29</time>
 </a>
+
+ 
+    <a href="/hexo/Hexo-Install/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+        
+            <span class="disqus-comment-count" data-disqus-identifier="/hexo/Hexo-Install/"></span>
+        
+    </a>
     </div>
   
   <div class="article-inner">
@@ -542,7 +592,21 @@
     </div>
     <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
 
-
+<script id="dsq-count-scr" src="//老四.disqus.com/count.js" async></script>
+        <script>
+            if ($(".left-col").is(":visible")) {
+                var $disqusCount = $(".disqus-comment-count");
+                $disqusCount.bind("DOMNodeInserted", function(e) {
+                    var num = $(this).text().replace(/[^0-9]/ig,"");
+                    if (num > 0) {
+                        $(this).siblings(".count-comment").text(num);
+                    }
+                    $(this).remove();
+                })
+            } else {
+                $(".disqus-comment-count").remove();
+            }
+        </script>
 
 
     <script type="text/x-mathjax-config">
