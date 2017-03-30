@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.jiaoyigui.cn//opensource/Index/</loc>
+    <loc>http://www.jiaoyigui.cn//%E5%BE%AE%E6%9C%8D%E5%8A%A1/Service-Framework-Select/</loc>
     
-    <lastmod>2017-03-30T02:14:25.000Z</lastmod>
+    <lastmod>2017-03-30T05:35:08.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.jiaoyigui.cn//android-librarys/Index/</loc>
     
-    <lastmod>2017-03-30T02:14:21.000Z</lastmod>
+    <lastmod>2017-03-30T03:54:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.jiaoyigui.cn//opensource/Index/</loc>
+    
+    <lastmod>2017-03-30T03:54:26.000Z</lastmod>
     
   </url>
   
