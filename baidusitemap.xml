@@ -4,8 +4,62 @@
 
     
   <url>
+    <loc>http://www.jiaoyigui.cn//git/git-flow/</loc>
+    <lastmod>2017-04-06T06:41:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>git flow 工作流 学习与使用</title>
+        <pubTime>2017-04-06T06:22:22.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>版本控制</tag>
+         
+        <tag>git flow</tag>
+         
+        <tag>Git Flow Gui</tag>
+         
+         
+           
+             
+              <breadCrumb title="git" url="http://www.jiaoyigui.cn/categories/git/"/>
+          
+             
+              <breadCrumb title="版本控制" url="http://www.jiaoyigui.cn/categories/git/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jiaoyigui.cn//git/git-command/</loc>
+    <lastmod>2017-04-06T06:15:09.000Z</lastmod>
+    <data>
+        <display>
+        <title>git基本命令学习</title>
+        <pubTime>2017-04-06T04:22:22.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>版本控制</tag>
+         
+         
+           
+             
+              <breadCrumb title="git" url="http://www.jiaoyigui.cn/categories/git/"/>
+          
+             
+              <breadCrumb title="版本控制" url="http://www.jiaoyigui.cn/categories/git/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.jiaoyigui.cn//%E5%BE%AE%E6%9C%8D%E5%8A%A1/Service-Framework-Select/</loc>
-    <lastmod>2017-03-30T05:35:08.000Z</lastmod>
+    <lastmod>2017-03-30T05:43:55.000Z</lastmod>
     <data>
         <display>
         <title>微服务架构的基础框架选择：Spring Cloud还是Dubbo？</title>

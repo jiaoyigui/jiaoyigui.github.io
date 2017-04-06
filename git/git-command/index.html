@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Zero">
+
+
+
+<meta name="description" content="版本控制git, 基本命令的学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git基本命令学习">
+<meta property="og:url" content="http://www.jiaoyigui.cn/git/git-command/index.html">
+<meta property="og:site_name" content="夜的灯">
+<meta property="og:description" content="版本控制git, 基本命令的学习">
+<meta property="og:image" content="http://www.jiaoyigui.cn/images/git.jpeg">
+<meta property="og:updated_time" content="2017-04-06T06:15:09.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git基本命令学习">
+<meta name="twitter:description" content="版本控制git, 基本命令的学习">
+<meta name="twitter:image" content="http://www.jiaoyigui.cn/images/git.jpeg">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="夜的灯" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>git基本命令学习 | 夜的灯</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8349881c9f92999de4652aac9681a840";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Zero</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">探索新知识，突破自身技术壁垒</p>
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/tags/目录索引/">系列文章</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:jyg0124@126.com" title="Email"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Animation/">Animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cocos2d-x/">Cocos2d-x</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Custom/">Custom</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DEBUG调试/">DEBUG调试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dialog/">Dialog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dubbo/">Dubbo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git-Flow-Gui/">Git Flow Gui</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Homebrew/">Homebrew</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Image/">Image</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ-IDEA/">IntelliJ IDEA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Layout/">Layout</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/List/">List</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Menu/">Menu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shadowsocks/">Shadowsocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringCloud/">SpringCloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Unity/">Unity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Utils/">Utils</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VPS/">VPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vultr/">Vultr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-flow/">git flow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinkphp5/">thinkphp5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/列表/">列表</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动画/">动画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反编译/">反编译</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图片组件/">图片组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具类/">工具类</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/布局/">布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发工具/">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发框架/">开发框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源组件/">开源组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源项目/">开源项目</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/弹窗/">弹窗</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微服务/">微服务</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/快捷键/">快捷键</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游戏/">游戏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/版本控制/">版本控制</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/目录索引/">目录索引</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/破解/">破解</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/终端/">终端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络请求/">网络请求</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/自定义控件/">自定义控件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/菜单/">菜单</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">关于我</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Zero</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Zero</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">探索新知识，突破自身技术壁垒</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/tags/目录索引/">系列文章</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:jyg0124@126.com" title="Email"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-git/git-command" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/git/git-command/" class="article-date">
+      <time datetime="2017-04-06T04:22:22.000Z" itemprop="datePublished">2017-04-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        <h1 class="article-title" itemprop="name">
+      git基本命令学习
+    </h1>
+      </header>
+      
+      <div class="article-info article-info-post">
+        <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/git/">git</a><a class="article-category-link" href="/categories/git/版本控制/">版本控制</a>
+    </div>
+        <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/版本控制/">版本控制</a></li></ul>
+    </div>
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="本文初衷"><a href="#本文初衷" class="headerlink" title="本文初衷"></a>本文初衷</h2><ul>
+<li>从2012年开始就断断徐徐的学习使用git， 但至今还没有系统整理过</li>
+<li>半类似于教程，为公司后续新人做指导作用</li>
+<li>现市面上，开源代码版本控制，大部分都是git控制</li>
+<li>由于是分布式，所有本地库包含了远程库的所有内容。</li>
+</ul>
+<h2 id="Git介绍"><a href="#Git介绍" class="headerlink" title="Git介绍"></a>Git介绍</h2><p><img src="/images/git.jpeg" alt=""></p>
+<ul>
+<li>git，是一个类似于svn的版本工具，但它的功能特性要比svn强的多(个人观点)</li>
+<li>从图上可以看出，git分了四个个库：<ul>
+<li>本地工作区 workspace</li>
+<li>本地索引库 index</li>
+<li>本地代码库 local repository</li>
+<li>远程代码库 remote repository</li>
+</ul>
+</li>
+</ul>
+<h2 id="Git使用"><a href="#Git使用" class="headerlink" title="Git使用"></a>Git使用</h2><h3 id="项目创建"><a href="#项目创建" class="headerlink" title="项目创建"></a>项目创建</h3><h4 id="从0开始创建git项目，-以现存blog的那个文件-执行完后，项目下有一个-git-文件"><a href="#从0开始创建git项目，-以现存blog的那个文件-执行完后，项目下有一个-git-文件" class="headerlink" title="从0开始创建git项目， 以现存blog的那个文件, 执行完后，项目下有一个 .git 文件"></a>从0开始创建git项目， 以现存blog的那个文件, 执行完后，项目下有一个 <strong><em>.git</em></strong> 文件</h4><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> xxx/blog</div><div class="line">$ git init .</div><div class="line">Initialized empty Git repository <span class="keyword">in</span> xxxx/blog/.git/</div></pre></td></tr></table></figure>
+<h4 id="从现有版本库，clone到本地项目"><a href="#从现有版本库，clone到本地项目" class="headerlink" title="从现有版本库，clone到本地项目"></a>从现有版本库，clone到本地项目</h4><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> git://github.com/schacon/simplegit.git</div><div class="line">Initialized empty Git repository <span class="keyword">in</span> /private/tmp/simplegit/.git/</div><div class="line">remote: Counting objects: 100, done.</div><div class="line">remote: Compressing objects: 100% (86/86), done.</div><div class="line">remote: Total 100 (delta 35), reused 0 (delta 0)</div><div class="line">Receiving objects: 100% (100/100), 9.51 KiB, done.</div><div class="line">Resolving deltas: 100% (35/35), done.</div><div class="line">$ <span class="built_in">cd</span> simplegit/</div><div class="line">$ ls <span class="_">-a</span></div><div class="line">.        ..       .git     README   Rakefile lib</div></pre></td></tr></table></figure>
+<h3 id="基本快照"><a href="#基本快照" class="headerlink" title="基本快照"></a>基本快照</h3><p>Git 的工作就是创建和保存你的项目的快照及与之后的快照进行对比。本章将对有关创建与提交你的项目的快照的命令作介绍。</p>
+<p>这里有个重要的概念，Git 有一个叫做“索引”的东东，有点像是你的快照的缓存区。这就使你能够从更改的文件中创建出一系列组织良好的快照，而不是一次提交所有的更改。</p>
+<blockquote>
+<p>使用 git add 添加需要追踪的新文件和待提交的更改， 然后使用 git status 和 git diff 查看有何改动， 最后用 git commit 将你的快照记录。这就是你要用的基本流程，绝大部分时候都是这样的</p>
+</blockquote>
+<h4 id="git-status-查看你的文件在工作目录与缓存的状态"><a href="#git-status-查看你的文件在工作目录与缓存的状态" class="headerlink" title="git status 查看你的文件在工作目录与缓存的状态"></a><strong><em>git status</em></strong> 查看你的文件在工作目录与缓存的状态</h4><p>执行 <strong><em>git status</em></strong> 命令查看你的代码在缓存与当前工作目录的状态。我演示该命令的时候加了 -s 参数，以获得简短的结果输出。 若没有这个标记，命令 <strong><em>git status</em></strong> 将告诉你更多的提示与上下文欣喜。 以下便是同样状态下，有跟没有 -s 参数的输出对比。简短的输出如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ git status <span class="_">-s</span></div><div class="line">?? README.md</div></pre></td></tr></table></figure>
+<p>而同样的状态，详细的输出看起来是这样的：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ git status</div><div class="line">On branch master</div><div class="line"></div><div class="line">Initial commit</div><div class="line"></div><div class="line">Untracked files:</div><div class="line">  (use <span class="string">"git add &lt;file&gt;..."</span> to include <span class="keyword">in</span> what will be committed)</div><div class="line"></div><div class="line">	README.md</div><div class="line"></div><div class="line">nothing added to commit but untracked files present (use <span class="string">"git add"</span> to track)</div></pre></td></tr></table></figure>
+<h4 id="git-add-添加文件到索引缓存"><a href="#git-add-添加文件到索引缓存" class="headerlink" title="git add 添加文件到索引缓存"></a><strong><em>git add</em></strong> 添加文件到索引缓存</h4><p>在 Git 中，在提交你修改的文件之前，你需要把它们添加到缓存。如果该文件是新创建的，你可以执行 <strong><em>git add</em></strong> 将该文件添加到缓存，但是，即使该文件已经被追踪了 —— 也就是说，曾经提交过了 —— 你仍然需要执行 <strong><em>git add</em></strong> 将新更改的文件添加到缓存去。让我们看几个例子：</p>
+<p>初始化该项目之后，我们就要用 <strong><em>git add</em></strong> 将我们的文件添加进去了。 我们可以用 <strong><em>git status</em></strong> 看看我们的项目的当前状态</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ git status <span class="_">-s</span></div><div class="line">?? README.md</div></pre></td></tr></table></figure>
+<p>被追踪的文件，得添加一下。<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ git add README.md</div><div class="line">$ git status <span class="_">-s</span></div><div class="line">A  README.md</div></pre></td></tr></table></figure></p>
+<p>修改一下, README.md文件<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ git status <span class="_">-s</span></div><div class="line">AM  README.md</div><div class="line">$ git status</div><div class="line">On branch master</div><div class="line"></div><div class="line">Initial commit</div><div class="line"></div><div class="line">Changes to be committed:</div><div class="line">  (use <span class="string">"git rm --cached &lt;file&gt;..."</span> to unstage)</div><div class="line"></div><div class="line">	new file:   README.md</div><div class="line"></div><div class="line">Changes not staged <span class="keyword">for</span> commit:</div><div class="line">  (use <span class="string">"git add &lt;file&gt;..."</span> to update what will be committed)</div><div class="line">  (use <span class="string">"git checkout -- &lt;file&gt;..."</span> to discard changes <span class="keyword">in</span> working directory)</div><div class="line"></div><div class="line">	modified:   README.md</div></pre></td></tr></table></figure></p>
+<p>再次添加索引</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ git add README.md</div><div class="line">$ git status <span class="_">-s</span></div><div class="line">A  README.md</div></pre></td></tr></table></figure>
+<h4 id="git-diff-显示已写入缓存与已修改但尚未写入缓存的改动的区别"><a href="#git-diff-显示已写入缓存与已修改但尚未写入缓存的改动的区别" class="headerlink" title="git diff 显示已写入缓存与已修改但尚未写入缓存的改动的区别"></a><strong><em>git diff</em></strong> 显示已写入缓存与已修改但尚未写入缓存的改动的区别</h4><p><strong><em>git diff</em></strong> 有两个主要的应用场景。我们将在此介绍其一， 在 检阅与对照 一章中，我们将介绍其二。 我们这里介绍的方式是用此命令描述已临时提交的或者已修改但尚未提交的改动。</p>
+<p><strong><em>git diff</em></strong> #尚未缓存的改动<br>如果没有其他参数，<strong><em>git diff</em></strong> 会以规范化的 diff 格式（一个补丁）显示自从你上次提交快照之后尚未缓存的所有更改。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ vim README.md</div><div class="line">$ git status <span class="_">-s</span></div><div class="line">AM README.md</div><div class="line">$ git diff</div><div class="line">diff --git a/README.md b/README.md</div><div class="line">index a5bce3f..224c9fe 100644</div><div class="line">--- a/README.md</div><div class="line">+++ b/README.md</div><div class="line">@@ -1 +1 @@</div><div class="line">-test1</div><div class="line">+qqtest1</div><div class="line">(END)</div></pre></td></tr></table></figure>
+<p>所以，<strong><em>git status</em></strong>显示你上次提交更新至后所更改或者写入缓存的改动， 而 <strong><em>git diff</em></strong> 一行一行地显示这些改动具体是啥。 通常执行完 <strong><em>git status</em></strong> 之后接着跑一下 <strong><em>git diff</em></strong> 是个好习惯。</p>
+<p><strong><em>git diff –cached</em></strong> #查看已缓存的改动<br><strong><em>git diff –cached</em></strong> 命令会告诉你有哪些内容已经写入缓存了。 也就是说，此命令显示的是接下来要写入快照的内容。所以，如果你将上述示例中的 hello.rb 写入缓存，因为 <strong><em>git diff</em></strong> 显示的是尚未缓存的改动，所以在此执行它不会显示任何信息。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ git diff --cached</div><div class="line">diff --git a/README.md b/README.md</div><div class="line">new file mode 100644</div><div class="line">index 0000000..a5bce3f</div><div class="line">--- /dev/null</div><div class="line">+++ b/README.md</div><div class="line">@@ -0,0 +1 @@</div><div class="line">+<span class="built_in">test</span>1</div><div class="line">(END)</div></pre></td></tr></table></figure>
+<p><strong><em>git diff HEAD</em></strong> 查看已缓存的与未缓存的所有改动</p>
+<p>如果你想一并查看已缓存的与未缓存的改动，可以执行 <strong><em>git diff HEAD</em></strong> —— 也就是说你要看到的是工作目录与上一次提交的更新的区别，无视缓存。 假设我们又改了些 README.md 的内容，那缓存的与未缓存的改动我们就都有了。 以上三个 diff 命令的结果如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ git diff</div><div class="line">diff --git a/README.md b/README.md</div><div class="line">index 224c9fe..f4b0107 100644</div><div class="line">--- a/README.md</div><div class="line">+++ b/README.md</div><div class="line">@@ -1 +1 @@</div><div class="line">-qqtest1</div><div class="line">+qqest1</div><div class="line">(END)</div><div class="line"></div><div class="line">$ git diff -cached</div><div class="line">diff --git a/README.md b/README.md</div><div class="line">new file mode 100644</div><div class="line">index 0000000..224c9fe</div><div class="line">--- /dev/null</div><div class="line">+++ b/README.md</div><div class="line">@@ -0,0 +1 @@</div><div class="line">+qqtest1</div><div class="line"></div><div class="line">$ git diff HEAD</div><div class="line">fatal: ambiguous argument <span class="string">'HEAD'</span>: unknown revision or path not <span class="keyword">in</span> the working tree.</div><div class="line">Use <span class="string">'--'</span> to separate paths from revisions, like this:</div><div class="line"><span class="string">'git &lt;command&gt; [&lt;revision&gt;...] -- [&lt;file&gt;...]'</span></div></pre></td></tr></table></figure>
+<p>因为还有提交到本地仓库，所以当前 <strong><em>git diff HEAD</em></strong>是用问题</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ git commit -m <span class="string">"test"</span></div><div class="line">$ git diff HEAD</div><div class="line">diff --git a/README.md b/README.md</div><div class="line">index 224c9fe..f4b0107 100644</div><div class="line">--- a/README.md</div><div class="line">+++ b/README.md</div><div class="line">@@ -1 +1 @@</div><div class="line">-qqtest1</div><div class="line">+qqest1</div><div class="line">(END)</div></pre></td></tr></table></figure>
+<p><strong><em>git diff –stat</em></strong> 显示摘要而非整个 diff<br>如果我们不想要看整个 diff 输出，但是又想比 <strong><em>git status</em></strong> 详细点， 就可以用 <strong><em>–stat</em></strong> 选项。该选项使它显示摘要而非全文。上文示例在使用 –stat 选项时，输出如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ git status <span class="_">-s</span></div><div class="line"> M README.md</div><div class="line">$ git diff --stat  </div><div class="line">README.md | 2 +-</div><div class="line">1 file changed, 1 insertion(+), 1 deletion(-)</div><div class="line">(END)</div><div class="line">$ git diff --cached --stat</div><div class="line">README.md | 2 +-</div><div class="line">1 file changed, 1 insertion(+), 1 deletion(-)</div><div class="line">(END)</div><div class="line">$  git diff HEAD --stat</div><div class="line"> README.md | 2 +-</div><div class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</div><div class="line">(END)</div></pre></td></tr></table></figure>
+<p>你还可以在上述命令后面制定一个目录，从而只查看特定文件或子目录的 diff 输出。<br>简而言之， 执行 <strong><em>git diff</em></strong> 来查看执行 <strong><em>git status</em></strong> 的结果的详细信息 —— 一行一行地显示这些文件是如何被修改或写入缓存的。</p>
+<h4 id="git-commit-记录缓存内容的快照"><a href="#git-commit-记录缓存内容的快照" class="headerlink" title="git commit 记录缓存内容的快照"></a><strong><em>git commit</em></strong> 记录缓存内容的快照</h4><p>现在你使用 <strong><em>git add</em></strong> 命令将想要快照的内容写入了缓存， 执行 git commit 就将它实际存储快照了。 Git 为你的每一个提交都记录你的名字与电子邮箱地址，所以第一步是告诉 Git 这些都是啥。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ git config --global user.name <span class="string">'Your Name'</span></div><div class="line">$ git config --global user.email you@somedomain.com</div></pre></td></tr></table></figure>
+<p>让我们写入缓存，并提交对 README.md 的所有改动。在首个例子中，我们使用 -m 选项以在命令行中提供提交注释。<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ git commit -m <span class="string">"test"</span></div></pre></td></tr></table></figure></p>
+<h4 id="git-reset-HEAD-取消缓存已缓存的内容"><a href="#git-reset-HEAD-取消缓存已缓存的内容" class="headerlink" title="git reset HEAD 取消缓存已缓存的内容"></a><strong><em>git reset HEAD</em></strong> 取消缓存已缓存的内容</h4><h4 id="git-rm-将文件从缓存区移除"><a href="#git-rm-将文件从缓存区移除" class="headerlink" title="git rm 将文件从缓存区移除"></a><strong><em>git rm</em></strong> 将文件从缓存区移除</h4><p><strong><em>git rm</em></strong> 会将条目从缓存区中移除。这与 <strong><em>git reset HEAD</em></strong> 将条目取消缓存是有区别的。 “取消缓存”的意思就是将缓存区恢复为我们做出修改之前的样子。 在另一方面，<strong><em>git rm</em></strong> 则将该文件彻底从缓存区踢出，因此它不再下一个提交快照之内，进而有效地删除它。</p>
+<p>默认情况下，<strong><em>git rm file</em></strong> 会将文件从缓存区和你的硬盘中（工作目录）删除。 如果要在工作目录中留着该文件，可以使用 <strong><em>git rm –cached</em></strong></p>
+<h3 id="分支与合并"><a href="#分支与合并" class="headerlink" title="分支与合并"></a>分支与合并</h3><h4 id="git-branch-列出、创建与管理工作上下文"><a href="#git-branch-列出、创建与管理工作上下文" class="headerlink" title="git branch 列出、创建与管理工作上下文"></a><strong><em>git branch</em></strong> 列出、创建与管理工作上下文</h4><h4 id="git-checkout-切换到新的分支上下文"><a href="#git-checkout-切换到新的分支上下文" class="headerlink" title="git checkout 切换到新的分支上下文"></a><strong><em>git checkout</em></strong> 切换到新的分支上下文</h4><p><strong><em>git branch</em></strong> 命令是 Git 中的通用分支管理工具，可以通过它完成多项任务。 我们先说你会用到的最多的命令 —— 列出分支、创建分支和删除分支。 我们还会介绍用来切换分支的 <strong><em>git checkout</em></strong> 命令。</p>
+<ul>
+<li><strong><em>git branch</em></strong> 列出可用的分支</li>
+<li><strong><em>git branch (branchname)</em></strong> 创建新分支</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ git branch</div><div class="line">* master</div><div class="line">$ git branch <span class="built_in">test</span></div><div class="line">$ git branch</div><div class="line">* master</div><div class="line">  <span class="built_in">test</span></div></pre></td></tr></table></figure>
+<h4 id="git-checkout-b-branchname-创建新分支，并立即切换到它"><a href="#git-checkout-b-branchname-创建新分支，并立即切换到它" class="headerlink" title="git checkout -b (branchname) 创建新分支，并立即切换到它"></a><strong><em>git checkout -b (branchname)</em></strong> 创建新分支，并立即切换到它</h4><h4 id="git-branch-d-branchname-删除分支"><a href="#git-branch-d-branchname-删除分支" class="headerlink" title="git branch -d (branchname) 删除分支"></a><strong><em>git branch -d (branchname)</em></strong> 删除分支</h4><h4 id="git-merge-将分支合并到你的当前分支"><a href="#git-merge-将分支合并到你的当前分支" class="headerlink" title="git merge 将分支合并到你的当前分支"></a><strong><em>git merge</em></strong> 将分支合并到你的当前分支</h4><p>一旦某分支有了独立内容，你终究会希望将它合并回到你的主分支。 你可以使用 git merge 命令将任何分支合并到当前分支中去。 我们那上例中的“removals”分支为例。假设我们创建了一个分支，移除了一些文件，并将它提交到该分支， 其实该分支是与我们的主分支（也就是“master”）独立开来的。 要想将这些移除操作包含在主分支中，你可以将“removals”分支合并回去。</p>
+<h4 id="git-log-显示一个分支中提交的更改记录"><a href="#git-log-显示一个分支中提交的更改记录" class="headerlink" title="git log 显示一个分支中提交的更改记录"></a><strong><em>git log</em></strong> 显示一个分支中提交的更改记录</h4><h4 id="git-tag-给历史记录中的某个重要的一点打上标签"><a href="#git-tag-给历史记录中的某个重要的一点打上标签" class="headerlink" title="git tag 给历史记录中的某个重要的一点打上标签"></a><strong><em>git tag</em></strong> 给历史记录中的某个重要的一点打上标签</h4><h3 id="分享与更新"><a href="#分享与更新" class="headerlink" title="分享与更新"></a>分享与更新</h3><p>使用 <strong><em>git fetch</em></strong> 更新你的项目，使用 <strong><em>git push</em></strong> 分享你的改动。 你可以用 <strong><em>git remote</em></strong> 管理你的远程仓库。</p>
+<h4 id="git-remote-罗列、添加和删除远端仓库别名"><a href="#git-remote-罗列、添加和删除远端仓库别名" class="headerlink" title="git remote 罗列、添加和删除远端仓库别名"></a><strong><em>git remote</em></strong> 罗列、添加和删除远端仓库别名</h4><ul>
+<li><strong><em>git remote -v</em></strong> 列出远端别名</li>
+<li><strong><em>git remote add</em></strong> 为你的项目添加一个新的远端仓库</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ git remote</div><div class="line">$ git remote add github git@github.com:schacon/hw.git</div><div class="line">$ git remote -v</div><div class="line">github	git@github.com:schacon/hw.git (fetch)</div><div class="line">github	git@github.com:schacon/hw.git (push)</div></pre></td></tr></table></figure>
+<ul>
+<li><strong><em>git remote rm</em></strong> 删除现存的某个别名</li>
+</ul>
+<h4 id="git-fetch-从远端仓库下载新分支与数据"><a href="#git-fetch-从远端仓库下载新分支与数据" class="headerlink" title="git fetch 从远端仓库下载新分支与数据"></a><strong><em>git fetch</em></strong> 从远端仓库下载新分支与数据</h4><p> 执行 <strong><em>git push [alias] [branch]</em></strong> 将你的本地改动推送到远端仓库。 如果可以的话，它会依据你的 [branch] 的样子，推送到远端的 [branch] 去。 如果在你上次提取、合并之后，另有人推送了，Git 服务器会拒绝你的推送，知道你是最新的为止。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>不断学习与总结， git工具使用多了， 感觉好了，要比svn之类功能强<br>适合大型项目，多业务线的合作。</p>
+      
+    </div>
+    
+  </div>
+  
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/git/git-command/">git基本命令学习</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Zero</a></p>
+        <p><span>发布时间:</span>2017-04-06 12:22</p>
+        <!-- <p><span>最后更新:</span>2017-04-06, 14:15:09</p> -->
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/git/git-command/" title="git基本命令学习">http://www.jiaoyigui.cn//git/git-command/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.jiaoyigui.cn//git/git-command/　　作者: Zero" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <!-- <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p> -->
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/git/git-flow/">
+                    git flow 工作流 学习与使用
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/微服务/Service-Framework-Select/">
+                    微服务架构的基础框架选择：Spring Cloud还是Dubbo？
+                </a>
+            </div>
+        
+    </nav>
+  
+</article>
+<div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#本文初衷"><span class="toc-number">1.</span> <span class="toc-text">本文初衷</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git介绍"><span class="toc-number">2.</span> <span class="toc-text">Git介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git使用"><span class="toc-number">3.</span> <span class="toc-text">Git使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#项目创建"><span class="toc-number">3.1.</span> <span class="toc-text">项目创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#从0开始创建git项目，-以现存blog的那个文件-执行完后，项目下有一个-git-文件"><span class="toc-number">3.1.1.</span> <span class="toc-text">从0开始创建git项目， 以现存blog的那个文件, 执行完后，项目下有一个 .git 文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#从现有版本库，clone到本地项目"><span class="toc-number">3.1.2.</span> <span class="toc-text">从现有版本库，clone到本地项目</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本快照"><span class="toc-number">3.2.</span> <span class="toc-text">基本快照</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#git-status-查看你的文件在工作目录与缓存的状态"><span class="toc-number">3.2.1.</span> <span class="toc-text">git status 查看你的文件在工作目录与缓存的状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-add-添加文件到索引缓存"><span class="toc-number">3.2.2.</span> <span class="toc-text">git add 添加文件到索引缓存</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-diff-显示已写入缓存与已修改但尚未写入缓存的改动的区别"><span class="toc-number">3.2.3.</span> <span class="toc-text">git diff 显示已写入缓存与已修改但尚未写入缓存的改动的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-commit-记录缓存内容的快照"><span class="toc-number">3.2.4.</span> <span class="toc-text">git commit 记录缓存内容的快照</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-reset-HEAD-取消缓存已缓存的内容"><span class="toc-number">3.2.5.</span> <span class="toc-text">git reset HEAD 取消缓存已缓存的内容</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-rm-将文件从缓存区移除"><span class="toc-number">3.2.6.</span> <span class="toc-text">git rm 将文件从缓存区移除</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分支与合并"><span class="toc-number">3.3.</span> <span class="toc-text">分支与合并</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#git-branch-列出、创建与管理工作上下文"><span class="toc-number">3.3.1.</span> <span class="toc-text">git branch 列出、创建与管理工作上下文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-checkout-切换到新的分支上下文"><span class="toc-number">3.3.2.</span> <span class="toc-text">git checkout 切换到新的分支上下文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-checkout-b-branchname-创建新分支，并立即切换到它"><span class="toc-number">3.3.3.</span> <span class="toc-text">git checkout -b (branchname) 创建新分支，并立即切换到它</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-branch-d-branchname-删除分支"><span class="toc-number">3.3.4.</span> <span class="toc-text">git branch -d (branchname) 删除分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-merge-将分支合并到你的当前分支"><span class="toc-number">3.3.5.</span> <span class="toc-text">git merge 将分支合并到你的当前分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-log-显示一个分支中提交的更改记录"><span class="toc-number">3.3.6.</span> <span class="toc-text">git log 显示一个分支中提交的更改记录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-tag-给历史记录中的某个重要的一点打上标签"><span class="toc-number">3.3.7.</span> <span class="toc-text">git tag 给历史记录中的某个重要的一点打上标签</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分享与更新"><span class="toc-number">3.4.</span> <span class="toc-text">分享与更新</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#git-remote-罗列、添加和删除远端仓库别名"><span class="toc-number">3.4.1.</span> <span class="toc-text">git remote 罗列、添加和删除远端仓库别名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-fetch-从远端仓库下载新分支与数据"><span class="toc-number">3.4.2.</span> <span class="toc-text">git fetch 从远端仓库下载新分支与数据</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+    <div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"git基本命令学习　| 夜的灯　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+    
+        <section class="youyan" id="comments">
+    <script>
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = 'http://v2.uyan.cc/code/uyan.js?uid=2129282';
+            (d.head || d.body).appendChild(s);
+        }
+    </script>
+    <script> loadComment(); </script>
+    <div id="uyan_frame"></div>
+</section>
+    
+
+
+<div class="scroll" id="post-nav-button">
+        
+            <a href="/git/git-flow/" title="上一篇: git flow 工作流 学习与使用">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/微服务/Service-Framework-Select/" title="下一篇: 微服务架构的基础框架选择：Spring Cloud还是Dubbo？">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/git/git-flow/">git flow 工作流 学习与使用</a></li><li class="post-list-item"><a class="post-list-link" href="/git/git-command/">git基本命令学习</a></li><li class="post-list-item"><a class="post-list-link" href="/微服务/Service-Framework-Select/">微服务架构的基础框架选择：Spring Cloud还是Dubbo？</a></li><li class="post-list-item"><a class="post-list-link" href="/opensource/Android/">Android开源项目</a></li><li class="post-list-item"><a class="post-list-link" href="/opensource/Index/">开源项目</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Utils/">辅助工具类 Utils - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Menu/">菜单 Menu - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Custom/">自定义控件 Custom - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Dialog/">弹窗 Dialog - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Framework/">开发框架Framework - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Layout/">布局Layout - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Animation/">动画Animation - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/List/">列表 List - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Image/">图片 Image - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Network/">网络请求 Network - Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/php/thinkphp5-install/">Thinkphp5快速入门</a></li><li class="post-list-item"><a class="post-list-link" href="/android-librarys/Index/">Android开源组件</a></li><li class="post-list-item"><a class="post-list-link" href="/android/Android-Decompile/">Android反编译</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-Java/">开发环境 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-iTerm2/">终端方案iTerm2 + Zsh - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-Homebrew/">包管理工具 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-keymap/">常用快捷键 - Java程序员的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/macos/Mac-settings/">系统使用 - Java程序员眼中的Mac OS</a></li><li class="post-list-item"><a class="post-list-link" href="/server/VPS/">VPS + Shadowsocks 可以是什么，做什么</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-Debug/">IntelliJ IDEA DEBUG调试</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-For-Mac-Keys/">IntelliJ IDEA For Mac 快捷键</a></li><li class="post-list-item"><a class="post-list-link" href="/intellij-idea/IntelliJ-IDEA-Settings/">IntelliJ IDEA 主题、字体、编辑区主题、文件编码修改、乱码问题</a></li><li class="post-list-item"><a class="post-list-link" href="/hexo/Hexo-Install/">搭建 Hexo 博客--增强篇</a></li></ul>
+
+
+    <script>
+        
+    </script></div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i>
+                2017 Zero
+            </div>
+            <div class="footer-right">
+                <!-- <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i> -->
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+    </div>
+    <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide()" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+<script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
